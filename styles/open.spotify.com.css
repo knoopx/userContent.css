@@ -1,0 +1,259 @@
+:root {
+  --background-base: var(--base00);
+  --background-highlight: var(--base01);
+  --background-press: var(--base00);
+  --background-elevated-base: var(--base01);
+  --background-elevated-highlight: var(--base02);
+  --background-elevated-press: var(--base01);
+  --background-tinted-base: var(--base00);
+  --background-tinted-highlight: color-mix(
+    in srgb,
+    var(--base00) 80%,
+    var(--base05)
+  );
+  --background-tinted-press: var(--base00);
+  --background-unsafe-for-small-text-base: var(--base00);
+  --background-unsafe-for-small-text-highlight: var(--base00);
+  --background-unsafe-for-small-text-press: var(--base00);
+  --text-base: var(--base05);
+  --text-subdued: var(--base04);
+  --text-bright-accent: var(--base0D);
+  --text-negative: var(--base08);
+  --text-warning: var(--base09);
+  --text-positive: var(--base0B);
+  --text-announcement: var(--base0C);
+  --essential-base: var(--base05);
+  --essential-subdued: var(--base04);
+  --essential-bright-accent: var(--base0D);
+  --essential-negative: var(--base08);
+  --essential-warning: var(--base09);
+  --essential-positive: var(--base0B);
+  --essential-announcement: var(--base00);
+  --decorative-base: var(--base05);
+  --decorative-subdued: var(--base03);
+  --gradient-color-bottom: var(--base00);
+  --start-gradient-color: var(--base00);
+  --end-gradient-color: var(--base00);
+}
+
+.encore-dark-theme,
+.encore-dark-theme .encore-base-set,
+.encore-light-theme,
+.encore-light-theme .encore-base-set,
+.encore-dark-theme .encore-inverted-light-set {
+  --background-base: var(--base00);
+  --background-highlight: var(--base01);
+  --background-press: var(--base00);
+  --background-elevated-base: var(--base01);
+  --background-elevated-highlight: var(--base02);
+  --background-elevated-press: var(--base01);
+  --background-tinted-base: var(--base00);
+  --background-tinted-highlight: color-mix(
+    in srgb,
+    var(--base00) 80%,
+    var(--base05)
+  );
+  --background-tinted-press: var(--base00);
+  --background-unsafe-for-small-text-base: var(--base00);
+  --background-unsafe-for-small-text-highlight: var(--base00);
+  --background-unsafe-for-small-text-press: var(--base00);
+  --text-base: var(--base05);
+  --text-subdued: var(--base04);
+  --text-bright-accent: var(--base0D);
+  --text-negative: var(--base08);
+  --text-warning: var(--base09);
+  --text-positive: var(--base0B);
+  --text-announcement: var(--base0C);
+  --essential-base: var(--base05);
+  --essential-subdued: var(--base04);
+  --essential-bright-accent: var(--base0D);
+  --essential-negative: var(--base08);
+  --essential-warning: var(--base09);
+  --essential-positive: var(--base0B);
+  --essential-announcement: var(--base00);
+  --decorative-base: var(--base05);
+  --decorative-subdued: var(--base03);
+}
+
+.encore-dark-theme .encore-inverted-light-set {
+  --background-base: var(--base02);
+  --background-highlight: var(--base01);
+  --background-press: var(--base02);
+}
+
+.encore-dark-theme .encore-bright-accent-set {
+  --background-base: var(--base0D);
+  --background-highlight: var(--base0D);
+  --background-press: var(--base0D);
+  --background-elevated-base: var(--base0D);
+  --background-elevated-highlight: var(--base0D);
+  --background-elevated-press: var(--base0D);
+  --background-tinted-base: var(--base0D);
+  --background-tinted-highlight: var(--base0D);
+  --background-tinted-press: var(--base0D);
+  --background-unsafe-for-small-text-base: var(--base0D);
+  --background-unsafe-for-small-text-highlight: var(--base0D);
+  --background-unsafe-for-small-text-press: var(--base0D);
+  --decorative-subdued: color-mix(in srgb, var(--base0D) 70%, var(--base00));
+}
+
+.encore-dark-theme .encore-over-media-set {
+  --background-base: color-mix(in srgb, var(--base00) 80%, var(--base05));
+  --background-highlight: var(--base00);
+  --background-press: color-mix(in srgb, var(--base00) 80%, var(--base05));
+  --background-elevated-base: var(--base00);
+  --background-elevated-highlight: var(--base00);
+  --background-elevated-press: color-mix(
+    in srgb,
+    var(--base00) 80%,
+    var(--base05)
+  );
+  --background-tinted-base: color-mix(
+    in srgb,
+    var(--base00) 80%,
+    var(--base05)
+  );
+  --background-tinted-highlight: color-mix(
+    in srgb,
+    var(--base00) 80%,
+    var(--base05)
+  );
+  --background-tinted-press: color-mix(
+    in srgb,
+    var(--base00) 80%,
+    var(--base05)
+  );
+  --background-unsafe-for-small-text-base: color-mix(
+    in srgb,
+    var(--base00) 80%,
+    var(--base05)
+  );
+  --background-unsafe-for-small-text-highlight: color-mix(
+    in srgb,
+    var(--base00) 80%,
+    var(--base05)
+  );
+  --background-unsafe-for-small-text-press: color-mix(
+    in srgb,
+    var(--base00) 80%,
+    var(--base05)
+  );
+}
+
+.encore-dark-theme .encore-base-set > *,
+.encore-dark-theme > * {
+  --parents-essential-base: var(--base05);
+}
+
+.encore-text {
+  color: var(--base05);
+}
+
+html {
+  background-color: var(--base00);
+}
+
+#main > * > *,
+.main-view-container__mh-footer-container {
+  background: var(--base00);
+}
+
+#Desktop_LeftSidebar_Id {
+  background-color: transparent;
+}
+
+a {
+  color: var(--base0D);
+}
+
+.link-subtle {
+  color: var(--base04);
+}
+
+.link-subtle:hover {
+  color: var(--base05);
+}
+
+div[data-tippy-root],
+#context-menu,
+#hover-or-focus-tooltip {
+  border-radius: 8px;
+  background-color: var(--base01);
+  color: var(--base05);
+}
+
+div[role*="menuitem"] {
+  background-color: var(--base01);
+}
+
+#onetrust-banner-sdk {
+  background-color: var(--base00);
+  color: var(--base05);
+}
+
+#onetrust-policy-text,
+.ot-dpd-title,
+.onetrust-policy-title,
+.ot-text-bold,
+.ot-dpd-desc,
+.ot-link-btn,
+#onetrust-consent-sdk #onetrust-policy-title,
+#onetrust-banner-sdk button {
+  color: var(--base05);
+}
+
+#onetrust-pc-btn-handler,
+#onetrust-consent-sdk #onetrust-pc-sdk,
+.ot-acc-txt,
+.ot-acc-grpdesc,
+#onetrust-consent-sdk #onetrust-pc-sdk #ot-sel-blk {
+  background-color: var(--base00);
+}
+
+#onetrust-consent-sdk #onetrust-pc-sdk #ot-pc-title,
+#onetrust-consent-sdk #onetrust-pc-sdk #ot-pc-desc,
+#onetrust-consent-sdk #onetrust-pc-sdk h2,
+#onetrust-consent-sdk #onetrust-pc-sdk h3,
+#onetrust-consent-sdk #onetrust-pc-sdk h4,
+#onetrust-consent-sdk #onetrust-pc-sdk h5,
+#onetrust-consent-sdk #onetrust-pc-sdk h6,
+#onetrust-pc-sdk .ot-always-active,
+#onetrust-consent-sdk #onetrust-pc-sdk p {
+  color: var(--base05);
+}
+
+#onetrust-consent-sdk
+  #onetrust-pc-sdk
+  button:not(
+    #clear-filters-handler,
+    .ot-close-icon,
+    #filter-btn-handler,
+    .ot-remove-objection-handler,
+    .ot-obj-leg-btn-handler,
+    [aria-expanded],
+    .ot-link-btn
+  ) {
+  background-color: var(--base0D);
+  border-color: var(--base0D);
+}
+
+/* top nav bar */
+.qPaMr9Jzt0_Doy3C {
+  background-color: color-mix(in srgb, var(--base00) 70%, black);
+}
+
+/* white divider in nav */
+.DjtXcVv22FQVMppM {
+  background-color: var(--base03);
+}
+
+/* gradient header behind content - has inline background-color */
+.Q7ciR0kAsukiCprc {
+  background-color: var(--base01);
+}
+
+/* sign-up banner gradient */
+.dz_h98rH9nZCwfPdnKgr {
+  background-image: none;
+  background-color: var(--base01);
+}
