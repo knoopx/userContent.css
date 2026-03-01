@@ -383,6 +383,24 @@ function hexToRgb(hex: string): string {
   return `${r}, ${g}, ${b}`;
 }
 
+function hexToHsl(hex: string): string {
+  const h = hex.replace("#", "");
+  const r = parseInt(h.slice(0, 2), 16) / 255;
+  const g = parseInt(h.slice(2, 4), 16) / 255;
+  const b = parseInt(h.slice(4, 6), 16) / 255;
+  const max = Math.max(r, g, b);
+  const min = Math.min(r, g, b);
+  const l = (max + min) / 2;
+  if (max === min) return `0 0% ${Math.round(l * 1000) / 10}%`;
+  const d = max - min;
+  const s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+  let hue = 0;
+  if (max === r) hue = ((g - b) / d + (g < b ? 6 : 0)) * 60;
+  else if (max === g) hue = ((b - r) / d + 2) * 60;
+  else hue = ((r - g) / d + 4) * 60;
+  return `${Math.round(hue * 10) / 10} ${Math.round(s * 1000) / 10}% ${Math.round(l * 1000) / 10}%`;
+}
+
 async function loadPaletteCSS(): Promise<string> {
   const raw = await readFile(PALETTE_PATH, "utf-8");
   const palette: Record<string, string> = JSON.parse(raw);
@@ -390,6 +408,7 @@ async function loadPaletteCSS(): Promise<string> {
     .flatMap(([name, value]) => [
       `  --${name}: ${value};`,
       `  --${name}-rgb: ${hexToRgb(value)};`,
+      `  --${name}-hsl: ${hexToHsl(value)};`,
     ])
     .join("\n");
   return `:root {\n${vars}\n}`;
