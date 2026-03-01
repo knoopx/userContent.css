@@ -1,0 +1,354 @@
+:root {
+  /* body and global */
+  background-color: var(--base00);
+  color: var(--base05);
+}
+
+body {
+  background-color: var(--base00);
+  color: var(--base05);
+}
+
+/* header / menu bar */
+.menu-bar,
+.menu-bar.fixed-show {
+  background-color: var(--base01);
+  color: var(--base05);
+  border-bottom-color: var(--base02);
+}
+
+/* sub-nav */
+.sub-nav,
+.homepage-subnav {
+  background-color: var(--base01);
+  border-bottom-color: var(--base02);
+}
+
+.sub-nav a,
+.sub-nav .g-button {
+  color: var(--base05);
+}
+
+/* search */
+.search input,
+#g-input-uid2 {
+  background-color: var(--base02);
+  color: var(--base05);
+  border-color: var(--base03);
+}
+
+/* nav links and buttons */
+.menu-bar a,
+.menu-bar .g-button,
+.menu-bar .g-button.no-outline {
+  color: var(--base05);
+}
+
+/* logo */
+.menu-bar svg {
+  fill: var(--base05);
+}
+
+/* promo banner */
+.page-wrapper.text-banner,
+.page-wrapper.text-banner.promo {
+  background-color: var(--base02);
+  color: var(--base05);
+}
+
+.text-banner a {
+  color: var(--base0D);
+}
+
+/* hero section */
+.hero,
+.hero-inner,
+.hd-section {
+  background-color: var(--base00);
+  color: var(--base05);
+}
+
+/* chladni marks (decorative SVGs) */
+.chladni-marks svg,
+.chladni-marks path {
+  fill: var(--base03);
+}
+
+/* main content area */
+#content,
+.app,
+main.app {
+  background-color: var(--base00);
+  color: var(--base05);
+}
+
+/* sales feed */
+#sales-feed {
+  background-color: var(--base00);
+  color: var(--base05);
+}
+
+.selling-message,
+.selling-message span {
+  color: var(--base04);
+}
+
+.selling-item-info,
+.selling-item-title {
+  color: var(--base05);
+}
+
+.selling-item-price,
+.selling-item-date {
+  color: var(--base04);
+}
+
+/* section headings */
+h2.header,
+.global-section h2 {
+  color: var(--base05);
+}
+
+/* light sections (radio, new-notable) */
+.global-section.corp-page-section,
+.corp-page-section.radio,
+.corp-page-section.new-notable,
+.corp-page-section.carousel-container {
+  background-color: var(--base01);
+  color: var(--base05);
+}
+
+/* inverted sections (discover, merch) */
+.inverted,
+.corp-page-section.inverted,
+.discover-tags,
+.discover-categories {
+  background-color: var(--base00);
+  color: var(--base05);
+}
+
+/* cards */
+.card-item,
+.card-item .header,
+.card-item .title,
+.card-item .artist-name {
+  color: var(--base05);
+}
+
+.card-item .sub-head,
+.card-item .genre,
+.card-item .location {
+  color: var(--base04);
+}
+
+/* text badges (genre tags, format tags) */
+.text-badge,
+.text-badge.inverted {
+  background-color: var(--base02);
+  color: var(--base05);
+  border-color: var(--base03);
+}
+
+/* buttons */
+.g-button {
+  background-color: var(--base02);
+  color: var(--base05);
+  border-color: var(--base03);
+}
+
+.g-button.outline {
+  background-color: transparent;
+  color: var(--base05);
+  border-color: var(--base03);
+}
+
+.g-button.no-outline {
+  background-color: transparent;
+  color: var(--base05);
+}
+
+.g-button:hover {
+  background-color: var(--base03);
+}
+
+/* radio items (category/format pills) */
+.radio-item {
+  background-color: color-mix(in srgb, var(--base03) 40%, transparent);
+  color: var(--base05);
+  border-color: var(--base03);
+}
+
+.radio-item.active,
+.radio-item.selected {
+  background-color: var(--base0D);
+  color: var(--base00);
+  border-color: var(--base0D);
+}
+
+.radio-item.active svg,
+.radio-item.selected svg {
+  fill: var(--base00);
+  color: var(--base00);
+}
+
+/* carousel nav buttons */
+.g-button.icon-only.nav,
+.g-button.icon-only.nav-left,
+.g-button.icon-only.nav-right {
+  color: var(--base04);
+  background-color: transparent;
+}
+
+/* links */
+a {
+  color: var(--base0D);
+}
+
+a:hover {
+  color: var(--base0E);
+}
+
+/* daily editorial */
+.daily-editorial,
+.daily-editorial .title,
+.daily-editorial .blurb {
+  color: var(--base05);
+}
+
+.daily-editorial .sub-head {
+  color: var(--base04);
+}
+
+/* Bandcamp Daily section */
+.editorial-list a,
+.editorial-item .title {
+  color: var(--base05);
+}
+
+.editorial-item .subtitle {
+  color: var(--base04);
+}
+
+/* radio section */
+.radio-card .header,
+.radio-card .title {
+  color: var(--base05);
+}
+
+.radio-card .sub-head {
+  color: var(--base04);
+}
+
+/* cookie dialog */
+.g-dialog,
+.g-dialog.cookie-dialog-initial,
+.g-dialog.dialog {
+  background-color: var(--base01);
+  color: var(--base05);
+  border-color: var(--base02);
+}
+
+.dialog-container {
+  background-color: color-mix(in srgb, var(--base00) 80%, transparent);
+}
+
+/* footer */
+#page-footer,
+#maximal-page-footer,
+.footer-container,
+.footer {
+  background-color: var(--base00);
+  color: var(--base04);
+  border-color: var(--base02);
+}
+
+.footer a {
+  color: var(--base04);
+}
+
+.footer a:hover {
+  color: var(--base05);
+}
+
+/* dividers and borders */
+hr,
+.divider {
+  border-color: var(--base02);
+}
+
+/* card image containers */
+.image-container {
+  background-color: var(--base01);
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+  background-color: var(--base00);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--base03);
+}
+
+/* SVG icons */
+svg {
+  fill: var(--base05);
+}
+
+/* explore more links */
+a.more-link,
+.explore-more {
+  color: var(--base0D);
+}
+
+/* carousel items - album art overlays */
+.carousel .item-title,
+.carousel .item-artist {
+  color: var(--base05);
+}
+
+.carousel .item-genre,
+.carousel .item-price {
+  color: var(--base04);
+}
+
+/* discover section tags */
+.tag-cloud a,
+.discover-tags a {
+  color: var(--base0D);
+}
+
+/* what's new section */
+.whats-new,
+.corp-page-section.whats-new {
+  background-color: var(--base00);
+  color: var(--base05);
+}
+
+/* highlight numbers in hero */
+.highlight,
+mark {
+  background-color: var(--base02);
+  color: var(--base0D);
+}
+
+/* input placeholder */
+input::placeholder {
+  color: var(--base03);
+}
+
+/* results panel */
+.results,
+.autocomplete-results {
+  background-color: var(--base01);
+  color: var(--base05);
+  border-color: var(--base02);
+}
+
+/* flag icons in sales feed - leave untouched */
+
+/* pause/play button in sales feed */
+.pause-play,
+.selling-controls button {
+  color: var(--base04);
+}
