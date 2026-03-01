@@ -7,5 +7,9 @@
   },
   "dependencies": {
     "postcss": "^8.5.6"
+  },
+  "devDependencies": {
+    "cssnano": "^7.1.2",
+    "cssnano-preset-default": "^7.0.10"
   }
 }
