@@ -1,0 +1,296 @@
+:root,
+body,
+body.unified-theme,
+body.unified-theme * {
+  --black: var(--base00);
+  --black-600: var(--base05);
+  --black-500: var(--base05);
+  --black-400: var(--base04);
+  --black-350: var(--base03);
+  --black-300: var(--base03);
+  --black-250: var(--base02);
+  --black-225: var(--base02);
+  --black-200: var(--base02);
+  --black-150: var(--base01);
+  --black-100: var(--base01);
+  --black-050: var(--base00);
+  --white: var(--base00);
+
+  --theme-background-color: var(--base00);
+  --theme-content-background-color: var(--base00);
+  --theme-content-border-color: var(--base02);
+  --theme-body-font-color: var(--base05);
+
+  --theme-header-background-color: color-mix(in srgb, var(--base00) 70%, black);
+  --theme-header-link-color: var(--base0D);
+  --theme-header-foreground-color: transparent;
+  --theme-header-background-border-bottom: none;
+
+  --theme-topbar-bottom-border: 1px solid var(--base02);
+
+  --theme-footer-background-color: color-mix(in srgb, var(--base00) 70%, black);
+  --theme-footer-title-color: var(--base05);
+  --theme-footer-text-color: var(--base04);
+  --theme-footer-link-color: var(--base04);
+  --theme-footer-link-color-hover: var(--base05);
+  --theme-footer-divider-color: var(--base02);
+  --theme-footer-background-border-top: none;
+
+  --theme-post-title-color: var(--base0D);
+  --theme-post-title-color-hover: var(--base07);
+  --theme-post-title-color-visited: var(--base0E);
+  --theme-post-owner-background-color: var(--base01);
+  --theme-post-owner-new-background-color: var(--base02);
+
+  --theme-primary: var(--base0D);
+  --theme-primary-400: var(--base0D);
+  --theme-primary-500: color-mix(in srgb, var(--base0D) 70%, black);
+  --theme-primary-600: color-mix(in srgb, var(--base0D) 50%, black);
+  --theme-primary-300: color-mix(in srgb, var(--base0D) 50%, var(--base05));
+  --theme-primary-200: color-mix(in srgb, var(--base0D) 20%, var(--base00));
+  --theme-primary-100: color-mix(in srgb, var(--base0D) 10%, var(--base00));
+
+  --theme-secondary: var(--base0D);
+  --theme-secondary-400: var(--base0D);
+  --theme-secondary-500: color-mix(in srgb, var(--base0D) 70%, black);
+  --theme-secondary-600: color-mix(in srgb, var(--base0D) 50%, black);
+  --theme-secondary-300: color-mix(in srgb, var(--base0D) 50%, var(--base05));
+  --theme-secondary-200: color-mix(in srgb, var(--base0D) 20%, var(--base00));
+  --theme-secondary-100: color-mix(in srgb, var(--base0D) 10%, var(--base00));
+
+  --orange-400: var(--base09);
+  --orange-500: color-mix(in srgb, var(--base09) 70%, black);
+  --orange-600: color-mix(in srgb, var(--base09) 50%, black);
+  --orange-300: color-mix(in srgb, var(--base09) 50%, var(--base05));
+  --orange-200: color-mix(in srgb, var(--base09) 20%, var(--base00));
+  --orange-100: color-mix(in srgb, var(--base09) 10%, var(--base00));
+
+  --blue-400: var(--base0D);
+  --blue-500: color-mix(in srgb, var(--base0D) 70%, black);
+  --blue-600: color-mix(in srgb, var(--base0D) 50%, black);
+  --blue-300: color-mix(in srgb, var(--base0D) 50%, var(--base05));
+  --blue-200: color-mix(in srgb, var(--base0D) 20%, var(--base00));
+  --blue-100: color-mix(in srgb, var(--base0D) 10%, var(--base00));
+
+  --green-400: var(--base0B);
+  --green-500: color-mix(in srgb, var(--base0B) 70%, black);
+  --green-600: color-mix(in srgb, var(--base0B) 50%, black);
+  --green-300: color-mix(in srgb, var(--base0B) 50%, var(--base05));
+  --green-200: color-mix(in srgb, var(--base0B) 20%, var(--base00));
+  --green-100: color-mix(in srgb, var(--base0B) 10%, var(--base00));
+
+  --red-400: var(--base08);
+  --red-500: color-mix(in srgb, var(--base08) 70%, black);
+  --red-600: color-mix(in srgb, var(--base08) 50%, black);
+  --red-300: color-mix(in srgb, var(--base08) 50%, var(--base05));
+  --red-200: color-mix(in srgb, var(--base08) 20%, var(--base00));
+  --red-100: color-mix(in srgb, var(--base08) 10%, var(--base00));
+
+  --yellow-400: var(--base0A);
+  --yellow-500: color-mix(in srgb, var(--base0A) 70%, black);
+  --yellow-600: color-mix(in srgb, var(--base0A) 50%, black);
+  --yellow-300: color-mix(in srgb, var(--base0A) 50%, var(--base05));
+  --yellow-200: color-mix(in srgb, var(--base0A) 20%, var(--base00));
+  --yellow-100: color-mix(in srgb, var(--base0A) 10%, var(--base00));
+
+  --purple-400: var(--base0F);
+  --purple-500: color-mix(in srgb, var(--base0F) 70%, black);
+  --purple-600: color-mix(in srgb, var(--base0F) 50%, black);
+  --purple-300: color-mix(in srgb, var(--base0F) 50%, var(--base05));
+  --purple-200: color-mix(in srgb, var(--base0F) 20%, var(--base00));
+  --purple-100: color-mix(in srgb, var(--base0F) 10%, var(--base00));
+
+  --fc-dark: var(--base05);
+  --fc-medium: var(--base04);
+  --fc-light: var(--base03);
+  --fc-danger: var(--base08);
+  --fc-error: var(--base08);
+  --fc-success: var(--base0B);
+  --fc-warning: var(--base0A);
+
+  --bc-darker: var(--base03);
+  --bc-dark: var(--base02);
+  --bc-medium: var(--base02);
+  --bc-light: var(--base01);
+  --bc-lighter: var(--base01);
+  --bc-lightest: var(--base00);
+  --bc-danger: var(--base08);
+  --bc-error: var(--base08);
+  --bc-success: var(--base0B);
+  --bc-warning: var(--base0A);
+
+  --bg-danger: var(--base08);
+  --bg-error: var(--base08);
+  --bg-success: var(--base0B);
+  --bg-warning: var(--base0A);
+
+  --highlight-bg: var(--base01);
+  --highlight-color: var(--base05);
+
+  --scrollbar: color-mix(in srgb, var(--base05) 20%, transparent);
+
+  --theme-topbar-background-color: color-mix(in srgb, var(--base00) 70%, black);
+  --theme-topbar-search-background: color-mix(
+    in srgb,
+    var(--base00) 70%,
+    black
+  );
+  --theme-topbar-search-border: var(--base03);
+  --theme-topbar-search-placeholder: var(--base04);
+  --theme-topbar-item-color: var(--base05);
+  --theme-topbar-item-color-hover: var(--base05);
+  --theme-topbar-item-background-hover: var(--base01);
+  --theme-button-primary-background-color: var(--base0D);
+  --theme-button-primary-hover-background-color: color-mix(
+    in srgb,
+    var(--base0D) 80%,
+    black
+  );
+  --theme-button-primary-active-background-color: var(--base05);
+  --theme-link-color: var(--base0D);
+  --theme-link-color-hover: var(--base07);
+  --theme-link-color-visited: var(--base0E);
+  --theme-tag-background-color: var(--base0D);
+  --theme-tag-border-color: var(--base0D);
+  --theme-tag-color: var(--base00);
+  --theme-tag-hover-background-color: color-mix(
+    in srgb,
+    var(--base0D) 80%,
+    black
+  );
+  --theme-tag-hover-border-color: color-mix(in srgb, var(--base0D) 80%, black);
+  --theme-tag-hover-color: var(--base00);
+
+  --focus-ring: color-mix(in srgb, var(--base0D) 15%, transparent);
+  --focus-ring-success: color-mix(in srgb, var(--base0B) 40%, transparent);
+  --focus-ring-warning: color-mix(in srgb, var(--base0A) 40%, transparent);
+  --focus-ring-error: color-mix(in srgb, var(--base08) 15%, transparent);
+  --focus-ring-muted: color-mix(in srgb, var(--base05) 10%, transparent);
+
+  --highlight-comment: var(--base03);
+  --highlight-keyword: var(--base0D);
+  --highlight-attribute: var(--base0D);
+  --highlight-symbol: var(--base0F);
+  --highlight-namespace: var(--base09);
+  --highlight-literal: var(--base09);
+  --highlight-variable: var(--base0B);
+  --highlight-punctuation: var(--base04);
+  --highlight-deletion: var(--base08);
+  --highlight-addition: var(--base0B);
+
+  --gold-400: var(--base0A);
+  --gold-300: color-mix(in srgb, var(--base0A) 60%, var(--base05));
+  --gold-200: color-mix(in srgb, var(--base0A) 30%, var(--base00));
+  --gold-100: color-mix(in srgb, var(--base0A) 10%, var(--base00));
+
+  --silver-400: var(--base04);
+  --silver-300: var(--base03);
+  --silver-200: var(--base02);
+  --silver-100: var(--base01);
+
+  --bronze-400: var(--base09);
+  --bronze-300: color-mix(in srgb, var(--base09) 60%, var(--base05));
+  --bronze-200: color-mix(in srgb, var(--base09) 30%, var(--base00));
+  --bronze-100: color-mix(in srgb, var(--base09) 10%, var(--base00));
+}
+
+/* topbar search */
+.s-topbar .s-input {
+  background-color: var(--base01);
+  color: var(--base05);
+  border-color: var(--base02);
+}
+
+/* tag chips */
+.s-tag {
+  background-color: var(--base01);
+  color: var(--base0D);
+  border-color: var(--base02);
+}
+
+/* collective avatars */
+.subcommunity-topic-avatar {
+  background-color: var(--base01);
+}
+
+/* sidebar widget borders */
+.s-sidebarwidget {
+  border-color: var(--base02);
+}
+
+/* hide cookie consent */
+#onetrust-consent-sdk {
+  display: none;
+}
+
+/* hide google login popup */
+.fc-consent-root,
+.js-consent-banner,
+.google-auth--btn,
+[data-google-login] {
+  display: none;
+}
+
+/* hide "Try new site BETA" */
+.s-topbar .js-announcement-banner {
+  display: none;
+}
+
+/* hide left sidebar promotions */
+.js-sidebar-zone,
+.s-sidebarwidget__yellow {
+  display: none;
+}
+
+/* hide Stack Internal promo */
+.js-freemium-cta {
+  display: none;
+}
+
+/* hide AI Assist sidebar link */
+#left-sidebar li.ps-relative:has(> a[href*="ai-assist"]) {
+  display: none;
+}
+
+/* hide Challenges sidebar link */
+#left-sidebar li.ps-relative:has(> a[href*="/challenges"]) {
+  display: none;
+}
+
+/* hide Chat sidebar link */
+#left-sidebar li.ps-relative:has(> a[href*="/chat"]) {
+  display: none;
+}
+
+/* hide "Try new site BETA" button */
+.js-beta-link {
+  display: none;
+}
+
+/* hide ads */
+[class*="everyonelovesstackoverflow"],
+.js-report-ad-button-container,
+.js-zone-container,
+#hireme,
+#dfp-tsb,
+#dfp-msb,
+iframe[id*="google_ads"] {
+  display: none;
+}
+
+/* hide Collectives section in left sidebar */
+li.js-collectives-navcta-toggle,
+#left-sidebar li.ml8.mt32.mb4 {
+  display: none;
+}
+
+/* hide "Companies to explore" */
+.s-sidebarwidget:has(a[href*="companies"]) {
+  display: none;
+}
+
+/* cookie consent */
+.js-consent-banner {
+  background-color: var(--base01);
+  color: var(--base05);
+}
