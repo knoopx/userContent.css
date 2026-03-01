@@ -1,0 +1,144 @@
+:root,
+:root.dark {
+  --Bg-Primary: var(--base00);
+  --Bg-Primary-hover: var(--base01);
+  --Bg-Primary-active: var(--base02);
+  --Bg-Primary90: color-mix(in srgb, var(--base00) 90%, transparent);
+  --Bg-Primary90-hover: color-mix(in srgb, var(--base01) 90%, transparent);
+  --Bg-Primary90-active: color-mix(in srgb, var(--base02) 90%, transparent);
+  --Bg-Primary70: color-mix(in srgb, var(--base00) 70%, transparent);
+  --Bg-Primary70-hover: color-mix(in srgb, var(--base01) 70%, transparent);
+  --Bg-Primary70-active: color-mix(in srgb, var(--base02) 70%, transparent);
+
+  --Bg-Secondary: var(--base01);
+  --Bg-Secondary-hover: var(--base02);
+  --Bg-Secondary-active: var(--base03);
+  --Bg-Secondary90: color-mix(in srgb, var(--base01) 90%, transparent);
+  --Bg-Secondary90-hover: color-mix(in srgb, var(--base02) 90%, transparent);
+  --Bg-Secondary90-active: color-mix(in srgb, var(--base03) 90%, transparent);
+
+  --Bg-Tertiary: var(--base02);
+  --Bg-Tertiary-hover: var(--base03);
+  --Bg-Tertiary-active: var(--base04);
+  --Bg-Tertiary90: color-mix(in srgb, var(--base02) 90%, transparent);
+  --Bg-Tertiary90-hover: color-mix(in srgb, var(--base03) 90%, transparent);
+  --Bg-Tertiary90-active: color-mix(in srgb, var(--base04) 90%, transparent);
+
+  --Bg-GroundPC: var(--base00);
+  --Bg-GroundPC-hover: var(--base01);
+  --Bg-GroundPC-active: var(--base02);
+
+  --Bg-Quaternary: var(--base03);
+  --Bg-Quaternary-hover: var(--base04);
+  --Bg-Quaternary-active: color-mix(in srgb, var(--base04) 80%, var(--base05));
+
+  --BgGp-Primary: var(--base00);
+  --BgGp-Primary-hover: var(--base01);
+  --BgGp-Primary-active: var(--base02);
+  --BgGp-Primary90: color-mix(in srgb, var(--base00) 90%, transparent);
+  --BgGp-Primary90-hover: color-mix(in srgb, var(--base01) 90%, transparent);
+  --BgGp-Primary90-active: color-mix(in srgb, var(--base02) 90%, transparent);
+
+  --BgGp-Secondary: var(--base01);
+  --BgGp-Secondary-hover: var(--base02);
+  --BgGp-Secondary-active: var(--base03);
+  --BgGp-Secondary90: color-mix(in srgb, var(--base01) 90%, transparent);
+  --BgGp-Secondary90-hover: color-mix(in srgb, var(--base02) 90%, transparent);
+  --BgGp-Secondary90-active: color-mix(in srgb, var(--base03) 90%, transparent);
+
+  --BgGp-Tertiary: var(--base02);
+  --BgGp-Tertiary-hover: var(--base03);
+  --BgGp-Tertiary-active: var(--base04);
+
+  --Labels-Primary: color-mix(in srgb, var(--base05) 84%, transparent);
+  --Labels-Primary-hover: color-mix(in srgb, var(--base05) 85%, transparent);
+  --Labels-Primary-active: color-mix(in srgb, var(--base05) 86%, transparent);
+  --Labels-Secondary: color-mix(in srgb, var(--base05) 56%, transparent);
+  --Labels-Secondary-hover: color-mix(in srgb, var(--base05) 58%, transparent);
+  --Labels-Secondary-active: color-mix(in srgb, var(--base05) 60%, transparent);
+  --Labels-Tertiary: color-mix(in srgb, var(--base05) 42%, transparent);
+  --Labels-Tertiary-hover: color-mix(in srgb, var(--base05) 45%, transparent);
+  --Labels-Tertiary-active: color-mix(in srgb, var(--base05) 48%, transparent);
+  --Labels-Quaternary: color-mix(in srgb, var(--base05) 26%, transparent);
+  --Labels-Quaternary-hover: color-mix(in srgb, var(--base05) 30%, transparent);
+  --Labels-Quaternary-active: color-mix(
+    in srgb,
+    var(--base05) 33%,
+    transparent
+  );
+
+  --Fills-F1: color-mix(in srgb, var(--base05) 5%, transparent);
+  --Fills-F1-hover: color-mix(in srgb, var(--base05) 10%, transparent);
+  --Fills-F1-active: color-mix(in srgb, var(--base05) 15%, transparent);
+  --Fills-F2: color-mix(in srgb, var(--base05) 10%, transparent);
+  --Fills-F2-hover: color-mix(in srgb, var(--base05) 15%, transparent);
+  --Fills-F2-active: color-mix(in srgb, var(--base05) 19%, transparent);
+  --Fills-F3: color-mix(in srgb, var(--base05) 18%, transparent);
+  --Fills-F3-hover: color-mix(in srgb, var(--base05) 22%, transparent);
+  --Fills-F3-active: color-mix(in srgb, var(--base05) 26%, transparent);
+  --Fills-F4: color-mix(in srgb, var(--base05) 25%, transparent);
+  --Fills-F4-hover: color-mix(in srgb, var(--base05) 29%, transparent);
+  --Fills-F4-active: color-mix(in srgb, var(--base05) 33%, transparent);
+
+  --Separators-S1: color-mix(in srgb, var(--base05) 12%, transparent);
+  --Separators-S1-hover: color-mix(in srgb, var(--base05) 16%, transparent);
+  --Separators-S1-active: color-mix(in srgb, var(--base05) 21%, transparent);
+
+  --Colors-KMBlue: var(--base0D);
+  --Colors-KMBlue-hover: color-mix(in srgb, var(--base0D) 90%, var(--base05));
+  --Colors-KMBlue-active: color-mix(in srgb, var(--base0D) 80%, var(--base05));
+  --Colors-Red: var(--base08);
+  --Colors-Red-hover: color-mix(in srgb, var(--base08) 90%, var(--base05));
+  --Colors-Red-active: color-mix(in srgb, var(--base08) 80%, var(--base05));
+  --Colors-Red25: color-mix(in srgb, var(--base08) 25%, transparent);
+  --Colors-PositiveGreen: var(--base0B);
+  --Colors-PositiveGreen-hover: color-mix(
+    in srgb,
+    var(--base0B) 90%,
+    var(--base05)
+  );
+  --Colors-PositiveGreen-active: color-mix(
+    in srgb,
+    var(--base0B) 80%,
+    var(--base05)
+  );
+  --Colors-PositiveGreen25: color-mix(in srgb, var(--base0B) 25%, transparent);
+  --Colors-Green: var(--base0B);
+  --Colors-Yellow: var(--base0A);
+  --Colors-Orange: var(--base09);
+  --Colors-Purple: var(--base0F);
+
+  --Others-LightBlueBg: var(--base01);
+  --Others-LightBlueBg-hover: var(--base02);
+  --Others-LightBlueBg-active: var(--base03);
+  --Others-BubbleBlue: var(--base02);
+  --Others-BubbleBlue-hover: var(--base03);
+  --Others-BubbleBlue-active: var(--base04);
+  --Others-BubbleGray_PC: var(--base02);
+  --Others-BubbleGray_PC-hover: var(--base03);
+  --Others-BubbleGray_PC-active: var(--base04);
+  --Others-KMBlueDisabled: color-mix(in srgb, var(--base0D) 40%, transparent);
+  --Others-KMBlue10: color-mix(in srgb, var(--base0D) 10%, transparent);
+  --Others-TextSelected: color-mix(in srgb, var(--base0D) 20%, transparent);
+  --Others-WhiteOnDarkDisabled: color-mix(
+    in srgb,
+    var(--base05) 40%,
+    transparent
+  );
+  --Others-SubLayerBg: color-mix(in srgb, var(--base05) 6%, transparent);
+
+  --MaskBg-Light: color-mix(in srgb, var(--base00) 30%, transparent);
+  --MaskBg-Base: color-mix(in srgb, var(--base00) 60%, transparent);
+  --MaskBg-Dark: color-mix(in srgb, var(--base00) 60%, transparent);
+  --MaskBg-Gray: color-mix(in srgb, var(--base02) 90%, transparent);
+  --MaskBg-ToastPC: var(--base02);
+
+  --Syntax-Keyword: var(--base0F);
+  --Syntax-String: var(--base0B);
+  --Syntax-Literal: var(--base09);
+  --Syntax-Comment: var(--base04);
+  --Syntax-Metadata: var(--base0A);
+  --Syntax-MultilineComment: var(--base04);
+  --Syntax-Punctuation: var(--base08);
+  --Syntax-Mark: var(--base0C);
+}
