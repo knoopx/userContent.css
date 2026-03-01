@@ -1,0 +1,53 @@
+:root {
+  --flathub-white: var(--base05-oklch);
+  --flathub-lotion: var(--base05-oklch);
+  --flathub-gainsborow: var(--base04-oklch);
+  --flathub-gray-x11: var(--base03-oklch);
+  --flathub-spanish-gray: var(--base04-oklch);
+  --flathub-sonic-silver: var(--base04-oklch);
+  --flathub-granite-gray: var(--base02-oklch);
+  --flathub-arsenic: var(--base01-oklch);
+  --flathub-dark-gunmetal: var(--base00-oklch);
+  --flathub-black: var(--base00-oklch);
+  --flathub-celestial-blue: var(--base0D-oklch);
+  --flathub-celestial-blue-dark: var(--base0D-oklch);
+  --flathub-electric-red: var(--base08-oklch);
+  --flathub-sunset-pink: var(--base08-oklch);
+  --flathub-vivid-crimson: var(--base08-oklch);
+  --flathub-dark-candy-apple-red: var(--base08-oklch);
+  --flathub-status-green: var(--base0B-oklch);
+  --flathub-status-green-dark: var(--base0B-oklch);
+  --flathub-status-yellow: var(--base0A-oklch);
+  --flathub-status-yellow-dark: var(--base0A-oklch);
+  --flathub-status-orange: var(--base09-oklch);
+  --flathub-status-orange-dark: var(--base09-oklch);
+  --flathub-status-red: var(--base08-oklch);
+  --flathub-status-red-dark: var(--base08-oklch);
+
+  --background: var(--base00-oklch);
+  --foreground: var(--base05-oklch);
+  --card: var(--base01-oklch);
+  --card-foreground: var(--base05-oklch);
+  --popover: var(--base01-oklch);
+  --popover-foreground: var(--base05-oklch);
+  --primary: var(--base0D-oklch);
+  --primary-foreground: var(--base00-oklch);
+  --secondary: var(--base02-oklch);
+  --secondary-foreground: var(--base05-oklch);
+  --muted: var(--base01-oklch);
+  --muted-foreground: var(--base04-oklch);
+  --accent: var(--base02-oklch);
+  --accent-foreground: var(--base05-oklch);
+  --destructive: var(--base08-oklch);
+  --destructive-foreground: var(--base05-oklch);
+  --border: var(--base02-oklch);
+  --input: var(--base03-oklch);
+  --ring: var(--base0D-oklch);
+  --text-primary: var(--base05-oklch);
+  --bg-color-secondary: var(--base01-oklch);
+  --color-primary: var(--base0D-oklch);
+}
+
+.bg-flathub-celestial-blue {
+  color: var(--base00);
+}
