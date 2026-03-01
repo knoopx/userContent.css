@@ -1,0 +1,241 @@
+:root {
+  /* Base colors */
+  --color-base: var(--base05);
+  --color-base-fixed: var(--base05);
+  --color-base--hover: var(--base06);
+  --color-emphasized: var(--base06);
+  --color-subtle: var(--base04);
+  --color-placeholder: var(--base03);
+  --color-disabled: var(--base03);
+  --color-disabled-emphasized: var(--base04);
+  --color-inverted: var(--base00);
+  --color-inverted-fixed: var(--base00);
+  --color-base--subtle: var(--base04);
+
+  /* Progressive (links) */
+  --color-progressive: var(--base0D);
+  --color-progressive--hover: var(--base0A);
+  --color-progressive--active: var(--base09);
+  --color-progressive--focus: var(--base0D);
+
+  /* Destructive */
+  --color-destructive: var(--base08);
+  --color-destructive--hover: var(--base08);
+  --color-destructive--active: var(--base08);
+  --color-destructive--focus: var(--base0D);
+
+  /* Visited */
+  --color-visited: var(--base0E);
+  --color-visited--hover: var(--base0E);
+  --color-visited--active: var(--base0E);
+
+  /* Error/Warning/Success/Notice */
+  --color-error: var(--base08);
+  --color-error--hover: var(--base08);
+  --color-error--active: var(--base08);
+  --color-warning: var(--base09);
+  --color-success: var(--base0B);
+  --color-notice: var(--base04);
+
+  /* Icon colors */
+  --color-icon-error: var(--base08);
+  --color-icon-warning: var(--base09);
+  --color-icon-success: var(--base0B);
+  --color-icon-notice: var(--base04);
+
+  /* Content diff */
+  --color-content-added: var(--base0B);
+  --color-content-removed: var(--base08);
+
+  /* Background colors */
+  --background-color-base: var(--base00);
+  --background-color-base-fixed: var(--base00);
+  --background-color-neutral: var(--base02);
+  --background-color-neutral-subtle: var(--base01);
+  --background-color-interactive: var(--base02);
+  --background-color-interactive--hover: var(--base03);
+  --background-color-interactive--active: var(--base03);
+  --background-color-interactive-subtle: var(--base01);
+  --background-color-interactive-subtle--hover: var(--base02);
+  --background-color-interactive-subtle--active: var(--base03);
+  --background-color-disabled: var(--base02);
+  --background-color-disabled-subtle: var(--base01);
+  --background-color-inverted: var(--base06);
+  --background-color-progressive: var(--base0D);
+  --background-color-progressive--hover: var(--base0A);
+  --background-color-progressive--active: var(--base09);
+  --background-color-progressive--focus: var(--base0D);
+  --background-color-progressive-subtle: color-mix(
+    in srgb,
+    var(--base0D) 10%,
+    transparent
+  );
+  --background-color-progressive-subtle--hover: color-mix(
+    in srgb,
+    var(--base0D) 15%,
+    transparent
+  );
+  --background-color-progressive-subtle--active: color-mix(
+    in srgb,
+    var(--base0D) 20%,
+    transparent
+  );
+  --background-color-destructive: var(--base08);
+  --background-color-destructive--hover: var(--base08);
+  --background-color-destructive--active: var(--base08);
+  --background-color-destructive--focus: var(--base0D);
+  --background-color-destructive-subtle: color-mix(
+    in srgb,
+    var(--base08) 10%,
+    transparent
+  );
+  --background-color-destructive-subtle--hover: color-mix(
+    in srgb,
+    var(--base08) 15%,
+    transparent
+  );
+  --background-color-destructive-subtle--active: color-mix(
+    in srgb,
+    var(--base08) 20%,
+    transparent
+  );
+  --background-color-error: var(--base08);
+  --background-color-error--hover: var(--base08);
+  --background-color-error--active: var(--base08);
+  --background-color-error-subtle: color-mix(
+    in srgb,
+    var(--base08) 10%,
+    transparent
+  );
+  --background-color-error-subtle--hover: color-mix(
+    in srgb,
+    var(--base08) 15%,
+    transparent
+  );
+  --background-color-error-subtle--active: color-mix(
+    in srgb,
+    var(--base08) 20%,
+    transparent
+  );
+  --background-color-warning-subtle: color-mix(
+    in srgb,
+    var(--base09) 10%,
+    transparent
+  );
+  --background-color-success-subtle: color-mix(
+    in srgb,
+    var(--base0B) 10%,
+    transparent
+  );
+  --background-color-notice-subtle: var(--base01);
+  --background-color-content-added: color-mix(
+    in srgb,
+    var(--base0B) 15%,
+    transparent
+  );
+  --background-color-content-removed: color-mix(
+    in srgb,
+    var(--base08) 15%,
+    transparent
+  );
+  --background-color-backdrop-light: color-mix(
+    in srgb,
+    var(--base00) 65%,
+    transparent
+  );
+  --background-color-backdrop-dark: color-mix(
+    in srgb,
+    var(--base00) 85%,
+    transparent
+  );
+  --background-color-button-quiet--hover: color-mix(
+    in srgb,
+    var(--base02) 50%,
+    transparent
+  );
+  --background-color-button-quiet--active: color-mix(
+    in srgb,
+    var(--base03) 50%,
+    transparent
+  );
+  --background-color-input-binary--checked: var(--base0D);
+  --background-color-tab-list-item-framed--hover: color-mix(
+    in srgb,
+    var(--base02) 30%,
+    transparent
+  );
+  --background-color-tab-list-item-framed--active: color-mix(
+    in srgb,
+    var(--base02) 65%,
+    transparent
+  );
+
+  /* Border colors */
+  --border-color-base: var(--base03);
+  --border-color-emphasized: var(--base05);
+  --border-color-subtle: var(--base02);
+  --border-color-muted: var(--base02);
+  --border-color-interactive: var(--base03);
+  --border-color-interactive--hover: var(--base04);
+  --border-color-interactive--active: var(--base05);
+  --border-color-disabled: var(--base02);
+  --border-color-inverted: var(--base00);
+  --border-color-inverted-fixed: var(--base00);
+  --border-color-progressive: var(--base0D);
+  --border-color-progressive--hover: var(--base0A);
+  --border-color-progressive--active: var(--base09);
+  --border-color-progressive--focus: var(--base0D);
+  --border-color-destructive: var(--base08);
+  --border-color-destructive--hover: var(--base08);
+  --border-color-destructive--active: var(--base08);
+  --border-color-destructive--focus: var(--base0D);
+  --border-color-error: var(--base08);
+  --border-color-error--hover: var(--base08);
+  --border-color-error--active: var(--base08);
+  --border-color-warning: var(--base09);
+  --border-color-warning--hover: var(--base09);
+  --border-color-warning--active: var(--base09);
+  --border-color-success: var(--base0B);
+  --border-color-notice: var(--base04);
+  --border-color-content-added: color-mix(
+    in srgb,
+    var(--base0B) 30%,
+    transparent
+  );
+  --border-color-content-removed: color-mix(
+    in srgb,
+    var(--base08) 30%,
+    transparent
+  );
+  --border-color-divider: var(--base02);
+
+  /* Box shadows */
+  --box-shadow-color-base: var(--base03);
+  --box-shadow-color-progressive--active: var(--base09);
+  --box-shadow-color-progressive--focus: var(--base0D);
+  --box-shadow-color-progressive-selected: var(--base0D);
+  --box-shadow-color-progressive-selected--hover: var(--base0A);
+  --box-shadow-color-progressive-selected--active: var(--base09);
+  --box-shadow-color-destructive--focus: var(--base0D);
+  --box-shadow-color-inverted: var(--base00);
+  --box-shadow-color-alpha-base: color-mix(
+    in srgb,
+    var(--base00) 87%,
+    transparent
+  );
+
+  /* Outline/Accent */
+  --outline-color-progressive--focus: var(--base0D);
+  --accent-color-base: var(--base0D);
+
+  /* Force dark scheme */
+  color-scheme: dark;
+}
+
+/* Invert filter icons for dark background */
+.skin-vector .mw-logo-icon,
+.cdx-text-input__icon,
+.vector-icon,
+.mw-ui-icon {
+  filter: invert(1) hue-rotate(180deg);
+}
