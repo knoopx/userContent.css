@@ -1,0 +1,87 @@
+:root {
+  /* Background colors */
+  --primary-background-color: var(--base00);
+  --secondary-background-color: var(--base01);
+  --card-background-color: var(--base01);
+  --ha-card-background: var(--base01);
+  --clear-background-color: var(--base01);
+  --lovelace-background: var(--base00);
+
+  /* Primary / accent */
+  --primary-color: var(--base0D);
+  --dark-primary-color: var(--base0D);
+  --darker-primary-color: var(--base02);
+  --light-primary-color: var(--base0A);
+  --accent-color: var(--base09);
+
+  /* Text */
+  --primary-text-color: var(--base05);
+  --secondary-text-color: var(--base04);
+  --text-primary-color: var(--base05);
+  --text-light-primary-color: var(--base00);
+  --disabled-text-color: var(--base03);
+
+  /* Borders / dividers */
+  --divider-color: color-mix(in srgb, var(--base03) 30%, transparent);
+  --outline-color: color-mix(in srgb, var(--base03) 30%, transparent);
+  --outline-hover-color: color-mix(in srgb, var(--base04) 40%, transparent);
+  --shadow-color: color-mix(in srgb, var(--base00) 50%, transparent);
+
+  /* Input fields */
+  --input-fill-color: var(--base02);
+  --input-disabled-fill-color: var(--base01);
+  --input-ink-color: var(--base05);
+  --input-label-ink-color: var(--base04);
+  --input-disabled-ink-color: var(--base03);
+  --input-idle-line-color: var(--base03);
+  --input-hover-line-color: var(--base04);
+  --input-disabled-line-color: var(--base02);
+  --input-outlined-idle-border-color: var(--base03);
+  --input-outlined-hover-border-color: var(--base04);
+  --input-outlined-disabled-border-color: var(--base02);
+  --input-dropdown-icon-color: var(--base04);
+
+  /* Scrollbar */
+  --scrollbar-thumb-color: var(--base03);
+
+  /* Semantic colors */
+  --error-color: var(--base08);
+  --warning-color: var(--base09);
+  --success-color: var(--base0B);
+  --info-color: var(--base0D);
+
+  /* State */
+  --state-icon-color: var(--base0D);
+  --disabled-color: var(--base03);
+  --label-badge-grey: var(--base03);
+
+  /* Neutral scale */
+  --ha-color-neutral-05: var(--base00);
+  --ha-color-neutral-10: var(--base01);
+  --ha-color-neutral-20: var(--base02);
+  --ha-color-neutral-30: var(--base03);
+  --ha-color-neutral-40: var(--base03);
+  --ha-color-neutral-50: var(--base04);
+  --ha-color-neutral-60: var(--base04);
+  --ha-color-neutral-70: var(--base04);
+  --ha-color-neutral-80: var(--base05);
+  --ha-color-neutral-90: var(--base05);
+  --ha-color-neutral-95: var(--base06);
+
+  /* Primary scale */
+  --ha-color-primary-05: var(--base00);
+  --ha-color-primary-10: var(--base01);
+  --ha-color-primary-20: var(--base02);
+  --ha-color-primary-30: var(--base02);
+  --ha-color-primary-40: var(--base03);
+  --ha-color-primary-50: var(--base0D);
+  --ha-color-primary-60: var(--base0D);
+  --ha-color-primary-70: var(--base0A);
+  --ha-color-primary-80: var(--base06);
+  --ha-color-primary-90: var(--base06);
+  --ha-color-primary-95: var(--base05);
+
+  /* Shadow */
+  --ha-color-shadow-light: color-mix(in srgb, var(--base00) 10%, transparent);
+  --ha-color-shadow-dark: color-mix(in srgb, var(--base00) 30%, transparent);
+}
