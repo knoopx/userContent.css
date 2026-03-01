@@ -1,0 +1,52 @@
+:root {
+  color-scheme: dark;
+
+  --text-color: var(--base05);
+  --text-color-light: var(--base04);
+  --text-color-warning: var(--base0A);
+  --background-color: var(--base00);
+  --hover-background: var(--base02);
+  --button-background: var(--base02);
+  --button-hover-background: var(--base03);
+  --button-active-background: var(--base03);
+  --button-active-hover-background: var(--base03);
+  --terminal-background: var(--base02);
+  --terminal-color: var(--base08);
+  --line-color: var(--base02);
+  --dark-blue: var(--base0D);
+  --light-blue: var(--base0D);
+  --headerbar-background-color: var(--base01);
+  --result-item-show-more-background: var(--base00);
+  --result-item-show-more-color: var(--base04);
+  --search-sidebar-container-border-color: var(--base02);
+  --search-sidebar-link-color: var(--base05);
+  --search-sidebar-hovered-link-background: var(--base02);
+  --search-sidebar-selected-link-background: var(--base0D);
+  --search-sidebar-selected-link-color: var(--base00);
+  --search-result-divider-line-color: var(--base02);
+  --search-result-title-color: var(--base0D);
+  --search-result-short-details-color: var(--base04);
+  --search-result-expanded-tab-border: var(--base02);
+  --loader-color: var(--base05);
+  --info-label-background: var(--base0D);
+  --link-color: var(--base0D);
+  --badge-background: var(--base0D);
+  --color-hover-tab: var(--base02);
+  --color-active-tab: var(--base02);
+  --color-active-hover-tab: var(--base03);
+
+  background-color: var(--base00);
+  color: var(--base05);
+}
+
+/* Badge/label text on colored bg */
+.label,
+.badge {
+  color: var(--base00);
+}
+
+/* Link hover */
+a:hover,
+a:focus {
+  color: var(--base05);
+}
