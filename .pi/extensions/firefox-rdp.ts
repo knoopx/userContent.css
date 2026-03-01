@@ -995,9 +995,16 @@ export default function (pi: ExtensionAPI) {
           new DOMRect(${rectX}, ${rectY}, ${rectW}, ${rectH}),
           1.0, "rgb(255,255,255)"
         );
-        const c = new OffscreenCanvas(snapshot.width, snapshot.height);
+        const MAX = 8000;
+        let w = snapshot.width, h = snapshot.height;
+        if (w > MAX || h > MAX) {
+          const s = Math.min(MAX / w, MAX / h);
+          w = Math.round(w * s);
+          h = Math.round(h * s);
+        }
+        const c = new OffscreenCanvas(w, h);
         const ctx = c.getContext("2d");
-        ctx.drawImage(snapshot, 0, 0);
+        ctx.drawImage(snapshot, 0, 0, w, h);
         snapshot.close();
         const blob = await c.convertToBlob({ type: "image/png" });
         const ab = await blob.arrayBuffer();
