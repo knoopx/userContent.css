@@ -1,0 +1,195 @@
+:root {
+  color-scheme: dark;
+  background-color: var(--base00);
+  color: var(--base05);
+}
+
+/* Llama logos */
+img[src="/public/ollama.png"],
+img[src="/public/shades.png"],
+img[src="/public/glasses.png"] {
+  filter: brightness(0) invert(1);
+}
+
+code,
+pre {
+  background-color: var(--base01);
+  color: var(--base05);
+}
+
+input {
+  background-color: var(--base01);
+  color: var(--base05);
+}
+
+main,
+section,
+strong,
+h3,
+ul,
+button,
+li,
+li::marker {
+  color: var(--base05);
+}
+
+blockquote {
+  color: var(--base04);
+}
+
+#query,
+#filter,
+#search {
+  background-color: var(--base01);
+  color: var(--base05);
+}
+
+#readme,
+#display,
+#file-explorer {
+  color: var(--base05);
+}
+
+.command,
+.truncate {
+  color: var(--base05);
+}
+
+/* Tailwind overrides */
+* {
+  border-color: var(--base03);
+}
+
+.prose {
+  --tw-prose-headings: var(--base05);
+  --tw-prose-links: var(--base0D);
+}
+
+.text-white,
+.text-black {
+  color: var(--base05);
+}
+
+.text-gray-900 {
+  color: var(--base05);
+}
+
+.text-green-500,
+.text-emerald-500,
+.text-green-700 {
+  color: var(--base0B);
+}
+
+.text-yellow-900 {
+  color: var(--base0A);
+}
+
+.text-neutral-300,
+.text-neutral-400,
+.text-neutral-500 {
+  color: var(--base04);
+}
+
+.text-neutral-700,
+.text-neutral-800,
+.text-neutral-900 {
+  color: var(--base05);
+}
+
+.text-red-500 {
+  color: var(--base08);
+}
+
+.text-blue-500,
+.text-blue-600 {
+  color: var(--base0D);
+}
+
+.text-indigo-600 {
+  color: var(--base00);
+}
+
+.bg-neutral-100 pre,
+.bg-neutral-100 .command {
+  background-color: unset;
+}
+
+.bg-white {
+  background-color: var(--base01);
+}
+
+.bg-black,
+.hover\:bg-black:hover {
+  background-color: var(--base02);
+}
+
+.bg-neutral-50 {
+  background-color: var(--base02);
+}
+
+.bg-neutral-100,
+.hover\:bg-neutral-100:hover {
+  background-color: var(--base03);
+}
+
+.bg-neutral-700,
+.bg-neutral-800 {
+  background-color: var(--base02);
+}
+
+.bg-green-50 {
+  background-color: color-mix(in srgb, var(--base0B) 10%, transparent);
+}
+
+.bg-yellow-50 {
+  background-color: color-mix(in srgb, var(--base0A) 10%, transparent);
+}
+
+.bg-indigo-50 {
+  background-color: var(--base0D);
+}
+
+.bg-\[\#ddf4ff\] {
+  background-color: color-mix(in srgb, var(--base0D) 10%, transparent);
+}
+
+.border {
+  border-color: var(--base0D);
+}
+
+.border-neutral-200,
+.border-neutral-300,
+.divide-gray-200 > :not([hidden]) ~ :not([hidden]),
+.divide-neutral-200 > :not([hidden]) ~ :not([hidden]) {
+  border-color: var(--base02);
+}
+
+.focus\:border-blue-400:focus {
+  border-color: var(--base0D);
+}
+
+.focus\:border-red-400:focus {
+  border-color: var(--base08);
+}
+
+.ring-neutral-300 {
+  --tw-ring-color: var(--base02);
+}
+
+.ring-green-600\/20 {
+  --tw-ring-color: var(--base0B);
+}
+
+.ring-yellow-600\/20 {
+  --tw-ring-color: var(--base0A);
+}
+
+select:focus,
+.ring-blue-300,
+.focus\:ring-blue-300:focus {
+  --tw-ring-color: var(--base0D);
+}
+
+.focus\:ring-red-300:focus {
+  --tw-ring-color: var(--base08);
+}
