@@ -1,0 +1,252 @@
+:root {
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--base00);
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+}
+
+#hnmain {
+  background-color: var(--base00);
+  width: 100%;
+}
+
+/* header bar */
+#hnmain > tbody > tr:first-child td {
+  background-color: var(--base0D);
+  padding: 10px 16px;
+}
+
+#hnmain > tbody > tr:first-child td a {
+  color: var(--base00);
+}
+
+#hnmain > tbody > tr:first-child .pagetop {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+#hnmain > tbody > tr:first-child .pagetop b a {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* item rows */
+.athing {
+  padding-top: 6px;
+}
+
+.athing td {
+  padding: 4px 8px;
+}
+
+.subtext {
+  padding-left: 8px;
+}
+
+/* title links */
+.titleline {
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.titleline a {
+  color: var(--base05);
+  text-decoration: none;
+}
+
+.titleline a:visited {
+  color: var(--base04);
+}
+
+.titleline a:hover {
+  color: var(--base0D);
+}
+
+/* site domain */
+.titleline .sitebit a,
+.titleline .sitestr {
+  color: var(--base03);
+  font-size: 12px;
+}
+
+/* subtext: points, user, time, comments */
+.subtext {
+  color: var(--base03);
+  font-size: 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid color-mix(in srgb, var(--base02) 30%, transparent);
+}
+
+.subtext a {
+  color: var(--base03);
+  text-decoration: none;
+}
+
+.subtext a:hover {
+  color: var(--base0D);
+}
+
+/* rank numbers */
+.rank {
+  color: var(--base03);
+  font-size: 14px;
+  min-width: 32px;
+  text-align: right;
+  padding-right: 8px;
+}
+
+/* score */
+.score {
+  color: var(--base0D);
+  font-weight: 600;
+}
+
+/* username */
+.hnuser {
+  color: var(--base0D);
+  font-weight: 500;
+}
+
+/* "More" link */
+.morelink {
+  color: var(--base05);
+  display: inline-block;
+  padding: 12px 8px;
+  font-weight: 500;
+}
+
+.morelink:hover {
+  color: var(--base0D);
+}
+
+/* vote arrows */
+.votearrow {
+  filter: hue-rotate(240deg) saturate(2);
+}
+
+/* hide spacer row between items */
+.spacer {
+  height: 2px;
+}
+
+/* footer */
+.yclinks {
+  color: var(--base03);
+  padding: 16px 0;
+}
+
+.yclinks a {
+  color: var(--base04);
+  text-decoration: none;
+}
+
+.yclinks a:hover {
+  color: var(--base0D);
+}
+
+/* footer separator line */
+td[bgcolor="#ff6600"] {
+  background-color: var(--base0D);
+  height: 2px;
+}
+
+td[bgcolor="#ff6600"] img {
+  display: none;
+}
+
+/* search input */
+input[type="text"] {
+  background-color: var(--base01);
+  color: var(--base05);
+  border: 1px solid var(--base02);
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 14px;
+  outline: none;
+}
+
+input[type="text"]:focus {
+  border-color: var(--base0D);
+}
+
+/* comment page elements */
+.comhead {
+  font-size: 12px;
+}
+
+.comhead a {
+  color: var(--base04);
+  text-decoration: none;
+}
+
+.comhead a:hover {
+  color: var(--base0D);
+}
+
+.comment {
+  color: var(--base05);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.comment a {
+  color: var(--base0D);
+}
+
+/* reply link */
+.reply a {
+  color: var(--base03);
+  text-decoration: none;
+  font-size: 12px;
+}
+
+/* gray text classes */
+.c00 {
+  color: var(--base05);
+}
+.c5a {
+  color: var(--base04);
+}
+.c73 {
+  color: var(--base04);
+}
+.c82 {
+  color: var(--base03);
+}
+.c88 {
+  color: var(--base03);
+}
+.c9c {
+  color: var(--base03);
+}
+.cae {
+  color: var(--base02);
+}
+.cbe {
+  color: var(--base02);
+}
+.cce {
+  color: var(--base02);
+}
+.cdd {
+  color: var(--base02);
+}
+
+/* text areas */
+textarea {
+  background-color: var(--base01);
+  color: var(--base05);
+  border: 1px solid var(--base02);
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 14px;
+  outline: none;
+}
+
+textarea:focus {
+  border-color: var(--base0D);
+}
