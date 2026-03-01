@@ -1,0 +1,39 @@
+:root {
+  --background: var(--base00);
+  --foreground: var(--base05);
+  --card: var(--base01);
+  --card-foreground: var(--base05);
+  --popover: var(--base01);
+  --popover-foreground: var(--base05);
+  --primary: var(--base0D);
+  --primary-foreground: var(--base00);
+  --secondary: var(--base02);
+  --secondary-foreground: var(--base05);
+  --muted: var(--base02);
+  --muted-foreground: var(--base04);
+  --accent: var(--base02);
+  --accent-foreground: var(--base05);
+  --destructive: var(--base08);
+  --border: color-mix(in srgb, var(--base03) 50%, transparent);
+  --input: color-mix(in srgb, var(--base03) 50%, transparent);
+  --ring: var(--base0D);
+  --chart-1: var(--base0D);
+  --chart-2: var(--base0B);
+  --chart-3: var(--base09);
+  --chart-4: var(--base0E);
+  --chart-5: var(--base08);
+  --sidebar: var(--base01);
+  --sidebar-foreground: var(--base05);
+  --sidebar-primary: var(--base0D);
+  --sidebar-primary-foreground: var(--base00);
+  --sidebar-accent: var(--base02);
+  --sidebar-accent-foreground: var(--base05);
+  --sidebar-border: color-mix(in srgb, var(--base03) 30%, transparent);
+  --sidebar-ring: var(--base0D);
+  --code-background: var(--base01);
+  --code-foreground: var(--base05);
+}
+
+[class*="bg-primary/5"] {
+  background-color: color-mix(in srgb, var(--base02) 80%, transparent);
+}
