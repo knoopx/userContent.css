@@ -1,0 +1,327 @@
+:root {
+  color-scheme: dark;
+
+  /* Core palette */
+  --grey900: var(--base00);
+  --grey700: var(--base04);
+  --grey600: var(--base04);
+  --grey200: var(--base01);
+  --green800: var(--base0B);
+  --green900: var(--base0B);
+  --violet800: var(--base02);
+
+  /* Yellow/orange accent */
+  --yellow100: var(--base0A);
+  --yellow500: var(--base0D);
+  --yellow700: var(--base0D);
+  --yellow800: var(--base02);
+  --yellow900: var(--base01);
+  --orange-50: var(--base09);
+  --orange-100: var(--base09);
+  --orange-200: var(--base09);
+  --orange-300: var(--base09);
+  --orange-400: var(--base09);
+  --orange-500: var(--base09);
+  --orange-600: var(--base09);
+  --orange-700: var(--base09);
+  --orange-800: var(--base09);
+  --orange-900: var(--base09);
+
+  /* Placeholder loading */
+  --placeholder-bg: var(--base03);
+  --placeholder-bg2: var(--base02);
+
+  /* Main theme */
+  --header-bg-color: var(--base00);
+  --main-color: var(--base05);
+  --main-color-light: var(--base04);
+  --main-shadow-color: var(--base00);
+  --main-bg: var(--base01);
+  --main-bg-dark: var(--base00);
+  --gray-border: var(--base02);
+  --link-color: var(--base0D);
+  --link-hover-color: var(--base0A);
+  --footer-link-color: var(--base0D);
+  --footer-header-color: var(--base05);
+  --shadow: none;
+
+  /* Notification colors */
+  --ecn-green: var(--base0B);
+  --ecn-blue: var(--base0D);
+  --ecn-orange: var(--base09);
+  --ecn-red: var(--base08);
+
+  /* Markdown alert colors */
+  --fg-color-note: var(--base0D);
+  --fg-color-tip: var(--base0B);
+  --fg-color-important: var(--base0F);
+  --fg-color-warning: var(--base0A);
+  --fg-color-caution: var(--base08);
+}
+
+/* Force dark scheme for light-dark() resolution */
+:root,
+:root[data-color-scheme="light"],
+:root[data-color-scheme="system"] {
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--base00);
+  color: var(--base05);
+}
+
+/* Header */
+[class*="header_"],
+[class*="header-inner_"] {
+  background-color: var(--base00);
+  color: var(--base05);
+}
+
+[class*="header-inner_"] a {
+  color: var(--base05);
+}
+
+/* Hero section */
+[class*="hero_"] {
+  background: var(--base00);
+}
+
+[class*="hero-title_"] {
+  color: var(--base05);
+  text-shadow: none;
+}
+
+/* Search input */
+[class*="search_"] input,
+[class*="input-lg"],
+[class*="input-sm"] {
+  background-color: var(--base02);
+  color: var(--base05);
+  border-color: var(--base03);
+}
+
+/* Search button */
+form[action="/search"] button {
+  color: var(--base00);
+  background-color: var(--base0D);
+}
+
+/* Main content area */
+main {
+  background-color: var(--base01);
+  color: var(--base05);
+}
+
+/* Docs/readme content wrapper and all inner content */
+[class*="docs_"],
+[class*="crate-info_"],
+[class*="sidebar_"],
+[class*="inner-main_"] {
+  background-color: var(--base01);
+  color: var(--base05);
+}
+
+/* Dropdown menus */
+ul[class*="list_"] {
+  background-color: var(--base01);
+  border-color: var(--base02);
+}
+
+/* Cards and list items */
+[class*="row_"],
+[class*="crate-row_"] {
+  background-color: var(--base01);
+  border-color: var(--base02);
+}
+
+[class*="row_"]:hover,
+[class*="crate-row_"]:hover {
+  background-color: var(--base02);
+}
+
+/* Homepage crate list items */
+ol[class*="list_"] li a,
+ul[class*="list_"] li a {
+  background-color: var(--base02);
+  color: var(--base05);
+}
+
+ol[class*="list_"] li a:hover,
+ul[class*="list_"] li a:hover {
+  background-color: var(--base03);
+}
+
+/* Links */
+a {
+  color: var(--base0D);
+}
+
+a:hover {
+  color: var(--base0A);
+}
+
+/* Buttons */
+.button,
+[class*="yellow-button_"],
+[class*="tan-button_"] {
+  --text-color: var(--base00);
+  --bg-color-top: var(--base0D);
+  --bg-color-bottom: var(--base0D);
+  --bg-color-top-light: var(--base0A);
+  --bg-color-bottom-light: var(--base0A);
+  --bg-color-top-dark: var(--base0D);
+  --bg-color-bottom-dark: var(--base0D);
+  color: var(--base00);
+}
+
+[class*="red-button_"] {
+  --bg-color-top: var(--base08);
+  --bg-color-bottom: var(--base08);
+  --bg-color-top-dark: var(--base08);
+  --bg-color-bottom-dark: var(--base08);
+}
+
+/* Footer */
+footer {
+  background-color: var(--base00);
+  color: var(--base05);
+}
+
+footer a {
+  color: var(--base0D);
+}
+
+/* Dropdowns */
+[class*="list_"][class*="dropdown_"],
+ul[class*="list_"]:not(main *) {
+  background-color: var(--base01);
+  border-color: var(--base02);
+}
+
+[class*="item_"]:hover,
+[class*="selected_"] {
+  background-color: var(--base02);
+}
+
+/* Crate detail page */
+[class*="crate-title_"],
+h1,
+h2,
+h3 {
+  color: var(--base05);
+}
+
+/* Version badges */
+[class*="yanked-badge_"] {
+  background-color: var(--base08);
+  color: var(--base00);
+}
+
+/* Avatar backgrounds */
+[class*="avatar_"] {
+  background-color: var(--base02);
+  box-shadow: none;
+}
+
+/* Tables in READMEs */
+table th,
+table td {
+  border-color: var(--base02);
+}
+
+/* Code blocks */
+pre,
+code {
+  background-color: var(--base00);
+  color: var(--base05);
+}
+
+/* Stat numbers */
+[class*="stats-value_"] {
+  color: var(--base05);
+}
+
+[class*="stats-value_"] [class*="label_"],
+[class*="stats-value_"] svg {
+  color: var(--base04);
+}
+
+/* Blurb description */
+[class*="blurb_"] {
+  color: var(--base04);
+}
+
+/* Tab navigation */
+[class*="tab_"] {
+  color: var(--base04);
+}
+
+[class*="tab_"][class*="active_"],
+[class*="tab_"][class*="selected_"] {
+  color: var(--base0D);
+  border-color: var(--base0D);
+}
+
+/* SVG icon circle backgrounds */
+[fill="#FFF"] {
+  fill: var(--base02);
+}
+
+/* SVG icon foregrounds */
+[fill="#B13B89"],
+[fill="#B84D94"],
+svg[class*="download-icon"] path {
+  fill: var(--base0D);
+}
+
+[stroke="#B84D94"] {
+  stroke: var(--base0D);
+}
+
+/* Row dividers — light-dark() sibling borders */
+[class*="list_"] > * + *,
+[class*="crates-list_"] > * + *,
+[class*="token-list_"] > * + *,
+[class*="feed-list_"] > * + * {
+  border-top-color: var(--base03);
+}
+
+/* All list/card containers — override light-dark() backgrounds and shadows */
+[class*="list_"],
+[class*="token-list_"],
+[class*="crates-list_"],
+[class*="reasons-list_"] {
+  background-color: var(--base01);
+  box-shadow: none;
+  border-color: var(--base02);
+}
+
+/* Crate row cards */
+[class*="crate-row_"],
+[class*="row_"] {
+  background-color: var(--base01);
+  box-shadow: none;
+  border-bottom: 1px solid var(--base03);
+}
+
+/* Tab spacing */
+[class*="link_"][class*="active_"],
+[class*="link_"]:not([class*="index-link"]) {
+  margin-right: 0.25rem;
+}
+
+/* Flexible width container */
+.width-limit {
+  max-width: 100%;
+  width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* Tooltip */
+.ember-tooltip {
+  color: var(--base05);
+  background-color: var(--base00);
+  text-shadow: none;
+}
