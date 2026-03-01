@@ -1,0 +1,416 @@
+:root {
+  color-scheme: dark;
+
+  --color-fg-default: var(--base05);
+  --color-fg-muted: var(--base04);
+  --color-fg-subtle: var(--base04);
+  --color-fg-on-emphasis: var(--base00);
+  --color-fg-brand: var(--base0D);
+  --color-fg-accent: var(--base0D);
+  --color-fg-success: var(--base0B);
+  --color-fg-attention: var(--base0A);
+  --color-fg-danger: var(--base08);
+  --color-border-strong: var(--base02);
+
+  --header-color: var(--base05);
+  --wombat-red: var(--base08);
+  --wombat-red-hover: var(--base08);
+
+  --search-fg-muted: var(--base04);
+  --search-border: var(--base02);
+  --search-bg-subtle: var(--base02);
+
+  --color-prettylights-syntax-comment: var(--base03);
+  --color-prettylights-syntax-constant: var(--base0C);
+  --color-prettylights-syntax-entity: var(--base0D);
+  --color-prettylights-syntax-storage-modifier-import: var(--base09);
+  --color-prettylights-syntax-entity-tag: var(--base0C);
+  --color-prettylights-syntax-keyword: var(--base0F);
+  --color-prettylights-syntax-string: var(--base0B);
+  --color-prettylights-syntax-variable: var(--base09);
+  --color-prettylights-syntax-invalid-illegal-text: var(--base08);
+  --color-prettylights-syntax-invalid-illegal-bg: color-mix(
+    in srgb,
+    var(--base08) 15%,
+    transparent
+  );
+  --color-prettylights-syntax-markup-heading: var(--base0C);
+  --color-prettylights-syntax-markup-italic: var(--base0A);
+  --color-prettylights-syntax-markup-bold: var(--base0A);
+  --color-prettylights-syntax-markup-deleted-text: var(--base05);
+  --color-prettylights-syntax-markup-deleted-bg: color-mix(
+    in srgb,
+    var(--base08) 40%,
+    transparent
+  );
+  --color-prettylights-syntax-markup-inserted-text: var(--base05);
+  --color-prettylights-syntax-markup-inserted-bg: color-mix(
+    in srgb,
+    var(--base0B) 40%,
+    transparent
+  );
+  --color-prettylights-syntax-markup-changed-text: var(--base05);
+  --color-prettylights-syntax-markup-changed-bg: color-mix(
+    in srgb,
+    var(--base0A) 40%,
+    transparent
+  );
+
+  background-color: var(--base00);
+  color: var(--base05);
+}
+
+main {
+  background-color: var(--base00);
+  color: var(--base05);
+}
+
+/* Primary background */
+.bg-white,
+._4ea0e50d {
+  background-color: var(--base00);
+}
+
+/* Background layer */
+.bg-black-05,
+._7eb68a55,
+.e9998f88 {
+  background-color: var(--base01);
+}
+
+/* Primary text */
+.black,
+.black-90,
+.black-80,
+a {
+  color: var(--base05);
+}
+
+/* Secondary text */
+.black-70,
+.black-60,
+.dim:focus,
+.dim:hover {
+  color: var(--base04);
+}
+
+/* Inverse text */
+.white {
+  color: var(--base00);
+}
+
+/* Borders */
+.b--black-10,
+.b--black-20 {
+  border-color: var(--base02);
+}
+
+/* Top loading bar */
+div.fixed.top-0.left-0.z-999 {
+  background-color: var(--base0D);
+}
+
+/* Magnifying glass icon */
+svg g[stroke="#777777"] {
+  stroke: var(--base04);
+}
+
+/* Header */
+header {
+  border-bottom-color: var(--base02);
+}
+
+header a[href="/"] > svg > path {
+  fill: var(--base05);
+}
+
+/* Search box */
+form#search button[type="submit"] {
+  background-color: var(--base04);
+}
+
+form#search > div {
+  border-color: var(--base02);
+}
+
+form#search > div:focus-within {
+  border-color: var(--base04);
+}
+
+form#search > div div:has(input[type="search"]) {
+  background-color: var(--base01);
+}
+
+form#search > div div:has(input[type="search"]) input[type="search"] {
+  color: var(--base05);
+}
+
+form#search > div div.list {
+  background-color: var(--base00);
+}
+
+form#search > div div.list ul[aria-label="Search results"] li {
+  border-bottom-color: var(--base02);
+}
+
+form#search > div div.list ul[aria-label="Search results"] li:hover {
+  background-color: var(--base02);
+}
+
+/* Package tabs */
+ul[aria-owns*="package-tab-"] li {
+  border-color: var(--base0A);
+}
+
+/* Deprecation warning */
+.bg-washed-red {
+  background-color: color-mix(in srgb, var(--base08) 30%, transparent);
+}
+
+.bg-washed-red code {
+  background-color: var(--base01);
+  color: var(--base05);
+}
+
+.red {
+  color: var(--base08);
+}
+
+/* "public" text */
+._813b53b2 {
+  color: var(--base0B);
+}
+
+/* Sidebar icons */
+svg:has(+ p > [aria-label="Copy install command line"]),
+button[aria-label="Copy install command line"] svg path,
+[aria-labelledby="repository repository-link"] svg g,
+[aria-labelledby="homePage homePage-link"] svg path,
+[aria-label="Showing weekly downloads"] svg {
+  fill: var(--base05);
+}
+
+/* Copy install command box */
+p:has(button[aria-label="Copy install command line"]) {
+  border-color: var(--base02);
+}
+
+/* Weekly downloads chart */
+div:has(> svg > [class^="sparkline--"]) {
+  border-bottom-color: color-mix(in srgb, var(--base0D) 20%, transparent);
+}
+
+div:has(> svg > [class^="sparkline--"]) svg {
+  stroke: var(--base0D);
+  fill: color-mix(in srgb, var(--base0D) 20%, transparent);
+}
+
+/* Sidebar text */
+.c84e15be {
+  color: var(--base04);
+}
+
+/* Tab headings */
+[id^="tabpanel-"] h2 {
+  color: var(--base05);
+}
+
+/* File explorer tab */
+#tabpanel-explore > div > div {
+  border-color: var(--base02);
+}
+
+#tabpanel-explore > div > div > div:has(h2),
+#tabpanel-explore > div > div div:has(+ pre) {
+  border-bottom-color: var(--base02);
+}
+
+#tabpanel-explore > div > div ul li {
+  border-bottom-color: var(--base02);
+}
+
+#tabpanel-explore > div > div ul li:hover {
+  background-color: var(--base02);
+}
+
+#tabpanel-explore > div > div div:has(+ pre) {
+  background-color: var(--base01);
+}
+
+#tabpanel-explore > div > div pre {
+  background-color: var(--base00);
+  color: var(--base05);
+}
+
+/* Versions tab */
+#tabpanel-versions ul li[class] div {
+  border-bottom-color: var(--base02);
+}
+
+/* Dependencies/dependents tab */
+#tabpanel-dependencies ul a,
+#tabpanel-dependents ul a {
+  color: var(--base0D);
+}
+
+#tabpanel-dependencies ul a:hover,
+#tabpanel-dependents ul a:hover {
+  color: var(--base05);
+}
+
+/* Readme */
+#tabpanel-readme #readme {
+  color: var(--base05);
+}
+
+#tabpanel-readme #readme a {
+  color: var(--base0D);
+}
+
+#tabpanel-readme #readme h1,
+#tabpanel-readme #readme h2,
+#tabpanel-readme #readme h3,
+#tabpanel-readme #readme h4,
+#tabpanel-readme #readme h5,
+#tabpanel-readme #readme h6 {
+  color: var(--base05);
+}
+
+#tabpanel-readme #readme p,
+#tabpanel-readme #readme li {
+  color: var(--base04);
+}
+
+#tabpanel-readme #readme strong {
+  color: var(--base05);
+}
+
+#tabpanel-readme #readme pre,
+#tabpanel-readme #readme code {
+  background-color: var(--base01);
+  color: var(--base05);
+}
+
+#tabpanel-readme #readme h1,
+#tabpanel-readme #readme h2 {
+  border-bottom-color: var(--base02);
+}
+
+#tabpanel-readme #readme blockquote {
+  background-color: var(--base02);
+  border-left-color: var(--base03);
+}
+
+#tabpanel-readme #readme table {
+  color: var(--base05);
+}
+
+#tabpanel-readme #readme table td,
+#tabpanel-readme #readme table th {
+  background-color: var(--base00);
+  border-color: var(--base02);
+}
+
+/* Keyword links */
+#user-content-keywords {
+  color: var(--base05);
+}
+
+#user-content-keywords + ul a {
+  color: var(--base0D);
+}
+
+/* Buttons */
+._24a1e9c7 {
+  background-image: none;
+  background-color: var(--base02);
+  color: var(--base05);
+  border-color: var(--base03);
+}
+
+._24a1e9c7:not([disabled]):hover {
+  background-color: var(--base03);
+}
+
+._24a1e9c7[disabled] {
+  background-color: var(--base01);
+  color: var(--base04);
+}
+
+/* Signup button */
+#signup[href="/signup"] {
+  border-color: var(--base02);
+}
+
+/* Dropdowns */
+details ul[class*="Dropdown__DropdownMenu"] {
+  background-color: var(--base00);
+  border-color: var(--base02);
+}
+
+details ul[class*="Dropdown__DropdownMenu"] li a:hover {
+  background-color: var(--base01);
+  color: var(--base05);
+}
+
+/* Select menus */
+select {
+  background-color: var(--base02);
+  border-color: var(--base03);
+  color: var(--base05);
+}
+
+/* Search pagination */
+nav[aria-label="Pagination Navigation"] div > a {
+  background-color: var(--base00);
+  border-color: var(--base02);
+}
+
+nav[aria-label="Pagination Navigation"] div > a:hover {
+  background-color: var(--base01);
+}
+
+/* Exact match */
+#pkg-list-exact-match {
+  color: var(--base00);
+  background-color: var(--base0D);
+}
+
+/* Footer */
+footer h3 {
+  color: var(--base05);
+}
+
+footer ul a:hover {
+  color: var(--base0D);
+}
+
+footer::after {
+  background-image: linear-gradient(
+    139deg,
+    var(--base09),
+    var(--base08),
+    var(--base08),
+    var(--base0F)
+  );
+}
+
+/* Settings */
+div[role="listitem"],
+div[role="radiogroup"] {
+  background: var(--base00);
+}
+
+/* Pricing */
+.dark-gray {
+  color: var(--base05);
+}
+
+.light-silver {
+  color: var(--base04);
+}
+
+.bg-light-gray,
+.bg-near-white {
+  background-color: var(--base02);
+}
