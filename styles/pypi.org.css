@@ -1,0 +1,490 @@
+:root {
+  /* Page background and text */
+  background-color: var(--base00);
+  color: var(--base05);
+}
+
+body {
+  background-color: var(--base00);
+  color: var(--base05);
+}
+
+/* Header */
+.site-header,
+.site-header--dark {
+  background-color: var(--base01);
+  border-bottom-color: var(--base02);
+}
+
+/* Banner / hero area */
+.banner {
+  background-color: var(--base01);
+  background-image: none;
+}
+
+.banner a {
+  color: var(--base0D);
+}
+
+.homepage-banner__title {
+  color: var(--base05);
+}
+
+/* Search input */
+.search-form__search,
+.search-form--large .search-form__search,
+.search-form--small .search-form__search {
+  background-color: var(--base02);
+  color: var(--base05);
+  border-color: var(--base03);
+}
+
+.search-form__search::placeholder {
+  color: var(--base04);
+}
+
+.search-form__button {
+  background-color: var(--base02);
+  color: var(--base05);
+  border-color: var(--base03);
+}
+
+/* Statistics bar */
+.horizontal-section--grey {
+  background-color: var(--base01);
+  border-top-color: var(--base02);
+  border-bottom-color: var(--base02);
+}
+
+.statistics-bar {
+  background-color: var(--base01);
+  border-top-color: var(--base02);
+  border-bottom-color: var(--base02);
+}
+
+.statistics-bar__statistic {
+  color: var(--base05);
+}
+
+.statistics-bar p {
+  color: var(--base05);
+}
+
+/* About section */
+.about-pypi {
+  background-color: var(--base00);
+}
+
+/* Links */
+a {
+  color: var(--base0D);
+}
+
+a:hover {
+  color: var(--base07);
+}
+
+/* Horizontal menu (nav links) */
+.horizontal-menu__link {
+  color: var(--base05);
+}
+
+.horizontal-menu__link:hover {
+  color: var(--base0D);
+}
+
+/* Package header (detail page) */
+.package-header {
+  background-color: var(--base01);
+  border-bottom-color: var(--base02);
+}
+
+.package-header__name {
+  color: var(--base05);
+}
+
+.package-header__pip-instructions {
+  background-color: var(--base02);
+  color: var(--base0B);
+}
+
+.package-header__pip-instructions .package-header__pip-instructions--clipboard {
+  color: var(--base04);
+}
+
+.package-header__date {
+  color: var(--base04);
+}
+
+/* Latest version badge */
+.badge {
+  background-color: var(--base02);
+  color: var(--base0B);
+}
+
+.badge--success {
+  background-color: color-mix(in srgb, var(--base0B) 20%, transparent);
+  color: var(--base0B);
+}
+
+.badge--danger {
+  background-color: color-mix(in srgb, var(--base08) 20%, transparent);
+  color: var(--base08);
+}
+
+/* Package description */
+.package-description__summary {
+  color: var(--base04);
+  border-bottom-color: var(--base02);
+}
+
+/* Sidebar sections */
+.sidebar-section {
+  border-bottom-color: var(--base02);
+}
+
+.sidebar-section__title {
+  color: var(--base05);
+}
+
+/* Vertical tabs (navigation) */
+.vertical-tabs__tab {
+  color: var(--base0D);
+  border-color: var(--base02);
+}
+
+.vertical-tabs__tab:hover {
+  background-color: var(--base02);
+  color: var(--base05);
+}
+
+.vertical-tabs__tab--is-active {
+  background-color: var(--base0D);
+  color: var(--base00);
+  border-color: var(--base0D);
+}
+
+.vertical-tabs__tab--is-active:hover {
+  background-color: var(--base0D);
+  color: var(--base00);
+}
+
+/* Project description content */
+.project-description {
+  color: var(--base05);
+}
+
+.project-description h1,
+.project-description h2,
+.project-description h3,
+.project-description h4 {
+  color: var(--base05);
+}
+
+/* Code blocks */
+pre {
+  background-color: var(--base01);
+  color: var(--base05);
+  border-color: var(--base02);
+}
+
+code {
+  background-color: var(--base01);
+  color: var(--base0B);
+  border-color: var(--base02);
+}
+
+.highlight .k,
+.highlight .kn,
+.highlight .kp {
+  color: var(--base0E);
+}
+
+.highlight .n,
+.highlight .nn,
+.highlight .nf {
+  color: var(--base05);
+}
+
+.highlight .s,
+.highlight .s1,
+.highlight .s2,
+.highlight .si {
+  color: var(--base09);
+}
+
+.highlight .nb,
+.highlight .bp {
+  color: var(--base0C);
+}
+
+.highlight .mi,
+.highlight .mf {
+  color: var(--base0B);
+}
+
+.highlight .o,
+.highlight .p {
+  color: var(--base05);
+}
+
+.highlight .c,
+.highlight .c1,
+.highlight .cm {
+  color: var(--base03);
+}
+
+.highlight .gp {
+  color: var(--base04);
+}
+
+/* Inline code / kbd */
+.project-description code,
+.project-description tt {
+  background-color: var(--base02);
+  color: var(--base0C);
+}
+
+/* Footer */
+.footer {
+  background-color: var(--base01);
+  border-top-color: var(--base02);
+}
+
+.footer a {
+  color: var(--base0D);
+}
+
+.footer h2 {
+  color: var(--base05);
+}
+
+.footer__text {
+  color: var(--base04);
+}
+
+/* Button styles */
+.button {
+  background-color: var(--base02);
+  color: var(--base05);
+  border-color: var(--base03);
+}
+
+.button--primary {
+  background-color: var(--base0D);
+  color: var(--base00);
+  border-color: var(--base0D);
+}
+
+.button--primary:hover {
+  background-color: var(--base07);
+  color: var(--base00);
+}
+
+/* Search results */
+.package-snippet {
+  background-color: var(--base00);
+  border-color: var(--base02);
+}
+
+.package-snippet:hover {
+  background-color: var(--base01);
+}
+
+.package-snippet__name {
+  color: var(--base0D);
+}
+
+.package-snippet__description {
+  color: var(--base04);
+}
+
+.package-snippet__created {
+  color: var(--base03);
+}
+
+.package-snippet__version {
+  color: var(--base04);
+}
+
+/* Applied filters */
+.filter-badge {
+  background-color: var(--base02);
+  color: var(--base05);
+}
+
+/* Left sidebar filters */
+.filter-panel {
+  background-color: var(--base01);
+}
+
+.filter-panel__heading {
+  color: var(--base05);
+}
+
+/* Breadcrumbs */
+.breadcrumbs a {
+  color: var(--base0D);
+}
+
+/* Callout blocks */
+.callout-block {
+  border-color: var(--base02);
+}
+
+.callout-block--danger {
+  border-color: var(--base08);
+  background-color: color-mix(in srgb, var(--base08) 10%, transparent);
+  color: var(--base08);
+}
+
+/* Notification bars */
+.notification-bar {
+  background-color: var(--base02);
+  color: var(--base05);
+}
+
+.notification-bar--warning {
+  background-color: color-mix(in srgb, var(--base09) 20%, transparent);
+  color: var(--base09);
+}
+
+.notification-bar--danger {
+  background-color: color-mix(in srgb, var(--base08) 20%, transparent);
+  color: var(--base08);
+}
+
+.notification-bar--success {
+  background-color: color-mix(in srgb, var(--base0B) 20%, transparent);
+  color: var(--base0B);
+}
+
+/* Horizontal rule / dividers */
+hr {
+  border-color: var(--base02);
+  background-color: var(--base02);
+}
+
+/* Hide ads and clutter */
+.ethical-sidebar,
+.sponsors,
+.stuck-notification,
+.notification-bar--dismissable {
+  display: none;
+}
+
+/* Status badges */
+.status-badge {
+  color: var(--base0B);
+}
+
+.status-badge--good,
+.status-badge--good span,
+.status-badge--good::before {
+  background-color: var(--base0D);
+  color: var(--base00);
+  border-color: var(--base0D);
+  font-weight: bold;
+}
+
+.status-badge--bad {
+  background-color: color-mix(in srgb, var(--base08) 20%, transparent);
+  color: var(--base08);
+}
+
+/* Release history page */
+.release {
+  border-color: var(--base02);
+}
+
+.release__card {
+  background-color: var(--base00);
+  border-color: var(--base02);
+}
+
+.release__version {
+  color: var(--base0D);
+}
+
+.release__version--current {
+  color: var(--base0B);
+}
+
+.release--current {
+  background-color: var(--base01);
+}
+
+.release__node {
+  background-color: var(--base02);
+}
+
+/* Table styles */
+table {
+  border-color: var(--base02);
+}
+
+th {
+  background-color: var(--base01);
+  color: var(--base05);
+  border-color: var(--base02);
+}
+
+td {
+  border-color: var(--base02);
+  color: var(--base05);
+}
+
+/* File list */
+.file {
+  border-color: var(--base02);
+}
+
+/* Maintainer avatars */
+.sidebar-section .maintainer {
+  color: var(--base05);
+}
+
+/* Copy button / clipboard */
+.copy-tooltip {
+  background-color: var(--base02);
+  color: var(--base05);
+}
+
+/* Gravatar placeholders */
+.gravatar {
+  background-color: var(--base02);
+}
+
+/* Sponsor section on homepage */
+.sponsors {
+  background-color: var(--base00);
+}
+
+/* Form fields */
+.form-group__field,
+input,
+select,
+textarea {
+  background-color: var(--base02);
+  color: var(--base05);
+  border-color: var(--base03);
+}
+
+/* Language switcher */
+.language-switcher {
+  background-color: var(--base01);
+}
+
+/* Dropdown menus */
+.dropdown__content {
+  background-color: var(--base01);
+  border-color: var(--base02);
+}
+
+.dropdown__link {
+  color: var(--base05);
+}
+
+.dropdown__link:hover {
+  background-color: var(--base02);
+}
