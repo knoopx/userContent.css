@@ -1,0 +1,436 @@
+:root {
+  /* Base text colors */
+  --color-base: var(--base05);
+  --color-base-fixed: var(--base05);
+  --color-base--hover: var(--base06);
+  --color-emphasized: var(--base07);
+  --color-subtle: var(--base04);
+  --color-placeholder: var(--base03);
+  --color-disabled: var(--base03);
+  --color-disabled-emphasized: var(--base04);
+  --color-inverted: var(--base00);
+  --color-inverted-fixed: var(--base00);
+  --color-base--subtle: var(--base04);
+
+  /* Progressive (links) */
+  --color-progressive: var(--base0D);
+  --color-progressive--hover: var(--base0A);
+  --color-progressive--active: var(--base09);
+  --color-progressive--focus: var(--base0D);
+
+  /* Destructive */
+  --color-destructive: var(--base08);
+  --color-destructive--hover: var(--base08);
+  --color-destructive--active: var(--base08);
+  --color-destructive--focus: var(--base0D);
+
+  /* Visited */
+  --color-visited: var(--base0F);
+  --color-visited--hover: var(--base0F);
+  --color-visited--active: var(--base0F);
+  --color-destructive--visited: var(--base08);
+  --color-destructive--visited--hover: var(--base08);
+  --color-destructive--visited--active: var(--base08);
+
+  /* Status colors */
+  --color-error: var(--base08);
+  --color-error--hover: var(--base08);
+  --color-error--active: var(--base08);
+  --color-warning: var(--base09);
+  --color-success: var(--base0B);
+  --color-notice: var(--base04);
+
+  /* Icon colors */
+  --color-icon-error: var(--base08);
+  --color-icon-warning: var(--base09);
+  --color-icon-success: var(--base0B);
+  --color-icon-notice: var(--base04);
+
+  /* Content diff */
+  --color-content-added: var(--base0B);
+  --color-content-removed: var(--base08);
+
+  /* Box shadows */
+  --box-shadow-color-base: var(--base02);
+  --box-shadow-color-progressive--active: var(--base02);
+  --box-shadow-color-progressive--focus: var(--base0D);
+  --box-shadow-color-progressive-selected: var(--base0D);
+  --box-shadow-color-progressive-selected--hover: var(--base0A);
+  --box-shadow-color-progressive-selected--active: var(--base09);
+  --box-shadow-color-destructive--focus: var(--base0D);
+  --box-shadow-color-inverted: var(--base00);
+  --box-shadow-color-alpha-base: color-mix(
+    in srgb,
+    var(--base00) 87%,
+    transparent
+  );
+
+  /* Background colors */
+  --background-color-base: var(--base00);
+  --background-color-base-fixed: var(--base00);
+  --background-color-neutral: var(--base02);
+  --background-color-neutral-subtle: var(--base01);
+  --background-color-interactive: var(--base02);
+  --background-color-interactive--hover: var(--base03);
+  --background-color-interactive--active: var(--base03);
+  --background-color-interactive-subtle: var(--base01);
+  --background-color-interactive-subtle--hover: var(--base02);
+  --background-color-interactive-subtle--active: var(--base03);
+  --background-color-disabled: var(--base02);
+  --background-color-disabled-subtle: var(--base01);
+  --background-color-inverted: var(--base05);
+  --background-color-progressive: var(--base0D);
+  --background-color-progressive--hover: var(--base0A);
+  --background-color-progressive--active: var(--base09);
+  --background-color-progressive--focus: var(--base0D);
+  --background-color-progressive-subtle: color-mix(
+    in srgb,
+    var(--base0D) 15%,
+    var(--base00)
+  );
+  --background-color-progressive-subtle--hover: color-mix(
+    in srgb,
+    var(--base0D) 25%,
+    var(--base00)
+  );
+  --background-color-progressive-subtle--active: color-mix(
+    in srgb,
+    var(--base0D) 35%,
+    var(--base00)
+  );
+  --background-color-destructive: var(--base08);
+  --background-color-destructive--hover: var(--base08);
+  --background-color-destructive--active: var(--base08);
+  --background-color-destructive--focus: var(--base0D);
+  --background-color-destructive-subtle: color-mix(
+    in srgb,
+    var(--base08) 15%,
+    var(--base00)
+  );
+  --background-color-destructive-subtle--hover: color-mix(
+    in srgb,
+    var(--base08) 25%,
+    var(--base00)
+  );
+  --background-color-destructive-subtle--active: color-mix(
+    in srgb,
+    var(--base08) 35%,
+    var(--base00)
+  );
+  --background-color-error: var(--base08);
+  --background-color-error--hover: var(--base08);
+  --background-color-error--active: var(--base08);
+  --background-color-error-subtle: color-mix(
+    in srgb,
+    var(--base08) 15%,
+    var(--base00)
+  );
+  --background-color-error-subtle--hover: color-mix(
+    in srgb,
+    var(--base08) 25%,
+    var(--base00)
+  );
+  --background-color-error-subtle--active: color-mix(
+    in srgb,
+    var(--base08) 35%,
+    var(--base00)
+  );
+  --background-color-warning-subtle: color-mix(
+    in srgb,
+    var(--base09) 15%,
+    var(--base00)
+  );
+  --background-color-success-subtle: color-mix(
+    in srgb,
+    var(--base0B) 15%,
+    var(--base00)
+  );
+  --background-color-notice-subtle: var(--base01);
+  --background-color-content-added: color-mix(
+    in srgb,
+    var(--base0B) 20%,
+    var(--base00)
+  );
+  --background-color-content-removed: color-mix(
+    in srgb,
+    var(--base08) 20%,
+    var(--base00)
+  );
+  --background-color-target-text: color-mix(
+    in srgb,
+    var(--base09) 25%,
+    var(--base00)
+  );
+  --background-color-backdrop-light: color-mix(
+    in srgb,
+    var(--base00) 65%,
+    transparent
+  );
+  --background-color-backdrop-dark: color-mix(
+    in srgb,
+    var(--base00) 85%,
+    transparent
+  );
+  --background-color-button-quiet--hover: color-mix(
+    in srgb,
+    var(--base02) 50%,
+    transparent
+  );
+  --background-color-button-quiet--active: color-mix(
+    in srgb,
+    var(--base03) 50%,
+    transparent
+  );
+  --background-color-input-binary--checked: var(--base0D);
+  --background-color-tab-list-item-framed--hover: color-mix(
+    in srgb,
+    var(--base02) 30%,
+    transparent
+  );
+  --background-color-tab-list-item-framed--active: color-mix(
+    in srgb,
+    var(--base02) 65%,
+    transparent
+  );
+
+  /* Border colors */
+  --border-color-base: var(--base03);
+  --border-color-emphasized: var(--base05);
+  --border-color-subtle: var(--base02);
+  --border-color-muted: var(--base02);
+  --border-color-interactive: var(--base03);
+  --border-color-interactive--hover: var(--base04);
+  --border-color-interactive--active: var(--base05);
+  --border-color-disabled: var(--base02);
+  --border-color-inverted: var(--base00);
+  --border-color-inverted-fixed: var(--base00);
+  --border-color-progressive: var(--base0D);
+  --border-color-progressive--hover: var(--base0A);
+  --border-color-progressive--active: var(--base09);
+  --border-color-progressive--focus: var(--base0D);
+  --border-color-destructive: var(--base08);
+  --border-color-destructive--hover: var(--base08);
+  --border-color-destructive--active: var(--base08);
+  --border-color-destructive--focus: var(--base0D);
+  --border-color-error: var(--base08);
+  --border-color-error--hover: var(--base08);
+  --border-color-error--active: var(--base08);
+  --border-color-warning: var(--base09);
+  --border-color-warning--hover: var(--base09);
+  --border-color-warning--active: var(--base09);
+  --border-color-success: var(--base0B);
+  --border-color-notice: var(--base04);
+  --border-color-content-added: color-mix(
+    in srgb,
+    var(--base0B) 30%,
+    var(--base00)
+  );
+  --border-color-content-removed: color-mix(
+    in srgb,
+    var(--base08) 30%,
+    var(--base00)
+  );
+  --border-color-divider: var(--base02);
+
+  /* Outline & accent */
+  --outline-color-progressive--focus: var(--base0D);
+  --accent-color-base: var(--base0D);
+}
+
+/* Infobox */
+.infobox,
+.infobox * {
+  color: var(--base05);
+  border-color: var(--base02);
+}
+
+.infobox {
+  background-color: var(--base01);
+}
+
+.infobox-above,
+.infobox-header {
+  background-color: var(--base02);
+}
+
+/* Navbox */
+.navbox {
+  background: var(--base00);
+  border-color: var(--base02);
+}
+
+.navbox-title,
+.navbox-abovebelow {
+  background: var(--base02);
+  color: var(--base05);
+}
+
+.navbox-group {
+  background: var(--base01);
+  color: var(--base05);
+  border-color: var(--base02);
+}
+
+.navbox-subgroup {
+  background: var(--base00);
+  border-color: var(--base02);
+}
+
+.navbox-even {
+  background: var(--base01);
+}
+
+.navbox-odd {
+  background: var(--base00);
+}
+
+.navbox-list {
+  border-color: var(--base02);
+}
+
+/* Override inline styles on navbox elements */
+.navbox [style*="background"],
+.navbox [style*="color"] {
+  background: var(--base02);
+  color: var(--base05);
+}
+
+.navbox .navbox-list[style],
+.navbox .navbox-odd[style],
+.navbox .navbox-even[style] {
+  background: var(--base00);
+}
+
+.navbox table[style] {
+  background: transparent;
+}
+
+/* Wikitable */
+.wikitable {
+  background-color: var(--base01);
+  color: var(--base05);
+  border-color: var(--base02);
+}
+
+.wikitable th {
+  background-color: var(--base02);
+  color: var(--base05);
+  border-color: var(--base03);
+}
+
+.wikitable td {
+  border-color: var(--base02);
+}
+
+/* Categories */
+.catlinks {
+  background-color: var(--base01);
+  border-color: var(--base02);
+}
+
+/* Ambox / message boxes */
+.ambox,
+.tmbox,
+.imbox,
+.ombox,
+.mbox-small {
+  background-color: var(--base01);
+  border-color: var(--base02);
+  color: var(--base05);
+}
+
+/* TOC */
+.toc {
+  background-color: var(--base01);
+  border-color: var(--base02);
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: var(--base01);
+  border-color: var(--base02);
+  color: var(--base05);
+}
+
+.sidebar *,
+.navbox * {
+  color: var(--base05);
+}
+
+/* Quotebox */
+.quotebox {
+  background-color: var(--base01);
+  border-color: var(--base02);
+}
+
+/* Main page */
+.mp-box,
+.MainPageBG {
+  background: var(--base01);
+  border-color: var(--base02);
+}
+
+.mp-h2 {
+  background: var(--base02);
+  color: var(--base0D);
+  border-color: var(--base03);
+}
+
+#mp-topbanner {
+  background: var(--base01);
+  border-color: var(--base02);
+}
+
+/* Logo */
+.mw-logo-icon,
+.mw-logo-wordmark,
+.mw-logo-tagline {
+  filter: invert(1) brightness(2);
+}
+
+/* Portal bar and sister projects */
+.portal-bar,
+.sister-bar,
+.sistersitebox {
+  background: var(--base01);
+  border-color: var(--base02);
+  color: var(--base05);
+}
+
+/* Horizontal rules */
+.mw-parser-output hr {
+  border-color: var(--base02);
+}
+
+/* Reference lists */
+.refbegin,
+.reflist {
+  color: var(--base05);
+}
+
+/* Hatnotes and disambiguation */
+.hatnote {
+  color: var(--base04);
+}
+
+/* Succession boxes and plainlist tables */
+.mw-parser-output table[style] {
+  border-color: var(--base02);
+  background-color: var(--base01);
+  color: var(--base05);
+}
+
+/* Override any inline color/background in article content */
+.mw-parser-output [style*="color:black"],
+.mw-parser-output [style*="color: black"],
+.mw-parser-output [style*="color:#0"],
+.mw-parser-output [style*="color: #0"] {
+  color: var(--base05);
+}
+
+.mw-parser-output [style*="background:#"],
+.mw-parser-output [style*="background: #"],
+.mw-parser-output [style*="background-color:#"],
+.mw-parser-output [style*="background-color: #"] {
+  background: var(--base01);
+}

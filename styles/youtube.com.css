@@ -1,0 +1,429 @@
+:root,
+html[dark],
+html[dark][dark],
+html[unified][dark][dark],
+html[darker-dark-theme][dark],
+html[color-version][dark] {
+  /* Base backgrounds */
+  --yt-spec-base-background: var(--base00);
+  --yt-spec-raised-background: var(--base01);
+  --yt-spec-menu-background: var(--base02);
+  --yt-spec-inverted-background: var(--base05);
+
+  /* Text */
+  --yt-spec-text-primary: var(--base05);
+  --yt-spec-text-secondary: var(--base04);
+  --yt-spec-text-disabled: var(--base03);
+  --yt-spec-text-primary-inverse: var(--base00);
+  --yt-spec-wordmark-text: var(--base05);
+
+  /* Accent / call to action */
+  --yt-spec-call-to-action: var(--base0D);
+  --yt-spec-call-to-action-hover: var(--base0A);
+  --yt-spec-call-to-action-inverse: var(--base0D);
+
+  /* Suggested action */
+  --yt-spec-suggested-action: var(--base02);
+  --yt-spec-suggested-action-hover: var(--base03);
+  --yt-spec-suggested-action-inverse: var(--base06);
+
+  /* Additive / tonal */
+  --yt-spec-additive-background: color-mix(
+    in srgb,
+    var(--base05) 10%,
+    transparent
+  );
+  --yt-spec-additive-background-inverse: color-mix(
+    in srgb,
+    var(--base00) 5%,
+    transparent
+  );
+  --yt-spec-additive-wash: color-mix(in srgb, var(--base05) 5%, transparent);
+  --yt-spec-additive-rim: color-mix(in srgb, var(--base05) 15%, transparent);
+
+  /* Outline */
+  --yt-spec-outline: color-mix(in srgb, var(--base05) 20%, transparent);
+  --yt-spec-outline-inverse: color-mix(in srgb, var(--base00) 10%, transparent);
+  --yt-spec-outline-opaque: var(--base03);
+  --yt-spec-outline-inverse-opaque: var(--base04);
+  --yt-spec-outline-rim: color-mix(in srgb, var(--base05) 15%, transparent);
+
+  /* Hover */
+  --yt-spec-button-chip-background-hover: color-mix(
+    in srgb,
+    var(--base05) 20%,
+    transparent
+  );
+  --yt-spec-mono-tonal-hover: color-mix(
+    in srgb,
+    var(--base05) 20%,
+    transparent
+  );
+  --yt-spec-mono-tonal-hover-inverse: color-mix(
+    in srgb,
+    var(--base00) 10%,
+    transparent
+  );
+  --yt-spec-mono-filled-hover: var(--base04);
+  --yt-spec-mono-filled-hover-inverse: var(--base02);
+  --yt-spec-inverse-wash: color-mix(in srgb, var(--base05) 30%, transparent);
+  --yt-spec-inverse-rim: color-mix(in srgb, var(--base05) 20%, transparent);
+
+  /* Touch response */
+  --yt-spec-touch-response: var(--base05);
+  --yt-spec-touch-response-inverse: var(--base00);
+
+  /* Status colors */
+  --yt-spec-red-indicator: var(--base08);
+  --yt-spec-error-indicator: var(--base08);
+  --yt-spec-error-background-red: color-mix(
+    in srgb,
+    var(--base08) 20%,
+    transparent
+  );
+  --yt-spec-brand-red-contrast: var(--base08);
+  --yt-spec-themed-green: var(--base0B);
+  --yt-spec-static-brand-red: var(--base08);
+  --yt-spec-text-warning: var(--base09);
+  --yt-spec-text-complete: var(--base0B);
+  --yt-spec-text-error: var(--base08);
+  --yt-spec-background-warning: color-mix(
+    in srgb,
+    var(--base09) 30%,
+    transparent
+  );
+  --yt-spec-background-complete: color-mix(
+    in srgb,
+    var(--base0B) 30%,
+    transparent
+  );
+  --yt-spec-static-ad-yellow: var(--base0A);
+
+  /* Static */
+  --yt-spec-static-black: var(--base00);
+  --yt-spec-static-brand-black: var(--base00);
+  --yt-spec-static-brand-white: var(--base05);
+  --yt-spec-static-white-background: var(--base05);
+  --yt-spec-static-grey: var(--base03);
+
+  /* Frosted glass */
+  --yt-spec-frosted-glass-mobile: color-mix(
+    in srgb,
+    var(--base00) 70%,
+    transparent
+  );
+  --yt-spec-frosted-glass-desktop: color-mix(
+    in srgb,
+    var(--base00) 80%,
+    transparent
+  );
+
+  /* Shadow / scrim */
+  --yt-spec-shadow-medium: color-mix(in srgb, var(--base00) 25%, transparent);
+  --yt-spec-scrim-background-gradient-1: color-mix(
+    in srgb,
+    var(--base00) 0%,
+    transparent
+  );
+  --yt-spec-scrim-background-gradient-2: color-mix(
+    in srgb,
+    var(--base00) 30%,
+    transparent
+  );
+  --yt-spec-scrim-background-gradient-3: color-mix(
+    in srgb,
+    var(--base00) 60%,
+    transparent
+  );
+  --yt-spec-scrim-background-gradient-4: color-mix(
+    in srgb,
+    var(--base00) 90%,
+    transparent
+  );
+  --yt-spec-scrim-background-gradient-5: var(--base00);
+
+  /* Overlay */
+  --yt-spec-overlay-background-solid: var(--base00);
+  --yt-spec-overlay-background-heavy: color-mix(
+    in srgb,
+    var(--base00) 80%,
+    transparent
+  );
+  --yt-spec-overlay-background-medium: color-mix(
+    in srgb,
+    var(--base00) 60%,
+    transparent
+  );
+  --yt-spec-overlay-background-medium-light: color-mix(
+    in srgb,
+    var(--base00) 30%,
+    transparent
+  );
+  --yt-spec-overlay-background-light: color-mix(
+    in srgb,
+    var(--base00) 10%,
+    transparent
+  );
+  --yt-spec-overlay-background-extra-light: color-mix(
+    in srgb,
+    var(--base00) 3%,
+    transparent
+  );
+  --yt-spec-overlay-additive-background: color-mix(
+    in srgb,
+    var(--base02) 60%,
+    transparent
+  );
+  --yt-spec-overlay-text-primary: var(--base05);
+  --yt-spec-overlay-text-secondary: color-mix(
+    in srgb,
+    var(--base05) 70%,
+    transparent
+  );
+  --yt-spec-overlay-text-disabled: color-mix(
+    in srgb,
+    var(--base05) 30%,
+    transparent
+  );
+  --yt-spec-overlay-text-primary-inverse: var(--base00);
+  --yt-spec-overlay-call-to-action: var(--base0D);
+  --yt-spec-overlay-call-to-action-hover: var(--base0A);
+  --yt-spec-overlay-button-primary: color-mix(
+    in srgb,
+    var(--base05) 30%,
+    transparent
+  );
+  --yt-spec-overlay-button-secondary: color-mix(
+    in srgb,
+    var(--base05) 10%,
+    transparent
+  );
+  --yt-spec-overlay-background-brand: color-mix(
+    in srgb,
+    var(--base08) 90%,
+    transparent
+  );
+  --yt-spec-overlay-touch-response: var(--base05);
+  --yt-spec-overlay-touch-response-inverse: var(--base00);
+  --yt-spec-overlay-filled-hover: var(--base04);
+  --yt-spec-overlay-tonal-hover: color-mix(
+    in srgb,
+    var(--base05) 20%,
+    transparent
+  );
+  --yt-spec-overlay-additive-wash: color-mix(
+    in srgb,
+    var(--base05) 15%,
+    transparent
+  );
+  --yt-spec-overlay-inverse-rim: color-mix(
+    in srgb,
+    var(--base05) 20%,
+    transparent
+  );
+  --yt-spec-overlay-additive-rim: color-mix(
+    in srgb,
+    var(--base05) 15%,
+    transparent
+  );
+  --yt-spec-overlay-outline-rim: color-mix(
+    in srgb,
+    var(--base05) 15%,
+    transparent
+  );
+  --yt-spec-themed-overlay-background: color-mix(
+    in srgb,
+    var(--base00) 80%,
+    transparent
+  );
+
+  /* Deprecated but still used */
+  --yt-deprecated-general-background-a: var(--base01);
+  --yt-deprecated-general-background-b: var(--base00);
+  --yt-deprecated-general-background-c: var(--base00);
+  --yt-deprecated-overlay-icon-active-other: var(--base05);
+
+  /* Searchbox */
+  --ytd-searchbox-background: var(--base00);
+  --ytd-searchbox-text-color: var(--base05);
+  --ytd-searchbox-border-color: color-mix(
+    in srgb,
+    var(--base04) 40%,
+    transparent
+  );
+  --ytd-searchbox-legacy-border-color: var(--base02);
+  --ytd-searchbox-legacy-border-shadow-color: transparent;
+  --ytd-searchbox-legacy-button-color: color-mix(
+    in srgb,
+    var(--base05) 8%,
+    transparent
+  );
+  --ytd-searchbox-legacy-button-border-color: var(--base02);
+  --ytd-searchbox-legacy-button-focus-color: color-mix(
+    in srgb,
+    var(--base05) 8%,
+    transparent
+  );
+  --ytd-searchbox-legacy-button-hover-color: color-mix(
+    in srgb,
+    var(--base05) 8%,
+    transparent
+  );
+  --ytd-searchbox-legacy-button-hover-border-color: var(--base02);
+  --ytd-searchbox-legacy-button-icon-color: var(--base04);
+
+  /* Live chat */
+  --yt-live-chat-secondary-background-color: var(--base02);
+  --yt-live-chat-toast-background-color: var(--base02);
+  --yt-live-chat-mode-change-background-color: var(--base02);
+  --yt-live-chat-secondary-text-color: color-mix(
+    in srgb,
+    var(--base05) 70%,
+    transparent
+  );
+  --yt-live-chat-tertiary-text-color: color-mix(
+    in srgb,
+    var(--base05) 54%,
+    transparent
+  );
+  --yt-live-chat-enabled-send-button-color: var(--base05);
+  --yt-live-chat-disabled-icon-button-color: color-mix(
+    in srgb,
+    var(--base05) 30%,
+    transparent
+  );
+  --yt-live-chat-owner-color: var(--base0A);
+  --yt-live-chat-sponsor-color: var(--base0B);
+  --yt-live-chat-moderator-color: var(--base0D);
+  --yt-live-chat-mention-background-color: var(--base09);
+  --yt-live-chat-mention-text-color: var(--base05);
+  --yt-live-chat-dialog-background-color: var(--base02);
+  --yt-live-chat-action-panel-background-color-transparent: color-mix(
+    in srgb,
+    var(--base02) 80%,
+    transparent
+  );
+  --yt-live-chat-overlay-color: color-mix(
+    in srgb,
+    var(--base00) 50%,
+    transparent
+  );
+  --yt-live-chat-disabled-button-background-color: var(--base03);
+  --yt-live-chat-text-input-field-inactive-underline-color: var(--base03);
+  --yt-live-chat-picker-button-hover-color: var(--base04);
+  --yt-live-chat-deleted-message-color: color-mix(
+    in srgb,
+    var(--base05) 50%,
+    transparent
+  );
+  --yt-live-chat-deleted-message-bar-color: color-mix(
+    in srgb,
+    var(--base05) 50%,
+    transparent
+  );
+  --yt-live-chat-reconnect-message-color: var(--base05);
+  --yt-live-chat-text-input-field-suggestion-background-color: var(--base02);
+  --yt-live-chat-text-input-field-suggestion-background-color-hover: var(
+    --base01
+  );
+  --yt-live-chat-shimmer-background-color: color-mix(
+    in srgb,
+    var(--base00) 40%,
+    transparent
+  );
+  --yt-live-chat-vem-background-color: var(--base02);
+  --yt-live-chat-product-picker-icon-color: color-mix(
+    in srgb,
+    var(--base05) 50%,
+    transparent
+  );
+  --yt-live-chat-product-picker-hover-color: var(--base03);
+  --yt-live-chat-product-picker-disabled-icon-color: color-mix(
+    in srgb,
+    var(--base05) 30%,
+    transparent
+  );
+  --yt-live-chat-automod-button-background-color-hover: color-mix(
+    in srgb,
+    var(--base05) 50%,
+    transparent
+  );
+  --yt-live-chat-automod-button-explanation-color: color-mix(
+    in srgb,
+    var(--base05) 70%,
+    transparent
+  );
+  --yt-live-chat-slider-active-color: var(--base0D);
+  --yt-live-chat-slider-container-color: var(--base03);
+  --yt-live-chat-slider-markers-color: var(--base05);
+  --yt-emoji-picker-variant-selector-bg-color: var(--base01);
+  --yt-emoji-picker-search-background-color: var(--base03);
+  --yt-emoji-picker-search-color: var(--base05);
+  --yt-emoji-picker-search-placeholder-color: var(--base04);
+}
+
+/* Logo: recolor red play button to accent */
+#logo-icon svg path[fill="#FF0033"],
+#logo-icon svg path[fill="#ff0033"],
+#logo-icon svg path[fill="red"] {
+  fill: var(--base0D);
+}
+
+/* Searchbox */
+.ytSearchboxComponentInputBox,
+.ytSearchboxComponentInputBoxDark {
+  background-color: var(--base01);
+  border-color: var(--base03);
+}
+
+.ytSearchboxComponentInput {
+  color: var(--base05);
+}
+
+.ytSearchboxComponentSearchButton,
+.ytSearchboxComponentSearchButtonDark {
+  background-color: var(--base02);
+  border-color: var(--base03);
+}
+
+.ytSearchboxComponentSearchButton svg,
+.ytSearchboxComponentSearchButtonDark svg {
+  color: var(--base04);
+}
+
+/* Sidebar clutter */
+/* "More from YouTube" section (Premium, Music, Kids) */
+ytd-guide-section-renderer:has(a[href*="premium"]),
+ytd-guide-section-renderer:has(a[href*="music_premium"]),
+ytd-guide-section-renderer:has(a[title="YouTube Premium"]) {
+  display: none;
+}
+
+/* Sidebar: Shorts, Report history, Help, Send feedback, footer */
+ytd-guide-entry-renderer:has(a[title="Shorts"]),
+ytd-guide-entry-renderer:has(a[href*="reporthistory"]),
+ytd-guide-entry-renderer:has(a[title="Help"]),
+ytd-guide-entry-renderer:has(a[title="Send feedback"]),
+ytd-mini-guide-entry-renderer:has(a[title="Shorts"]),
+ytd-guide-renderer #footer,
+ytd-guide-renderer #guide-links-primary,
+ytd-guide-renderer #guide-links-secondary {
+  display: none;
+}
+
+/* Element hiding */
+div[class^="YtInlinePlayerControlsTopLeftControls"] {
+  display: none;
+}
+
+div[class^="ytp-paid-content-overlay"] {
+  display: none;
+}
+
+ytd-rich-section-renderer:has(#dismissible) {
+  display: none;
+}
+
+a[href="https://support.google.com/youtube?p=ppp&nohelpkit=1"] {
+  display: none;
+}

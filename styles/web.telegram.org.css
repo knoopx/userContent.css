@@ -1,0 +1,207 @@
+:root,
+body {
+  --color-background: var(--base00);
+  --color-background-secondary: var(--base01);
+  --color-background-sidebar: var(--base01);
+  --color-background-own: var(--base02);
+  --color-background-own-apple: var(--base02);
+  --color-background-own-selected: var(--base03);
+  --color-background-selected: var(--base03);
+  --color-background-compact-menu: var(--base01);
+  --color-background-compact-menu-hover: var(--base02);
+  --color-background-compact-menu-reactions: var(--base01);
+  --color-background-secondary-accent: var(--base01);
+  --color-background-menu-separator: color-mix(
+    in srgb,
+    var(--base05) 10%,
+    transparent
+  );
+  --color-text: var(--base05);
+  --color-text-secondary: var(--base06);
+  --color-text-secondary-apple: var(--base06);
+  --color-text-lighter: var(--base04);
+  --color-text-meta: var(--base06);
+  --color-text-meta-apple: var(--base06);
+  --color-text-meta-colored: var(--base06);
+  --color-text-green: var(--base0B);
+  --color-message-meta-own: color-mix(in srgb, var(--base05) 85%, transparent);
+  --color-message-non-contact: var(--base06);
+  --color-primary: var(--base0D);
+  --color-primary-shade: var(--base0D);
+  --color-primary-shade-darker: var(--base0D);
+  --color-primary-tint: color-mix(in srgb, var(--base0D) 80%, transparent);
+  --color-primary-opacity: color-mix(in srgb, var(--base0D) 15%, transparent);
+  --color-primary-opacity-hover: color-mix(
+    in srgb,
+    var(--base0D) 25%,
+    transparent
+  );
+  --accent-color: var(--base0D);
+  --accent-background-color: color-mix(in srgb, var(--base0D) 10%, transparent);
+  --accent-background-active-color: color-mix(
+    in srgb,
+    var(--base0D) 20%,
+    transparent
+  );
+  --color-accent-own: var(--base05);
+  --color-links: var(--base0D);
+  --color-link: var(--base0D);
+  --color-own-links: var(--base0D);
+  --color-borders: var(--base02);
+  --color-borders-alternate: var(--base02);
+  --color-borders-input: var(--base03);
+  --color-borders-read-story: var(--base03);
+  --color-dividers: var(--base02);
+  --color-dividers-android: var(--base01);
+  --color-chat-hover: var(--base01);
+  --color-chat-active: var(--base02);
+  --color-chat-active-greyed: var(--base03);
+  --color-chat-username: var(--base05);
+  --color-item-active: var(--base02);
+  --color-item-hover: var(--base01);
+  --color-reply-hover: var(--base01);
+  --color-reply-active: var(--base02);
+  --color-reply-own-hover: var(--base03);
+  --color-reply-own-active: var(--base03);
+  --color-reply-own-hover-apple: var(--base03);
+  --color-reply-own-active-apple: var(--base03);
+  --color-error: var(--base08);
+  --color-negative-progress: var(--base08);
+  --color-warning: var(--base09);
+  --color-orange: var(--base09);
+  --color-light-coral: color-mix(in srgb, var(--base09) 20%, transparent);
+  --color-yellow: var(--base0A);
+  --color-green: var(--base0B);
+  --color-green-darker: var(--base0B);
+  --color-success: var(--base0B);
+  --color-scrollbar: color-mix(in srgb, var(--base04) 30%, transparent);
+  --color-scrollbar-code: color-mix(in srgb, var(--base04) 30%, transparent);
+  --color-icon-secondary: var(--base06);
+  --color-composer-button: color-mix(in srgb, var(--base06) 80%, transparent);
+  --color-placeholders: var(--base06);
+  --color-fill: var(--base04);
+  --color-section: var(--base01);
+  --color-selection-highlight: var(--base0D);
+  --color-selection-highlight-emoji: color-mix(
+    in srgb,
+    var(--base0D) 70%,
+    transparent
+  );
+  --color-skeleton-background: color-mix(
+    in srgb,
+    var(--base01) 50%,
+    transparent
+  );
+  --color-skeleton-foreground: color-mix(
+    in srgb,
+    var(--base03) 30%,
+    transparent
+  );
+  --color-interactive-active: var(--base0D);
+  --color-interactive-inactive: color-mix(
+    in srgb,
+    var(--base04) 25%,
+    transparent
+  );
+  --color-interactive-buffered: color-mix(
+    in srgb,
+    var(--base04) 50%,
+    transparent
+  );
+  --color-interactive-element-hover: color-mix(
+    in srgb,
+    var(--base0D) 30%,
+    transparent
+  );
+  --color-toast-background: color-mix(in srgb, var(--base00) 90%, transparent);
+  --color-toast-action: var(--base0D);
+  --color-default-shadow: transparent;
+  --color-light-shadow: transparent;
+  --color-white: var(--base05);
+  --color-gray: var(--base06);
+  --color-list-icon: var(--base06);
+  --color-telegram-blue: var(--base0D);
+  --color-code: var(--base0E);
+  --color-code-bg: color-mix(in srgb, var(--base01) 80%, transparent);
+  --color-code-own: var(--base0E);
+  --color-code-own-bg: color-mix(in srgb, var(--base01) 80%, transparent);
+  --color-message-reaction: color-mix(in srgb, var(--base0D) 20%, transparent);
+  --color-message-reaction-hover: color-mix(
+    in srgb,
+    var(--base0D) 30%,
+    transparent
+  );
+  --color-message-reaction-own: color-mix(
+    in srgb,
+    var(--base0D) 25%,
+    transparent
+  );
+  --color-message-reaction-hover-own: color-mix(
+    in srgb,
+    var(--base0D) 35%,
+    transparent
+  );
+  --color-message-reaction-chosen-hover: color-mix(
+    in srgb,
+    var(--base0D) 40%,
+    transparent
+  );
+  --color-message-reaction-chosen-hover-own: color-mix(
+    in srgb,
+    var(--base0D) 40%,
+    transparent
+  );
+  --color-webpage-initial-background: var(--base02);
+  --color-stars: var(--base0A);
+  --color-heart: var(--base08);
+  --color-archive: var(--base04);
+  --color-deleted-account: var(--base04);
+  --color-voice-transcribe-button: color-mix(
+    in srgb,
+    var(--base0D) 30%,
+    transparent
+  );
+  --color-voice-transcribe-button-own: color-mix(
+    in srgb,
+    var(--base0D) 30%,
+    transparent
+  );
+  --color-premium-color: var(--base0F);
+  --color-forum-unread-topic-hover: var(--base02);
+  --color-forum-hover-unread-topic-hover: var(--base03);
+  --color-forum-hover-unread-topic: var(--base04);
+  --color-topic-blue: var(--base0C);
+  --color-topic-yellow: var(--base0A);
+  --color-topic-violet: var(--base0F);
+  --color-topic-green: var(--base0B);
+  --color-topic-rose: var(--base08);
+  --color-topic-red: var(--base08);
+  --color-topic-grey: var(--base04);
+  --action-message-bg: color-mix(in srgb, var(--base01) 85%, transparent);
+  --hover-color: color-mix(in srgb, var(--base05) 6%, transparent);
+  --ripple-color: color-mix(in srgb, var(--base05) 8%, transparent);
+  --theme-background-color: var(--base00);
+  --pattern-color: transparent;
+}
+
+#MiddleColumn > div:nth-child(2)::after {
+  display: none;
+}
+
+.composer-wrapper {
+  background-color: var(--base01);
+}
+
+.MiddleHeader {
+  background-color: var(--base01);
+}
+
+.DWjOG2Ze {
+  background: var(--base03);
+  color: var(--base05);
+}
+
+.O7esHjyC {
+  background: var(--base0D);
+  color: var(--base00);
+}

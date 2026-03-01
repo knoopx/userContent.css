@@ -1,0 +1,368 @@
+:root {
+  --dt_color-plt-primary-100: var(--base00-rgb);
+  --sk_primary_background: var(--base01-rgb);
+  --sk_primary_foreground: var(--base05-rgb);
+  --sk_foreground: var(--base05-rgb);
+  --sk_foreground_max: var(--base05-rgb);
+  --sk_foreground_max_solid: var(--base05);
+  --sk_foreground_high: var(--base06-rgb);
+  --sk_foreground_high_solid: var(--base06);
+  --sk_foreground_mid: var(--base04-rgb);
+  --sk_foreground_mid_solid: var(--base04);
+  --sk_foreground_low: var(--base03-rgb);
+  --sk_foreground_low_solid: var(--base03);
+  --sk_foreground_min: var(--base02-rgb);
+  --sk_foreground_min_solid: var(--base02);
+  --sk_foreground_soft: var(--base03-rgb);
+  --sk_foreground_soft_solid: var(--base03);
+  --sk_inverted_background: var(--base05-rgb);
+  --sk_inverted_foreground: var(--base00-rgb);
+  --sk_highlight: var(--base07-rgb);
+  --sk_highlight_hover: var(--base0E-rgb);
+  --sk_highlight_accent: var(--base07-rgb);
+  --sk_secondary_highlight: var(--base0C-rgb);
+  --sk_focused-shadow-color: color-mix(in srgb, var(--base07) 40%, transparent);
+  --sk_red: var(--base08-rgb);
+  --sk_raspberry_red: var(--base08-rgb);
+
+  --dt_color-base-pry: var(--base00);
+  --dt_color-base-pry-hover: var(--base01);
+  --dt_color-base-pry-pressed: var(--base02);
+  --dt_color-base-sec: var(--base00);
+  --dt_color-base-sec-hover: var(--base01);
+  --dt_color-base-sec-pressed: var(--base02);
+  --dt_color-base-ter: var(--base01);
+  --dt_color-base-ter-hover: var(--base02);
+  --dt_color-base-ter-pressed: var(--base03);
+  --dt_color-base-min: var(--base00);
+  --dt_color-base-hgl-1: color-mix(in srgb, var(--base07) 15%, var(--base00));
+  --dt_color-base-hgl-1-hover: color-mix(
+    in srgb,
+    var(--base07) 25%,
+    var(--base00)
+  );
+  --dt_color-base-hgl-1-pressed: color-mix(
+    in srgb,
+    var(--base07) 35%,
+    var(--base00)
+  );
+  --dt_color-base-hgl-2: color-mix(in srgb, var(--base0B) 15%, var(--base00));
+  --dt_color-base-hgl-2-hover: color-mix(
+    in srgb,
+    var(--base0B) 25%,
+    var(--base00)
+  );
+  --dt_color-base-hgl-2-pressed: color-mix(
+    in srgb,
+    var(--base0B) 35%,
+    var(--base00)
+  );
+  --dt_color-base-hgl-3: color-mix(in srgb, var(--base09) 15%, var(--base00));
+  --dt_color-base-imp: color-mix(in srgb, var(--base08) 15%, var(--base00));
+  --dt_color-base-imp-hover: color-mix(
+    in srgb,
+    var(--base08) 25%,
+    var(--base00)
+  );
+  --dt_color-base-imp-pressed: color-mix(
+    in srgb,
+    var(--base08) 35%,
+    var(--base00)
+  );
+  --dt_color-base-modal: color-mix(in srgb, var(--base00) 60%, transparent);
+  --dt_color-base-modal-hover: var(--base01);
+  --dt_color-base-modal-pressed: var(--base02);
+  --dt_color-base-inv-pry: var(--base01);
+  --dt_color-base-inv-hgl-1: color-mix(
+    in srgb,
+    var(--base07) 40%,
+    var(--base00)
+  );
+  --dt_color-base-inv-hgl-1-hover: color-mix(
+    in srgb,
+    var(--base07) 25%,
+    var(--base00)
+  );
+  --dt_color-base-inv-hgl-1-pressed: color-mix(
+    in srgb,
+    var(--base07) 35%,
+    var(--base00)
+  );
+  --dt_color-base-inv-hgl-2: color-mix(
+    in srgb,
+    var(--base0B) 40%,
+    var(--base00)
+  );
+  --dt_color-base-inv-hgl-2-hover: color-mix(
+    in srgb,
+    var(--base0B) 25%,
+    var(--base00)
+  );
+  --dt_color-base-inv-hgl-2-pressed: color-mix(
+    in srgb,
+    var(--base0B) 35%,
+    var(--base00)
+  );
+  --dt_color-base-inv-hgl-3: color-mix(
+    in srgb,
+    var(--base09) 40%,
+    var(--base00)
+  );
+  --dt_color-base-inv-imp: var(--base08);
+  --dt_color-base-inv-imp-hover: color-mix(
+    in srgb,
+    var(--base08) 25%,
+    var(--base00)
+  );
+  --dt_color-base-inv-imp-pressed: color-mix(
+    in srgb,
+    var(--base08) 35%,
+    var(--base00)
+  );
+
+  --dt_color-content-pry: var(--base05);
+  --dt_color-content-sec: var(--base06);
+  --dt_color-content-ter: var(--base04);
+  --dt_color-content-hgl-1: var(--base0C);
+  --dt_color-content-hgl-2: var(--base0B);
+  --dt_color-content-hgl-3: var(--base09);
+  --dt_color-content-imp: var(--base08);
+  --dt_color-content-inv-pry: var(--base05);
+  --dt_color-content-inv-sec: var(--base06);
+  --dt_color-content-inv-hgl-1: var(--base0C);
+  --dt_color-content-inv-hgl-2: var(--base0B);
+  --dt_color-content-inv-hgl-3: var(--base09);
+  --dt_color-content-inv-imp: var(--base08);
+
+  --dt_color-surf-pry: color-mix(in srgb, var(--base05) 6%, transparent);
+  --dt_color-surf-pry-hover: color-mix(in srgb, var(--base05) 10%, transparent);
+  --dt_color-surf-pry-pressed: color-mix(
+    in srgb,
+    var(--base05) 18%,
+    transparent
+  );
+  --dt_color-surf-sec: color-mix(in srgb, var(--base05) 25%, transparent);
+  --dt_color-surf-sec-hover: color-mix(in srgb, var(--base05) 10%, transparent);
+  --dt_color-surf-sec-pressed: color-mix(
+    in srgb,
+    var(--base05) 18%,
+    transparent
+  );
+  --dt_color-surf-hgl-1: color-mix(in srgb, var(--base07) 25%, transparent);
+  --dt_color-surf-hgl-1-hover: color-mix(
+    in srgb,
+    var(--base07) 10%,
+    transparent
+  );
+  --dt_color-surf-hgl-1-pressed: color-mix(
+    in srgb,
+    var(--base07) 18%,
+    transparent
+  );
+  --dt_color-surf-hgl-2: color-mix(in srgb, var(--base0B) 25%, transparent);
+  --dt_color-surf-hgl-2-hover: color-mix(
+    in srgb,
+    var(--base0B) 10%,
+    transparent
+  );
+  --dt_color-surf-hgl-2-pressed: color-mix(
+    in srgb,
+    var(--base0B) 18%,
+    transparent
+  );
+  --dt_color-surf-hgl-3: color-mix(in srgb, var(--base09) 18%, transparent);
+  --dt_color-surf-hgl-3-hover: color-mix(
+    in srgb,
+    var(--base09) 10%,
+    transparent
+  );
+  --dt_color-surf-hgl-3-pressed: color-mix(
+    in srgb,
+    var(--base09) 18%,
+    transparent
+  );
+  --dt_color-surf-imp: color-mix(in srgb, var(--base08) 25%, transparent);
+  --dt_color-surf-imp-hover: color-mix(in srgb, var(--base08) 10%, transparent);
+  --dt_color-surf-imp-pressed: color-mix(
+    in srgb,
+    var(--base08) 18%,
+    transparent
+  );
+  --dt_color-surf-inv: color-mix(in srgb, var(--base05) 18%, transparent);
+  --dt_color-surf-inv-hover: color-mix(in srgb, var(--base05) 10%, transparent);
+  --dt_color-surf-inv-pressed: color-mix(
+    in srgb,
+    var(--base05) 18%,
+    transparent
+  );
+  --dt_color-surf-inv-hgl-3: color-mix(in srgb, var(--base09) 18%, transparent);
+  --dt_color-surf-inv-hgl-3-hover: color-mix(
+    in srgb,
+    var(--base09) 10%,
+    transparent
+  );
+  --dt_color-surf-inv-hgl-3-pressed: color-mix(
+    in srgb,
+    var(--base09) 18%,
+    transparent
+  );
+
+  --dt_color-otl-pry: var(--base03);
+  --dt_color-otl-sec: color-mix(in srgb, var(--base03) 50%, transparent);
+  --dt_color-otl-ter: color-mix(in srgb, var(--base03) 30%, transparent);
+  --dt_color-otl-hgl-1: var(--base0C);
+  --dt_color-otl-hgl-1-sec: color-mix(in srgb, var(--base0C) 20%, transparent);
+  --dt_color-otl-hgl-2: var(--base0B);
+  --dt_color-otl-hgl-2-sec: color-mix(in srgb, var(--base0B) 20%, transparent);
+  --dt_color-otl-hgl-3-sec: color-mix(in srgb, var(--base09) 20%, transparent);
+  --dt_color-otl-imp: var(--base08);
+  --dt_color-otl-imp-sec: color-mix(in srgb, var(--base08) 25%, transparent);
+  --dt_color-otl-inv-pry: var(--base03);
+  --dt_color-otl-inv-sec: color-mix(in srgb, var(--base03) 50%, transparent);
+  --dt_color-otl-inv-ter: color-mix(in srgb, var(--base03) 30%, transparent);
+
+  --dt_color-ctr-pry: var(--base01);
+  --dt_color-ctr-pry-hover: var(--base02);
+  --dt_color-ctr-pry-pressed: var(--base03);
+  --dt_color-ctr-sec: var(--base01);
+  --dt_color-ctr-sec-hover: var(--base02);
+  --dt_color-ctr-sec-pressed: var(--base03);
+
+  --dt_color-theme-base-pry: var(--base07);
+  --dt_color-theme-base-pry-hover: color-mix(
+    in srgb,
+    var(--base07) 80%,
+    transparent
+  );
+  --dt_color-theme-base-pry-pressed: color-mix(
+    in srgb,
+    var(--base07) 60%,
+    transparent
+  );
+  --dt_color-theme-base-sec: var(--base0D);
+  --dt_color-theme-base-sec-hover: color-mix(
+    in srgb,
+    var(--base0D) 80%,
+    transparent
+  );
+  --dt_color-theme-base-sec-pressed: color-mix(
+    in srgb,
+    var(--base0D) 60%,
+    transparent
+  );
+  --dt_color-theme-base-hgl-1: var(--base03);
+  --dt_color-theme-base-hgl-1-hover: var(--base04);
+  --dt_color-theme-base-hgl-1-pressed: var(--base04);
+  --dt_color-theme-base-hgl-2: var(--base0B);
+  --dt_color-theme-base-hgl-2-hover: color-mix(
+    in srgb,
+    var(--base0B) 80%,
+    transparent
+  );
+  --dt_color-theme-base-hgl-2-pressed: color-mix(
+    in srgb,
+    var(--base0B) 60%,
+    transparent
+  );
+  --dt_color-theme-base-imp: var(--base08);
+  --dt_color-theme-base-imp-hover: color-mix(
+    in srgb,
+    var(--base08) 80%,
+    transparent
+  );
+  --dt_color-theme-base-imp-pressed: color-mix(
+    in srgb,
+    var(--base08) 60%,
+    transparent
+  );
+  --dt_color-theme-base-inv-pry: var(--base05);
+  --dt_color-theme-base-inv-pry-hover: color-mix(
+    in srgb,
+    var(--base05) 80%,
+    transparent
+  );
+  --dt_color-theme-base-inv-pry-pressed: color-mix(
+    in srgb,
+    var(--base05) 60%,
+    transparent
+  );
+  --dt_color-theme-base-inv-sec: var(--base06);
+  --dt_color-theme-base-inv-sec-hover: color-mix(
+    in srgb,
+    var(--base06) 80%,
+    transparent
+  );
+  --dt_color-theme-base-inv-sec-pressed: color-mix(
+    in srgb,
+    var(--base06) 60%,
+    transparent
+  );
+  --dt_color-theme-base-inv-hgl-1: var(--base03);
+  --dt_color-theme-base-inv-hgl-1-hover: var(--base04);
+  --dt_color-theme-base-inv-hgl-1-pressed: var(--base04);
+  --dt_color-theme-base-inv-hgl-2: var(--base0B);
+  --dt_color-theme-base-inv-hgl-2-hover: color-mix(
+    in srgb,
+    var(--base0B) 80%,
+    transparent
+  );
+  --dt_color-theme-base-inv-hgl-2-pressed: color-mix(
+    in srgb,
+    var(--base0B) 60%,
+    transparent
+  );
+  --dt_color-theme-base-inv-imp: var(--base08);
+  --dt_color-theme-base-inv-imp-hover: color-mix(
+    in srgb,
+    var(--base08) 80%,
+    transparent
+  );
+  --dt_color-theme-base-inv-imp-pressed: color-mix(
+    in srgb,
+    var(--base08) 60%,
+    transparent
+  );
+
+  --dt_color-theme-surf-pry: var(--base00);
+  --dt_color-theme-surf-pry-hover: var(--base01);
+  --dt_color-theme-surf-pry-pressed: var(--base02);
+  --dt_color-theme-surf-sec: var(--base01);
+  --dt_color-theme-surf-sec-hover: var(--base02);
+  --dt_color-theme-surf-sec-pressed: var(--base03);
+  --dt_color-theme-surf-ter: var(--base02);
+  --dt_color-theme-surf-ter-hover: var(--base03);
+  --dt_color-theme-surf-ter-pressed: var(--base04);
+  --dt_color-theme-surf-inv-pry: var(--base01);
+  --dt_color-theme-surf-inv-pry-hover: var(--base02);
+  --dt_color-theme-surf-inv-pry-pressed: var(--base03);
+  --dt_color-theme-surf-inv-sec: var(--base02);
+  --dt_color-theme-surf-inv-sec-hover: var(--base03);
+  --dt_color-theme-surf-inv-sec-pressed: var(--base04);
+  --dt_color-theme-surf-inv-ter: var(--base00);
+  --dt_color-theme-surf-inv-ter-hover: var(--base01);
+  --dt_color-theme-surf-inv-ter-pressed: var(--base02);
+
+  --dt_color-theme-content-pry: var(--base05);
+  --dt_color-theme-content-sec: var(--base06);
+  --dt_color-theme-content-ter: var(--base04);
+  --dt_color-theme-content-hgl-1: var(--base07);
+  --dt_color-theme-content-imp: var(--base08);
+  --dt_color-theme-content-inv-pry: var(--base05);
+  --dt_color-theme-content-inv-sec: var(--base06);
+  --dt_color-theme-content-inv-ter: var(--base04);
+  --dt_color-theme-content-inv-imp: var(--base08);
+  --dt_color-theme-content-inv-imp-sec: var(--base0F);
+
+  --dt_color-theme-otl-inv-pry: var(--base03);
+}
+
+.p-tab_rail,
+.p-control_strip,
+.p-ia4_top_nav {
+  opacity: 1;
+}
+
+.p-workspace_banner__desktop-notifications--ia4 {
+  background-color: var(--base01);
+  color: var(--base05);
+}

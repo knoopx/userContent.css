@@ -1,0 +1,860 @@
+/* High-specificity WDS theme overrides (match doubled-class selectors) */
+.x1646n1n.x1646n1n,
+.x1hk1k9l.x1hk1k9l,
+.x1j21q21.x1j21q21,
+.x1kumeab.x1kumeab,
+.x1tdctmr.x1tdctmr,
+.x28tbhy.x28tbhy,
+.xddo19n.xddo19n {
+  --WDS-accent: var(--base0D);
+  --WDS-accent-deemphasized: var(--base02);
+  --WDS-accent-emphasized: var(--base0A);
+  --WDS-content-action-emphasized: var(--base0D);
+  --WDS-content-external-link: var(--base0D);
+  --WDS-persistent-always-branded: var(--base0D);
+  --WDS-persistent-activity-indicator: var(--base0D);
+  --WDS-secondary-positive: var(--base0B);
+  --WDS-secondary-positive-deemphasized: color-mix(
+    in srgb,
+    var(--base0B) 15%,
+    var(--base00)
+  );
+  --WDS-secondary-negative: var(--base08);
+  --WDS-secondary-negative-deemphasized: color-mix(
+    in srgb,
+    var(--base08) 15%,
+    var(--base00)
+  );
+  --WDS-secondary-warning: var(--base09);
+  --WDS-secondary-warning-deemphasized: color-mix(
+    in srgb,
+    var(--base09) 15%,
+    var(--base00)
+  );
+  --WDS-surface-default: var(--base00);
+  --WDS-surface-elevated-default: var(--base01);
+  --WDS-surface-elevated-emphasized: var(--base02);
+  --WDS-surface-emphasized: var(--base01);
+  --WDS-surface-highlight: color-mix(in srgb, var(--base02) 50%, transparent);
+  --WDS-surface-inverse: var(--base05);
+  --WDS-surface-pressed: color-mix(in srgb, var(--base02) 60%, transparent);
+  --WDS-background-wash-plain: var(--base00);
+  --WDS-background-wash-inset: var(--base00);
+  --WDS-background-elevated-wash-plain: var(--base01);
+  --WDS-background-elevated-wash-inset: var(--base01);
+  --WDS-background-dimmer: color-mix(in srgb, var(--base00) 80%, transparent);
+  --WDS-components-active-list-row: color-mix(
+    in srgb,
+    var(--base02) 50%,
+    transparent
+  );
+  --WDS-components-filter-surface-selected: var(--base02);
+  --WDS-components-surface-nav-bar: var(--base01);
+  --WDS-components-outline-profile-photo: color-mix(
+    in srgb,
+    var(--base03) 50%,
+    transparent
+  );
+  --WDS-content-action-default: var(--base05);
+  --WDS-content-default: var(--base05);
+  --WDS-content-deemphasized: var(--base04);
+  --WDS-content-disabled: var(--base03);
+  --WDS-content-inverse: var(--base00);
+  --WDS-content-on-accent: var(--base00);
+  --WDS-content-read: var(--base0C);
+  --WDS-lines-divider: color-mix(in srgb, var(--base03) 30%, transparent);
+  --WDS-lines-outline-deemphasized: color-mix(
+    in srgb,
+    var(--base03) 30%,
+    transparent
+  );
+  --WDS-lines-outline-default: var(--base03);
+  --WDS-systems-bubble-surface-incoming: var(--base01);
+  --WDS-systems-bubble-surface-outgoing: var(--base02);
+  --WDS-systems-bubble-surface-system: var(--base01);
+  --WDS-systems-bubble-surface-overlay: color-mix(
+    in srgb,
+    var(--base00) 40%,
+    transparent
+  );
+  --WDS-systems-bubble-content-deemphasized: var(--base04);
+  --WDS-systems-chat-background-wallpaper: var(--base00);
+  --WDS-systems-chat-foreground-wallpaper: color-mix(
+    in srgb,
+    var(--base02) 30%,
+    transparent
+  );
+  --WDS-systems-chat-surface-composer: var(--base01);
+  --WDS-systems-chat-surface-tray: var(--base00);
+  --WDS-systems-status-seen: var(--base03);
+}
+
+/* Neutral WDS theme overrides */
+.x1v469da.x1v469da,
+.x1vdmjfa.x1vdmjfa,
+.x1wv12dg.x1wv12dg {
+  --WDS-accent: var(--base05);
+  --WDS-accent-deemphasized: var(--base02);
+  --WDS-accent-emphasized: var(--base06);
+  --WDS-content-action-emphasized: var(--base0D);
+  --WDS-content-external-link: var(--base0D);
+  --WDS-persistent-always-branded: var(--base0D);
+  --WDS-persistent-activity-indicator: var(--base0D);
+  --WDS-secondary-positive: var(--base0B);
+  --WDS-secondary-negative: var(--base08);
+  --WDS-secondary-warning: var(--base09);
+  --WDS-surface-default: var(--base00);
+  --WDS-surface-elevated-default: var(--base01);
+  --WDS-surface-elevated-emphasized: var(--base02);
+  --WDS-surface-emphasized: var(--base01);
+  --WDS-background-wash-plain: var(--base00);
+  --WDS-background-wash-inset: var(--base00);
+  --WDS-background-elevated-wash-plain: var(--base01);
+  --WDS-background-elevated-wash-inset: var(--base01);
+  --WDS-components-surface-nav-bar: var(--base01);
+  --WDS-content-action-default: var(--base05);
+  --WDS-content-default: var(--base05);
+  --WDS-content-deemphasized: var(--base04);
+  --WDS-content-disabled: var(--base03);
+  --WDS-content-inverse: var(--base00);
+  --WDS-content-on-accent: var(--base00);
+  --WDS-content-read: var(--base0C);
+  --WDS-lines-divider: color-mix(in srgb, var(--base03) 30%, transparent);
+  --WDS-lines-outline-default: var(--base03);
+  --WDS-systems-bubble-surface-incoming: var(--base01);
+  --WDS-systems-bubble-surface-outgoing: var(--base02);
+  --WDS-systems-chat-background-wallpaper: var(--base00);
+  --WDS-systems-chat-surface-composer: var(--base01);
+  --WDS-systems-chat-surface-tray: var(--base00);
+}
+
+/* Hardcoded atomic CSS overrides */
+.xe4h88v {
+  background-color: var(--base00);
+}
+.x12peec7 {
+  background-color: var(--base01);
+}
+.x1r7xphn {
+  background-color: var(--base00);
+}
+.x1c5tqo3 {
+  background-color: var(--base00);
+}
+.x1liytr5 {
+  background-color: var(--base00);
+}
+.x83z2og {
+  background-color: var(--base00);
+}
+.x1q85c4o {
+  background-color: var(--base00);
+}
+.xzjr1n0 {
+  background-color: var(--base00);
+}
+.x17feruq {
+  background-color: var(--base01);
+}
+.x1ha55ut {
+  background-color: var(--base01);
+}
+.x1ftnk57 {
+  background-color: var(--base01);
+}
+.xz2iaq5 {
+  background-color: var(--base01);
+}
+.x19kays6 {
+  background-color: var(--base01);
+}
+.x1bmlja0 {
+  background-color: var(--base01);
+}
+.x6cgz0f {
+  background-color: var(--base01);
+}
+.x1slwz57 {
+  background-color: var(--base01);
+}
+.xtc6z2u {
+  background-color: var(--base01);
+}
+.xpmz5cn {
+  background-color: var(--base01);
+}
+.xqi1l69 {
+  background-color: var(--base01);
+}
+.xy5qmvz {
+  background-color: var(--base01);
+}
+.x8d01b4 {
+  background-color: var(--base01);
+}
+.x1dr8pv1 {
+  background-color: var(--base01);
+}
+.x1l1zz8g {
+  background-color: var(--base01);
+}
+.x1lhxs90 {
+  background-color: var(--base01);
+}
+.xjup8qr {
+  background-color: var(--base01);
+}
+.xkd2t4d {
+  background-color: var(--base01);
+}
+.x1lz4jft {
+  background-color: var(--base01);
+}
+.x1ccxcpk {
+  background-color: var(--base02);
+}
+
+/* Hardcoded green → accent overrides */
+.x14qam3d {
+  color: var(--base0D);
+}
+.x1g0q99y {
+  color: var(--base0D);
+}
+
+/* Hardcoded line/separator overrides */
+.x42x0ya {
+  background-color: var(--base03);
+}
+
+/* Hardcoded border color overrides */
+.xpypsur {
+  border-top-color: var(--base03);
+}
+.x249io5 {
+  border-bottom-color: var(--base03);
+}
+.x1fe0zbt {
+  border-inline-end-color: var(--base03);
+}
+.xtq6bvn {
+  border-inline-start-color: var(--base03);
+}
+
+/* Hardcoded text color overrides */
+.x1c4vz4f {
+  color: var(--base05);
+}
+.x1mqxbix {
+  color: var(--base05);
+}
+.x1c3i2sq {
+  color: var(--base05);
+}
+
+:root {
+  /* WDS alpha overrides */
+  --WDS-black-alpha-05: color-mix(in srgb, var(--base05) 5%, transparent);
+  --WDS-black-alpha-10: color-mix(in srgb, var(--base05) 10%, transparent);
+  --WDS-black-alpha-20: color-mix(in srgb, var(--base05) 20%, transparent);
+  --WDS-black-alpha-30: color-mix(in srgb, var(--base05) 30%, transparent);
+  --WDS-black-alpha-40: color-mix(in srgb, var(--base05) 40%, transparent);
+  --WDS-black-alpha-50: color-mix(in srgb, var(--base05) 50%, transparent);
+  --WDS-black-alpha-60: color-mix(in srgb, var(--base05) 60%, transparent);
+  --WDS-black-alpha-70: color-mix(in srgb, var(--base05) 70%, transparent);
+  --WDS-black-alpha-80: color-mix(in srgb, var(--base05) 80%, transparent);
+  --WDS-black-alpha-90: color-mix(in srgb, var(--base05) 90%, transparent);
+  --WDS-black: var(--base05);
+  --wds-black: var(--base05);
+  --wds-cool-gray-alpha-05: color-mix(in srgb, var(--base05) 5%, transparent);
+  --wds-cool-gray-alpha-10: color-mix(in srgb, var(--base05) 10%, transparent);
+  --wds-cool-gray-alpha-20: color-mix(in srgb, var(--base05) 20%, transparent);
+  --wds-cool-gray-alpha-30: color-mix(in srgb, var(--base05) 30%, transparent);
+  --wds-cool-gray-alpha-40: color-mix(in srgb, var(--base05) 40%, transparent);
+  --wds-cool-gray-alpha-50: color-mix(in srgb, var(--base05) 50%, transparent);
+  --wds-cool-gray-alpha-60: color-mix(in srgb, var(--base05) 60%, transparent);
+  --wds-cool-gray-alpha-70: color-mix(in srgb, var(--base05) 70%, transparent);
+  --wds-cool-gray-alpha-80: color-mix(in srgb, var(--base05) 80%, transparent);
+  --wds-cool-gray-alpha-90: color-mix(in srgb, var(--base05) 90%, transparent);
+  --WDS-cool-gray-alpha-05: color-mix(in srgb, var(--base05) 5%, transparent);
+  --WDS-cool-gray-alpha-10: color-mix(in srgb, var(--base05) 10%, transparent);
+  --WDS-cool-gray-alpha-20: color-mix(in srgb, var(--base05) 20%, transparent);
+  --WDS-cool-gray-alpha-30: color-mix(in srgb, var(--base05) 30%, transparent);
+  --WDS-cool-gray-alpha-40: color-mix(in srgb, var(--base05) 40%, transparent);
+  --WDS-cool-gray-alpha-50: color-mix(in srgb, var(--base05) 50%, transparent);
+  --WDS-cool-gray-alpha-60: color-mix(in srgb, var(--base05) 60%, transparent);
+  --WDS-cool-gray-alpha-70: color-mix(in srgb, var(--base05) 70%, transparent);
+  --WDS-cool-gray-alpha-80: color-mix(in srgb, var(--base05) 80%, transparent);
+  --WDS-cool-gray-alpha-90: color-mix(in srgb, var(--base05) 90%, transparent);
+
+  /* Green → accent color overrides */
+  --green: var(--base0D);
+  --green-deep: var(--base0D);
+  --green-accent: var(--base0D);
+  --teal: var(--base0D);
+  --teal-light: var(--base0D);
+  --teal-lighter: var(--base0D);
+  --WDS-green-300: var(--base0B);
+  --WDS-green-400: var(--base0D);
+  --WDS-green-450: var(--base0D);
+  --WDS-green-500: var(--base0D);
+  --WDS-green-600: var(--base0D);
+  --WDS-green-700: var(--base02);
+  --WDS-green-750: var(--base02);
+  --WDS-green-800: var(--base01);
+  --WDS-green-100: color-mix(in srgb, var(--base0D) 20%, var(--base00));
+  --WDS-green-50: color-mix(in srgb, var(--base0D) 10%, var(--base00));
+  --WDS-green-75: color-mix(in srgb, var(--base0D) 15%, var(--base00));
+  --WDS-green-200: color-mix(in srgb, var(--base0D) 40%, var(--base00));
+  --WDS-green-500-alpha-30: color-mix(in srgb, var(--base0D) 30%, transparent);
+  --WDS-green-500-alpha-60: color-mix(in srgb, var(--base0D) 60%, transparent);
+  --wds-green-300: var(--base0B);
+  --wds-green-400: var(--base0D);
+  --wds-green-500: var(--base0D);
+  --wds-green-600: var(--base0D);
+  --wds-green-700: var(--base02);
+  --wds-green-800: var(--base01);
+  --wds-emerald-400: var(--base0D);
+  --wds-emerald-500: var(--base0D);
+  --wds-emerald-600: var(--base0D);
+  --WDS-emerald-400: var(--base0D);
+  --WDS-emerald-500: var(--base0D);
+  --WDS-emerald-600: var(--base0D);
+  --WDS-emerald-700: var(--base02);
+  --WDS-teal-400: var(--base0D);
+  --WDS-teal-500: var(--base0D);
+  --wds-teal-400: var(--base0D);
+  --wds-teal-500: var(--base0D);
+
+  /* Gray scale overrides */
+  --gray-30: var(--base01);
+  --gray-60: var(--base01);
+  --gray-70: var(--base01);
+  --gray-100: var(--base02);
+  --gray-150: var(--base03);
+  --gray-200: var(--base03);
+  --gray-300: var(--base03);
+  --gray-400: var(--base04);
+  --gray-500: var(--base04);
+  --gray-600: var(--base04);
+  --gray-700: var(--base03);
+  --gray-800: var(--base01);
+  --gray-850: var(--base05);
+  --gray-900: var(--base05);
+  --black: var(--base05);
+  --dark: var(--base05);
+
+  /* WDS dark theme variables */
+  --WDS-accent: var(--base0D);
+  --WDS-accent-deemphasized: var(--base02);
+  --WDS-accent-emphasized: var(--base0A);
+  --WDS-background-dimmer: color-mix(in srgb, var(--base00) 80%, transparent);
+  --WDS-background-elevated-wash-inset: var(--base01);
+  --WDS-background-elevated-wash-plain: var(--base01);
+  --WDS-background-wash-inset: var(--base00);
+  --WDS-background-wash-plain: var(--base00);
+  --WDS-components-active-list-row: color-mix(
+    in srgb,
+    var(--base02) 50%,
+    transparent
+  );
+  --WDS-components-filter-surface-selected: var(--base02);
+  --WDS-components-outline-profile-photo: color-mix(
+    in srgb,
+    var(--base03) 50%,
+    transparent
+  );
+  --WDS-components-surface-nav-bar: var(--base01);
+  --WDS-content-action-default: var(--base05);
+  --WDS-content-action-emphasized: var(--base0B);
+  --WDS-content-deemphasized: var(--base04);
+  --WDS-content-default: var(--base05);
+  --WDS-content-disabled: var(--base03);
+  --WDS-content-external-link: var(--base0C);
+  --WDS-content-inverse: var(--base00);
+  --WDS-content-on-accent: var(--base00);
+  --WDS-content-read: var(--base0C);
+  --WDS-lines-divider: color-mix(in srgb, var(--base03) 30%, transparent);
+  --WDS-lines-outline-deemphasized: color-mix(
+    in srgb,
+    var(--base03) 30%,
+    transparent
+  );
+  --WDS-lines-outline-default: var(--base03);
+  --WDS-persistent-activity-indicator: var(--base0B);
+  --WDS-persistent-always-branded: var(--base0D);
+  --WDS-secondary-negative: var(--base08);
+  --WDS-secondary-negative-deemphasized: color-mix(
+    in srgb,
+    var(--base08) 15%,
+    var(--base00)
+  );
+  --WDS-secondary-negative-emphasized: var(--base08);
+  --WDS-secondary-positive: var(--base0B);
+  --WDS-secondary-positive-deemphasized: color-mix(
+    in srgb,
+    var(--base0B) 15%,
+    var(--base00)
+  );
+  --WDS-secondary-warning: var(--base09);
+  --WDS-secondary-warning-deemphasized: color-mix(
+    in srgb,
+    var(--base09) 15%,
+    var(--base00)
+  );
+  --WDS-surface-default: var(--base00);
+  --WDS-surface-elevated-default: var(--base01);
+  --WDS-surface-elevated-emphasized: var(--base02);
+  --WDS-surface-emphasized: var(--base01);
+  --WDS-surface-highlight: color-mix(in srgb, var(--base02) 50%, transparent);
+  --WDS-surface-inverse: var(--base05);
+  --WDS-surface-pressed: color-mix(in srgb, var(--base02) 60%, transparent);
+  --WDS-systems-bubble-surface-incoming: var(--base01);
+  --WDS-systems-bubble-surface-outgoing: var(--base02);
+  --WDS-systems-bubble-surface-overlay: color-mix(
+    in srgb,
+    var(--base00) 40%,
+    transparent
+  );
+  --WDS-systems-bubble-surface-system: var(--base01);
+  --WDS-systems-bubble-content-deemphasized: var(--base04);
+  --WDS-systems-chat-background-wallpaper: var(--base00);
+  --WDS-systems-chat-foreground-wallpaper: color-mix(
+    in srgb,
+    var(--base02) 30%,
+    transparent
+  );
+  --WDS-systems-chat-surface-composer: var(--base01);
+  --WDS-systems-chat-surface-tray: var(--base00);
+  --WDS-systems-status-seen: var(--base03);
+
+  /* Traditional WhatsApp dark theme variables */
+  --active-tab-marker: var(--base0D);
+  --app-background: var(--base00);
+  --app-background-deeper: var(--base00);
+  --app-background-stripe: transparent;
+  --avatar-background: var(--base01);
+  --avatar-circle-gray-light: var(--base02);
+  --avatar-circle-gray: var(--base03);
+  --avatar-placeholder-background: var(--base02);
+  --avatar-placeholder-primary: var(--base05);
+
+  --background-default: var(--base00);
+  --background-default-active: var(--base02);
+  --background-default-hover: var(--base01);
+  --background-lighter: var(--base01);
+  --background-lighter-content: var(--base01);
+  --background-lighter-active: var(--base01);
+  --background-lighter-hover: var(--base01);
+  --background-lightest-active: var(--base01);
+  --background-lightest-hover: var(--base01);
+  --background-document-with-captions: var(--base00);
+
+  --text-primary: var(--base05);
+  --text-primary-strong: var(--base05);
+  --text-secondary: var(--base04);
+  --text-secondary-emphasized: var(--base04);
+  --text-secondary-lighter: var(--base04);
+  --text-medium-emphasis: var(--base04);
+  --text-teal: var(--base0D);
+  --text-success: var(--base0B);
+  --text-critical: var(--base08);
+  --text-action: var(--base0D);
+  --text-muted: var(--base04);
+  --text-disabled: var(--base03);
+
+  --badge-pending: var(--base0D);
+  --border-bubble: color-mix(in srgb, var(--base03) 20%, transparent);
+  --border-deeper: color-mix(in srgb, var(--base03) 25%, transparent);
+  --border-default: color-mix(in srgb, var(--base03) 25%, transparent);
+  --border-list: color-mix(in srgb, var(--base03) 25%, transparent);
+  --border-panel: color-mix(in srgb, var(--base03) 25%, transparent);
+  --border-strong: color-mix(in srgb, var(--base03) 25%, transparent);
+  --border-stronger: color-mix(in srgb, var(--base03) 25%, transparent);
+
+  --bubble-meta: var(--base04);
+  --bubble-meta-icon: var(--base03);
+
+  --button-primary-background: var(--base0D);
+  --button-primary-background-hover: var(--base0A);
+  --button-primary: var(--base00);
+  --button-round-background: var(--base0D);
+  --button-focus-outline: var(--base0D);
+  --button-secondary: var(--base0D);
+  --button-secondary-border: color-mix(in srgb, var(--base03) 25%, transparent);
+  --button-secondary-hover: var(--base0A);
+  --button-alternative: var(--base0C);
+  --button-plain: var(--base05);
+  --button-plain-hover: var(--base05);
+  --button-plain-background: var(--base02);
+  --button-plain-background-hover: var(--base03);
+  --button-disabled: var(--base03);
+  --button-background-disabled: color-mix(
+    in srgb,
+    var(--base02) 50%,
+    transparent
+  );
+  --button-bubble: color-mix(in srgb, var(--base0D) 70%, transparent);
+  --button-approve: var(--base0B);
+  --button-approve-background: color-mix(
+    in srgb,
+    var(--base0B) 15%,
+    var(--base00)
+  );
+  --button-reject: var(--base04);
+  --button-reject-background: var(--base01);
+  --button-primary-destructive-background: var(--base08);
+  --button-secondary-destructive-color: var(--base08);
+
+  --chat-marker: var(--base04);
+  --chat-marker-border: var(--base02);
+  --chat-marker-background: var(--base02);
+  --chat-meta: var(--base04);
+  --chatlist-icon: var(--base04);
+  --checkbox-background: var(--base0D);
+  --checkbox-mark: var(--base00);
+
+  --chip-button-background: var(--base02);
+  --chip-button-foreground: var(--base05);
+
+  --compose-input-background: var(--base01);
+  --compose-input-background-focused: var(--base02);
+  --compose-input-border: var(--base01);
+  --compose-input-border-focused: var(--base03);
+  --compose-panel-background-hover: var(--base00);
+
+  --conversation-panel-background: var(--base00);
+  --conversation-panel-border: color-mix(
+    in srgb,
+    var(--base03) 20%,
+    transparent
+  );
+  --conversation-header-border: color-mix(
+    in srgb,
+    var(--base03) 25%,
+    transparent
+  );
+
+  --danger: var(--base08);
+  --document-meta: var(--base04);
+  --drawer-background: var(--base00);
+  --drawer-background-deep: var(--base00);
+  --drawer-gallery-background: var(--base00);
+  --drawer-gallery-background-active: var(--base01);
+  --drawer-gallery-background-hover: var(--base01);
+  --dropdown-background: var(--base01);
+  --dropdown-background-hover: var(--base02);
+
+  --empty-state-background: var(--base01);
+
+  --expressions-panel-active-icon-color: var(--base05);
+  --expressions-panel-active-icon-tab-background: var(--base02);
+  --expressions-panel-icon-tab-border: color-mix(
+    in srgb,
+    var(--base03) 25%,
+    transparent
+  );
+
+  --filters-container-background: var(--base00);
+  --filters-item-color: var(--base04);
+  --filters-item-background: var(--base01);
+  --filters-item-background-hover: var(--base02);
+  --filters-item-active-color: var(--base0D);
+  --filters-item-active-background: var(--base02);
+
+  --focus: var(--base0C);
+  --focus-animation: color-mix(in srgb, var(--base0C) 26%, transparent);
+  --focus-lighter: color-mix(in srgb, var(--base0C) 12%, transparent);
+
+  --forwarded-indicator-text: var(--base04);
+  --highlight: var(--base0D);
+
+  --icon: var(--base04);
+  --icon-ack: var(--base0C);
+  --icon-disabled: var(--base03);
+  --icon-fixed: var(--base04);
+  --icon-lighter: var(--base04);
+  --icon-strong: var(--base04);
+  --icon-search-back: var(--base0D);
+  --icon-bright-highlight: var(--base0D);
+  --icon-high-emphasis: var(--base0D);
+  --icon-primary: var(--base0D);
+  --icon-secondary: var(--base04);
+  --round-icon-background: var(--base0D);
+
+  --incoming-background: var(--base01);
+  --incoming-background-deeper: var(--base01);
+  --incoming-background-highlight: var(--base00);
+
+  --input-border-active: var(--base0D);
+  --input-border: var(--base04);
+  --input-empty-value-placeholder: var(--base0D);
+  --input-placeholder: var(--base04);
+  --input-button-more: var(--base0D);
+  --input-floating-toolbar-icon: var(--base04);
+  --input-floating-toolbar-icon-active: var(--base05);
+  --input-floating-toolbar-icon-disabled: var(--base03);
+
+  --intro-background: var(--base01);
+  --intro-secondary: var(--base04);
+
+  --link: var(--base0C);
+  --link-alt: var(--base0D);
+
+  --message-primary: var(--base05);
+  --modal-backdrop: color-mix(in srgb, var(--base00) 85%, transparent);
+  --modal-backdrop-solid: var(--base00);
+  --modal-background: var(--base02);
+  --modal-title: var(--base05);
+
+  --outgoing-background: var(--base02);
+  --outgoing-background-deeper: var(--base02);
+  --outgoing-background-highlight: color-mix(
+    in srgb,
+    var(--base02) 70%,
+    var(--base00)
+  );
+
+  --overlay: var(--base00);
+
+  --panel-background: var(--base00);
+  --panel-background-colored: var(--base01);
+  --panel-background-colored-deeper: var(--base01);
+  --panel-background-deep: var(--base00);
+  --panel-background-deeper: var(--base00);
+  --panel-background-hover: var(--base01);
+  --panel-background-lighter: var(--base01);
+  --panel-header-background: var(--base01);
+  --panel-header-icon: var(--base04);
+  --panel-input-background: var(--base01);
+  --panel-primary: color-mix(in srgb, var(--base04) 50%, transparent);
+
+  --picker-background: var(--base01);
+  --pin-indicator: var(--base02);
+
+  --primary-muted: var(--base04);
+  --primary: var(--base05);
+  --primary-strong: var(--base05);
+  --primary-stronger: var(--base05);
+  --primary-strongest: var(--base05);
+  --primary-title: var(--base05);
+
+  --progress-background: color-mix(in srgb, var(--base03) 30%, transparent);
+  --progress-primary: var(--base0D);
+
+  --ptt-blue: var(--base0C);
+  --ptt-green: var(--base0B);
+  --ptt-text: var(--base05);
+
+  --quoted-message-text: var(--base04);
+  --rich-text-panel-background: var(--base01);
+  --search-input-background: var(--base01);
+  --search-container-background: var(--base00);
+  --search-input-container-background: var(--base00);
+
+  --secondary: var(--base04);
+  --secondary-light: var(--base03);
+  --secondary-lighter: var(--base04);
+  --secondary-stronger: var(--base05);
+
+  --shadow: var(--base00);
+  --spinner-default: var(--base03);
+  --spinner-highlight: var(--base0D);
+
+  --startup-background: var(--base00);
+  --sticker-button-background: var(--base02);
+  --success: var(--base0B);
+  --system-message-background: var(--base01);
+  --system-message-text: var(--base04);
+
+  --toast-background: color-mix(in srgb, var(--base00) 96%, transparent);
+  --toast-text: var(--base05);
+  --tooltip-background: var(--base01);
+
+  --unread-timestamp: var(--base0D);
+  --unread-marker-background: var(--base0D);
+  --unread-marker-text: var(--base00);
+
+  --wallpaper-background: var(--base00);
+
+  --navbar-background: var(--base01);
+  --navbar-separator: color-mix(in srgb, var(--base03) 30%, transparent);
+  --navbar-border: color-mix(in srgb, var(--base03) 25%, transparent);
+  --navbar-item-active-background: color-mix(
+    in srgb,
+    var(--base02) 50%,
+    transparent
+  );
+
+  --pill-background: var(--base01);
+  --pill-text: var(--base04);
+
+  --switch-button-checked-color: var(--base0D);
+  --switch-track-checked-color: color-mix(
+    in srgb,
+    var(--base0D) 30%,
+    var(--base00)
+  );
+  --switch-button-color: var(--base04);
+  --switch-track-color: var(--base02);
+
+  --qc-button-border: var(--base02);
+  --qc-quantity-label-highlighted-background: var(--base0D);
+
+  --reactions-bubble-border: var(--base00);
+  --reactions-bubble-counter: var(--base04);
+
+  --block-quote-text: color-mix(in srgb, var(--base05) 75%, transparent);
+
+  /* Splash screen */
+  --splashscreen-primary-title: var(--base05);
+  --splashscreen-progress-background: var(--base02);
+  --splashscreen-progress-primary: var(--base0D);
+  --splashscreen-secondary-lighter: var(--base04);
+  --splashscreen-startup-background: var(--base00);
+  --splashscreen-startup-icon: var(--base03);
+
+  /* Obfuscated variables - backgrounds & surfaces */
+  --xzhcxmt: var(--base00);
+  --xfo7sr8: var(--base00);
+  --x1ncx2h4: var(--base02);
+  --x12ht13k: color-mix(in srgb, var(--base02) 30%, transparent);
+  --x1ohco26: var(--base01);
+  --x77ddco: var(--base00);
+  --xhckjy1: var(--base0D);
+  --xoq7kpr: var(--base00);
+  --x3x7tyz: color-mix(in srgb, var(--base03) 20%, transparent);
+  --xo5r61n: var(--base03);
+  --x1s6xkc7: var(--base0F);
+  --xso0e35: var(--base0C);
+
+  /* Dark surface obfuscated */
+  --x1txeeyc: var(--base00);
+  --x6e525v: var(--base01);
+  --x1mf01g3: var(--base02);
+  --xuji152: var(--base00);
+  --x1dzpkwf: var(--base00);
+  --x1kpbo2m: var(--base03);
+  --xzsc5bc: var(--base03);
+
+  --x5rs0e5: var(--base00);
+  --xcmwmc4: var(--base01);
+  --x1th0f3r: var(--base02);
+  --x1ny6skj: var(--base00);
+  --x1rmap8s: var(--base01);
+  --xamcbhg: var(--base0B);
+  --x1fn4p78: var(--base00);
+  --x1l9roa6: var(--base0F);
+  --xyeapbb: var(--base01);
+  --x29xchp: var(--base03);
+  --xpkxt7q: var(--base0C);
+
+  /* Content/text obfuscated */
+  --bubbleContentUserBackgroundColor: var(--base02);
+  --bubbleContentUserColor: var(--base05);
+  --buttonSendBackgroundColor: var(--base0D);
+
+  --x1ev4bvd: var(--base01);
+  --x1bxvvwh: var(--base00);
+  --xiw6jcg: var(--base01);
+  --xlqx6mo: var(--base05);
+  --x1wb1v04: var(--base05);
+  --x1wabinx: var(--base03);
+  --xl9ojqf: var(--base05);
+  --xftuvfa: var(--base05);
+  --x17h09wl: var(--base04);
+  --xmqvuy9: var(--base00);
+  --xdvz3pk: var(--base0D);
+  --x1evxk78: var(--base00);
+  --x1pwsir7: var(--base03);
+  --x6r21d0: var(--base0D);
+  --xe31vrr: var(--base02);
+  --xsl46bp: var(--base05);
+  --x1r17ggk: var(--base02);
+  --xqu9v5: var(--base02);
+  --x1xj48ei: var(--base00);
+  --xqx1b3w: var(--base03);
+  --x19fognk: var(--base05);
+  --x16oxp5a: var(--base01);
+  --x1kpccw5: var(--base05);
+  --xe5i04x: var(--base04);
+  --xiv1y0m: var(--base03);
+  --xd9u4s4: var(--base02);
+  --x1rhfrof: var(--base05);
+  --x12qb30c: var(--base01);
+  --xqt9fth: var(--base08);
+  --xzdavdm: var(--base04);
+  --x1p42rpq: var(--base00);
+  --x1fowau0: var(--base01);
+  --x1drzc3: var(--base02);
+  --x215qz1: var(--base0D);
+  --x5lf19y: var(--base00);
+  --x125vgxg: var(--base05);
+  --x15j2dhm: var(--base03);
+  --x1h50e4l: var(--base05);
+  --x11psvdz: var(--base04);
+  --x149dqt: var(--base00);
+  --xbdfujg: var(--base05);
+  --x1s39hm7: var(--base02);
+  --x1p8ippb: var(--base00);
+  --x15bmxmr: var(--base05);
+  --xkvygis: var(--base04);
+  --xyaxlxh: var(--base00);
+  --x1196mbi: var(--base00);
+  --x1dxmqov: var(--base03);
+  --xadhof8: var(--base08);
+  --x1a4bunx: var(--base05);
+  --x1ihezxe: var(--base00);
+
+  /* Page-level panel variables */
+  --x1dodnpi: var(--base00);
+  --xkr7jg8: var(--base00);
+  --x1izr7lo: var(--base02);
+  --x17emkuz: var(--base00);
+  --xu3owp6: var(--base03);
+
+  /* Design system extended */
+  --x1pemqhl: var(--base00);
+  --xbdgffm: var(--base05);
+  --x1iy7589: var(--base05);
+  --x1sie9h7: var(--base04);
+  --xeh2i4f: var(--base05);
+  --xzq5v5e: var(--base04);
+  --x9mpi4i: var(--base03);
+  --x1y5o4kb: var(--base05);
+  --xn93tna: var(--base03);
+  --x1hg3a3i: var(--base04);
+  --xmdq6we: var(--base00);
+  --x1gy3fwr: var(--base05);
+  --xm07qmq: var(--base05);
+  --x1hiqbtc: var(--base04);
+  --x1y1vcbx: var(--base00);
+  --xj6fmph: var(--base04);
+  --xpa06uk: var(--base04);
+
+  --xmxl3y4: var(--base01);
+  --xt15msc: var(--base00);
+  --xqg8v9z: var(--base01);
+  --x666kwq: var(--base01);
+
+  /* Link colors */
+  --xfe8al5: var(--base0C);
+  --xza3hsg: var(--base0C);
+  --xud6c83: var(--base0C);
+  --x1ikcymc: var(--base0C);
+  --xz9lgvt: var(--base0C);
+  --x6axvlg: var(--base0C);
+  --xh6bbig: var(--base0C);
+  --x1487n2n: var(--base0C);
+
+  /* Status colors */
+  --x1esmk3j: var(--base08);
+  --x1jzxkya: var(--base0B);
+  --x127c7k2: var(--base09);
+  --x1irys84: var(--base0F);
+  --xkzq59e: var(--base0F);
+
+  /* Beige/cream tones */
+  --beige: var(--base01);
+  --xmipt9: var(--base01);
+}

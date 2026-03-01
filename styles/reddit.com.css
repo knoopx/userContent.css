@@ -1,0 +1,354 @@
+html {
+  background-color: var(--base00);
+  color: var(--base05);
+}
+
+:root,
+.theme-beta,
+.theme-rpl,
+.theme-dark {
+  --color-neutral-background: var(--base00);
+  --color-neutral-background-container: var(--base01);
+  --color-neutral-background-container-hover: var(--base02);
+  --color-neutral-background-container-strong: var(--base02);
+  --color-neutral-background-container-strong-hover: var(--base03);
+  --color-neutral-background-gilded: var(--base01);
+  --color-neutral-background-gilded-hover: var(--base02);
+  --color-neutral-background-highlighted: var(--base01);
+  --color-neutral-background-highlighted-strong: var(--base02);
+  --color-neutral-background-hover: var(--base01);
+  --color-neutral-background-medium: var(--base01);
+  --color-neutral-background-pinned: var(--base01);
+  --color-neutral-background-selected: var(--base02);
+  --color-neutral-background-strong: var(--base00);
+  --color-neutral-background-strong-hover: var(--base01);
+  --color-neutral-background-weak: var(--base01);
+  --color-neutral-background-weak-hover: var(--base02);
+  --color-neutral-border: var(--base03);
+  --color-neutral-border-medium: var(--base04);
+  --color-neutral-border-strong: var(--base05);
+  --color-neutral-border-weak: var(--base02);
+  --color-neutral-content: var(--base05);
+  --color-neutral-content-disabled: var(--base03);
+  --color-neutral-content-strong: var(--base06);
+  --color-neutral-content-weak: var(--base04);
+
+  --color-secondary: var(--base04);
+  --color-secondary-background: var(--base02);
+  --color-secondary-background-hover: var(--base03);
+  --color-secondary-background-selected: var(--base03);
+  --color-secondary-hover: var(--base05);
+  --color-secondary-onBackground: var(--base05);
+  --color-secondary-plain: var(--base05);
+  --color-secondary-plain-hover: var(--base06);
+  --color-secondary-plain-weak: var(--base04);
+  --color-secondary-weak: var(--base04);
+
+  --color-primary: var(--base07);
+  --color-primary-background: var(--base07);
+  --color-primary-background-hover: var(--base0A);
+  --color-primary-background-selected: var(--base0A);
+  --color-primary-border: var(--base07);
+  --color-primary-border-hover: var(--base0A);
+  --color-primary-hover: var(--base0A);
+  --color-primary-onBackground: var(--base00);
+  --color-primary-onBackground-selected: var(--base00);
+  --color-primary-plain: var(--base07);
+  --color-primary-plain-hover: var(--base0A);
+  --color-primary-plain-visited: var(--base0F);
+  --color-primary-visited: var(--base0F);
+
+  --color-primarynext-background: var(--base07);
+  --color-primarynext-background-hover: var(--base0A);
+  --color-primarynext-onBackground: var(--base00);
+  --color-primarynext-plain: var(--base07);
+  --color-primarynext-plain-hover: var(--base0A);
+  --color-primarynext-plain-visited: var(--base0F);
+
+  --color-tone-1: var(--base05);
+  --color-tone-2: var(--base04);
+  --color-tone-3: var(--base03);
+  --color-tone-4: var(--base02);
+  --color-tone-5: var(--base01);
+  --color-tone-6: var(--base01);
+  --color-tone-7: var(--base00);
+
+  --color-upvote-background: var(--base09);
+  --color-upvote-background-hover: var(--base09);
+  --color-upvote-background-disabled: color-mix(
+    in srgb,
+    var(--base09) 30%,
+    transparent
+  );
+  --color-upvote-content: var(--base09);
+  --color-upvote-content-weak: var(--base09);
+  --color-upvote-disabled: color-mix(in srgb, var(--base09) 30%, transparent);
+  --color-upvote-onBackground: var(--base00);
+  --color-upvote-onStrongScrim: var(--base09);
+  --color-upvote-plain: var(--base09);
+  --color-upvote-plain-weaker: var(--base09);
+
+  --color-downvote-background: var(--base0C);
+  --color-downvote-background-hover: var(--base0C);
+  --color-downvote-background-disabled: color-mix(
+    in srgb,
+    var(--base0C) 30%,
+    transparent
+  );
+  --color-downvote-content: var(--base0C);
+  --color-downvote-content-weak: var(--base0C);
+  --color-downvote-disabled: color-mix(in srgb, var(--base0C) 30%, transparent);
+  --color-downvote-onBackground: var(--base00);
+  --color-downvote-onStrongScrim: var(--base0C);
+  --color-downvote-plain: var(--base0C);
+  --color-downvote-plain-weaker: var(--base0C);
+
+  --color-brand-background: var(--base07);
+  --color-brand-background-hover: var(--base0A);
+  --color-brand-onBackground: var(--base00);
+  --color-brand-gradient-default: var(--base07);
+  --color-brand-gradient-hover: var(--base0A);
+  --color-brand-gradient-active: var(--base0A);
+
+  --color-danger-background: var(--base08);
+  --color-danger-background-hover: var(--base08);
+  --color-danger-background-disabled: color-mix(
+    in srgb,
+    var(--base08) 30%,
+    transparent
+  );
+  --color-danger-background-weaker: color-mix(
+    in srgb,
+    var(--base08) 20%,
+    transparent
+  );
+  --color-danger-content: var(--base08);
+  --color-danger-content-default: var(--base00);
+  --color-danger-content-hover: var(--base08);
+  --color-danger-onBackground: var(--base00);
+  --color-danger-plain: var(--base08);
+  --color-danger-plain-hover: var(--base08);
+
+  --color-success-background: var(--base0B);
+  --color-success-background-hover: var(--base0B);
+  --color-success-content: var(--base0B);
+  --color-success-hover: var(--base0B);
+  --color-success-onBackground: var(--base00);
+  --color-success-plain: var(--base0B);
+  --color-success-plain-hover: var(--base0B);
+
+  --color-caution-background: var(--base09);
+  --color-caution-background-hover: var(--base09);
+  --color-caution-onBackground: var(--base00);
+  --color-caution-plain: var(--base09);
+  --color-caution-plain-hover: var(--base09);
+
+  --color-warning-background: var(--base09);
+  --color-warning-background-hover: var(--base09);
+  --color-warning-content: var(--base09);
+  --color-warning-content-hover: var(--base09);
+  --color-warning-onBackground: var(--base00);
+
+  --color-interactive-background-disabled: color-mix(
+    in srgb,
+    var(--base02) 50%,
+    transparent
+  );
+  --color-interactive-content-disabled: color-mix(
+    in srgb,
+    var(--base04) 50%,
+    transparent
+  );
+  --color-interactive-focused: var(--base0C);
+  --color-interactive-pressed: var(--base02);
+
+  --color-scrim: color-mix(in srgb, var(--base00) 60%, transparent);
+  --color-scrim-background: color-mix(in srgb, var(--base00) 60%, transparent);
+  --color-scrim-background-strong: color-mix(
+    in srgb,
+    var(--base00) 80%,
+    transparent
+  );
+  --color-scrim-strong: color-mix(in srgb, var(--base00) 80%, transparent);
+
+  --color-ui-canvas: var(--base00);
+  --shreddit-content-background: var(--base00);
+
+  --color-global-black: var(--base00);
+  --color-global-white: var(--base00);
+  --color-global-orangered: var(--base09);
+  --color-global-alienblue: var(--base0C);
+  --color-global-darkblue: var(--base01);
+  --color-global-brand-orangered: var(--base09);
+  --color-global-moderator: var(--base0B);
+  --color-global-admin: var(--base09);
+  --color-global-nsfw: var(--base0F);
+  --color-global-online: var(--base0B);
+  --color-global-offline: var(--base04);
+  --color-global-stars: var(--base09);
+  --color-global-gold: var(--base09);
+
+  --color-inverted-neutral-background: var(--base05);
+  --color-inverted-neutral-background-hover: var(--base06);
+  --color-inverted-neutral-border: color-mix(
+    in srgb,
+    var(--base05) 20%,
+    transparent
+  );
+  --color-inverted-neutral-content: var(--base01);
+  --color-inverted-neutral-content-strong: var(--base00);
+  --color-inverted-secondary-background: var(--base04);
+  --color-inverted-secondary-background-hover: var(--base03);
+  --color-inverted-secondary-background-selected: var(--base03);
+  --color-inverted-secondary-onBackground: var(--base00);
+  --color-inverted-secondary-plain: var(--base06);
+  --color-inverted-secondary-plain-hover: var(--base05);
+
+  --color-media-background: color-mix(in srgb, var(--base00) 60%, transparent);
+  --color-media-background-hover: color-mix(
+    in srgb,
+    var(--base00) 80%,
+    transparent
+  );
+  --color-media-onBackground: var(--base05);
+  --color-media-onBackground-weak: var(--base04);
+  --color-media-onbackground: var(--base05);
+  --color-media-onbackground-weak: var(--base04);
+
+  --color-transparent-background-hover: color-mix(
+    in srgb,
+    var(--base02) 50%,
+    transparent
+  );
+
+  --color-button-secondary-background: transparent;
+  --color-button-secondary-background-focus: transparent;
+  --color-button-secondary-background-hover: transparent;
+  --color-button-secondary-background-activated: transparent;
+  --color-button-secondary-background-disabled: color-mix(
+    in srgb,
+    var(--base02) 50%,
+    transparent
+  );
+  --color-button-secondary-border: var(--base03);
+  --color-button-secondary-border-activated: var(--base07);
+  --color-button-secondary-border-disabled: var(--base03);
+  --color-button-secondary-text-disabled: color-mix(
+    in srgb,
+    var(--base04) 50%,
+    transparent
+  );
+
+  --color-button-primary-border-hover: transparent;
+  --color-button-primary-border-active: transparent;
+  --color-button-primary-border-activated: transparent;
+  --color-button-primary-border-disabled: transparent;
+
+  --color-ai-background-weaker: color-mix(
+    in srgb,
+    var(--base0B) 10%,
+    transparent
+  );
+  --color-ai-plain: var(--base0B);
+  --color-ai-plain-hover: var(--base0B);
+
+  --color-category-nsfw: var(--base0F);
+  --color-category-live: var(--base08);
+
+  --color-identity-admin: var(--base09);
+  --color-identity-moderator: var(--base0B);
+  --color-identity-self: var(--base0C);
+  --color-identity-coins: var(--base09);
+
+  --color-online: var(--base0B);
+  --color-offline: var(--base04);
+  --color-favorite: var(--base09);
+  --color-pizzaRed: var(--base08);
+
+  --color-action-downvote: var(--base0C);
+  --color-action-upvote: var(--base09);
+
+  --color-opacity-08: color-mix(in srgb, var(--base00) 8%, transparent);
+  --color-opacity-50: color-mix(in srgb, var(--base00) 50%, transparent);
+
+  --color-elevation-large1: color-mix(in srgb, var(--base00) 25%, transparent);
+  --color-elevation-large2: color-mix(in srgb, var(--base00) 15%, transparent);
+  --color-elevation-medium1: color-mix(in srgb, var(--base00) 25%, transparent);
+  --color-elevation-medium2: color-mix(in srgb, var(--base00) 10%, transparent);
+  --color-elevation-small: color-mix(in srgb, var(--base00) 15%, transparent);
+  --color-elevation-xsmall: color-mix(in srgb, var(--base00) 25%, transparent);
+
+  --color-shimmer-background: color-mix(in srgb, var(--base02) 5%, transparent);
+
+  --color-dialog-background: color-mix(in srgb, var(--base00) 50%, transparent);
+
+  --shreddit-color-wordmark: var(--base05);
+}
+
+.button-brand,
+.button-primary {
+  --button-color-text-default: var(--base00);
+  --button-color-text-disabled: var(--base03);
+  --button-color-text-activated: var(--base00);
+}
+
+/* Ads */
+shreddit-ad-post,
+[data-testid="ad-slot"],
+.promotedlink {
+  display: none;
+}
+
+/* Trending/gallery carousel */
+shreddit-trending-carousel,
+shreddit-gallery-carousel {
+  display: none;
+}
+
+/* Popular communities sidebar */
+#right-sidebar-container {
+  display: none;
+}
+
+/* Get App nag */
+[id*="get-app"],
+[class*="get-app"],
+[data-testid="app-download"],
+xpromo-nsfw-blocking-container {
+  display: none;
+}
+
+/* Sidebar: corporate, legal, editorial */
+li:has(> a[href*="redditinc.com"]),
+li:has(> a[href*="ads.reddit.com"]),
+li:has(> a[href*="developers.reddit.com"]),
+li:has(> a[href*="reddit-pro"]),
+li:has(> a[href*="reddithelp.com"]),
+li:has(> a[href*="redditblog.com"]),
+li:has(> a[href*="best/communities"]),
+li:has(> a[href*="/posts/20"]),
+li:has(> a[href*="policies/"]) {
+  display: none;
+}
+
+/* Resources heading */
+#left-sidebar-container [role="heading"]:has(+ ul li a[href*="redditinc.com"]),
+#left-sidebar-container details:has(a[href*="redditinc.com"]) {
+  display: none;
+}
+
+/* Footer copyright */
+#left-sidebar-container div:has(> a[href*="redditinc.com"]) {
+  display: none;
+}
+
+/* Cookie banner */
+[data-testid="cookie-banner"],
+.cookie-infobar {
+  display: none;
+}
+
+/* Right rail tracker */
+#right-rail-experience-root > faceplate-tracker {
+  display: none;
+}

@@ -1,0 +1,642 @@
+/* stylelint-disable declaration-block-single-line-max-declarations */
+:root {
+  --palette-default-grey-000: var(--base07);
+  --palette-default-grey-050: var(--base06);
+  --palette-default-grey-100: var(--base06);
+  --palette-default-grey-200: var(--base05);
+  --palette-default-grey-300: var(--base05);
+  --palette-default-grey-400: var(--base05);
+  --palette-default-grey-500: var(--base04);
+  --palette-default-grey-600: var(--base03);
+  --palette-default-grey-700: var(--base03);
+  --palette-default-grey-800: var(--base02);
+  --palette-default-grey-900: var(--base01);
+  --palette-default-grey-1000: var(--base01);
+  --palette-default-grey-1050: var(--base01);
+  --palette-default-grey-1100: var(--base00);
+  --palette-default-grey-1200: var(--base00);
+
+  --palette-default-grey-alpha-000: transparent;
+  --palette-default-grey-alpha-100: var(--base02);
+  --palette-default-grey-alpha-150: var(--base02);
+  --palette-default-grey-alpha-200: var(--base02);
+  --palette-default-grey-alpha-300: var(--base02);
+  --palette-default-grey-alpha-400: var(--base03);
+  --palette-default-grey-alpha-500: var(--base03);
+  --palette-default-grey-alpha-600: var(--base04);
+  --palette-default-grey-alpha-700: var(--base04);
+  --palette-default-grey-alpha-800: var(--base03);
+  --palette-default-grey-alpha-900: var(--base02);
+  --palette-default-grey-alpha-950: var(--base02);
+  --palette-default-grey-alpha-1000: var(--base01);
+  --palette-default-grey-alpha-1100: transparent;
+
+  --palette-default-black-alpha-050: var(--base00);
+  --palette-default-black-alpha-100: var(--base00);
+  --palette-default-black-alpha-150: var(--base00);
+  --palette-default-black-alpha-200: var(--base00);
+  --palette-default-black-alpha-300: var(--base00);
+  --palette-default-black-alpha-400: var(--base00);
+  --palette-default-black-alpha-500: var(--base00);
+  --palette-default-black-alpha-600: var(--base00);
+  --palette-default-black-alpha-700: var(--base00);
+  --palette-default-black-alpha-800: var(--base00);
+
+  --palette-default-white-alpha-150: var(--base02);
+  --palette-default-white-alpha-200: var(--base02);
+  --palette-default-white-alpha-300: var(--base03);
+  --palette-default-white-alpha-1000: var(--base06);
+  --palette-default-white-alpha-1100: var(--base07);
+
+  --palette-default-blue-050: color-mix(
+    in srgb,
+    var(--base0D) 5%,
+    var(--base00)
+  );
+  --palette-default-blue-100: color-mix(
+    in srgb,
+    var(--base0D) 10%,
+    var(--base00)
+  );
+  --palette-default-blue-200: color-mix(
+    in srgb,
+    var(--base0D) 20%,
+    var(--base00)
+  );
+  --palette-default-blue-300: color-mix(
+    in srgb,
+    var(--base0D) 30%,
+    var(--base00)
+  );
+  --palette-default-blue-400: color-mix(
+    in srgb,
+    var(--base0D) 50%,
+    var(--base00)
+  );
+  --palette-default-blue-500: color-mix(
+    in srgb,
+    var(--base0D) 65%,
+    var(--base00)
+  );
+  --palette-default-blue-600: color-mix(
+    in srgb,
+    var(--base0D) 80%,
+    var(--base00)
+  );
+  --palette-default-blue-700: var(--base0D);
+  --palette-default-blue-800: color-mix(
+    in srgb,
+    var(--base0D) 80%,
+    var(--base01)
+  );
+  --palette-default-blue-900: color-mix(
+    in srgb,
+    var(--base0D) 50%,
+    var(--base01)
+  );
+  --palette-default-blue-1000: color-mix(
+    in srgb,
+    var(--base0D) 30%,
+    var(--base01)
+  );
+  --palette-default-blue-1050: color-mix(
+    in srgb,
+    var(--base0D) 20%,
+    var(--base01)
+  );
+  --palette-default-blue-alpha-100: color-mix(
+    in srgb,
+    var(--base0D) 14%,
+    var(--base00)
+  );
+  --palette-default-blue-alpha-200: color-mix(
+    in srgb,
+    var(--base0D) 28%,
+    var(--base00)
+  );
+  --palette-default-blue-alpha-300: color-mix(
+    in srgb,
+    var(--base0D) 44%,
+    var(--base00)
+  );
+  --palette-default-blue-alpha-800: color-mix(
+    in srgb,
+    var(--base0D) 52%,
+    var(--base00)
+  );
+  --palette-default-blue-alpha-900: color-mix(
+    in srgb,
+    var(--base0D) 36%,
+    var(--base00)
+  );
+  --palette-default-blue-alpha-1000: color-mix(
+    in srgb,
+    var(--base0D) 20%,
+    var(--base00)
+  );
+
+  --palette-default-purple-050: color-mix(
+    in srgb,
+    var(--base0E) 5%,
+    var(--base00)
+  );
+  --palette-default-purple-100: color-mix(
+    in srgb,
+    var(--base0E) 10%,
+    var(--base00)
+  );
+  --palette-default-purple-200: color-mix(
+    in srgb,
+    var(--base0E) 20%,
+    var(--base00)
+  );
+  --palette-default-purple-300: color-mix(
+    in srgb,
+    var(--base0E) 30%,
+    var(--base00)
+  );
+  --palette-default-purple-400: color-mix(
+    in srgb,
+    var(--base0E) 50%,
+    var(--base00)
+  );
+  --palette-default-purple-500: color-mix(
+    in srgb,
+    var(--base0E) 65%,
+    var(--base00)
+  );
+  --palette-default-purple-600: color-mix(
+    in srgb,
+    var(--base0E) 80%,
+    var(--base00)
+  );
+  --palette-default-purple-700: var(--base0E);
+  --palette-default-purple-800: color-mix(
+    in srgb,
+    var(--base0E) 80%,
+    var(--base01)
+  );
+  --palette-default-purple-900: color-mix(
+    in srgb,
+    var(--base0E) 50%,
+    var(--base01)
+  );
+  --palette-default-purple-1000: color-mix(
+    in srgb,
+    var(--base0E) 30%,
+    var(--base01)
+  );
+  --palette-default-purple-1050: color-mix(
+    in srgb,
+    var(--base0E) 20%,
+    var(--base01)
+  );
+  --palette-default-purple-1100: color-mix(
+    in srgb,
+    var(--base0E) 15%,
+    var(--base01)
+  );
+
+  --palette-default-indigo-050: color-mix(
+    in srgb,
+    var(--base09) 5%,
+    var(--base00)
+  );
+  --palette-default-indigo-100: color-mix(
+    in srgb,
+    var(--base09) 10%,
+    var(--base00)
+  );
+  --palette-default-indigo-200: color-mix(
+    in srgb,
+    var(--base09) 20%,
+    var(--base00)
+  );
+  --palette-default-indigo-300: color-mix(
+    in srgb,
+    var(--base09) 30%,
+    var(--base00)
+  );
+  --palette-default-indigo-400: color-mix(
+    in srgb,
+    var(--base09) 50%,
+    var(--base00)
+  );
+  --palette-default-indigo-500: color-mix(
+    in srgb,
+    var(--base09) 65%,
+    var(--base00)
+  );
+  --palette-default-indigo-600: color-mix(
+    in srgb,
+    var(--base09) 80%,
+    var(--base00)
+  );
+  --palette-default-indigo-700: var(--base09);
+  --palette-default-indigo-800: color-mix(
+    in srgb,
+    var(--base09) 80%,
+    var(--base01)
+  );
+  --palette-default-indigo-900: color-mix(
+    in srgb,
+    var(--base09) 50%,
+    var(--base01)
+  );
+  --palette-default-indigo-1000: color-mix(
+    in srgb,
+    var(--base09) 30%,
+    var(--base01)
+  );
+  --palette-default-indigo-1050: color-mix(
+    in srgb,
+    var(--base09) 20%,
+    var(--base01)
+  );
+
+  --palette-default-green-100: color-mix(
+    in srgb,
+    var(--base0B) 10%,
+    var(--base00)
+  );
+  --palette-default-green-200: color-mix(
+    in srgb,
+    var(--base0B) 20%,
+    var(--base00)
+  );
+  --palette-default-green-300: color-mix(
+    in srgb,
+    var(--base0B) 30%,
+    var(--base00)
+  );
+  --palette-default-green-400: color-mix(
+    in srgb,
+    var(--base0B) 50%,
+    var(--base00)
+  );
+  --palette-default-green-500: color-mix(
+    in srgb,
+    var(--base0B) 65%,
+    var(--base00)
+  );
+  --palette-default-green-600: color-mix(
+    in srgb,
+    var(--base0B) 80%,
+    var(--base00)
+  );
+  --palette-default-green-700: var(--base0B);
+  --palette-default-green-800: color-mix(
+    in srgb,
+    var(--base0B) 80%,
+    var(--base01)
+  );
+  --palette-default-green-900: color-mix(
+    in srgb,
+    var(--base0B) 50%,
+    var(--base01)
+  );
+  --palette-default-green-1000: color-mix(
+    in srgb,
+    var(--base0B) 30%,
+    var(--base01)
+  );
+
+  --palette-default-red-050: color-mix(
+    in srgb,
+    var(--base08) 5%,
+    var(--base00)
+  );
+  --palette-default-red-100: color-mix(
+    in srgb,
+    var(--base08) 10%,
+    var(--base00)
+  );
+  --palette-default-red-200: color-mix(
+    in srgb,
+    var(--base08) 20%,
+    var(--base00)
+  );
+  --palette-default-red-300: color-mix(
+    in srgb,
+    var(--base08) 30%,
+    var(--base00)
+  );
+  --palette-default-red-400: color-mix(
+    in srgb,
+    var(--base08) 50%,
+    var(--base00)
+  );
+  --palette-default-red-500: color-mix(
+    in srgb,
+    var(--base08) 65%,
+    var(--base00)
+  );
+  --palette-default-red-600: color-mix(
+    in srgb,
+    var(--base08) 80%,
+    var(--base00)
+  );
+  --palette-default-red-700: var(--base08);
+  --palette-default-red-800: color-mix(
+    in srgb,
+    var(--base08) 80%,
+    var(--base01)
+  );
+  --palette-default-red-900: color-mix(
+    in srgb,
+    var(--base08) 50%,
+    var(--base01)
+  );
+  --palette-default-red-1000: color-mix(
+    in srgb,
+    var(--base08) 30%,
+    var(--base01)
+  );
+
+  --palette-default-yellow-050: color-mix(
+    in srgb,
+    var(--base0A) 5%,
+    var(--base00)
+  );
+  --palette-default-yellow-100: color-mix(
+    in srgb,
+    var(--base0A) 10%,
+    var(--base00)
+  );
+  --palette-default-yellow-200: color-mix(
+    in srgb,
+    var(--base0A) 20%,
+    var(--base00)
+  );
+  --palette-default-yellow-300: color-mix(
+    in srgb,
+    var(--base0A) 30%,
+    var(--base00)
+  );
+  --palette-default-yellow-400: color-mix(
+    in srgb,
+    var(--base0A) 50%,
+    var(--base00)
+  );
+  --palette-default-yellow-500: color-mix(
+    in srgb,
+    var(--base0A) 65%,
+    var(--base00)
+  );
+  --palette-default-yellow-600: color-mix(
+    in srgb,
+    var(--base0A) 80%,
+    var(--base00)
+  );
+  --palette-default-yellow-700: var(--base0A);
+  --palette-default-yellow-800: color-mix(
+    in srgb,
+    var(--base0A) 80%,
+    var(--base01)
+  );
+  --palette-default-yellow-900: color-mix(
+    in srgb,
+    var(--base0A) 50%,
+    var(--base01)
+  );
+  --palette-default-yellow-1000: color-mix(
+    in srgb,
+    var(--base0A) 30%,
+    var(--base01)
+  );
+  --palette-default-yellow-1050: color-mix(
+    in srgb,
+    var(--base0A) 20%,
+    var(--base01)
+  );
+
+  --color-background-accent-cyan-secondary: color-mix(
+    in srgb,
+    var(--base0C) 10%,
+    var(--base00)
+  );
+  --color-background-accent-cyan-secondary-hovered: color-mix(
+    in srgb,
+    var(--base0C) 20%,
+    var(--base00)
+  );
+  --color-background-accent-orange-secondary: color-mix(
+    in srgb,
+    var(--base09) 10%,
+    var(--base00)
+  );
+  --color-background-accent-orange-secondary-hovered: color-mix(
+    in srgb,
+    var(--base09) 20%,
+    var(--base00)
+  );
+  --color-background-accent-pink-secondary: color-mix(
+    in srgb,
+    var(--base0F) 10%,
+    var(--base00)
+  );
+  --color-background-accent-pink-secondary-hovered: color-mix(
+    in srgb,
+    var(--base0F) 20%,
+    var(--base00)
+  );
+  --color-background-blanket-inverse: var(--base01);
+  --color-elevation-surface-secondary: var(--base01);
+  --color-elevation-surface-secondary-elevation: var(--base01);
+  --color-elevation-surface-secondary-overlay: var(--base01);
+  --color-elevation-surface-secondary-raised: var(--base01);
+  --color-icon-accent-cyan: var(--base0C);
+  --color-icon-accent-orange: var(--base09);
+
+  --grey-000: var(--base07);
+  --grey-000-alpha8: var(--base02);
+  --grey-000-alpha16: var(--base02);
+  --grey-000-alpha24: var(--base03);
+  --grey-000-alpha30: var(--base03);
+  --grey-000-alpha80: var(--base06);
+  --grey-050: var(--base06);
+  --grey-100: var(--base05);
+  --grey-200: var(--base05);
+  --grey-300: var(--base04);
+  --grey-300-alpha20: var(--base02);
+  --grey-400: var(--base04);
+  --grey-500: var(--base03);
+  --grey-600: var(--base03);
+  --grey-700: var(--base02);
+  --grey-700-alpha80: var(--base02);
+  --grey-750: var(--base01);
+  --grey-800: var(--base00);
+  --grey-900: var(--base00);
+  --grey-900-alpha4: var(--base00);
+  --grey-900-alpha8: var(--base00);
+  --grey-900-alpha12: var(--base00);
+  --grey-900-alpha16: var(--base00);
+  --grey-900-alpha20: var(--base00);
+
+  --action-blue-050: color-mix(in srgb, var(--base0D) 5%, var(--base00));
+  --action-blue-100: color-mix(in srgb, var(--base0D) 10%, var(--base00));
+  --action-blue-200: color-mix(in srgb, var(--base0D) 30%, var(--base00));
+  --action-blue-200-alpha20: color-mix(
+    in srgb,
+    var(--base0D) 20%,
+    var(--base00)
+  );
+  --action-blue-300: color-mix(in srgb, var(--base0D) 50%, var(--base00));
+  --action-blue-300-alpha20: color-mix(
+    in srgb,
+    var(--base0D) 20%,
+    var(--base00)
+  );
+  --action-blue-400: var(--base0D);
+  --action-blue-400-alpha20: color-mix(
+    in srgb,
+    var(--base0D) 20%,
+    var(--base00)
+  );
+  --action-blue-500: color-mix(in srgb, var(--base0D) 80%, var(--base01));
+  --action-blue-600: color-mix(in srgb, var(--base0D) 50%, var(--base01));
+  --action-blue-600-alpha20: color-mix(
+    in srgb,
+    var(--base0D) 20%,
+    var(--base00)
+  );
+  --action-blue-700: color-mix(in srgb, var(--base0D) 30%, var(--base01));
+  --action-blue-link: var(--base0D);
+
+  --purple-100: color-mix(in srgb, var(--base0E) 10%, var(--base00));
+  --purple-200: color-mix(in srgb, var(--base0E) 30%, var(--base00));
+  --purple-300: color-mix(in srgb, var(--base0E) 50%, var(--base00));
+  --purple-400: var(--base0E);
+  --purple-500: color-mix(in srgb, var(--base0E) 80%, var(--base01));
+  --purple-600: color-mix(in srgb, var(--base0E) 50%, var(--base01));
+  --purple-700: color-mix(in srgb, var(--base0E) 30%, var(--base01));
+  --purple-darker: color-mix(in srgb, var(--base0E) 30%, var(--base01));
+  --purple-light: color-mix(in srgb, var(--base0E) 50%, var(--base05));
+
+  --pink-100: color-mix(in srgb, var(--base0F) 10%, var(--base00));
+  --pink-200: color-mix(in srgb, var(--base0F) 30%, var(--base00));
+  --pink-400: var(--base0F);
+  --pink-700: color-mix(in srgb, var(--base0F) 30%, var(--base01));
+  --pink-lighter: color-mix(in srgb, var(--base0F) 10%, var(--base00));
+  --pink-light: color-mix(in srgb, var(--base0F) 50%, var(--base05));
+  --pink-base: var(--base0F);
+  --pink-dark: color-mix(in srgb, var(--base0F) 80%, var(--base01));
+  --pink-darker: color-mix(in srgb, var(--base0F) 30%, var(--base01));
+
+  --blue-lighter: color-mix(in srgb, var(--base0D) 10%, var(--base00));
+  --blue-light: color-mix(in srgb, var(--base0D) 50%, var(--base05));
+  --blue-base: var(--base0D);
+  --blue-dark: color-mix(in srgb, var(--base0D) 80%, var(--base01));
+  --blue-darker: color-mix(in srgb, var(--base0D) 30%, var(--base01));
+
+  --cyan-100: color-mix(in srgb, var(--base0C) 10%, var(--base00));
+  --cyan-200: color-mix(in srgb, var(--base0C) 30%, var(--base00));
+  --cyan-400: color-mix(in srgb, var(--base0C) 65%, var(--base00));
+  --cyan-500: var(--base0C);
+  --cyan-700: color-mix(in srgb, var(--base0C) 30%, var(--base01));
+  --cyan-lighter: color-mix(in srgb, var(--base0C) 10%, var(--base00));
+  --cyan-light: color-mix(in srgb, var(--base0C) 50%, var(--base05));
+  --cyan-base: var(--base0C);
+  --cyan-dark: color-mix(in srgb, var(--base0C) 80%, var(--base01));
+  --cyan-darker: color-mix(in srgb, var(--base0C) 30%, var(--base01));
+
+  --green-100: color-mix(in srgb, var(--base0B) 10%, var(--base00));
+  --green-200: color-mix(in srgb, var(--base0B) 20%, var(--base00));
+  --green-300: color-mix(in srgb, var(--base0B) 30%, var(--base00));
+  --green-300-alpha20: color-mix(in srgb, var(--base0B) 20%, var(--base00));
+  --green-400: color-mix(in srgb, var(--base0B) 65%, var(--base00));
+  --green-500: var(--base0B);
+  --green-500-alpha20: color-mix(in srgb, var(--base0B) 20%, var(--base00));
+  --green-600: color-mix(in srgb, var(--base0B) 80%, var(--base01));
+  --green-700: color-mix(in srgb, var(--base0B) 30%, var(--base01));
+  --green-700-alpha48: color-mix(in srgb, var(--base0B) 48%, var(--base00));
+
+  --yellow-000: color-mix(in srgb, var(--base0A) 2%, var(--base00));
+  --yellow-100: color-mix(in srgb, var(--base0A) 10%, var(--base00));
+  --yellow-200: color-mix(in srgb, var(--base0A) 30%, var(--base00));
+  --yellow-300: color-mix(in srgb, var(--base0A) 50%, var(--base00));
+  --yellow-400: var(--base0A);
+  --yellow-500: color-mix(in srgb, var(--base0A) 80%, var(--base01));
+  --yellow-600: color-mix(in srgb, var(--base0A) 50%, var(--base01));
+  --yellow-600-alpha48: color-mix(in srgb, var(--base0A) 48%, var(--base00));
+  --yellow-800: color-mix(in srgb, var(--base0A) 15%, var(--base01));
+
+  --orange-100: color-mix(in srgb, var(--base09) 10%, var(--base00));
+  --orange-200: color-mix(in srgb, var(--base09) 30%, var(--base00));
+  --orange-400: var(--base09);
+  --orange-500: color-mix(in srgb, var(--base09) 80%, var(--base01));
+  --orange-600: color-mix(in srgb, var(--base09) 50%, var(--base01));
+  --orange-700: color-mix(in srgb, var(--base09) 30%, var(--base01));
+
+  --red-100: color-mix(in srgb, var(--base08) 10%, var(--base00));
+  --red-100-alpha-20: color-mix(in srgb, var(--base08) 5%, var(--base00));
+  --red-200: color-mix(in srgb, var(--base08) 30%, var(--base00));
+  --red-300: color-mix(in srgb, var(--base08) 50%, var(--base00));
+  --red-400: var(--base08);
+  --red-400-alpha20: color-mix(in srgb, var(--base08) 20%, var(--base00));
+  --red-500: color-mix(in srgb, var(--base08) 80%, var(--base01));
+  --red-600: color-mix(in srgb, var(--base08) 50%, var(--base01));
+}
+
+[data-theme="dark"] {
+  --color-background-accent-cyan-secondary: color-mix(
+    in srgb,
+    var(--base0C) 15%,
+    var(--base00)
+  );
+  --color-background-accent-cyan-secondary-hovered: color-mix(
+    in srgb,
+    var(--base0C) 25%,
+    var(--base00)
+  );
+  --color-background-accent-orange-secondary: color-mix(
+    in srgb,
+    var(--base09) 15%,
+    var(--base00)
+  );
+  --color-background-accent-orange-secondary-hovered: color-mix(
+    in srgb,
+    var(--base09) 25%,
+    var(--base00)
+  );
+  --color-background-accent-pink-secondary: color-mix(
+    in srgb,
+    var(--base0F) 15%,
+    var(--base00)
+  );
+  --color-background-accent-pink-secondary-hovered: color-mix(
+    in srgb,
+    var(--base0F) 25%,
+    var(--base00)
+  );
+  --color-background-blanket: color-mix(
+    in srgb,
+    var(--base00) 60%,
+    transparent
+  );
+  --color-background-blanket-inverse: var(--base01);
+  --color-elevation-surface-secondary-elevation: var(--base01);
+  --color-elevation-surface-secondary-overlay: var(--base02);
+  --color-elevation-surface-secondary-raised: var(--base02);
+  --color-icon-accent-cyan: var(--base0C);
+  --color-icon-accent-orange: var(--base09);
+}
+
+:root,
+[data-theme="dark"],
+body,
+body:not([data-theme="light"]) {
+  --color-text-primary: var(--base05);
+  --color-text-secondary: var(--base05);
+  --color-text-tertiary: var(--base05);
+  --color-text-disabled: var(--base04);
+  --color-text-brand: var(--base05);
+  --color-text-serplink: var(--base0D);
+  --color-text-serplink-hovered: var(--base0D);
+  --color-text-serplink-pressed: var(--base0D);
+  --color-text-serplink-visited: var(--base05);
+  --color-link-primary: var(--base0D);
+  --color-link-primary-inverse: var(--base0D);
+  --color-link-visited: var(--base05);
+  --color-link-visited-inverse: var(--base05);
+}

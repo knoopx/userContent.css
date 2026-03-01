@@ -1,0 +1,11 @@
+{
+  "name": "usercss",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/generate-usercontent.js"
+  },
+  "dependencies": {
+    "postcss": "^8.5.6"
+  }
+}
