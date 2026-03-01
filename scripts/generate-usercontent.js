@@ -12,8 +12,61 @@ const STYLES_DIR = join(ROOT_DIR, "styles");
 
 const palette = JSON.parse(await readFile(PALETTE_PATH, "utf-8"));
 
+function hexToRgb(hex) {
+  const h = hex.replace("#", "");
+  return `${parseInt(h.slice(0, 2), 16)}, ${parseInt(h.slice(2, 4), 16)}, ${parseInt(h.slice(4, 6), 16)}`;
+}
+
+function hexToHsl(hex) {
+  const h = hex.replace("#", "");
+  const r = parseInt(h.slice(0, 2), 16) / 255;
+  const g = parseInt(h.slice(2, 4), 16) / 255;
+  const b = parseInt(h.slice(4, 6), 16) / 255;
+  const max = Math.max(r, g, b);
+  const min = Math.min(r, g, b);
+  const l = (max + min) / 2;
+  if (max === min) return `0 0% ${Math.round(l * 1000) / 10}%`;
+  const d = max - min;
+  const s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+  let hue = 0;
+  if (max === r) hue = ((g - b) / d + (g < b ? 6 : 0)) * 60;
+  else if (max === g) hue = ((b - r) / d + 2) * 60;
+  else hue = ((r - g) / d + 4) * 60;
+  return `${Math.round(hue * 10) / 10} ${Math.round(s * 1000) / 10}% ${Math.round(l * 1000) / 10}%`;
+}
+
+function hexToOklch(hex) {
+  const h = hex.replace("#", "");
+  const ri = parseInt(h.slice(0, 2), 16) / 255;
+  const gi = parseInt(h.slice(2, 4), 16) / 255;
+  const bi = parseInt(h.slice(4, 6), 16) / 255;
+  const toLinear = (c) =>
+    c <= 0.04045 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
+  const lr = toLinear(ri);
+  const lg = toLinear(gi);
+  const lb = toLinear(bi);
+  const l_ = 0.4122214708 * lr + 0.5363325363 * lg + 0.0514459929 * lb;
+  const m_ = 0.2119034982 * lr + 0.6806995451 * lg + 0.1073969566 * lb;
+  const s_ = 0.0883024619 * lr + 0.2817188376 * lg + 0.6299787005 * lb;
+  const l3 = Math.cbrt(l_);
+  const m3 = Math.cbrt(m_);
+  const s3 = Math.cbrt(s_);
+  const L = 0.2104542553 * l3 + 0.793617785 * m3 - 0.0040720468 * s3;
+  const a = 1.9779984951 * l3 - 2.428592205 * m3 + 0.4505937099 * s3;
+  const bOk = 0.0259040371 * l3 + 0.7827717662 * m3 - 0.808675766 * s3;
+  const C = Math.sqrt(a * a + bOk * bOk);
+  let H = (Math.atan2(bOk, a) * 180) / Math.PI;
+  if (H < 0) H += 360;
+  return `${Math.round(L * 10000) / 10000} ${Math.round(C * 10000) / 10000} ${Math.round(H * 100) / 100}`;
+}
+
 const paletteVars = Object.entries(palette)
-  .map(([name, value]) => `  --${name}: ${value};`)
+  .flatMap(([name, value]) => [
+    `  --${name}: ${value};`,
+    `  --${name}-rgb: ${hexToRgb(value)};`,
+    `  --${name}-hsl: ${hexToHsl(value)};`,
+    `  --${name}-oklch: ${hexToOklch(value)};`,
+  ])
   .join("\n");
 
 const addImportant = {

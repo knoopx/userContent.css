@@ -401,6 +401,37 @@ function hexToHsl(hex: string): string {
   return `${Math.round(hue * 10) / 10} ${Math.round(s * 1000) / 10}% ${Math.round(l * 1000) / 10}%`;
 }
 
+function hexToOklch(hex: string): string {
+  const h = hex.replace("#", "");
+  const ri = parseInt(h.slice(0, 2), 16) / 255;
+  const gi = parseInt(h.slice(2, 4), 16) / 255;
+  const bi = parseInt(h.slice(4, 6), 16) / 255;
+  // sRGB to linear
+  const toLinear = (c: number) =>
+    c <= 0.04045 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
+  const lr = toLinear(ri);
+  const lg = toLinear(gi);
+  const lb = toLinear(bi);
+  // Linear sRGB to OKLab
+  const l_ = 0.4122214708 * lr + 0.5363325363 * lg + 0.0514459929 * lb;
+  const m_ = 0.2119034982 * lr + 0.6806995451 * lg + 0.1073969566 * lb;
+  const s_ = 0.0883024619 * lr + 0.2817188376 * lg + 0.6299787005 * lb;
+  const l3 = Math.cbrt(l_);
+  const m3 = Math.cbrt(m_);
+  const s3 = Math.cbrt(s_);
+  const L = 0.2104542553 * l3 + 0.793617785 * m3 - 0.0040720468 * s3;
+  const a = 1.9779984951 * l3 - 2.428592205 * m3 + 0.4505937099 * s3;
+  const bOk = 0.0259040371 * l3 + 0.7827717662 * m3 - 0.808675766 * s3;
+  const C = Math.sqrt(a * a + bOk * bOk);
+  let H = (Math.atan2(bOk, a) * 180) / Math.PI;
+  if (H < 0) H += 360;
+  // Round to match typical CSS precision
+  const Lr = Math.round(L * 10000) / 10000;
+  const Cr = Math.round(C * 10000) / 10000;
+  const Hr = Math.round(H * 100) / 100;
+  return `${Lr} ${Cr} ${Hr}`;
+}
+
 async function loadPaletteCSS(): Promise<string> {
   const raw = await readFile(PALETTE_PATH, "utf-8");
   const palette: Record<string, string> = JSON.parse(raw);
@@ -409,6 +440,7 @@ async function loadPaletteCSS(): Promise<string> {
       `  --${name}: ${value};`,
       `  --${name}-rgb: ${hexToRgb(value)};`,
       `  --${name}-hsl: ${hexToHsl(value)};`,
+      `  --${name}-oklch: ${hexToOklch(value)};`,
     ])
     .join("\n");
   return `:root {\n${vars}\n}`;
@@ -541,13 +573,26 @@ export default function (pi: ExtensionAPI) {
           const raw = [paletteCSS, ...matched.map((s) => s.css)].join("\n\n");
           const combined = await addImportant(raw);
           const escaped = escapeForTemplate(combined);
+          // Parse CSS into individual rules server-side for CSSOM injection
+          const parsedRoot = postcss.parse(combined);
+          const rules: string[] = [];
+          for (const node of parsedRoot.nodes) {
+            rules.push(node.toString());
+          }
+          const rulesJson = JSON.stringify(rules);
           await evalInTab(
             tab,
             `(() => {
             const id = "__usercss__";
             let el = document.getElementById(id);
-            if (!el) { el = document.createElement("style"); el.id = id; document.head.appendChild(el); }
-            el.textContent = \`${escaped}\`;
+            if (el) el.remove();
+            el = document.createElement("style");
+            el.id = id;
+            document.head.appendChild(el);
+            const rules = ${rulesJson};
+            for (const rule of rules) {
+              try { el.sheet.insertRule(rule, el.sheet.cssRules.length); } catch(e) {}
+            }
           })()`,
           );
           results.push(
