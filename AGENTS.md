@@ -37,7 +37,8 @@ The extension (`.pi/extensions/firefox-rdp.ts`) registers these tools:
 | `query-elements-by-selector`         | Query DOM elements by CSS selector. Returns tag, classes, computed styles, text.  |
 | `get-computed-css-vars-from-element` | Get resolved CSS custom property values from an element.                          |
 | `extract-css-vars-from-stylesheets`  | Extract CSS variable declarations from a local file or live page stylesheets.     |
-| `screenshot-tab`                     | Screenshot the tab viewport or a specific element.                                |
+| `screenshot-tab`                     | Screenshot the tab viewport.                                                      |
+| `screenshot-element-in-tab`          | Screenshot a specific DOM element by CSS selector.                                |
 | `close-tab`                          | Close a tab by index.                                                             |
 | `reload-tab`                         | Reload a tab.                                                                     |
 | `close-browser`                      | Kill Firefox and clean up.                                                        |

@@ -150,7 +150,7 @@ async function killExisting(): Promise<void> {
 async function waitForPort(
   port: number,
   host = "127.0.0.1",
-  timeout = 10000,
+  timeout = 5000,
 ): Promise<void> {
   const start = Date.now();
   while (Date.now() - start < timeout) {
@@ -250,7 +250,7 @@ async function evalInChrome(expression: string): Promise<string> {
     const timeout = setTimeout(() => {
       client!.removeListener("message", handler);
       reject(new Error("chrome eval timeout"));
-    }, 30000);
+    }, 5000);
 
     const handler = (msg: any) => {
       if (msg.from === actor && msg.type === "evaluationResult") {
@@ -344,7 +344,7 @@ async function evalInTab(
       const timeout = setTimeout(() => {
         client!.removeListener("message", handler);
         reject(new Error("eval timeout"));
-      }, 15000);
+      }, 5000);
 
       const handler = (msg: any) => {
         if (msg.from === consoleActor && msg.type === "evaluationResult") {
@@ -959,18 +959,61 @@ export default function (pi: ExtensionAPI) {
     },
   });
 
+  async function captureScreenshot(
+    tab: any,
+    rectX: number,
+    rectY: number,
+    rectW: number,
+    rectH: number,
+  ) {
+    const dataUrl = await evalInChrome(`
+      (async () => {
+        const win = Services.wm.getMostRecentWindow("navigator:browser");
+        if (!win) throw new Error("no browser window");
+        const browser = win.gBrowser.selectedBrowser;
+        const bc = browser.browsingContext;
+        const snapshot = await bc.currentWindowGlobal.drawSnapshot(
+          new DOMRect(${rectX}, ${rectY}, ${rectW}, ${rectH}),
+          1.0, "rgb(255,255,255)"
+        );
+        const c = new OffscreenCanvas(snapshot.width, snapshot.height);
+        const ctx = c.getContext("2d");
+        ctx.drawImage(snapshot, 0, 0);
+        snapshot.close();
+        const blob = await c.convertToBlob({ type: "image/png" });
+        const ab = await blob.arrayBuffer();
+        const bytes = new Uint8Array(ab);
+        let binary = "";
+        for (let i = 0; i < bytes.length; i++) binary += String.fromCharCode(bytes[i]);
+        return "data:image/png;base64," + btoa(binary);
+      })()
+    `);
+
+    if (dataUrl.startsWith("data:image/png")) {
+      const b64 = dataUrl.replace(/^data:image\/png;base64,/, "");
+      return {
+        content: [
+          { type: "text", text: "Screenshot captured." },
+          { type: "image", data: b64, mimeType: "image/png" },
+        ],
+        details: {},
+      };
+    }
+
+    return {
+      content: [
+        { type: "text", text: "Screenshot failed: " + dataUrl.slice(0, 200) },
+      ],
+      isError: true,
+    };
+  }
+
   pi.registerTool({
     name: "screenshot-tab",
-    label: "Screenshot",
+    label: "Screenshot Tab",
     description:
-      "Take a screenshot of the browser viewport or a specific element. Returns the image as an attachment.",
+      "Take a screenshot of the browser viewport. Returns the image as an attachment.",
     parameters: Type.Object({
-      selector: Type.Optional(
-        Type.String({
-          description:
-            "CSS selector to screenshot a specific element (default: full viewport)",
-        }),
-      ),
       tab: Type.Optional(
         Type.Number({ description: "Tab index (default: 0)" }),
       ),
@@ -986,65 +1029,79 @@ export default function (pi: ExtensionAPI) {
           };
         }
 
-        if (params.selector) {
-          await evalInTab(
-            tab,
-            `document.querySelector(${JSON.stringify(params.selector)})?.scrollIntoView({ block: "center" })`,
-          );
-          await new Promise((r) => setTimeout(r, 300));
-        }
-
-        // Get current scroll position from the content tab
         const scrollPos = await evalInTab(
           tab,
-          `JSON.stringify({ x: window.scrollX, y: window.scrollY })`,
+          `JSON.stringify({ x: window.scrollX, y: window.scrollY, w: document.documentElement.clientWidth, h: document.documentElement.clientHeight })`,
         );
-        const { x: scrollX, y: scrollY } = JSON.parse(scrollPos);
+        const vp = JSON.parse(scrollPos);
+        return await captureScreenshot(tab, vp.x, vp.y, vp.w, vp.h);
+      } catch (e: any) {
+        return {
+          content: [{ type: "text", text: `Failed: ${e.message}` }],
+          isError: true,
+        };
+      }
+    },
+  });
 
-        // Use chrome-privileged drawSnapshot via parent process console
-        const dataUrl = await evalInChrome(`
-          (async () => {
-            const win = Services.wm.getMostRecentWindow("navigator:browser");
-            if (!win) throw new Error("no browser window");
-            const browser = win.gBrowser.selectedBrowser;
-            const bc = browser.browsingContext;
-            const snapshot = await bc.currentWindowGlobal.drawSnapshot(
-              new DOMRect(${scrollX}, ${scrollY}, browser.clientWidth, browser.clientHeight),
-              1.0, "rgb(255,255,255)"
-            );
-            const c = new OffscreenCanvas(snapshot.width, snapshot.height);
-            const ctx = c.getContext("2d");
-            ctx.drawImage(snapshot, 0, 0);
-            snapshot.close();
-            const blob = await c.convertToBlob({ type: "image/png" });
-            const ab = await blob.arrayBuffer();
-            const bytes = new Uint8Array(ab);
-            let binary = "";
-            for (let i = 0; i < bytes.length; i++) binary += String.fromCharCode(bytes[i]);
-            return "data:image/png;base64," + btoa(binary);
-          })()
-        `);
-
-        if (dataUrl.startsWith("data:image/png")) {
-          const b64 = dataUrl.replace(/^data:image\/png;base64,/, "");
+  pi.registerTool({
+    name: "screenshot-element-in-tab",
+    label: "Screenshot Element",
+    description:
+      "Take a screenshot of a specific DOM element by CSS selector. Returns the image as an attachment.",
+    parameters: Type.Object({
+      selector: Type.String({
+        description: "CSS selector of the element to screenshot",
+      }),
+      tab: Type.Optional(
+        Type.Number({ description: "Tab index (default: 0)" }),
+      ),
+    }),
+    async execute(_id, params) {
+      try {
+        const tabs = await listTabs();
+        const tab = tabs[params.tab ?? 0];
+        if (!tab) {
           return {
-            content: [
-              { type: "text", text: "Screenshot captured." },
-              { type: "image", data: b64, mimeType: "image/png" },
-            ],
-            details: {},
+            content: [{ type: "text", text: "No tab at that index" }],
+            isError: true,
           };
         }
 
-        return {
-          content: [
-            {
-              type: "text",
-              text: "Screenshot failed: " + dataUrl.slice(0, 200),
-            },
-          ],
-          isError: true,
-        };
+        const boundsJson = await evalInTab(
+          tab,
+          `(() => {
+            const el = document.querySelector(${JSON.stringify(params.selector)});
+            if (!el) return "null";
+            el.scrollIntoView({ block: "center" });
+            const r = el.getBoundingClientRect();
+            return JSON.stringify({ x: r.x + window.scrollX, y: r.y + window.scrollY, w: r.width, h: r.height });
+          })()`,
+        );
+        const bounds = JSON.parse(boundsJson);
+        if (!bounds) {
+          return {
+            content: [
+              {
+                type: "text",
+                text: `No element found for selector: ${params.selector}`,
+              },
+            ],
+            isError: true,
+          };
+        }
+        await new Promise((r) => setTimeout(r, 300));
+        // Re-read after scroll settles
+        const settled = await evalInTab(
+          tab,
+          `(() => {
+            const el = document.querySelector(${JSON.stringify(params.selector)});
+            const r = el.getBoundingClientRect();
+            return JSON.stringify({ x: r.x + window.scrollX, y: r.y + window.scrollY, w: r.width, h: r.height });
+          })()`,
+        );
+        const s = JSON.parse(settled);
+        return await captureScreenshot(tab, s.x, s.y, s.w, s.h);
       } catch (e: any) {
         return {
           content: [{ type: "text", text: `Failed: ${e.message}` }],
