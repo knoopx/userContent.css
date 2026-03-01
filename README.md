@@ -61,6 +61,17 @@ Install dependencies:
 npm install
 ```
 
+## Screenshots
+
+|                                                               |                                                         |                                                   |
+| ------------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------- |
+| ![chatgpt.com](screenshots/chatgpt.com.png)                   | ![claude.ai](screenshots/claude.ai.png)                 | ![crates.io](screenshots/crates.io.png)           |
+| ![devdocs.io](screenshots/devdocs.io.png)                     | ![flathub.org](screenshots/flathub.org.png)             | ![github.com](screenshots/github.com.png)         |
+| ![huggingface.co](screenshots/huggingface.co.png)             | ![kimi.com](screenshots/kimi.com.png)                   | ![lobste.rs](screenshots/lobste.rs.png)           |
+| ![news.ycombinator.com](screenshots/news.ycombinator.com.png) | ![pypi.org](screenshots/pypi.org.png)                   | ![reddit.com](screenshots/reddit.com.png)         |
+| ![search.nixos.org](screenshots/search.nixos.org.png)         | ![stackoverflow.com](screenshots/stackoverflow.com.png) | ![wiki.nixos.org](screenshots/wiki.nixos.org.png) |
+| ![wikipedia.org](screenshots/wikipedia.org.png)               | ![www.npmjs.com](screenshots/www.npmjs.com.png)         |                                                   |
+
 ## Dependencies
 
 - [postcss](https://postcss.org) — CSS processing
