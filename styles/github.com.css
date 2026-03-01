@@ -1,0 +1,504 @@
+:root,
+[data-color-mode="dark"][data-dark-theme="dark"],
+[data-color-mode="dark"][data-dark-theme="dark_high_contrast"],
+[data-color-mode="auto"][data-dark-theme="dark"],
+[data-color-mode="auto"][data-dark-theme="dark_high_contrast"],
+[data-color-mode="light"][data-light-theme="light"],
+[data-color-mode="light"][data-light-theme="light_high_contrast"],
+[data-color-mode="auto"][data-light-theme="light"],
+[data-color-mode="auto"][data-light-theme="light_high_contrast"] {
+  /* backgrounds */
+  --bgColor-default: var(--base00);
+  --bgColor-muted: var(--base01);
+  --bgColor-inset: var(--base00);
+  --bgColor-emphasis: var(--base02);
+  --bgColor-inverse: var(--base05);
+  --bgColor-disabled: var(--base01);
+  --bgColor-transparent: transparent;
+  --bgColor-black: var(--base00);
+  --bgColor-white: var(--base05);
+
+  /* neutral backgrounds */
+  --bgColor-neutral-emphasis: var(--base03);
+  --bgColor-neutral-muted: color-mix(in srgb, var(--base03) 20%, transparent);
+
+  /* semantic backgrounds */
+  --bgColor-accent-emphasis: var(--base02);
+  --bgColor-accent-muted: color-mix(in srgb, var(--base0D) 10%, transparent);
+  --bgColor-success-emphasis: var(--base0B);
+  --bgColor-success-muted: var(--base01);
+  --bgColor-attention-emphasis: var(--base0A);
+  --bgColor-attention-muted: var(--base01);
+  --bgColor-danger-emphasis: var(--base08);
+  --bgColor-danger-muted: var(--base01);
+  --bgColor-severe-emphasis: var(--base09);
+  --bgColor-severe-muted: var(--base01);
+  --bgColor-done-emphasis: var(--base0F);
+  --bgColor-done-muted: var(--base01);
+  --bgColor-sponsors-emphasis: var(--base0F);
+  --bgColor-sponsors-muted: var(--base01);
+
+  /* foreground */
+  --fgColor-default: var(--base05);
+  --fgColor-muted: var(--base04);
+  --fgColor-onEmphasis: var(--base05);
+  --fgColor-onInverse: var(--base00);
+  --fgColor-white: var(--base05);
+  --fgColor-black: var(--base00);
+  --fgColor-disabled: var(--base03);
+  --fgColor-neutral: var(--base04);
+
+  /* semantic foreground */
+  --fgColor-accent: var(--base0D);
+  --fgColor-success: var(--base0B);
+  --fgColor-attention: var(--base0A);
+  --fgColor-danger: var(--base08);
+  --fgColor-severe: var(--base09);
+  --fgColor-done: var(--base0F);
+  --fgColor-sponsors: var(--base0F);
+
+  /* borders */
+  --borderColor-default: var(--base02);
+  --borderColor-muted: color-mix(in srgb, var(--base02) 70%, transparent);
+  --borderColor-emphasis: var(--base03);
+  --borderColor-disabled: color-mix(in srgb, var(--base03) 10%, transparent);
+  --borderColor-transparent: transparent;
+  --borderColor-translucent: color-mix(in srgb, var(--base05) 15%, transparent);
+
+  /* semantic borders */
+  --borderColor-accent-emphasis: var(--base0D);
+  --borderColor-accent-muted: color-mix(
+    in srgb,
+    var(--base0D) 40%,
+    transparent
+  );
+  --borderColor-success-emphasis: var(--base0B);
+  --borderColor-success-muted: color-mix(
+    in srgb,
+    var(--base0B) 40%,
+    transparent
+  );
+  --borderColor-attention-emphasis: var(--base0A);
+  --borderColor-attention-muted: color-mix(
+    in srgb,
+    var(--base0A) 40%,
+    transparent
+  );
+  --borderColor-danger-emphasis: var(--base08);
+  --borderColor-danger-muted: color-mix(
+    in srgb,
+    var(--base08) 40%,
+    transparent
+  );
+  --borderColor-severe-emphasis: var(--base09);
+  --borderColor-severe-muted: color-mix(
+    in srgb,
+    var(--base09) 40%,
+    transparent
+  );
+  --borderColor-done-emphasis: var(--base0F);
+  --borderColor-done-muted: color-mix(in srgb, var(--base0F) 40%, transparent);
+  --borderColor-sponsors-emphasis: var(--base0F);
+  --borderColor-sponsors-muted: color-mix(
+    in srgb,
+    var(--base0F) 40%,
+    transparent
+  );
+  --borderColor-neutral-emphasis: var(--base03);
+
+  /* header */
+  --header-bgColor: var(--base01);
+  --header-fgColor-default: color-mix(in srgb, var(--base05) 70%, transparent);
+  --header-fgColor-logo: var(--base05);
+  --header-borderColor-divider: var(--base03);
+  --headerSearch-bgColor: var(--base00);
+  --headerSearch-borderColor: var(--base02);
+
+  /* controls */
+  --control-bgColor-rest: var(--base01);
+  --control-bgColor-hover: var(--base02);
+  --control-bgColor-active: var(--base02);
+  --control-fgColor-rest: var(--base05);
+  --control-borderColor-selected: var(--base05);
+  --control-transparent-bgColor-rest: transparent;
+  --control-transparent-bgColor-hover: color-mix(
+    in srgb,
+    var(--base03) 20%,
+    transparent
+  );
+  --control-transparent-bgColor-active: color-mix(
+    in srgb,
+    var(--base03) 25%,
+    transparent
+  );
+  --control-transparent-bgColor-selected: color-mix(
+    in srgb,
+    var(--base03) 20%,
+    transparent
+  );
+  --control-transparent-borderColor-rest: transparent;
+  --control-transparent-borderColor-hover: transparent;
+  --control-transparent-borderColor-active: transparent;
+  --control-danger-fgColor-hover: var(--base08);
+
+  /* control tracks */
+  --controlTrack-bgColor-rest: var(--base02);
+  --controlTrack-bgColor-hover: var(--base02);
+  --controlTrack-bgColor-active: var(--base03);
+  --controlTrack-fgColor-rest: var(--base04);
+
+  /* control knobs */
+  --controlKnob-bgColor-rest: var(--base03);
+  --controlKnob-bgColor-checked: var(--base03);
+
+  /* buttons - primary */
+  --button-primary-bgColor-rest: var(--base0D);
+  --button-primary-bgColor-hover: var(--base0A);
+  --button-primary-bgColor-active: var(--base0A);
+  --button-primary-bgColor-disabled: var(--base02);
+  --button-primary-fgColor-disabled: var(--base03);
+  --button-primary-iconColor-rest: var(--base01);
+  --button-primary-borderColor-disabled: var(--base02);
+  --button-primary-fgColor-rest: var(--base01);
+
+  /* buttons - outline */
+  --button-outline-bgColor-rest: var(--base05);
+  --button-outline-bgColor-active: var(--base02);
+  --button-outline-fgColor-rest: var(--base0D);
+  --button-outline-fgColor-hover: var(--base0D);
+  --button-outline-fgColor-active: var(--base05);
+  --button-outline-fgColor-disabled: color-mix(
+    in srgb,
+    var(--base0D) 50%,
+    transparent
+  );
+
+  /* buttons - danger */
+  --button-danger-fgColor-rest: var(--base08);
+  --button-danger-fgColor-hover: var(--base05);
+  --button-danger-fgColor-active: var(--base05);
+  --button-danger-fgColor-disabled: color-mix(
+    in srgb,
+    var(--base08) 50%,
+    transparent
+  );
+  --button-danger-bgColor-hover: color-mix(
+    in srgb,
+    var(--base08) 50%,
+    var(--base00)
+  );
+  --button-danger-iconColor-hover: var(--base05);
+
+  /* buttons - inactive */
+  --button-inactive-bgColor: var(--base02);
+  --button-inactive-fgColor: var(--base04);
+
+  /* buttons - invisible */
+  --button-invisible-bgColor-disabled: transparent;
+  --button-invisible-borderColor-disabled: transparent;
+
+  /* buttons - star */
+  --button-star-iconColor: var(--base0A);
+
+  /* button counters */
+  --buttonCounter-default-bgColor-rest: var(--base02);
+  --buttonCounter-primary-bgColor-rest: color-mix(
+    in srgb,
+    var(--base00) 20%,
+    transparent
+  );
+  --buttonCounter-outline-bgColor-rest: color-mix(
+    in srgb,
+    var(--base02) 20%,
+    transparent
+  );
+  --buttonCounter-outline-bgColor-hover: color-mix(
+    in srgb,
+    var(--base02) 20%,
+    transparent
+  );
+  --buttonCounter-outline-fgColor-rest: var(--base0D);
+  --buttonCounter-outline-fgColor-hover: var(--base0D);
+  --buttonCounter-outline-fgColor-disabled: color-mix(
+    in srgb,
+    var(--base0D) 50%,
+    transparent
+  );
+  --buttonCounter-danger-bgColor-rest: color-mix(
+    in srgb,
+    var(--base08) 20%,
+    transparent
+  );
+  --buttonCounter-danger-bgColor-hover: color-mix(
+    in srgb,
+    var(--base05) 20%,
+    transparent
+  );
+  --buttonCounter-danger-bgColor-disabled: color-mix(
+    in srgb,
+    var(--base08) 5%,
+    transparent
+  );
+  --buttonCounter-danger-fgColor-hover: var(--base05);
+  --buttonCounter-danger-fgColor-disabled: color-mix(
+    in srgb,
+    var(--base08) 50%,
+    transparent
+  );
+
+  /* button keybinding hints */
+  --buttonKeybindingHint-default-bgColor-rest: var(--base02);
+  --buttonKeybindingHint-inactive-bgColor: var(--base02);
+  --buttonKeybindingHint-invisible-borderColor-rest: transparent;
+  --buttonKeybindingHint-danger-bgColor-hover: color-mix(
+    in srgb,
+    var(--base00) 20%,
+    transparent
+  );
+  --buttonKeybindingHint-danger-bgColor-active: color-mix(
+    in srgb,
+    var(--base00) 40%,
+    transparent
+  );
+  --buttonKeybindingHint-danger-borderColor-hover: color-mix(
+    in srgb,
+    var(--base00) 10%,
+    transparent
+  );
+  --buttonKeybindingHint-primary-bgColor-disabled: color-mix(
+    in srgb,
+    var(--base00) 10%,
+    transparent
+  );
+  --buttonKeybindingHint-primary-borderColor-rest: color-mix(
+    in srgb,
+    var(--base00) 10%,
+    transparent
+  );
+
+  /* checked controls */
+  --control-checked-bgColor-hover: var(--base0D);
+  --control-checked-bgColor-active: var(--base0D);
+  --control-checked-fgColor-disabled: var(--base00);
+
+  /* overlay */
+  --overlay-bgColor: var(--base00);
+  --overlay-borderColor: color-mix(in srgb, var(--base02) 50%, transparent);
+  --overlay-backdrop-bgColor: color-mix(
+    in srgb,
+    var(--base01) 40%,
+    transparent
+  );
+
+  /* avatar */
+  --avatar-bgColor: color-mix(in srgb, var(--base05) 10%, transparent);
+  --avatarStack-fade-bgColor-default: var(--base02);
+  --avatarStack-fade-bgColor-muted: var(--base02);
+
+  /* selection */
+  --selection-bgColor: color-mix(in srgb, var(--base0D) 70%, transparent);
+
+  /* highlight */
+  --highlight-neutral-bgColor: color-mix(
+    in srgb,
+    var(--base0A) 40%,
+    transparent
+  );
+
+  /* menu */
+  --menu-bgColor-active: var(--base01);
+
+  /* side nav */
+  --sideNav-bgColor-selected: var(--base01);
+
+  /* skeleton loader */
+  --skeletonLoader-bgColor: color-mix(in srgb, var(--base03) 20%, transparent);
+
+  /* timeline */
+  --timelineBadge-bgColor: var(--base01);
+
+  /* counter */
+  --counter-borderColor: transparent;
+
+  /* topic tag */
+  --topicTag-borderColor: transparent;
+
+  /* select menu */
+  --selectMenu-bgColor-active: var(--base02);
+  --selectMenu-borderColor: transparent;
+
+  /* reaction button */
+  --reactionButton-selected-bgColor-rest: color-mix(
+    in srgb,
+    var(--base0D) 20%,
+    transparent
+  );
+  --reactionButton-selected-bgColor-hover: color-mix(
+    in srgb,
+    var(--base0D) 36%,
+    transparent
+  );
+  --reactionButton-selected-fgColor-hover: var(--base0C);
+
+  /* underline nav */
+  --underlineNav-borderColor-active: var(--base09);
+
+  /* progress bar */
+  --progressBar-track-borderColor: transparent;
+
+  /* diff blobs */
+  --diffBlob-additionNum-bgColor: color-mix(
+    in srgb,
+    var(--base0B) 30%,
+    transparent
+  );
+  --diffBlob-additionWord-bgColor: color-mix(
+    in srgb,
+    var(--base0B) 40%,
+    transparent
+  );
+  --diffBlob-deletionNum-bgColor: color-mix(
+    in srgb,
+    var(--base08) 30%,
+    transparent
+  );
+  --diffBlob-deletionWord-bgColor: color-mix(
+    in srgb,
+    var(--base08) 40%,
+    transparent
+  );
+  --diffBlob-hunkNum-bgColor-rest: color-mix(
+    in srgb,
+    var(--base0D) 30%,
+    transparent
+  );
+
+  /* syntax highlighting - codemirror */
+  --codeMirror-syntax-fgColor-comment: var(--base03);
+  --codeMirror-syntax-fgColor-constant: var(--base0C);
+  --codeMirror-syntax-fgColor-entity: var(--base0F);
+  --codeMirror-syntax-fgColor-keyword: var(--base08);
+  --codeMirror-syntax-fgColor-storage: var(--base08);
+  --codeMirror-syntax-fgColor-string: var(--base0C);
+  --codeMirror-syntax-fgColor-support: var(--base0C);
+  --codeMirror-syntax-fgColor-variable: var(--base09);
+
+  /* syntax highlighting - prettylights */
+  --color-prettylights-syntax-comment: var(--base03);
+  --color-prettylights-syntax-constant: var(--base0C);
+  --color-prettylights-syntax-constant-other-reference-link: var(--base0C);
+  --color-prettylights-syntax-entity: var(--base0F);
+  --color-prettylights-syntax-entity-tag: var(--base0B);
+  --color-prettylights-syntax-keyword: var(--base08);
+  --color-prettylights-syntax-string: var(--base0C);
+  --color-prettylights-syntax-string-regexp: var(--base0B);
+  --color-prettylights-syntax-variable: var(--base09);
+  --color-prettylights-syntax-brackethighlighter-angle: var(--base04);
+  --color-prettylights-syntax-brackethighlighter-unmatched: var(--base08);
+  --color-prettylights-syntax-carriage-return-bg: var(--base08);
+  --color-prettylights-syntax-carriage-return-text: var(--base05);
+  --color-prettylights-syntax-markup-heading: var(--base0D);
+  --color-prettylights-syntax-markup-bold: var(--base05);
+  --color-prettylights-syntax-markup-italic: var(--base05);
+  --color-prettylights-syntax-markup-list: var(--base0A);
+  --color-prettylights-syntax-markup-inserted-text: var(--base0B);
+  --color-prettylights-syntax-markup-inserted-bg: color-mix(
+    in srgb,
+    var(--base0B) 15%,
+    var(--base00)
+  );
+  --color-prettylights-syntax-markup-deleted-text: var(--base08);
+  --color-prettylights-syntax-markup-deleted-bg: color-mix(
+    in srgb,
+    var(--base08) 15%,
+    var(--base00)
+  );
+  --color-prettylights-syntax-markup-changed-text: var(--base09);
+  --color-prettylights-syntax-markup-changed-bg: color-mix(
+    in srgb,
+    var(--base09) 15%,
+    var(--base00)
+  );
+  --color-prettylights-syntax-markup-ignored-text: var(--base05);
+  --color-prettylights-syntax-markup-ignored-bg: var(--base0D);
+  --color-prettylights-syntax-meta-diff-range: var(--base0F);
+  --color-prettylights-syntax-storage-modifier-import: var(--base05);
+  --color-prettylights-syntax-sublimelinter-gutter-mark: var(--base02);
+
+  /* ansi colors */
+  --color-ansi-black: var(--base02);
+  --color-ansi-black-bright: var(--base03);
+  --color-ansi-red: var(--base08);
+  --color-ansi-red-bright: var(--base08);
+  --color-ansi-green: var(--base0B);
+  --color-ansi-green-bright: var(--base0B);
+  --color-ansi-yellow: var(--base0A);
+  --color-ansi-yellow-bright: var(--base0A);
+  --color-ansi-blue: var(--base0D);
+  --color-ansi-blue-bright: var(--base0D);
+  --color-ansi-magenta: var(--base0F);
+  --color-ansi-magenta-bright: var(--base0F);
+  --color-ansi-cyan: var(--base0C);
+  --color-ansi-cyan-bright: var(--base0C);
+  --color-ansi-white: var(--base05);
+  --color-ansi-white-bright: var(--base05);
+  --color-ansi-gray: var(--base03);
+
+  /* contribution graph */
+  --contribution-default-bgColor-0: var(--base01);
+  --contribution-default-bgColor-1: color-mix(
+    in srgb,
+    var(--base0B) 20%,
+    var(--base00)
+  );
+  --contribution-default-bgColor-2: color-mix(
+    in srgb,
+    var(--base0B) 40%,
+    var(--base00)
+  );
+  --contribution-default-bgColor-3: color-mix(
+    in srgb,
+    var(--base0B) 60%,
+    var(--base00)
+  );
+  --contribution-default-bgColor-4: var(--base0B);
+  --contribution-default-borderColor-0: color-mix(
+    in srgb,
+    var(--base00) 5%,
+    transparent
+  );
+
+  /* marketing/project colors */
+  --color-marketing-icon-primary: var(--base0D);
+  --color-marketing-icon-secondary: var(--base0D);
+  --color-project-header-bg: var(--base00);
+  --color-project-sidebar-bg: var(--base01);
+  --color-project-gradient-in: var(--base01);
+  --color-project-gradient-out: color-mix(
+    in srgb,
+    var(--base01) 0%,
+    transparent
+  );
+}
+
+.Button--primary {
+  font-weight: 700;
+}
+
+.highcharts-color-0 path,
+.highcharts-series-0 path {
+  fill: var(--base0B);
+  stroke: var(--base0B);
+}
+
+.highcharts-color-1 path,
+.highcharts-series-1 path {
+  fill: var(--base0D);
+  stroke: var(--base0D);
+}
+
+.highcharts-color-2 path,
+.highcharts-series-2 path {
+  fill: var(--base0F);
+  stroke: var(--base0F);
+}
