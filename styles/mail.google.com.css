@@ -1,0 +1,899 @@
+:root,
+.GYfbG,
+.s8Kcyb,
+.KYatzc,
+.bGV,
+.bkL,
+.qp,
+.lBV8Rb,
+.aLF-aPX-bil-bip,
+.bbL.bbR,
+.bbM.bbR,
+.bbL.bbK,
+.bbM.bbK,
+.o9kyXe,
+.fP5mL,
+.C1fF3c,
+.Lov59,
+.V9kMTd,
+.gMjUJ,
+.ldAxn,
+.lOpKR,
+.JwUC2c,
+.tV7Lpe,
+.q70Nge,
+.EMAdud,
+.JnEIz {
+  /* surface/background */
+  --gm3-sys-color-background: var(--base00);
+  --gm3-sys-color-surface: var(--base00);
+  --gm3-sys-color-surface-bright: var(--base01);
+  --gm3-sys-color-surface-dim: var(--base00);
+  --gm3-sys-color-surface-variant: var(--base02);
+  --gm3-sys-color-surface-container: var(--base01);
+  --gm3-sys-color-surface-container-low: var(--base00);
+  --gm3-sys-color-surface-container-lowest: var(--base00);
+  --gm3-sys-color-surface-container-high: var(--base02);
+  --gm3-sys-color-surface-container-highest: var(--base02);
+  --gm3-sys-color-surface-tint: var(--base0D);
+
+  /* foreground */
+  --gm3-sys-color-on-background: var(--base05);
+  --gm3-sys-color-on-surface: var(--base05);
+  --gm3-sys-color-on-surface-variant: var(--base04);
+
+  /* inverse */
+  --gm3-sys-color-inverse-surface: var(--base05);
+  --gm3-sys-color-inverse-on-surface: var(--base00);
+  --gm3-sys-color-inverse-primary: var(--base0D);
+
+  /* primary */
+  --gm3-sys-color-primary: var(--base0D);
+  --gm3-sys-color-primary-container: var(--base02);
+  --gm3-sys-color-primary-fixed: var(--base02);
+  --gm3-sys-color-primary-fixed-dim: var(--base0D);
+  --gm3-sys-color-on-primary: var(--base00);
+  --gm3-sys-color-on-primary-container: var(--base0D);
+  --gm3-sys-color-on-primary-fixed: var(--base00);
+  --gm3-sys-color-on-primary-fixed-variant: var(--base0D);
+
+  /* secondary */
+  --gm3-sys-color-secondary: var(--base0C);
+  --gm3-sys-color-secondary-container: var(--base02);
+  --gm3-sys-color-secondary-fixed: var(--base02);
+  --gm3-sys-color-secondary-fixed-dim: var(--base0C);
+  --gm3-sys-color-on-secondary: var(--base00);
+  --gm3-sys-color-on-secondary-container: var(--base0C);
+  --gm3-sys-color-on-secondary-fixed: var(--base00);
+  --gm3-sys-color-on-secondary-fixed-variant: var(--base0C);
+
+  /* tertiary */
+  --gm3-sys-color-tertiary: var(--base0B);
+  --gm3-sys-color-tertiary-container: var(--base02);
+  --gm3-sys-color-tertiary-fixed: var(--base02);
+  --gm3-sys-color-tertiary-fixed-dim: var(--base0B);
+  --gm3-sys-color-on-tertiary: var(--base00);
+  --gm3-sys-color-on-tertiary-container: var(--base0B);
+  --gm3-sys-color-on-tertiary-fixed: var(--base00);
+  --gm3-sys-color-on-tertiary-fixed-variant: var(--base0B);
+
+  /* error */
+  --gm3-sys-color-error: var(--base08);
+  --gm3-sys-color-error-container: var(--base01);
+  --gm3-sys-color-on-error: var(--base00);
+  --gm3-sys-color-on-error-container: var(--base08);
+
+  /* outline */
+  --gm3-sys-color-outline: var(--base03);
+  --gm3-sys-color-outline-variant: var(--base02);
+
+  /* scrim/shadow */
+  --gm3-sys-color-scrim: var(--base00);
+  --gm3-sys-color-shadow: var(--base00);
+}
+
+/* body and main layout */
+body {
+  background-color: var(--base00);
+  color: var(--base05);
+}
+
+/* loading screen */
+#loading {
+  background-color: var(--base00);
+  color: var(--base05);
+}
+
+/* header/top bar */
+.aeH {
+  background-color: var(--base00);
+}
+
+/* search box */
+.gb_Cd,
+.gb_Fd,
+form.gb_Fd {
+  background-color: var(--base01);
+  border-color: var(--base02);
+}
+
+.gb_Cd input,
+.gb_Dd,
+.gb_ze {
+  color: var(--base05);
+}
+
+/* sidebar */
+.aeN {
+  background-color: var(--base00);
+}
+
+/* sidebar labels */
+.TN {
+  color: var(--base05);
+  background-color: transparent;
+}
+
+/* selected/active folder */
+.TO.nZ {
+  background-color: var(--base02);
+}
+
+/* sidebar icons (background-image PNGs) */
+.qj {
+  filter: brightness(0) invert(0.7);
+}
+
+.TO.nZ .qj {
+  filter: brightness(0) invert(1);
+}
+
+.aeN svg {
+  fill: var(--base04);
+}
+
+.TO.nZ svg {
+  fill: var(--base0D);
+}
+
+/* sidebar label text */
+.aio,
+.nU {
+  color: var(--base05);
+}
+
+.TO.nZ .nU {
+  color: var(--base0D);
+}
+
+/* count badges */
+.bsU {
+  color: var(--base04);
+}
+
+.TO.nZ .bsU {
+  color: var(--base0D);
+}
+
+/* email list checkboxes (background-image PNGs) */
+.oZ-jc {
+  filter: brightness(0) invert(0.7);
+}
+
+/* star icon sprites (::before pseudo-elements) */
+.T-KT::before {
+  filter: brightness(0) invert(1);
+  opacity: 0.3;
+}
+
+/* starred state */
+.T-KT-Js::before {
+  filter: none;
+  opacity: 1;
+}
+
+.T-KT-JX {
+  opacity: 0;
+}
+
+/* email list star icons */
+.T-KT.T-KT-Js {
+  color: var(--base0A);
+}
+
+/* toolbar icon sprites (apply filter to inner elements only) */
+.G-atb .T-Jo,
+.G-atb .T-I-J3,
+.G-atb .G-asx,
+.G-atb .asa,
+.G-atb img {
+  background-color: transparent;
+  filter: brightness(0) invert(1);
+}
+
+/* reading pane toolbar icon sprites */
+.iH .T-I-J3,
+.iH .G-asx,
+.iH .asa,
+.iH img {
+  background-color: transparent;
+  filter: brightness(0) invert(1);
+}
+
+/* "More" text and chevron */
+.CL,
+.aic,
+.J-Ke,
+.n4,
+.ah9,
+.CJ {
+  color: var(--base05);
+}
+
+/* "Labels" section header */
+.aWk,
+.aAv,
+.aAw {
+  color: var(--base05);
+}
+
+/* header area icons */
+.aeH svg {
+  fill: var(--base04);
+}
+
+/* all SVG icons across Gmail */
+svg,
+svg[fill] {
+  fill: var(--base05);
+  color: var(--base05);
+}
+
+svg path:not([fill="none"]) {
+  fill: var(--base05);
+}
+
+/* icon button containers */
+.T-I {
+  color: var(--base04);
+}
+
+/* label badges in email list */
+.at {
+  border-color: var(--base03);
+}
+
+/* Inbox/Updates badges in reading pane header */
+.BO .at,
+.hN,
+.hO,
+div.hN,
+div.hO,
+div.hN[style],
+div.hO[style] {
+  --cv-colored-label-bg-color: var(--base02);
+  --cv-colored-label-text-color: var(--base05);
+  background-color: var(--base02);
+  background: var(--base02);
+  border-color: var(--base03);
+  color: var(--base05);
+}
+
+.hN span,
+.hN div,
+.hO span,
+.hO div,
+.ahR,
+.ahR span,
+.ahR div {
+  color: var(--base05);
+}
+
+/* badge x/close icon */
+.wYeeg svg {
+  fill: var(--base04);
+}
+
+/* reading pane action buttons (print, new window) */
+.bHI {
+  color: var(--base04);
+}
+
+.bHI svg,
+.aoH {
+  fill: var(--base04);
+}
+
+/* badge close/x button */
+.hN .wYeeg,
+.hN .J-J5-Ji,
+.ahR {
+  color: var(--base04);
+}
+
+/* reply/forward buttons */
+.ams,
+.amn [role="button"] {
+  color: var(--base05);
+  border-color: var(--base04);
+}
+
+.ams::before {
+  filter: brightness(0) invert(1);
+}
+
+.ams svg {
+  fill: var(--base05);
+}
+
+/* compose button icon */
+.T-I.T-I-KE.L3 svg {
+  fill: var(--base0D);
+}
+
+.T-I.T-I-KE.L3 img {
+  filter: brightness(0) invert(1);
+}
+
+/* view mode toggle icons */
+.apL .T-I,
+.apK .T-I,
+.Nu .T-I,
+.aOd {
+  color: var(--base05);
+}
+
+.apL svg,
+.apK svg,
+.Nu svg,
+.aOd svg {
+  fill: var(--base05);
+}
+
+/* pagination arrows */
+.ar5 .T-I {
+  color: var(--base04);
+}
+
+.ar5 svg {
+  fill: var(--base04);
+}
+
+/* email list row icons (attachment, calendar, encrypted, etc) */
+.aJ4,
+.brd,
+.yE,
+.xL {
+  filter: brightness(0) invert(1);
+}
+
+/* hover row action icons */
+.bqX {
+  background-color: transparent;
+  filter: brightness(0) invert(1);
+}
+
+/* compose button */
+.T-I.T-I-KE.L3 {
+  background-color: var(--base02);
+  color: var(--base0D);
+}
+
+/* compose pen icon (::before background image) */
+.T-I.T-I-KE.L3::before {
+  filter: brightness(0) invert(1);
+  opacity: 0.8;
+}
+
+/* main content area */
+.wl,
+.nH,
+.AO,
+.bkK {
+  color: var(--base05);
+}
+
+/* email list rows */
+.zA {
+  background-color: var(--base00);
+  color: var(--base05);
+}
+
+.zA:hover {
+  background-color: var(--base01);
+}
+
+/* unread rows */
+.zE {
+  background-color: var(--base01);
+}
+
+/* selected/active row */
+.aqO {
+  background-color: var(--base02);
+}
+
+/* email list text */
+.yX .y2,
+.xT .y2 {
+  color: var(--base05);
+}
+
+.y2 {
+  color: var(--base05);
+}
+
+/* sender name */
+.yP,
+.zF,
+.bA4 {
+  color: var(--base05);
+}
+
+/* email snippet */
+.y2 {
+  color: var(--base04);
+}
+
+/* date/time */
+.xW {
+  color: var(--base04);
+}
+
+/* label badges in email list */
+.ar.as .at,
+.at {
+  background-color: var(--base02);
+  color: var(--base05);
+  border-color: var(--base03);
+}
+
+/* label badge inner text (has inline color) */
+.at .av,
+.at .au {
+  color: var(--base05);
+  border-color: var(--base03);
+}
+
+/* reading pane header */
+.ha .hP {
+  color: var(--base05);
+}
+
+/* reading pane toolbar */
+.G-atb {
+  background-color: var(--base00);
+}
+
+/* message header */
+.gE {
+  color: var(--base05);
+}
+
+/* sender in message view */
+.gD,
+.go {
+  color: var(--base0D);
+}
+
+/* message date */
+.g3 {
+  color: var(--base04);
+}
+
+/* message body - override inline dark text colors */
+.a3s,
+.a3s div,
+.a3s span,
+.a3s p,
+.a3s td,
+.a3s th,
+.a3s tr,
+.a3s table,
+.a3s li,
+.a3s h1,
+.a3s h2,
+.a3s h3,
+.a3s h4,
+.a3s font,
+.a3s b,
+.a3s strong,
+.a3s i,
+.a3s em {
+  color: var(--base05);
+}
+
+.a3s a {
+  color: var(--base0D);
+}
+
+/* email inner white backgrounds */
+.a3s div,
+.a3s table,
+.a3s td,
+.a3s th,
+.a3s tbody {
+  background-color: transparent;
+}
+
+/* message body container */
+.nH.hx {
+  background-color: var(--base00);
+}
+
+/* toolbar */
+.G-Ni,
+.G-asx {
+  background-color: var(--base00);
+}
+
+/* toolbar icons */
+.T-I .T-I-J3,
+.ar7 .lR {
+  color: var(--base04);
+}
+
+/* notification bar */
+.vh {
+  background-color: var(--base01);
+  color: var(--base05);
+}
+
+/* yellow notification */
+.ata-asE {
+  background-color: var(--base01);
+  color: var(--base05);
+}
+
+/* dropdown menus */
+.J-M {
+  background-color: var(--base01);
+  color: var(--base05);
+}
+
+/* menu items */
+.J-N {
+  color: var(--base05);
+}
+
+.J-N-JT {
+  background-color: var(--base02);
+}
+
+/* scrollbar area */
+.Tm .T-I-J3 {
+  color: var(--base04);
+}
+
+/* footer */
+.l2 {
+  background-color: var(--base00);
+  color: var(--base04);
+}
+
+/* links */
+a {
+  color: var(--base0D);
+}
+
+/* icons */
+.gb_Uc,
+.gb_Mc {
+  color: var(--base04);
+}
+
+/* pagination text */
+.Dj {
+  color: var(--base04);
+}
+
+/* settings gear, help etc */
+.gb_Lc {
+  color: var(--base04);
+}
+
+/* white containers in Gmail */
+div[style*="background-color: rgb(255, 255, 255)"],
+div[style*="background-color:rgb(255,255,255)"],
+div[style*="background: rgb(255, 255, 255)"],
+div[style*="background:rgb(255,255,255)"] {
+  background-color: var(--base00);
+}
+
+div[style*="background-color: rgb(248, 250, 253)"],
+div[style*="background-color:rgb(248,250,253)"] {
+  background-color: var(--base00);
+}
+
+div[style*="background-color: rgb(241, 243, 244)"],
+div[style*="background-color:rgb(241,243,244)"] {
+  background-color: var(--base01);
+}
+
+div[style*="background-color: rgb(250, 251, 251)"],
+div[style*="background-color:rgb(250,251,251)"] {
+  background-color: var(--base00);
+}
+
+/* text color overrides for dark-on-light text */
+div[style*="color: rgb(32, 33, 36)"],
+div[style*="color:rgb(32,33,36)"],
+span[style*="color: rgb(32, 33, 36)"],
+span[style*="color:rgb(32,33,36)"] {
+  color: var(--base05);
+}
+
+div[style*="color: rgb(95, 99, 104)"],
+div[style*="color:rgb(95,99,104)"],
+span[style*="color: rgb(95, 99, 104)"],
+span[style*="color:rgb(95,99,104)"] {
+  color: var(--base04);
+}
+
+/* search input area */
+.gb_ne {
+  background-color: var(--base01);
+}
+
+/* context menu / popup panels */
+.d-Na-JG-M {
+  background-color: var(--base01);
+}
+
+/* star icons area */
+.T-KT {
+  color: var(--base0A);
+}
+
+/* reading pane star icons */
+.gE .zd .T-KT::before {
+  filter: brightness(0) invert(1);
+  opacity: 0.3;
+}
+
+.gE .zd .T-KT-Js::before {
+  filter: none;
+  opacity: 1;
+}
+
+/* reading pane white container */
+.nH.bkK .nH {
+  background-color: var(--base00);
+}
+
+/* message wrapper text */
+.h7,
+.ii.gt,
+.adn,
+.gs,
+.Bk,
+.gE.iv.gt {
+  color: var(--base05);
+}
+
+/* message header details */
+.gE.iv.gt .go,
+.gE.iv.gt .gD {
+  color: var(--base0D);
+}
+
+/* reply/forward button area */
+.nr.wR,
+.nr,
+.wR,
+.amn {
+  background-color: transparent;
+  color: var(--base05);
+}
+
+/* input fields */
+input,
+textarea {
+  background-color: var(--base01);
+  color: var(--base05);
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+  background-color: var(--base00);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--base03);
+}
+
+/* storage progress bar */
+.aiC {
+  background-color: var(--base02);
+}
+
+.aiA {
+  background-color: var(--base0D);
+}
+
+/* storage text */
+.aDq,
+.aDn,
+.aiG {
+  color: var(--base04);
+}
+
+/* "No conversations selected" empty state */
+.TD,
+.aDi,
+.aRv,
+.T9,
+.apb {
+  color: var(--base04);
+}
+
+/* storage usage text */
+.aiD,
+.aiF {
+  color: var(--base04);
+}
+
+/* footer: "Last account activity", "Details" */
+.l6,
+.l6 div,
+.l8 {
+  color: var(--base04);
+}
+
+/* tooltips */
+.T-ays-iP {
+  background-color: var(--base02);
+}
+
+/* reading pane snippet/preview text */
+.iA.g6,
+.iA.g6 span {
+  color: var(--base04);
+}
+
+/* reading pane recipient labels (to, cc, groups) */
+.g2 {
+  color: var(--base04);
+}
+
+/* message action buttons (emoji, reply, more) */
+.R1Zuwf,
+.X92YGb,
+.jvIjkd,
+.LS5phe,
+.s4xHRb {
+  fill: var(--base05);
+  color: var(--base05);
+}
+
+/* "show details" dropdown arrow */
+.ajz {
+  background-color: transparent;
+  filter: brightness(0) invert(1);
+}
+
+/* collapsed messages count bubble */
+.adx {
+  background-color: var(--base01);
+  color: var(--base04);
+  box-shadow: var(--base02) 0px 0px 0px 1px inset;
+}
+
+/* collapsed message rows */
+.kv,
+.kQ {
+  color: var(--base05);
+}
+
+/* message separators and selected row borders */
+.zA {
+  box-shadow: none;
+}
+
+.zA.aps {
+  box-shadow:
+    var(--base02) 1px 0px 0px 0px inset,
+    var(--base02) -1px 0px 0px 0px inset;
+}
+
+.G3.G2 {
+  border-color: var(--base02);
+}
+
+/* email list row dividers */
+.Nt {
+  border-color: var(--base02);
+}
+
+.zA,
+.zA td {
+  border-color: var(--base02);
+}
+
+/* generic table and list borders */
+.F.cf.zt,
+.F.cf.zt td,
+.F.cf.zt tr {
+  border-color: var(--base02);
+}
+
+/* right side panel (calendar, keep, tasks, contacts) */
+.brC-aT5-aOt-Jw {
+  background-color: var(--base01);
+}
+
+.brC-aT5-aOt-axR {
+  border-color: var(--base02);
+}
+
+/* side panel icon sprites (+ add, more, etc) */
+.brC-aT5-aOt-Jw .aT5-aOt-I-JX-Jw {
+  background-color: transparent;
+  filter: brightness(0) invert(1);
+}
+
+/* preserve companion app icons (calendar, keep, tasks, contacts) */
+.bse-bvF-aLp .aT5-aOt-I-JX-Jw,
+.bse-bvF-a9p .aT5-aOt-I-JX-Jw {
+  filter: none;
+}
+
+/* search bar inner element */
+.hNbco.pbiu3c {
+  background-color: transparent;
+}
+
+/* Gmail logo text */
+.gb_0c {
+  filter: brightness(2);
+}
+
+/* top right icons area */
+.gb_Ed {
+  color: var(--base04);
+}
+
+/* input tools icon (sprite image) */
+.d-Na-J3 {
+  filter: brightness(0) invert(1);
+  opacity: 0.6;
+}
+
+/* misc toolbar sprite icons */
+.d-Na-JX-I {
+  color: var(--base04);
+}
+
+/* upgrade button */
+.M1LkOe,
+.FOBRw-I,
+.mG9PAb {
+  background-color: var(--base01);
+  color: var(--base05);
+}
+
+.FOBRw-anl {
+  color: var(--base05);
+}
+
+.cMggmd svg {
+  fill: var(--base05);
+}
+
+.FOBRw-ank-Rtc0Jf img {
+  filter: brightness(0) invert(1);
+  opacity: 0.7;
+}
+
+/* main wrapper */
+.wl {
+  background-color: var(--base00);
+}
+
+/* side panel (google apps) */
+.gb_9c,
+.gb_6c,
+.gb_dd {
+  background-color: var(--base00);
+  color: var(--base05);
+}
