@@ -1,0 +1,114 @@
+:root {
+  color-scheme: dark;
+
+  --color-bg: var(--base00);
+  --color-fg: var(--base05);
+  --color-fg-shape: var(--base03);
+
+  --color-tag-bg: color-mix(in srgb, var(--base0A) 20%, transparent);
+  --color-tag-border: color-mix(in srgb, var(--base0A) 20%, transparent);
+
+  --color-lobsters-tag-special-bg: color-mix(
+    in srgb,
+    var(--base08) 30%,
+    transparent
+  );
+  --color-lobsters-tag-special-border: color-mix(
+    in srgb,
+    var(--base08) 30%,
+    transparent
+  );
+
+  --color-tag-media-bg: color-mix(in srgb, var(--base0D) 20%, transparent);
+  --color-tag-media-border: color-mix(in srgb, var(--base0D) 30%, transparent);
+
+  --color-tag-meta-bg: var(--base02);
+  --color-tag-meta-border: var(--base03);
+
+  --color-bg-target: color-mix(in srgb, var(--base0D) 20%, transparent);
+
+  --color-fg-affirmative: var(--base0B);
+  --color-fg-accent: var(--base0D);
+  --color-fg-author: var(--base0D);
+
+  --color-fg-contrast-7-5: var(--base0D);
+  --color-fg-link: var(--base0D);
+  --color-fg-link-visited: var(--base0E);
+
+  --color-fg-contrast-4-5: var(--base04);
+  --color-fg-contrast-5: var(--base04);
+  --color-fg-contrast-6: var(--base04);
+  --color-fg-contrast-10: var(--base05);
+  --color-fg-contrast-13: var(--base05);
+
+  --color-box-bg: var(--base01);
+  --color-button-bg: var(--base01);
+  --color-button-bg-shaded: var(--base02);
+  --color-box-border: var(--base02);
+  --color-box-border-focus: var(--base0D);
+  --color-box-bg-shaded: var(--base01);
+
+  --color-mobile-story-liner-bg: var(--base00);
+  --color-mobile-story-comments-bubble-fill: var(--base02);
+  --color-mobile-story-comments-bubble-fill-zero: var(--base02);
+
+  --color-table-header-bg: var(--base02);
+  --color-table-header-border: var(--base03);
+  --color-table-row-bg-even: var(--base01);
+  --color-table-row-bg-odd: var(--base00);
+  --color-table-row-border: var(--base00);
+
+  --color-flash-bg-success: color-mix(in srgb, var(--base0B) 30%, transparent);
+  --color-fg-negative: var(--base08);
+
+  --base-bg: 25 16 51;
+  --base-fg: 248 248 248;
+  --base-light: 248 248 248;
+  --base-shadow: 0 0 0;
+
+  --opacity-fg: 1;
+  --opacity-fg-contrast-13: 1;
+  --opacity-fg-contrast-10: 0.85;
+  --opacity-fg-contrast-7-5: 0.65;
+  --opacity-fg-contrast-6: 0.55;
+  --opacity-fg-contrast-5: 0.45;
+  --opacity-fg-contrast-4-5: 0.4;
+  --opacity-gradient-lit: 0.3;
+  --opacity-gradient-shadowed: 0.15;
+  --opacity-shadow-80: 0.8;
+  --opacity-shadow-25: 0.25;
+  --opacity-shadow-10: 0.1;
+
+  background-color: var(--base00);
+  color: var(--base05);
+}
+
+hr {
+  color: var(--base03);
+}
+
+a {
+  color: var(--base0D);
+}
+
+a:visited {
+  color: var(--base0E);
+}
+
+#logo {
+  background-color: transparent;
+}
+
+input,
+textarea,
+select {
+  background-color: var(--base01);
+  color: var(--base05);
+  border-color: var(--base02);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--base0D);
+}
