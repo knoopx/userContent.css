@@ -1,9 +1,14 @@
 :root,
+html,
 html[dark],
 html[dark][dark],
 html[unified][dark][dark],
 html[darker-dark-theme][dark],
-html[color-version][dark] {
+html[color-version][dark],
+html[system-icons],
+html[darker-dark-theme] {
+  color: var(--base05);
+  background: var(--base00);
   /* Base backgrounds */
   --yt-spec-base-background: var(--base00);
   --yt-spec-raised-background: var(--base01);
@@ -237,11 +242,357 @@ html[color-version][dark] {
     transparent
   );
 
+  /* Solid */
+  --yt-spec-solid-background: var(--base06);
+  --yt-spec-solid-background-inverse: var(--base00);
+  --yt-spec-solid-rim: color-mix(in srgb, var(--base05) 20%, transparent);
+  --yt-spec-solid-rim-inverse: color-mix(in srgb, var(--base05) 20%, transparent);
+  --yt-spec-solid-wash: color-mix(in srgb, var(--base05) 30%, transparent);
+  --yt-spec-solid-wash-inverse: color-mix(in srgb, var(--base05) 15%, transparent);
+
+  /* Tonal */
+  --yt-spec-tonal-background: color-mix(in srgb, var(--base05) 10%, transparent);
+  --yt-spec-tonal-background-inverse: color-mix(in srgb, var(--base00) 10%, transparent);
+  --yt-spec-tonal-rim: color-mix(in srgb, var(--base05) 15%, transparent);
+  --yt-spec-tonal-rim-inverse: color-mix(in srgb, var(--base00) 5%, transparent);
+  --yt-spec-tonal-wash: color-mix(in srgb, var(--base05) 5%, transparent);
+  --yt-spec-tonal-wash-inverse: color-mix(in srgb, var(--base05) 20%, transparent);
+
+  /* Inverted hover */
+  --yt-spec-inverted-background-hover: var(--base04);
+
+  /* GenAI */
+  --yt-spec-genai-1: var(--base0C);
+  --yt-spec-genai-2: var(--base0E);
+  --yt-spec-genai-3: var(--base0F);
+  --yt-spec-genai-4: var(--base08);
+  --yt-spec-genai-1-additive: color-mix(in srgb, var(--base0C) 30%, transparent);
+  --yt-spec-genai-2-additive: color-mix(in srgb, var(--base0E) 30%, transparent);
+  --yt-spec-genai-3-additive: color-mix(in srgb, var(--base0F) 30%, transparent);
+  --yt-spec-genai-4-additive: color-mix(in srgb, var(--base08) 30%, transparent);
+
+  /* Feed gradients */
+  --yt-spec-feed-vibrant-gradient1: var(--base0C);
+  --yt-spec-feed-vibrant-gradient2: var(--base0E);
+  --yt-spec-feed-vibrant-gradient3: var(--base08);
+
+  /* Expressive trend */
+  --yt-spec-expressive-trend-10: color-mix(in srgb, var(--base0B) 10%, var(--base01));
+  --yt-spec-expressive-trend-20: color-mix(in srgb, var(--base0B) 20%, var(--base01));
+  --yt-spec-expressive-trend-30: color-mix(in srgb, var(--base0B) 30%, var(--base01));
+  --yt-spec-expressive-trend-40: var(--base0B);
+  --yt-spec-expressive-trend-50: color-mix(in srgb, var(--base0B) 80%, var(--base00));
+  --yt-spec-expressive-trend-60: color-mix(in srgb, var(--base0B) 60%, var(--base00));
+  --yt-spec-expressive-trend-70: color-mix(in srgb, var(--base0B) 40%, var(--base00));
+
+  /* Assistive feed */
+  --yt-spec-assistive-feed-vibrant-gradient-1: var(--base0C);
+  --yt-spec-assistive-feed-vibrant-gradient-2: var(--base0E);
+  --yt-spec-assistive-feed-vibrant-gradient-3: var(--base08);
+  --yt-spec-assistive-feed-themed-gradient-1: color-mix(in srgb, var(--base0C) 30%, var(--base00));
+  --yt-spec-assistive-feed-themed-gradient-2: color-mix(in srgb, var(--base0E) 30%, var(--base00));
+  --yt-spec-assistive-feed-themed-gradient-3: color-mix(in srgb, var(--base08) 30%, var(--base00));
+
+  /* Inverse text variants */
+  --yt-spec-text-secondary-inverse: var(--base04);
+  --yt-spec-text-disabled-inverse: var(--base03);
+  --yt-spec-text-primary-inverse: var(--base00);
+
+  /* Status / system bars */
+  --yt-spec-status-bar: var(--base05);
+  --yt-spec-system-bar: var(--base05);
+
+  /* Extra overlays */
+  --yt-spec-overlay-background-medium-heavy: color-mix(
+    in srgb,
+    var(--base00) 40%,
+    transparent
+  );
+  --yt-spec-overlay-green: var(--base0B);
+  --yt-spec-overlay-solid-background: var(--base06);
+  --yt-spec-overlay-solid-background-inverse: var(--base00);
+  --yt-spec-overlay-solid-rim: color-mix(
+    in srgb,
+    var(--base05) 20%,
+    transparent
+  );
+  --yt-spec-overlay-solid-rim-inverse: color-mix(
+    in srgb,
+    var(--base05) 20%,
+    transparent
+  );
+  --yt-spec-overlay-solid-wash: var(--base05);
+  --yt-spec-overlay-solid-wash-inverse: color-mix(
+    in srgb,
+    var(--base05) 20%,
+    transparent
+  );
+  --yt-spec-overlay-tonal-background: color-mix(
+    in srgb,
+    var(--base05) 30%,
+    transparent
+  );
+  --yt-spec-overlay-tonal-background-inverse: color-mix(
+    in srgb,
+    var(--base05) 15%,
+    transparent
+  );
+  --yt-spec-overlay-tonal-rim: color-mix(
+    in srgb,
+    var(--base05) 15%,
+    transparent
+  );
+  --yt-spec-overlay-tonal-rim-inverse: color-mix(
+    in srgb,
+    var(--base05) 15%,
+    transparent
+  );
+  --yt-spec-overlay-tonal-wash: color-mix(
+    in srgb,
+    var(--base05) 15%,
+    transparent
+  );
+  --yt-spec-overlay-tonal-wash-inverse: color-mix(
+    in srgb,
+    var(--base05) 15%,
+    transparent
+  );
+  --yt-spec-overlay-outline: color-mix(
+    in srgb,
+    var(--base05) 30%,
+    transparent
+  );
+  --yt-spec-overlay-outline-inverse: color-mix(
+    in srgb,
+    var(--base05) 30%,
+    transparent
+  );
+  --yt-spec-overlay-button-secondary-darker: color-mix(
+    in srgb,
+    var(--base05) 20%,
+    transparent
+  );
+
+  /* Extra static */
+  --yt-spec-static-dark-grey: var(--base02);
+  --yt-spec-static-clear-color: transparent;
+  --yt-spec-static-clear-black: transparent;
+  --yt-spec-static-magenta: var(--base0F);
+  --yt-spec-static-medium-magenta: var(--base0F);
+
+  /* Extra indicator */
+  --yt-spec-error-indicator-inverse: var(--base08);
+  --yt-spec-themed-green-inverse: var(--base0B);
+
+  /* Brand backgrounds */
+  --yt-spec-brand-background-solid: var(--base00);
+  --yt-spec-brand-background-primary: var(--base00);
+  --yt-spec-brand-background-secondary: var(--base01);
+  --yt-spec-general-background-a: var(--base00);
+  --yt-spec-general-background-b: var(--base00);
+  --yt-spec-general-background-c: var(--base00);
+  --yt-spec-error-background: var(--base00);
+
+  /* Snackbars */
+  --yt-spec-snackbar-background: var(--base01);
+  --yt-spec-snackbar-background-updated: var(--base01);
+
+  /* Badge/chip */
+  --yt-spec-badge-chip-background: var(--base02);
+  --yt-spec-verified-badge-background: var(--base03);
+  --yt-spec-commerce-badge-background: var(--base0B);
+
+  /* Brand button */
+  --yt-spec-brand-button-background: var(--base0D);
+  --yt-spec-brand-button-background-hover: var(--base0D);
+  --yt-spec-brand-link-text: var(--base0D);
+  --yt-spec-filled-button-text: var(--base00);
+  --yt-spec-filled-button-focus-outline: var(--base03);
+  --yt-spec-selected-nav-text: var(--base05);
+
+  /* Icons */
+  --yt-spec-icon-inactive: var(--base05);
+  --yt-spec-icon-disabled: var(--base03);
+  --yt-spec-icon-active-other: var(--base05);
+  --yt-spec-brand-icon-active: var(--base0D);
+  --yt-spec-brand-icon-inactive: var(--base04);
+
+  /* Shadows */
+  --yt-spec-shadow: color-mix(in srgb, var(--base00) 75%, transparent);
+
+  /* 10-percent layer */
+  --yt-spec-10-percent-layer: var(--base02);
+
+  /* Static overlays */
+  --yt-spec-static-overlay-background-solid: var(--base00);
+  --yt-spec-static-overlay-background-heavy: var(--base00);
+  --yt-spec-static-overlay-background-medium: color-mix(in srgb, var(--base00) 50%, transparent);
+  --yt-spec-static-overlay-background-light: color-mix(in srgb, var(--base00) 90%, transparent);
+  --yt-spec-static-overlay-text-primary: var(--base05);
+  --yt-spec-static-overlay-text-secondary: color-mix(in srgb, var(--base05) 30%, transparent);
+  --yt-spec-static-overlay-text-disabled: color-mix(in srgb, var(--base05) 70%, transparent);
+  --yt-spec-static-overlay-call-to-action: var(--base0D);
+  --yt-spec-static-overlay-icon-active-other: var(--base00);
+  --yt-spec-static-overlay-icon-inactive: var(--base02);
+  --yt-spec-static-overlay-icon-disabled: var(--base03);
+  --yt-spec-static-overlay-button-primary: var(--base0D);
+  --yt-spec-static-overlay-touch-response: var(--base03);
+  --yt-spec-static-overlay-touch-response-inverse: var(--base02);
+  --yt-spec-static-overlay-background-brand: var(--base0D);
+  --yt-spec-static-overlay-button-hover: var(--base02);
+  --yt-spec-static-overlay-filled-hover: var(--base03);
+  --yt-spec-static-overlay-tonal-hover: var(--base02);
+
+  /* Themed */
+  --yt-spec-themed-blue: var(--base0D);
+  --yt-spec-ad-indicator: var(--base0C);
+  --yt-spec-themed-overlay-background: color-mix(in srgb, var(--base00) 80%, transparent);
+
+  /* Paper/tab */
+  --yt-spec-paper-tab-ink: color-mix(in srgb, var(--base05) 70%, transparent);
+
+  /* Misc */
+  --dimmer-text: var(--base05);
+  --iron-icon-fill-color: var(--base05);
+  --yt-spec-commerce-filled-hover: var(--base0D);
+  --yt-spec-commerce-tonal-hover: var(--base03);
+  --yt-spec-call-to-action-fadeoutd: color-mix(in srgb, var(--base0D) 70%, transparent);
+  --yt-spec-brand-link-text-fadeoutd: color-mix(in srgb, var(--base0D) 70%, transparent);
+
+  /* Live chat extras */
+  --yt-live-chat-background-color: var(--base00);
+  --yt-live-chat-action-panel-background-color: var(--base00);
+  --yt-live-chat-sub-panel-background-color: var(--base00);
+  --yt-live-chat-sub-panel-background-color-transparent: var(--base01);
+  --yt-live-chat-message-highlight-background-color: var(--base00);
+  --yt-live-chat-moderation-mode-hover-background-color: color-mix(in srgb, var(--base01) 70%, transparent);
+
   /* Deprecated but still used */
   --yt-deprecated-general-background-a: var(--base01);
   --yt-deprecated-general-background-b: var(--base00);
   --yt-deprecated-general-background-c: var(--base00);
   --yt-deprecated-overlay-icon-active-other: var(--base05);
+
+  /* White/Black/Grey base colors (used by legacy and some components) */
+  --yt-spec-white-1: var(--base05);
+  --yt-spec-white-2: color-mix(in srgb, var(--base05) 97%, var(--base00));
+  --yt-spec-white-3: color-mix(in srgb, var(--base05) 95%, var(--base00));
+  --yt-spec-white-4: color-mix(in srgb, var(--base05) 91%, var(--base00));
+  --yt-spec-black-1: var(--base02);
+  --yt-spec-black-2: color-mix(in srgb, var(--base00) 80%, var(--base02));
+  --yt-spec-black-3: color-mix(in srgb, var(--base00) 90%, var(--base02));
+  --yt-spec-black-4: var(--base00);
+  --yt-spec-black-pure: var(--base00);
+  --yt-spec-grey-1: var(--base04);
+  --yt-spec-grey-2: var(--base04);
+  --yt-spec-grey-3: var(--base03);
+  --yt-spec-grey-4: var(--base03);
+  --yt-spec-grey-5: var(--base04);
+  --yt-spec-red-30: var(--base08);
+  --yt-spec-red-70: var(--base08);
+  --yt-spec-pale-blue: color-mix(in srgb, var(--base0D) 10%, var(--base01));
+  --yt-spec-light-blue: var(--base0D);
+  --yt-spec-dark-blue: color-mix(in srgb, var(--base0D) 60%, var(--base00));
+  --yt-spec-navy-blue: color-mix(in srgb, var(--base0D) 20%, var(--base00));
+  --yt-spec-light-green: var(--base0B);
+  --yt-spec-dark-green: color-mix(in srgb, var(--base0B) 60%, var(--base00));
+  --yt-spec-yellow: var(--base0A);
+
+  /* Alpha variants */
+  --yt-spec-black-pure-alpha-5: color-mix(in srgb, var(--base00) 5%, transparent);
+  --yt-spec-black-pure-alpha-10: color-mix(in srgb, var(--base00) 10%, transparent);
+  --yt-spec-black-pure-alpha-15: color-mix(in srgb, var(--base00) 15%, transparent);
+  --yt-spec-black-pure-alpha-30: color-mix(in srgb, var(--base00) 30%, transparent);
+  --yt-spec-black-pure-alpha-60: color-mix(in srgb, var(--base00) 60%, transparent);
+  --yt-spec-black-pure-alpha-80: color-mix(in srgb, var(--base00) 80%, transparent);
+  --yt-spec-black-1-alpha-98: color-mix(in srgb, var(--base02) 98%, transparent);
+  --yt-spec-black-1-alpha-95: color-mix(in srgb, var(--base02) 95%, transparent);
+  --yt-spec-white-1-alpha-10: color-mix(in srgb, var(--base05) 10%, transparent);
+  --yt-spec-white-1-alpha-20: color-mix(in srgb, var(--base05) 20%, transparent);
+  --yt-spec-white-1-alpha-25: color-mix(in srgb, var(--base05) 25%, transparent);
+  --yt-spec-white-1-alpha-30: color-mix(in srgb, var(--base05) 30%, transparent);
+  --yt-spec-white-1-alpha-70: color-mix(in srgb, var(--base05) 70%, transparent);
+  --yt-spec-white-1-alpha-95: color-mix(in srgb, var(--base05) 95%, transparent);
+  --yt-spec-white-1-alpha-98: color-mix(in srgb, var(--base05) 98%, transparent);
+  --yt-spec-light-blue-alpha-30: color-mix(in srgb, var(--base0D) 30%, transparent);
+  --yt-spec-dark-blue-alpha-30: color-mix(
+    in srgb,
+    var(--base0D) 30%,
+    transparent
+  );
+
+  /* Light theme overrides (used by comments, some video page elements) */
+  --light-theme-background-color: var(--base00);
+  --light-theme-base-color: var(--base05);
+  --light-theme-text-color: var(--base05);
+  --light-theme-secondary-color: var(--base04);
+  --light-theme-disabled-color: var(--base03);
+  --light-theme-divider-color: var(--base02);
+
+  /* YTCP static overlay */
+  --ytcp-static-overlay-background-solid: var(--base00);
+  --ytcp-static-overlay-background-heavy: color-mix(
+    in srgb,
+    var(--base00) 80%,
+    transparent
+  );
+  --ytcp-static-overlay-background-medium: color-mix(
+    in srgb,
+    var(--base00) 60%,
+    transparent
+  );
+  --ytcp-static-overlay-background-medium-light: color-mix(
+    in srgb,
+    var(--base00) 30%,
+    transparent
+  );
+  --ytcp-static-overlay-background-red: color-mix(
+    in srgb,
+    var(--base08) 90%,
+    transparent
+  );
+  --ytcp-static-overlay-background-a20: color-mix(
+    in srgb,
+    var(--base00) 20%,
+    transparent
+  );
+  --ytcp-static-overlay-tooltip-background: color-mix(
+    in srgb,
+    var(--base03) 90%,
+    transparent
+  );
+  --ytcp-static-overlay-text-primary: var(--base05);
+  --ytcp-static-overlay-text-secondary: color-mix(
+    in srgb,
+    var(--base05) 70%,
+    transparent
+  );
+  --ytcp-static-overlay-text-disabled: color-mix(
+    in srgb,
+    var(--base05) 30%,
+    transparent
+  );
+  --ytcp-static-yellow: var(--base0A);
+  --ytcp-static-overlay-drop-shadow-a12: color-mix(
+    in srgb,
+    var(--base00) 12%,
+    transparent
+  );
+  --ytcp-static-overlay-drop-shadow-a40: color-mix(
+    in srgb,
+    var(--base00) 40%,
+    transparent
+  );
+  --ytcp-static-overlay-focus: var(--base05);
+  --ytcp-static-brand-red: var(--base08);
+  --ytcp-static-brand-white: var(--base05);
+  --ytcp-static-brand-red-a38: color-mix(
+    in srgb,
+    var(--base08) 38%,
+    transparent
+  );
+  --ytcp-static-overlay-text-primary-inverse: var(--base00);
+  --ytcp-static-overlay-text-secondary-inverse: var(--base04);
 
   /* Searchbox */
   --ytd-searchbox-background: var(--base00);
@@ -362,6 +713,92 @@ html[color-version][dark] {
   --yt-emoji-picker-search-placeholder-color: var(--base04);
 }
 
+/* HTML background — not covered by --yt-spec-base-background */
+html,
+html[dark] {
+  background-color: var(--base00);
+}
+
+/* Polymer / :not(.style-scope) variables */
+:root:not(.style-scope) {
+  --primary-text-color: var(--base05);
+  --primary-background-color: var(--base00);
+  --secondary-text-color: var(--base04);
+  --disabled-text-color: var(--base03);
+  --divider-color: var(--base02);
+  --error-color: var(--base08);
+  --primary-color: var(--base0D);
+  --light-primary-color: var(--base0D);
+  --dark-primary-color: var(--base0D);
+  --accent-color: var(--base0D);
+  --light-accent-color: var(--base0D);
+  --dark-accent-color: var(--base0D);
+  --light-theme-background-color: var(--base00);
+  --light-theme-base-color: var(--base05);
+  --light-theme-text-color: var(--base05);
+  --light-theme-secondary-color: var(--base04);
+  --light-theme-disabled-color: var(--base03);
+  --light-theme-divider-color: var(--base02);
+  --dark-theme-background-color: var(--base00);
+  --dark-theme-base-color: var(--base05);
+  --dark-theme-text-color: var(--base05);
+  --dark-theme-secondary-color: var(--base04);
+  --dark-theme-disabled-color: var(--base03);
+  --dark-theme-divider-color: var(--base02);
+  --paper-tooltip-background: var(--base02);
+  --paper-tooltip-text-color: var(--base05);
+}
+
+/* Player container background — eliminates black bars around video */
+#ytd-player #container {
+  background: var(--base01);
+}
+
+/* Video description: override color-sampled saturated variables */
+ytd-watch-metadata {
+  --yt-saturated-base-background: var(--base00);
+  --yt-saturated-raised-background: var(--base01);
+  --yt-saturated-additive-background: var(--base02);
+  --yt-saturated-text-primary: var(--base05);
+  --yt-saturated-text-secondary: var(--base04);
+  --yt-saturated-inverted-background: var(--base05);
+  --yt-saturated-overlay-background: color-mix(
+    in srgb,
+    var(--base00) 80%,
+    transparent
+  );
+}
+
+/* Ambient mode / cinematics — lighten blend so palette shows through */
+#cinematics,
+#cinematic-container {
+  mix-blend-mode: lighten;
+}
+
+/* Masthead frosted glass */
+#background.ytd-masthead,
+#frosted-glass {
+  --yt-frosted-glass-desktop: var(--base00);
+  --yt-spec-frosted-glass-desktop: var(--base00);
+  background-color: var(--base00) !important;
+}
+
+/* Description links */
+.yt-core-attributed-string--link-inherit-color {
+  color: var(--base05);
+}
+.yt-core-attributed-string__link--call-to-action-color {
+  color: var(--base0D);
+}
+.yt-core-attributed-string--highlight-text-decorator {
+  background-color: var(--base03);
+}
+
+/* Touch feedback */
+.yt-spec-touch-feedback-shape__hover-effect {
+  background-color: var(--base02);
+}
+
 /* Logo: recolor red play button to accent */
 #logo-icon svg path[fill="#FF0033"],
 #logo-icon svg path[fill="#ff0033"],
@@ -426,4 +863,50 @@ ytd-rich-section-renderer:has(#dismissible) {
 
 a[href="https://support.google.com/youtube?p=ppp&nohelpkit=1"] {
   display: none;
+}
+
+/* Video player container background */
+#ytd-player #container {
+  background-color: var(--base00);
+}
+
+/* Saturated color-sample overrides (video metadata) */
+ytd-watch-metadata {
+  --yt-saturated-base-background: var(--base00);
+  --yt-saturated-raised-background: var(--base01);
+  --yt-saturated-additive-background: color-mix(
+    in srgb,
+    var(--base05) 10%,
+    transparent
+  );
+  --yt-saturated-text-primary: var(--base05);
+  --yt-saturated-text-secondary: var(--base04);
+  --yt-saturated-outline: initial;
+  --yt-saturated-inverted-background: var(--base04);
+  --yt-saturated-overlay-background: color-mix(
+    in srgb,
+    var(--base00) 80%,
+    transparent
+  );
+}
+
+/* Ambient mode blend */
+#cinematics,
+#cinematic-container {
+  mix-blend-mode: lighten;
+}
+
+/* Skeleton loaders */
+#guide-skeleton,
+#home-container-skeleton,
+#home-chips {
+  background-color: var(--base00);
+}
+
+#guide-skeleton .guide-ghost-icon,
+#guide-skeleton .guide-ghost-text,
+.masthead-skeleton-icon,
+#home-page-skeleton .skeleton-bg-color,
+.watch-skeleton .skeleton-bg-color {
+  background-color: var(--base02);
 }
