@@ -6,7 +6,7 @@
     "build": "node scripts/generate-usercontent.js"
   },
   "dependencies": {
-    "postcss": "^8.5.6"
+    "postcss": "^8.5.15"
   },
   "devDependencies": {
     "cssnano": "^7.1.2",
