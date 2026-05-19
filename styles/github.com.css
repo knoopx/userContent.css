@@ -502,3 +502,7 @@
   fill: var(--base0F);
   stroke: var(--base0F);
 }
+
+#dashboard .news article[data-hydro-view*="PULL_REQUEST"] {
+  display: none;
+}
