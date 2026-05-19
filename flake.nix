@@ -37,7 +37,7 @@
           pname = "usercss";
           version = "0.1.0";
           inherit src;
-          npmDepsHash = "sha256-bCHVYc3Qb1sa54O1gn63HQDTkn5B8OUu6FLuMusoGqE=";
+          npmDepsHash = "sha256-h0HKUD3mqTjtwvowXt2+rm5TgszTM+LmlFwXj/oWNcQ=";
           dontNpmBuild = true;
           installPhase = let
             paletteJson = pkgs.writeText "palette.json" (builtins.toJSON palette);
