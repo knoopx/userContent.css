@@ -1,0 +1,441 @@
+/* Wallapop — CHDS design system variable overrides (base16 dark) */
+
+:root {
+	/* Backgrounds */
+	--chds-color-background-base: var(--base00);
+	--chds-color-background-low: var(--base01);
+	--chds-color-background-mid: var(--base03);
+	--chds-color-background-high: var(--base02);
+	--chds-color-background-overlay: color-mix(in srgb, var(--base01) 60%, transparent);
+	--chds-color-background-transparent: color-mix(in srgb, var(--base01) 0%, transparent);
+
+	/* Content / text */
+	--chds-color-content-high: var(--base05);
+	--chds-color-content-mid: var(--base04);
+	--chds-color-content-low: color-mix(in srgb, var(--base04) 60%, transparent);
+	--chds-color-content-onhigh: var(--base01);
+
+	/* Brand (yellow accent) */
+	--chds-color-brand-high: var(--base0A);
+	--chds-color-brand-mid: var(--base0A);
+	--chds-color-brand-low: color-mix(in srgb, var(--base0A) 60%, var(--base00));
+	--chds-color-brand-subtle: color-mix(in srgb, var(--base0A) 15%, transparent);
+
+	/* Negative (red) */
+	--chds-color-negative-high: var(--base08);
+	--chds-color-negative-mid: var(--base08);
+	--chds-color-negative-low: color-mix(in srgb, var(--base08) 50%, var(--base00));
+
+	/* Positive (green) */
+	--chds-color-positive-high: var(--base0B);
+	--chds-color-positive-mid: var(--base0B);
+	--chds-color-positive-low: color-mix(in srgb, var(--base0B) 50%, var(--base00));
+
+	/* Warning (yellow) */
+	--chds-color-warning-high: var(--base0A);
+	--chds-color-warning-mid: var(--base0A);
+	--chds-color-warning-low: color-mix(in srgb, var(--base0A) 50%, var(--base00));
+	--chds-color-warning-subtle: color-mix(in srgb, var(--base0A) 15%, transparent);
+
+	/* Orange */
+	--chds-color-orange-high: var(--base09);
+	--chds-color-orange-mid: var(--base09);
+	--chds-color-orange-low: color-mix(in srgb, var(--base09) 50%, var(--base00));
+
+	/* Lime */
+	--chds-color-lime-high: var(--base0B);
+	--chds-color-lime-mid: var(--base0C);
+	--chds-color-lime-low: color-mix(in srgb, var(--base0C) 40%, var(--base00));
+
+	/* Magenta */
+	--chds-color-magenta-high: var(--base0F);
+	--chds-color-magenta-mid: var(--base0F);
+	--chds-color-magenta-low: color-mix(in srgb, var(--base0F) 50%, var(--base00));
+
+	/* Pink */
+	--chds-color-pink-high: var(--base0F);
+	--chds-color-pink-mid: var(--base0F);
+	--chds-color-pink-low: color-mix(in srgb, var(--base0F) 50%, var(--base00));
+
+	/* Purple */
+	--chds-color-purple-high: var(--base0E);
+	--chds-color-purple-mid: var(--base0E);
+	--chds-color-purple-low: color-mix(in srgb, var(--base0E) 50%, var(--base00));
+	--chds-color-purple-subtle: color-mix(in srgb, var(--base0E) 15%, transparent);
+
+	/* Blue */
+	--chds-color-blue-high: var(--base0E);
+	--chds-color-blue-mid: var(--base0C);
+	--chds-color-blue-low: color-mix(in srgb, var(--base0C) 60%, var(--base05));
+	--chds-color-blue-subtle: color-mix(in srgb, var(--base0C) 15%, transparent);
+}
+
+/* Page base */
+
+html,
+body {
+	background-color: var(--base00);
+	color: var(--base05);
+}
+
+/* Wallapop JS sets body overflow:hidden inline (modal/scroll trap); restore scrolling */
+
+html,
+body {
+	overflow: auto !important;
+	overflow-y: auto !important;
+}
+
+/* Neutralize any full-viewport fixed overlay that traps wheel/pointer events (cookie, app-download, promo prompts) */
+
+html div#cmpwrapper.cmpwrapper.cmpwrapper.cmpwrapper.cmpwrapper,
+[class*="consent"],
+[class*="Consent"],
+[class*="cookie-banner"],
+[class*="app-download-banner"],
+[class*="download-app_Banners"] {
+	pointer-events: none !important;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar-thumb {
+	background-color: color-mix(in srgb, var(--base04) 30%, transparent);
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: color-mix(in srgb, var(--base04) 50%, transparent);
+}
+
+/* Shadows — override hardcoded rgba shadows */
+
+.chds-shadow-down-s,
+.chds-shadow-down-m,
+.chds-shadow-down-l,
+.chds-shadow-up-s,
+.chds-shadow-up-m,
+.chds-shadow-up-l {
+	box-shadow: 0 2px 8px color-mix(in srgb, var(--base00) 60%, transparent);
+}
+
+/* Image slider arrows (hardcoded white bg) */
+
+[class*="item-card-images-slider"] [class*="arrow"] {
+	background-color: color-mix(in srgb, var(--base05) 80%, transparent);
+	color: var(--base00);
+}
+
+/* Hide promotional / cookie elements */
+
+[class*="pro-banner_ProBanner"],
+[class*="download-app_Banners"],
+[class*="theme-debug-toggle"] {
+	display: none;
+}
+
+/* Hide ads (search top-sky ad slot, item-detail ad slots, ad containers, promoted badges) */
+
+[class*="search-page_SearchPage__topSky"],
+[class*="AdWithPlaceholder"],
+[class*="ad-with-placeholder"],
+[class*="Ads__container"],
+[class*="Ads_"],
+[class*="adSlot"],
+[class*="AdSlot"],
+[class*="ad-slot"],
+[class*="AdSlot_"],
+[class*="promoted"],
+[class*="Promoted"] {
+	display: none !important;
+}
+
+/* Cookie / consent banner (consentmanager.net renders a fixed overlay inside #cmpwrapper's shadow DOM; it re-asserts display:block via div#cmpwrapper.cmpwrapper, so match with equal-or-higher specificity) */
+
+html body div#cmpwrapper.cmpwrapper.cmpwrapper.cmpwrapper.cmpwrapper,
+html body div#cmpwrapper.cmpwrapper.cmpwrapper.cmpwrapper.cmpwrapper * {
+	display: none !important;
+	visibility: hidden !important;
+}
+
+/* ============================================================ */
+/* Hero banner (hardcoded promotional colors: bright teal content box + white veil) */
+/* ============================================================ */
+
+/* White veil over the hero photo → dark overlay so the image reads as dark */
+
+[class*="hero-banner-desktop_HeroBanner__veil"],
+[class*="hero-banner_HeroBanner__veil"] {
+	background-color: color-mix(in srgb, var(--base00) 60%, transparent) !important;
+}
+
+/* Bright teal content box → dark purple with light text */
+
+[class*="hero-content-box_HeroContentBox"] {
+	background-color: var(--base01) !important;
+	color: var(--base05) !important;
+}
+
+[class*="hero-content-box_HeroContentBox"] :is(p, span, div, a, button) {
+	color: var(--base05) !important;
+}
+
+/* CTA button inside the hero content box → yellow accent with dark text */
+
+[class*="hero-content-box_HeroContentBox"] :is(a, button),
+[class*="hero-content-box_HeroContentBox"] [class*="button"],
+[class*="hero-content-box_HeroContentBox"] [class*="cta"],
+[class*="hero-content-box_HeroContentBox"] [class*="link"] {
+	color: var(--base00) !important;
+	background-color: var(--base0A) !important;
+}
+
+/* Hero heading → yellow accent */
+
+[class*="hero-content-box_HeroContentBox"] [class*="heading"] {
+	color: var(--base0A) !important;
+}
+
+/* ============================================================ */
+/* walla-button (header + action buttons — custom element with shadow DOM)
+   The component reads --chds-color-brand-low for its fill and
+   --chds-color-content-high for its label, so override them on the host. */
+/* ============================================================ */
+
+/* Primary / filled brand buttons (Vender, Comprar) → yellow fill, dark label */
+
+walla-button[button-type="primary"] {
+	--chds-color-brand-low: var(--base0A);
+	--chds-color-content-high: var(--base00);
+}
+
+/* Secondary / outline buttons (Hacer oferta, Regístrate) → yellow border, light label */
+
+walla-button[button-type="secondary"] {
+	--chds-color-brand-low: var(--base0A);
+	--chds-color-content-high: var(--base05);
+}
+
+/* ============================================================ */
+/* Bootstrap 5 variable overrides (elements using --bs-* directly) */
+/* ============================================================ */
+
+:root {
+	--bs-dark: var(--base05);
+	--bs-dark-rgb: 234, 236, 240;
+	--bs-light: var(--base01);
+	--bs-light-rgb: 24, 25, 28;
+	--bs-body-color: var(--base05);
+	--bs-body-color-rgb: 234, 236, 240;
+	--bs-body-bg: var(--base00);
+	--bs-body-bg-rgb: 24, 25, 28;
+	--bs-tertiary-bg: var(--base01);
+	--bs-tertiary-bg-rgb: 24, 25, 28;
+	--bs-tertiary-color: color-mix(in srgb, var(--base04) 60%, transparent);
+	--bs-tertiary-color-rgb: 93, 107, 125;
+	--bs-secondary-bg: var(--base01);
+	--bs-secondary-bg-rgb: 24, 25, 28;
+	--bs-secondary-color: color-mix(in srgb, var(--base05) 75%, transparent);
+	--bs-secondary-color-rgb: 234, 236, 240;
+	--bs-border-color: var(--base03);
+	--bs-border-color-translucent: color-mix(in srgb, var(--base03) 30%, transparent);
+	--bs-emphasis-color: var(--base05);
+	--bs-emphasis-color-rgb: 234, 236, 240;
+	--bs-highlight-bg: color-mix(in srgb, var(--base0A) 20%, transparent);
+	--bs-highlight-color: var(--base05);
+	--bs-black: var(--base00);
+	--bs-white: var(--base05);
+	--bs-white-rgb: 234, 236, 240;
+	--bs-black-rgb: 24, 25, 28;
+	--bs-primary: var(--base0A);
+	--bs-primary-rgb: 250, 208, 0;
+	--bs-success: var(--base0B);
+	--bs-success-rgb: 10, 131, 76;
+	--bs-danger: var(--base08);
+	--bs-danger-rgb: 238, 108, 117;
+	--bs-warning: var(--base0A);
+	--bs-warning-rgb: 247, 150, 60;
+	--bs-info: var(--base0A);
+	--bs-info-rgb: 250, 208, 0;
+	--bs-link-color: var(--base0C);
+	--bs-link-color-rgb: 128, 252, 255;
+	--bs-link-hover-color: var(--base0C);
+	--bs-link-hover-color-rgb: 128, 252, 255;
+	--bs-link-visited-color: var(--base0F);
+	--bs-link-visited-color-rgb: 251, 148, 255;
+	--bs-secondary: var(--base04);
+	--bs-secondary-rgb: 93, 107, 125;
+	--bs-gray: var(--base04);
+	--bs-gray-rgb: 93, 107, 125;
+	--bs-gray-100: var(--base01);
+	--bs-gray-200: var(--base02);
+	--bs-gray-300: var(--base03);
+	--bs-gray-400: var(--base04);
+	--bs-gray-500: var(--base04);
+	--bs-gray-600: var(--base04);
+	--bs-gray-700: var(--base05);
+	--bs-gray-800: var(--base02);
+	--bs-gray-900: var(--base05);
+	--bs-gray-dark: var(--base02);
+}
+
+/* ============================================================ */
+/* Header & Navigation (hardcoded white backgrounds) */
+/* ============================================================ */
+
+[class*="header-with-category-navigation"] {
+	background-color: var(--base00);
+}
+
+[class*="header_Header__container"] {
+	background-color: var(--base00);
+	border-color: var(--base03);
+}
+
+[class*="searchbox-form_SearchBox__input"] {
+	background-color: var(--base01);
+	color: var(--base05);
+	border-color: var(--base03);
+}
+
+[class*="wallapop-menu-mobile-module"] {
+	background-color: var(--base00);
+}
+
+[class*="wallapop-category-navigation-mobile-module"] {
+	background-color: var(--base00);
+}
+
+[class*="CategoryNavigation__closeContainer"] {
+	background-color: var(--base00);
+}
+
+[class*="CategoryNavigation__previousButton"],
+[class*="CategoryNavigation__closeButton"] {
+	background-color: var(--base01);
+	color: var(--base05);
+}
+
+[class*="CategoryVerticalNavigationDesktop"] {
+	background-color: var(--base00);
+	border-color: var(--base03);
+}
+
+[class*="item-detail-footer-actions"] {
+	background-color: var(--base00);
+	border-color: var(--base03);
+}
+
+[class*="bottom-navigation-bar"] {
+	background-color: var(--base00);
+}
+
+/* ============================================================ */
+/* Item cards & search results */
+/* ============================================================ */
+
+/* Image placeholder backgrounds */
+[class*="item-card_ItemCard__image"] {
+	background-color: var(--base03);
+}
+
+/* Image counter overlay */
+[class*="item-card-images-slider"] [class*="imageCounter"] {
+	background-color: color-mix(in srgb, var(--base01) 80%, transparent);
+	color: var(--base05);
+}
+
+/* Item card text */
+[class*="item-card_ItemCard__price"] {
+	color: var(--base05);
+}
+
+[class*="item-card_ItemCard__title"] {
+	color: var(--base05);
+}
+
+/* ============================================================ */
+/* Listing detail page */
+/* ============================================================ */
+
+/* Seller profile section */
+[class*="item-detail-seller-profile"] {
+	color: var(--base05);
+}
+
+/* Description */
+[class*="product-details-description"] {
+	color: var(--base05);
+}
+
+/* Installment payment methods */
+[class*="item-detail-installment-payment"] {
+	color: var(--base05);
+}
+
+/* User avatar badge */
+[class*="ItemDetailUserAvatar__badge"] {
+	background-color: var(--base02);
+	color: var(--base05);
+}
+
+/* Report button */
+[class*="item-detail-report"] {
+	color: var(--base0A);
+}
+
+/* ============================================================ */
+/* Seller / User profile page */
+/* ============================================================ */
+
+[class*="public-profile"] {
+	background-color: var(--base01);
+	color: var(--base05);
+}
+
+/* ============================================================ */
+/* SVG fill overrides */
+/* ============================================================ */
+
+svg path[fill="white"],
+svg path[fill="#ffffff"],
+svg circle[fill="white"],
+svg rect[fill="white"] {
+	fill: var(--base05);
+}
+
+/* ============================================================ */
+/* Sidebar filters */
+/* ============================================================ */
+
+[class*="sidebar-filters"] {
+	color: var(--base05);
+}
+
+[class*="sidebar-filters"] [class*="title"] {
+	color: var(--base05);
+}
+
+/* ============================================================ */
+/* Price range selector (search filters) */
+/* ============================================================ */
+
+input.sc-wallapop-range-selector {
+	background-color: var(--base01);
+	color: var(--base05);
+}
+
+[class*="wallapop-range-selector"] {
+	color: var(--base05);
+}
+
+/* ============================================================ */
+/* Pure black color fix (hardcoded, not using variables) */
+/* ============================================================ */
+
+[class*="CategoryNavigation__previousButton"] {
+	color: var(--base05);
+}
+
+[class*="CategoryNavigation__closeButton"] {
+	color: var(--base05);
+}
