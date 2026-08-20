@@ -1,0 +1,521 @@
+/* tradingview.com — base16 palette override.
+   The site ships in `theme-light` (white bg, near-black text). To render the
+   dark base16 palette we INVERT the neutral ramp (lightest shade -> darkest
+   palette color, darkest shade -> lightest text) and remap the accent families
+   to the palette accents. All declarations get !important via the extension.
+   Chart up/down: green -> base0B, red -> base08.
+*/
+
+:root {
+  /* neutral black/white */
+  --color-white: var(--base00);   /* light bg -> darkest bg */
+  --color-black: var(--base05);   /* dark text -> primary text */
+
+  /* cold-gray ramp (inverted: 50 lightest -> base00, 950 darkest -> base05) */
+  --color-cold-gray-50: var(--base00);
+  --color-cold-gray-100: var(--base01);
+  --color-cold-gray-150: var(--base01);
+  --color-cold-gray-200: var(--base02);
+  --color-cold-gray-250: var(--base02);
+  --color-cold-gray-300: var(--base03);
+  --color-cold-gray-350: var(--base03);
+  --color-cold-gray-400: var(--base04);
+  --color-cold-gray-450: var(--base04);
+  --color-cold-gray-550: var(--base04);
+  --color-cold-gray-600: var(--base06);
+  --color-cold-gray-650: var(--base06);
+  --color-cold-gray-700: var(--base06);
+  --color-cold-gray-750: var(--base06);
+  --color-cold-gray-800: var(--base07);
+  --color-cold-gray-850: var(--base07);
+  --color-cold-gray-900: var(--base05);
+  --color-cold-gray-950: var(--base05);
+
+  /* ripe-red: down / negative -> red (base08) */
+  --color-ripe-red-50: color-mix(in srgb, var(--base08) 12%, transparent);
+  --color-ripe-red-100: color-mix(in srgb, var(--base08) 22%, transparent);
+  --color-ripe-red-200: color-mix(in srgb, var(--base08) 40%, transparent);
+  --color-ripe-red-300: color-mix(in srgb, var(--base08) 60%, transparent);
+  --color-ripe-red-400: var(--base08);
+  --color-ripe-red-500: var(--base08);
+  --color-ripe-red-600: color-mix(in srgb, var(--base08) 75%, var(--base01));
+  --color-ripe-red-a100: var(--base08);
+  --color-ripe-red-a200: var(--base08);
+  --color-ripe-red-a400: var(--base08);
+  --color-ripe-red-a600: color-mix(in srgb, var(--base08) 75%, var(--base01));
+  --color-ripe-red-a700: color-mix(in srgb, var(--base08) 55%, var(--base01));
+  --color-ripe-red-a800: color-mix(in srgb, var(--base08) 45%, var(--base01));
+  --color-ripe-red-a900: color-mix(in srgb, var(--base08) 35%, var(--base01));
+  --color-ripe-red-700: color-mix(in srgb, var(--base08) 55%, var(--base01));
+  --color-ripe-red-800: color-mix(in srgb, var(--base08) 45%, var(--base01));
+  --color-ripe-red-900: color-mix(in srgb, var(--base08) 35%, var(--base01));
+
+  /* iguana-green: up / positive -> green (base0B) */
+  --color-iguana-green-50: color-mix(in srgb, var(--base0B) 12%, transparent);
+  --color-iguana-green-100: color-mix(in srgb, var(--base0B) 22%, transparent);
+  --color-iguana-green-200: color-mix(in srgb, var(--base0B) 40%, transparent);
+  --color-iguana-green-300: color-mix(in srgb, var(--base0B) 60%, transparent);
+  --color-iguana-green-400: var(--base0B);
+  --color-iguana-green-500: var(--base0B);
+  --color-iguana-green-600: color-mix(in srgb, var(--base0B) 75%, var(--base01));
+  --color-iguana-green-a100: var(--base0B);
+  --color-iguana-green-a200: var(--base0B);
+  --color-iguana-green-a400: var(--base0B);
+  --color-iguana-green-a700: color-mix(in srgb, var(--base0B) 55%, var(--base01));
+  --color-iguana-green-700: color-mix(in srgb, var(--base0B) 55%, var(--base01));
+  --color-iguana-green-800: color-mix(in srgb, var(--base0B) 45%, var(--base01));
+  --color-iguana-green-900: color-mix(in srgb, var(--base0B) 35%, var(--base01));
+
+  /* forest-green: alternate up/positive -> green (base0B) */
+  --color-forest-green-50: color-mix(in srgb, var(--base0B) 12%, transparent);
+  --color-forest-green-100: color-mix(in srgb, var(--base0B) 22%, transparent);
+  --color-forest-green-200: color-mix(in srgb, var(--base0B) 40%, transparent);
+  --color-forest-green-300: color-mix(in srgb, var(--base0B) 60%, transparent);
+  --color-forest-green-400: var(--base0B);
+  --color-forest-green-500: var(--base0B);
+  --color-forest-green-600: color-mix(in srgb, var(--base0B) 75%, var(--base01));
+  --color-forest-green-a100: color-mix(in srgb, var(--base0B) 15%, transparent);
+  --color-forest-green-a200: color-mix(in srgb, var(--base0B) 30%, transparent);
+  --color-forest-green-a400: var(--base0B);
+  --color-forest-green-a700: color-mix(in srgb, var(--base0B) 55%, var(--base01));
+  --color-forest-green-700: color-mix(in srgb, var(--base0B) 55%, var(--base01));
+  --color-forest-green-800: color-mix(in srgb, var(--base0B) 45%, var(--base01));
+  --color-forest-green-900: color-mix(in srgb, var(--base0B) 35%, var(--base01));
+
+  /* minty-green: positive/up values -> green (base0B) */
+  --color-minty-green-50: color-mix(in srgb, var(--base0B) 12%, transparent);
+  --color-minty-green-100: color-mix(in srgb, var(--base0B) 22%, transparent);
+  --color-minty-green-200: color-mix(in srgb, var(--base0B) 40%, transparent);
+  --color-minty-green-300: color-mix(in srgb, var(--base0B) 60%, transparent);
+  --color-minty-green-400: var(--base0B);
+  --color-minty-green-500: var(--base0B);
+  --color-minty-green-600: color-mix(in srgb, var(--base0B) 75%, var(--base01));
+  --color-minty-green-a100: color-mix(in srgb, var(--base0B) 15%, transparent);
+  --color-minty-green-a200: color-mix(in srgb, var(--base0B) 30%, transparent);
+  --color-minty-green-a400: var(--base0B);
+  --color-minty-green-a600: color-mix(in srgb, var(--base0B) 60%, var(--base01));
+  --color-minty-green-a700: color-mix(in srgb, var(--base0B) 50%, var(--base01));
+  --color-minty-green-a800: color-mix(in srgb, var(--base0B) 40%, var(--base01));
+  --color-minty-green-a900: color-mix(in srgb, var(--base0B) 30%, var(--base01));
+  --color-minty-green-700: color-mix(in srgb, var(--base0B) 55%, var(--base01));
+  --color-minty-green-800: color-mix(in srgb, var(--base0B) 45%, var(--base01));
+  --color-minty-green-900: color-mix(in srgb, var(--base0B) 35%, var(--base01));
+
+  /* sky-blue: positive/up values -> green (base0B) */
+  --color-sky-blue-50: color-mix(in srgb, var(--base0B) 12%, transparent);
+  --color-sky-blue-100: color-mix(in srgb, var(--base0B) 22%, transparent);
+  --color-sky-blue-200: color-mix(in srgb, var(--base0B) 40%, transparent);
+  --color-sky-blue-300: color-mix(in srgb, var(--base0B) 60%, transparent);
+  --color-sky-blue-400: var(--base0B);
+  --color-sky-blue-500: var(--base0B);
+  --color-sky-blue-600: color-mix(in srgb, var(--base0B) 75%, var(--base01));
+  --color-sky-blue-a100: color-mix(in srgb, var(--base0B) 15%, transparent);
+  --color-sky-blue-a200: color-mix(in srgb, var(--base0B) 30%, transparent);
+  --color-sky-blue-a400: var(--base0B);
+  --color-sky-blue-a700: color-mix(in srgb, var(--base0B) 50%, var(--base01));
+  --color-sky-blue-700: color-mix(in srgb, var(--base0B) 55%, var(--base01));
+  --color-sky-blue-800: color-mix(in srgb, var(--base0B) 45%, var(--base01));
+  --color-sky-blue-900: color-mix(in srgb, var(--base0B) 35%, var(--base01));
+
+  /* tv-blue: primary interactive / brand -> accent (base0D) */
+  --color-tv-blue-50: color-mix(in srgb, var(--base0D) 12%, transparent);
+  --color-tv-blue-100: color-mix(in srgb, var(--base0D) 22%, transparent);
+  --color-tv-blue-200: color-mix(in srgb, var(--base0D) 40%, transparent);
+  --color-tv-blue-300: var(--base0D);
+  --color-tv-blue-400: var(--base0D);
+  --color-tv-blue-500: var(--base0D);
+  --color-tv-blue-600: color-mix(in srgb, var(--base0D) 75%, var(--base01));
+  --color-tv-blue-a100: var(--base0D);
+  --color-tv-blue-a200: var(--base0D);
+  --color-tv-blue-a400: var(--base0D);
+  --color-tv-blue-a600: var(--base0D);
+  --color-tv-blue-a700: color-mix(in srgb, var(--base0D) 50%, var(--base01));
+  --color-tv-blue-a800: color-mix(in srgb, var(--base0D) 40%, var(--base01));
+  --color-tv-blue-a900: color-mix(in srgb, var(--base0D) 30%, var(--base01));
+  --color-tv-blue-700: color-mix(in srgb, var(--base0D) 55%, var(--base01));
+  --color-tv-blue-800: color-mix(in srgb, var(--base0D) 45%, var(--base01));
+  --color-tv-blue-900: color-mix(in srgb, var(--base0D) 35%, var(--base01));
+
+  /* deep-blue: lavender (base0E) */
+  --color-deep-blue-50: color-mix(in srgb, var(--base0E) 12%, transparent);
+  --color-deep-blue-100: color-mix(in srgb, var(--base0E) 22%, transparent);
+  --color-deep-blue-200: color-mix(in srgb, var(--base0E) 40%, transparent);
+  --color-deep-blue-300: var(--base0E);
+  --color-deep-blue-400: var(--base0E);
+  --color-deep-blue-500: var(--base0E);
+  --color-deep-blue-600: color-mix(in srgb, var(--base0E) 65%, var(--base01));
+  --color-deep-blue-a100: var(--base0E);
+  --color-deep-blue-a200: var(--base0E);
+  --color-deep-blue-a400: var(--base0E);
+  --color-deep-blue-a700: color-mix(in srgb, var(--base0E) 45%, var(--base01));
+  --color-deep-blue-700: color-mix(in srgb, var(--base0E) 55%, var(--base01));
+  --color-deep-blue-800: color-mix(in srgb, var(--base0E) 45%, var(--base01));
+  --color-deep-blue-900: color-mix(in srgb, var(--base0E) 35%, var(--base01));
+
+  /* grapes-purple: lavender (base0E) */
+  --color-grapes-purple-50: color-mix(in srgb, var(--base0E) 12%, transparent);
+  --color-grapes-purple-100: color-mix(in srgb, var(--base0E) 22%, transparent);
+  --color-grapes-purple-200: color-mix(in srgb, var(--base0E) 40%, transparent);
+  --color-grapes-purple-300: var(--base0E);
+  --color-grapes-purple-400: var(--base0E);
+  --color-grapes-purple-500: var(--base0E);
+  --color-grapes-purple-600: color-mix(in srgb, var(--base0E) 65%, var(--base01));
+  --color-grapes-purple-a100: color-mix(in srgb, var(--base0E) 15%, transparent);
+  --color-grapes-purple-a200: var(--base0E);
+  --color-grapes-purple-a400: var(--base0E);
+  --color-grapes-purple-a700: color-mix(in srgb, var(--base0E) 45%, var(--base01));
+  --color-grapes-purple-700: color-mix(in srgb, var(--base0E) 55%, var(--base01));
+  --color-grapes-purple-800: color-mix(in srgb, var(--base0E) 45%, var(--base01));
+  --color-grapes-purple-900: color-mix(in srgb, var(--base0E) 35%, var(--base01));
+
+  /* tan-orange: orange (base09) */
+  --color-tan-orange-50: color-mix(in srgb, var(--base09) 12%, transparent);
+  --color-tan-orange-100: color-mix(in srgb, var(--base09) 22%, transparent);
+  --color-tan-orange-200: color-mix(in srgb, var(--base09) 40%, transparent);
+  --color-tan-orange-300: var(--base09);
+  --color-tan-orange-400: var(--base09);
+  --color-tan-orange-500: var(--base09);
+  --color-tan-orange-600: color-mix(in srgb, var(--base09) 70%, var(--base01));
+  --color-tan-orange-a100: color-mix(in srgb, var(--base09) 15%, transparent);
+  --color-tan-orange-a200: var(--base09);
+  --color-tan-orange-a400: var(--base09);
+  --color-tan-orange-a500: color-mix(in srgb, var(--base09) 60%, var(--base01));
+  --color-tan-orange-a600: color-mix(in srgb, var(--base09) 55%, var(--base01));
+  --color-tan-orange-a700: color-mix(in srgb, var(--base09) 45%, var(--base01));
+  --color-tan-orange-a800: color-mix(in srgb, var(--base09) 35%, var(--base01));
+  --color-tan-orange-a900: color-mix(in srgb, var(--base09) 25%, var(--base01));
+  --color-tan-orange-700: color-mix(in srgb, var(--base09) 55%, var(--base01));
+  --color-tan-orange-800: color-mix(in srgb, var(--base09) 45%, var(--base01));
+  --color-tan-orange-900: color-mix(in srgb, var(--base09) 35%, var(--base01));
+
+  /* banana-yellow: yellow (base0A) */
+  --color-banana-yellow-50: color-mix(in srgb, var(--base0A) 12%, transparent);
+  --color-banana-yellow-100: color-mix(in srgb, var(--base0A) 22%, transparent);
+  --color-banana-yellow-200: color-mix(in srgb, var(--base0A) 40%, transparent);
+  --color-banana-yellow-300: var(--base0A);
+  --color-banana-yellow-400: var(--base0A);
+  --color-banana-yellow-500: var(--base0A);
+  --color-banana-yellow-600: color-mix(in srgb, var(--base0A) 70%, var(--base01));
+  --color-banana-yellow-a100: color-mix(in srgb, var(--base0A) 15%, transparent);
+  --color-banana-yellow-a200: color-mix(in srgb, var(--base0A) 30%, transparent);
+  --color-banana-yellow-a400: var(--base0A);
+  --color-banana-yellow-a700: color-mix(in srgb, var(--base0A) 50%, var(--base01));
+  --color-banana-yellow-700: color-mix(in srgb, var(--base0A) 55%, var(--base01));
+  --color-banana-yellow-800: color-mix(in srgb, var(--base0A) 45%, var(--base01));
+  --color-banana-yellow-900: color-mix(in srgb, var(--base0A) 35%, var(--base01));
+
+  /* berry-pink: pink (base0F) */
+  --color-berry-pink-50: color-mix(in srgb, var(--base0F) 12%, transparent);
+  --color-berry-pink-100: color-mix(in srgb, var(--base0F) 22%, transparent);
+  --color-berry-pink-200: color-mix(in srgb, var(--base0F) 40%, transparent);
+  --color-berry-pink-300: var(--base0F);
+  --color-berry-pink-400: var(--base0F);
+  --color-berry-pink-500: var(--base0F);
+  --color-berry-pink-600: color-mix(in srgb, var(--base0F) 65%, var(--base01));
+  --color-berry-pink-a100: color-mix(in srgb, var(--base0F) 15%, transparent);
+  --color-berry-pink-a200: var(--base0F);
+  --color-berry-pink-a400: var(--base0F);
+  --color-berry-pink-a700: color-mix(in srgb, var(--base0F) 45%, var(--base01));
+  --color-berry-pink-700: color-mix(in srgb, var(--base0F) 55%, var(--base01));
+  --color-berry-pink-800: color-mix(in srgb, var(--base0F) 45%, var(--base01));
+  --color-berry-pink-900: color-mix(in srgb, var(--base0F) 35%, var(--base01));
+
+  /* social / third-party brand marks */
+  --color-facebook: var(--base0C);
+  --color-deep-facebook: var(--base0C);
+  --color-twitter: var(--base0C);
+  --color-deep-twitter: var(--base0C);
+  --color-linkedin: var(--base0E);
+  --color-seeking-alpha-brand: var(--base09);
+
+  /* bitcoin dominance chart inline variables */
+  --bitcoin-dominance-bitcoin-color: var(--base0D);
+  --bitcoin-dominance-ethereum-color: var(--base0B);
+  --bitcoin-dominance-others-color: var(--base04);
+
+  /* image card preview background (inline style override) */
+  --ui-lib-image-card-preview-background: var(--base01);
+
+  /* remaining unmapped vars found on live pages */
+  --color-youtube: var(--base08);
+  --color-cold-gray-500: var(--base04);
+  --color-background-page-promo: var(--base00);
+  --color-featured-broker-badge-bg: var(--base01);
+  --color-featured-broker-badge-bg-hover: var(--base0D);
+  --color-featured-broker-badge-text: var(--base00);
+  --color-common-tooltip-bg: var(--base01);
+  --color-common-tooltip-text: var(--base05);
+  --color-popup-element-text: var(--base05);
+  --color-popup-element-secondary-text: var(--base04);
+  --color-popup-element-toolbox-text: var(--base04);
+  --color-background-dark-primary: var(--base01);
+  --color-background-page-promo: var(--base00);
+  --color-border-primary-neutral-extra-bold: var(--base03);
+  --color-border-primary-neutral-extra-heavy: var(--base03);
+  --color-border-primary-neutral-extra-light: var(--base03);
+}
+
+/* --- base surfaces & text (force the dark theme regardless of site class) --- */
+html,
+body {
+  background-color: var(--base00);
+  color: var(--base05);
+}
+
+/* cards / panels that keep a white or near-white surface */
+[class*="card-"],
+[class*="Card-"],
+[class*="panel-"],
+[class*="Panel-"] {
+  background-color: var(--base01);
+}
+
+/* header stays transparent so the dark page shows through */
+.tv-header {
+  background-color: transparent;
+}
+
+/* avoid white placeholder boxes behind lazy-loaded images */
+img {
+  background-color: transparent;
+}
+
+/* links: primary interactive color is yellow (base0D), not cyan */
+a {
+  color: var(--base0D);
+}
+a:hover {
+  color: var(--base0D);
+  text-decoration: underline;
+}
+
+/* form controls */
+input,
+textarea,
+select {
+  background-color: var(--base01);
+  color: var(--base05);
+  border-color: var(--base03);
+}
+input::placeholder,
+textarea::placeholder {
+  color: var(--base04);
+}
+
+/* selection */
+::selection {
+  background-color: color-mix(in srgb, var(--base0D) 35%, transparent);
+  color: var(--base05);
+}
+
+/* scrollbars */
+::-webkit-scrollbar {
+  background-color: var(--base00);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--base03);
+}
+
+/* --- scroll-lock override --- */
+body,
+html {
+  overflow: auto;
+}
+/* chart page locks scroll via body.i-no-scroll */
+body.i-no-scroll {
+  overflow: auto;
+}
+
+/* --- element hiding: cookie/consent layer + promotional elements (with space collapse) --- */
+[class*="toastLayerDefault"] {
+  display: none;
+  height: 0;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.js-main-page-promo {
+  display: none;
+  height: 0;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.js-promo-footer-init-ssr {
+  display: none;
+  height: 0;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+/* cookie/consent banner */
+[class*="cookie-banner"],
+[class*="CookieBanner"],
+[class*="cookieBanner"],
+[class*="cookie-notice"],
+[class*="CookieNotice"],
+[class*="cookie-consent"],
+[class*="CookieConsent"],
+[class*="cookieConsent"] {
+  display: none;
+  height: 0;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+/* ad containers */
+[class*="ad-container"],
+[class*="adContainer"],
+[class*="ad-slot"],
+[class*="adSlot"],
+[class*="ad-banner"],
+[class*="adBanner"],
+[class*="sponsored"],
+[class*="Sponsored"],
+[class*="ad-"],
+[class*="Ad-"] {
+  display: none;
+  height: 0;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+/* promotional newsletter / signup banners */
+[class*="newsletter"],
+[class*="Newsletter"],
+[class*="signup-banner"],
+[class*="SignupBanner"],
+[class*="promo-footer"],
+[class*="PromoFooter"] {
+  display: none;
+  height: 0;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+/* popup widget (sign-in prompt, notifications) */
+[class*="popupWidgetWrapper"] {
+  display: none;
+}
+
+/* --- white-box overrides: stable class selectors --- */
+
+/* homepage: broker review cards */
+[class*="container-u3a"] {
+  background-color: var(--base01);
+  color: var(--base05);
+}
+
+/* homepage: bitcoin dominance chart container */
+[class*="container-kzG"] {
+  background-color: var(--base01);
+  color: var(--base05);
+}
+
+/* --- TradingView Advanced Charts widget theme override --- */
+/* The chart widget renders its canvas using CSS vars set on the .chart-widget element.
+   Override the light theme vars so the canvas renders with the dark palette. */
+.chart-widget--themed-light,
+.chart-widget--themed-dark,
+[class*="chart-widget--themed-light"],
+[class*="chart-widget--themed-dark"] {
+  --background-color: var(--base00);
+  --border-color: var(--base02);
+  --text-color: var(--base05);
+  --up-color: var(--base0B);
+  --down-color: var(--base08);
+  --crosshair-color: var(--base0D);
+  --main-contrast-color: var(--base05);
+  --main-contrast-color-rgb: "248, 248, 248";
+  --text-color-rgb: "248, 248, 248";
+  --crosshair-color-rgb: "250, 208, 0";
+  --border-color-rgb: "50, 36, 93";
+  --grid-color: color-mix(in srgb, var(--base03) 50%, transparent);
+  --grid-color-rgb: "76, 62, 118, 0.5";
+  --grid-color-vert: color-mix(in srgb, var(--base03) 50%, transparent);
+  --pane-bg: var(--base00);
+  --up-series-color: var(--base0B);
+  --down-series-color: var(--base08);
+}
+
+/* chart page: chart container border */
+.chart-container-border {
+  background-color: var(--base01);
+}
+
+/* chart page: widget bar */
+.widgetbar-pages,
+[class*="widgetbar-pages"] {
+  background-color: var(--base01);
+}
+
+/* chart page: individual widgets (watchlist, detail, etc.) */
+[class*="widget-aKd"],
+[class*="widgetbar-widget"] {
+  background-color: var(--base01);
+  color: var(--base05);
+}
+
+/* screener page: body background (site sets white via tv-screener__body-background) */
+body.tv-screener__body-background,
+body[class*="tv-screener__body-background"] {
+  background-color: var(--base00);
+}
+
+/* screener page: header inner */
+.tv-header__inner {
+  background-color: var(--base00);
+}
+
+/* screener page: table and cells */
+[class*="table-"][class*="NI7"],
+table[class*="table-"] {
+  background-color: var(--base01);
+  color: var(--base05);
+}
+[class*="cellWrapper-"] {
+  background-color: var(--base01);
+  color: var(--base05);
+}
+
+/* screener page: table header */
+[class*="tableHead-"] {
+  background-color: var(--base02);
+  color: var(--base05);
+}
+
+/* generic: any white card/panel with CSS-module hashed names */
+[class*="container-"][class*="card"],
+[class*="Card-"][class*="container"] {
+  background-color: var(--base01);
+  color: var(--base05);
+}
+
+/* --- secondary navigation bar (semi-transparent white) --- */
+[class*="container-"][class*="navigation-"],
+[class*="navigation-"] {
+  background-color: var(--base01);
+}
+
+/* --- gainers/losers icons (light circular backgrounds) --- */
+[class*="gainers-"],
+[class*="losers-"] {
+  background-color: var(--base02);
+}
+
+/* --- image card preview backgrounds (inline style overrides) --- */
+[class*="image-ky9wu9YA"],
+[class*="image-card"],
+[class*="ImageCard"] {
+  background-color: var(--base01);
+}

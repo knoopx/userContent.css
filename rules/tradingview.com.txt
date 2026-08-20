@@ -1,0 +1,44 @@
+! TradingView: hide popup widget (sign-in prompt, notification banners)
+tradingview.com##[class*="popupWidgetWrapper"]
+
+! Hide promo modals (sign-up prompts, "Look first / Then leap" style)
+tradingview.com##[class*="modal-"]:has([class*="Join for free"])
+tradingview.com##[class*="dialog-"]:has([class*="Join for free"])
+
+! Hide cookie/consent banner
+tradingview.com##[class*="cookie-banner"]
+tradingview.com##[class*="CookieBanner"]
+tradingview.com##[class*="cookieBanner"]
+tradingview.com##[class*="cookie-notice"]
+tradingview.com##[class*="CookieNotice"]
+tradingview.com##[class*="cookie-consent"]
+tradingview.com##[class*="CookieConsent"]
+tradingview.com##[class*="cookieConsent"]
+
+! Hide ad containers
+tradingview.com##[class*="ad-container"]
+tradingview.com##[class*="adContainer"]
+tradingview.com##[class*="ad-slot"]
+tradingview.com##[class*="adSlot"]
+tradingview.com##[class*="ad-banner"]
+tradingview.com##[class*="adBanner"]
+
+! Hide toast layer (notification toasts)
+tradingview.com##[class*="toastLayerDefault"]
+
+! Hide main page promo
+tradingview.com##.js-main-page-promo
+
+! Hide promo footer
+tradingview.com##.js-promo-footer-init-ssr
+
+! Force TradingView chart canvas into dark theme.
+! The chart widget renders to a <canvas> using an internal theme config,
+! not CSS variables. CSS injection alone cannot re-render the canvas.
+! This comment-resource filter injects an IIFE that:
+!   1. Polls (up to 40 s) for the chart widget to initialize
+!   2. Forces _backgroundBasedTheme / _topTheme / _bottomTheme to 'dark'
+!   3. Sets CSS vars + swaps class on the widget element
+!   4. Calls applyOverrides with palette colors
+!   5. Re-applies via MutationObserver on DOM changes
+tradingview.com#%#(function(){function A(){try{const t=window.TradingViewApi;if(!t||!t.activeChart)return;const c=t.activeChart();if(!c||!c._chartWidget)return;const w=c._chartWidget;const themes=[w._backgroundBasedTheme,w._backgroundTopTheme,w._backgroundBottomTheme];for(const th of themes){if(th&&th._value==='light'&&th.setValue)th.setValue('dark')}const el=document.querySelector('.chart-widget--themed-light,.chart-widget--themed-dark');if(el){el.style.setProperty('--background-color','#191033');el.style.setProperty('--text-color','#f8f8f8');el.style.setProperty('--up-color','#a5ff90');el.style.setProperty('--down-color','#ff628c');el.style.setProperty('--grid-color','rgba(76,62,118,0.5)');el.style.setProperty('--crosshair-color','#fad000');el.classList.remove('chart-widget--themed-light');el.classList.add('chart-widget--themed-dark')}c.applyOverrides({'paneProperties.background':'#191033','textColor':'#f8f8f8','upColor':'#a5ff90','downColor':'#ff628c','borderVisible':true,'borderColor':'#32245d','grid.vertLines.color':'rgba(76,62,118,0.5)','grid.horizLines.color':'rgba(76,62,118,0.5)','crosshair.horizLine.color':'#fad000','crosshair.vertLine.color':'#fad000'})}catch(e){}}let n=0;const P=()=>{if(A()){new MutationObserver(()=>A()).observe(document.documentElement,{childList:true,subtree:true,attributes:true})}else if(++n<200){setTimeout(P,200)}};P()})();
