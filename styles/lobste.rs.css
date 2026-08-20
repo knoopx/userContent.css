@@ -99,6 +99,10 @@ a:visited {
   background-color: transparent;
 }
 
+#logo::after {
+  background: none;
+}
+
 input,
 textarea,
 select {

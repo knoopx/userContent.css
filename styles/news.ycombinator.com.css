@@ -158,6 +158,24 @@ td[bgcolor="#ff6600"] img {
   display: none;
 }
 
+/* yellow "new" submission box */
+td[bgcolor="#ffffaa"] {
+  background-color: var(--base0A);
+}
+
+td[bgcolor="#ffffaa"] td {
+  color: var(--base00);
+}
+
+/* green "new" markers */
+[color="#3c963c"] {
+  color: var(--base0B);
+}
+
+table[bgcolor="#ff6600"] {
+  background-color: var(--base0D);
+}
+
 /* search input */
 input[type="text"] {
   background-color: var(--base01);

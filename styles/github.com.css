@@ -506,3 +506,175 @@
 #dashboard .news article[data-hydro-view*="PULL_REQUEST"] {
   display: none;
 }
+
+/* ============================================================
+   Supplemental rules (derived from catppuccin/userstyles github)
+   ============================================================ */
+
+:root {
+  /* missing foreground */
+  --fgColor-link: var(--base0D);
+
+  /* color-scale tokens (newer GitHub components) */
+  --color-scale-white: var(--base00);
+  --color-scale-gray-3: var(--base04);
+  --color-scale-gray-5: var(--base03);
+  --color-scale-gray-6: var(--base01);
+  --color-scale-gray-7: var(--base01);
+  --color-scale-blue-2: var(--base0C);
+  --color-scale-blue-5: var(--base0D);
+  --color-scale-green-3: var(--base0B);
+  --color-scale-green-4: var(--base0B);
+  --color-scale-yellow-3: var(--base09);
+  --color-scale-orange-4: var(--base09);
+  --color-scale-red-4: var(--base08);
+
+  /* focus / misc */
+  --outline-focus: var(--base0D) solid 2px;
+  --color-icon-directory: var(--fgColor-muted);
+  --color-social-reaction-bg-reacted-hover: color-mix(in srgb, var(--base0D) 30%, transparent);
+  --color-notifications-button-hover-bg: color-mix(in srgb, var(--base0D) 60%, transparent);
+  --color-user-mention-fg: var(--base0D);
+  --color-user-mention-bg: color-mix(in srgb, var(--base0D) 30%, transparent);
+  --tooltip-fgColor: var(--base00);
+  --tooltip-bgColor: var(--base04);
+  --rgh-heat-color: var(--base09);
+
+  /* calendar contribution graph */
+  --color-calendar-graph-day-bg: var(--base02);
+  --color-calendar-graph-day-border: transparent;
+  --color-calendar-graph-day-L1-bg: color-mix(in srgb, var(--base0B) 40%, var(--base00));
+  --color-calendar-graph-day-L2-bg: color-mix(in srgb, var(--base0B) 60%, var(--base00));
+  --color-calendar-graph-day-L3-bg: color-mix(in srgb, var(--base0B) 80%, var(--base00));
+  --color-calendar-graph-day-L4-bg: var(--base0B);
+
+  /* diff blob — remaining */
+  --diffBlob-additionNum-fgColor: var(--base05);
+  --diffBlob-additionLine-bgColor: color-mix(in srgb, var(--base0B) 15%, transparent);
+  --diffBlob-additionWord-fgColor: var(--base05);
+  --diffBlob-deletionNum-fgColor: var(--base05);
+  --diffBlob-deletionLine-bgColor: color-mix(in srgb, var(--base08) 15%, transparent);
+  --diffBlob-deletionWord-fgColor: var(--base05);
+  --diffBlob-hunkNum-bgColor-hover: color-mix(in srgb, var(--base0D) 75%, var(--base00));
+  --diffBlob-hunkLine-bgColor: color-mix(in srgb, var(--base0D) 25%, transparent);
+  --diffBlob-expander-iconColor: var(--base04);
+  --diffBlob-emptyNum-bgColor: var(--base01);
+  --diffBlob-emptyLine-bgColor: var(--base01);
+
+  /* code-mirror — structural */
+  --codeMirror-fgColor: var(--base05);
+  --codeMirror-bgColor: var(--base00);
+  --codeMirror-gutters-bgColor: var(--base00);
+  --codeMirror-gutterMarker-fgColor-default: var(--base00);
+  --codeMirror-gutterMarker-fgColor-muted: var(--base03);
+  --codeMirror-lineNumber-fgColor: var(--base04);
+  --codeMirror-cursor-fgColor: var(--base05);
+  --codeMirror-matchingBracket-fgColor: var(--base05);
+  --codeMirror-lines-bgColor: var(--base00);
+
+  /* prettylights — missing */
+  --color-prettylights-syntax-invalid-illegal-text: var(--base08);
+  --color-prettylights-syntax-invalid-illegal-bg: color-mix(in srgb, var(--base08) 15%, transparent);
+
+  /* data-viz emphasis + copilot */
+  --data-blue-color-emphasis: var(--base0D);
+  --data-red-color-emphasis: var(--base08);
+  --data-green-color-emphasis: var(--base0B);
+  --display-green-fgColor: var(--base0B);
+  --display-teal-fgColor: var(--base0C);
+  --display-purple-fgColor: var(--base0D);
+  --display-blue-fgColor: var(--base0C);
+  --display-pink-fgColor: var(--base0F);
+  --display-gray-fgColor: var(--base04);
+
+  /* docs.github.com */
+  --color-fg-default: var(--base05);
+  --color-canvas-default: var(--base00);
+  --color-canvas-subtle: var(--base01);
+}
+
+/* accent-color + base text */
+:root {
+  accent-color: var(--base0D);
+}
+
+.cm-placeholder {
+  color: var(--base04);
+}
+
+/* progress bar */
+.turbo-progress-bar {
+  background-color: var(--base0D);
+}
+
+/* selected subnav */
+.subnav-link.selected {
+  border-bottom-color: var(--base0D);
+}
+
+/* activity graph highlight */
+.js-activity-overview-graph .js-highlight-blob {
+  fill: var(--base0D);
+  stroke: var(--base0D);
+}
+
+/* logged-out header search */
+.header-search-button svg {
+  fill: var(--base05);
+}
+
+.HeaderMenu-toggle-bar {
+  border-color: var(--base05);
+}
+
+/* mail notification gradient */
+.notification-indicator .mail-status {
+  background-image: linear-gradient(
+    var(--base0D),
+    color-mix(in srgb, var(--base0D) 90%, var(--base00))
+  );
+}
+
+/* PR check-in-progress indicator */
+[stroke="#DBAB0A" i] {
+  stroke: color-mix(in srgb, var(--base0A) 70%, transparent);
+}
+
+[fill="#DBAB0A" i] {
+  fill: var(--base0A);
+}
+
+/* feed links */
+.feed-item-content a code,
+.feed-item-content a tt {
+  color: var(--base0D);
+}
+
+/* CI step ANSI colors */
+.CheckStep .ansifg-r {
+  color: var(--color-ansi-red);
+}
+
+.CheckStep .ansifg-y {
+  color: var(--color-ansi-yellow);
+}
+
+.CheckStep .ansifg-g {
+  color: var(--color-ansi-green);
+}
+
+.CheckStep .ansifg-b {
+  color: var(--color-ansi-blue);
+}
+
+.CheckStep .ansifg-c {
+  color: var(--color-ansi-cyan);
+}
+
+.CheckStep .ansifg-m {
+  color: var(--color-ansi-magenta);
+}
+
+.CheckStep .ansifg-gr {
+  color: var(--color-ansi-gray);
+}

@@ -216,3 +216,74 @@ textarea {
 body {
   pointer-events: auto;
 }
+
+/* ============================================================
+   Supplemental rules (derived from catppuccin/userstyles chatgpt)
+   ============================================================ */
+
+:root {
+  --bg-tooltip: var(--base00);
+  --bg-secondary-surface: var(--base01);
+  --bg-elevated-primary: var(--base00);
+  --interactive-bg-secondary-hover: var(--base02);
+  --interactive-bg-secondary-press: var(--base02);
+  --interactive-label-accent-default: var(--base0D);
+  --interactive-border-focus: var(--base03);
+  --theme-user-msg-bg: var(--base02);
+  --theme-user-msg-text: var(--base05);
+  --theme-submit-btn-bg: var(--base0D);
+  --theme-submit-btn-text: var(--base00);
+  --theme-secondary-btn-bg: var(--base02);
+  --theme-secondary-btn-text: var(--base05);
+  --sidebar-surface: var(--base01);
+  --surface-hover: var(--base02);
+  --icon-tertiary: var(--base04);
+  --text-status-error: var(--base08);
+  --shadow-color-1: color-mix(in srgb, var(--base01) 50%, transparent);
+  --shadow-color-2: color-mix(in srgb, var(--base05) 80%, transparent);
+}
+
+/* Inline code */
+code:not(pre > code) {
+  background-color: var(--base02);
+}
+
+/* Syntax-highlighted code */
+code.hljs {
+  color: var(--base05);
+}
+
+/* Buttons */
+.btn-purple {
+  background-color: var(--base0D);
+  color: var(--base00);
+}
+
+.btn-purple:hover {
+  background-color: color-mix(in srgb, var(--base0D) 90%, var(--base05));
+}
+
+.btn-purple:focus,
+.btn-purple:active {
+  background-color: color-mix(in srgb, var(--base0D) 90%, var(--base00));
+}
+
+.btn-danger-outline {
+  color: var(--base08);
+  border-color: var(--base08);
+}
+
+.btn-ghost:not(:disabled):hover {
+  background-color: var(--base02);
+}
+
+/* Sidebar menu items */
+.__menu-item[data-sidebar-item] {
+  --menu-item-highlighted: var(--base02);
+}
+
+.__menu-item[data-color="danger"] {
+  --menu-item-highlighted: color-mix(in srgb, var(--base08) 20%, transparent);
+  --menu-item-active: color-mix(in srgb, var(--base08) 30%, transparent);
+  --menu-item-open: color-mix(in srgb, var(--base08) 30%, transparent);
+}

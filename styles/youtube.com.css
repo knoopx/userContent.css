@@ -910,3 +910,1012 @@ ytd-watch-metadata {
 .watch-skeleton .skeleton-bg-color {
   background-color: var(--base02);
 }
+
+/* supplemental: ported from catppuccin */
+
+/* === New baseline / sys variables (YouTube design system, not in local file) === */
+:root,
+html,
+html[dark],
+html[dark][dark],
+html[unified][dark][dark],
+html[darker-dark-theme][dark],
+html[color-version][dark],
+html[system-icons],
+html[darker-dark-theme] {
+  --efyt-control-bar-background-color: var(--base01);
+
+  /* yt-sys-color-baseline */
+  --yt-sys-color-baseline--base-background: var(--base00);
+  --yt-sys-color-baseline--menu-background: var(--base01);
+  --yt-sys-color-baseline--raised-background: var(--base02);
+  --yt-sys-color-baseline--additive-background: var(--base02);
+  --yt-sys-color-baseline--wordmark-text: var(--base05);
+  --yt-sys-color-baseline--text-primary: var(--base05);
+  --yt-sys-color-baseline--text-secondary: var(--base04);
+  --yt-sys-color-baseline--call-to-action: var(--base0D);
+  --yt-sys-color-baseline--suggested-action: color-mix(
+    in srgb,
+    var(--base0D) 30%,
+    var(--base00)
+  );
+  --yt-sys-color-baseline--outline: var(--base02);
+  --yt-sys-color-baseline--outline-opaque: var(--base02);
+  --yt-sys-color-baseline--outline-inverse-opaque: var(--base03);
+  --yt-sys-color-baseline--overlay-background-medium-light: color-mix(
+    in srgb,
+    var(--base00) 60%,
+    transparent
+  );
+  --yt-sys-color-baseline--overlay-background-heavy: color-mix(
+    in srgb,
+    var(--base00) 80%,
+    transparent
+  );
+  --yt-sys-color-baseline--overlay-background-solid: var(--base00);
+  --yt-sys-color-baseline--overlay-text-primary: var(--base05);
+
+  /* Brand reds */
+  --yt-brand-youtube-red: var(--base0D);
+  --yt-brand-medium-red: var(--base0D);
+  --yt-brand-light-red: var(--base0D);
+  --yt-brand-medium-red-alpha-90: color-mix(
+    in srgb,
+    var(--base0D) 10%,
+    transparent
+  );
+  --yt-brand-medium-red-alpha-30: color-mix(
+    in srgb,
+    var(--base0D) 70%,
+    transparent
+  );
+  --yt-brand-light-red-alpha-30: color-mix(
+    in srgb,
+    var(--base0D) 70%,
+    transparent
+  );
+
+  /* Live chat extras */
+  --yt-live-chat-primary-text-color: var(--base05);
+  --yt-live-chat-text-input-field-placeholder-color: var(--base04);
+  --yt-grey: var(--base04);
+  --yt-live-chat-banner-gradient-scrim: linear-gradient(var(--base01), transparent);
+  --yt-live-chat-action-panel-gradient-scrim: linear-gradient(
+    to top,
+    var(--base01),
+    transparent
+  );
+  --yt-live-chat-shimmer-linear-gradient: linear-gradient(
+    0deg,
+    color-mix(in srgb, var(--base05) 90%, transparent) 40%,
+    color-mix(in srgb, var(--base00) 70%, transparent) 50%,
+    color-mix(in srgb, var(--base05) 90%, transparent) 60%
+  );
+
+  /* Endpoint / link colors */
+  --yt-endpoint-color: var(--base05);
+  --yt-endpoint-visited-color: var(--base05);
+  --yt-endpoint-hover-color: var(--base0D);
+
+  /* SponsorBlock */
+  --sb-dark-red-outline: var(--base0D);
+  --sb-main-bg-color: var(--base00);
+  --sb-main-fg-color: var(--base05);
+  --sb-grey-bg-color: var(--base00);
+  --sb-grey-fg-color: var(--base04);
+  --sb-red-bg-color: var(--base0D);
+  --sb-category-sponsor: var(--base0B);
+  --sb-category-selfpromo: var(--base0A);
+  --sb-category-exclusive_access: var(--base0C);
+  --sb-category-interaction: var(--base0D);
+  --sb-category-poi_highlight: var(--base08);
+  --sb-category-intro: var(--base0C);
+  --sb-category-outro: var(--base0D);
+  --sb-category-preview: var(--base0C);
+  --sb-category-filler: var(--base0E);
+  --sb-category-music_offtopic: var(--base0A);
+}
+
+/* === Page navigation progress === */
+#progress.yt-page-navigation-progress {
+  background-color: var(--base0D);
+}
+
+/* === Chapter markers === */
+ytd-macro-markers-list-item-renderer {
+  --ytd-macro-markers-list-item-background-color: var(--base02);
+  --ytd-macro-markers-list-item-title-color: var(--base05);
+  --ytd-macro-markers-list-item-secondary-color: var(--base05);
+  --ytd-macro-markers-list-item-timestamp-background-color: var(--base02);
+}
+
+/* === Playlist panel === */
+ytd-playlist-panel-video-renderer {
+  --yt-lightsource-section2-color: var(--base02);
+  --yt-lightsource-section4-color: var(--base03);
+  --yt-lightsource-primary-title-color: var(--base05);
+  --yt-lightsource-secondary-title-color: var(--base05);
+  --yt-active-playlist-panel-background-color: var(--base02);
+}
+
+ytd-playlist-panel-renderer[collapsible][collapsed][use-color-palette]
+  .header.ytd-playlist-panel-renderer {
+  --iron-icon-fill-color: var(--base05);
+  background-color: var(--base00);
+}
+
+/* === Masthead container icon === */
+#container.ytd-masthead {
+  --iron-icon-fill-color: var(--base05);
+}
+
+/* === Feed filter chip bar === */
+ytd-feed-filter-chip-bar-renderer[expand-instead-of-scroll]
+  #chips-wrapper.ytd-feed-filter-chip-bar-renderer {
+  --iron-icon-fill-color: var(--base05);
+  background-color: var(--base00);
+}
+
+/* === Player progress bars === */
+.ytp-progress-list {
+  background-color: color-mix(in srgb, var(--base02) 80%, transparent);
+}
+.ytp-load-progress {
+  background-color: var(--base03);
+}
+
+/* === Expandable metadata (video page) === */
+ytd-expandable-metadata-renderer {
+  --yt-lightsource-section1-color: var(--base00);
+  --yt-lightsource-section2-color: var(--base02);
+  --yt-lightsource-section3-color: var(--base02);
+  --yt-lightsource-section4-color: var(--base03);
+  --yt-lightsource-primary-title-color: var(--base05);
+  --yt-lightsource-secondary-title-color: var(--base04);
+}
+
+/* === Live chat buttons === */
+yt-live-chat-renderer {
+  --yt-button-default-text-color: var(--base05);
+  --yt-button-default-background-color: var(--base00);
+  --yt-button-dark-text-color: var(--base00);
+  --yt-button-dark-background-color: var(--base0D);
+  --yt-button-payment-background-color: var(--base0D);
+}
+
+yt-icon-button.yt-live-chat-item-list-renderer {
+  background-color: var(--base0D);
+  color: var(--base00);
+}
+yt-icon-button.yt-live-chat-item-list-renderer:hover {
+  background-color: color-mix(in srgb, var(--base0D) 95%, var(--base00));
+}
+
+/* === Skeleton z-index fix === */
+#guide-skeleton,
+#home-container-skeleton,
+#home-chips {
+  z-index: -1;
+}
+
+/* === Shorts page background === */
+ytd-app[is-shorts-page] {
+  background-color: var(--yt-spec-base-background);
+}
+
+/* === Quality badges === */
+.ytp-settings-button.ytp-hd-quality-badge::after,
+.ytp-settings-button.ytp-hdr-quality-badge::after,
+.ytp-settings-button.ytp-4k-quality-badge::after,
+.ytp-settings-button.ytp-5k-quality-badge::after,
+.ytp-settings-button.ytp-8k-quality-badge::after,
+.ytp-settings-button.ytp-3d-badge-grey::after,
+.ytp-settings-button.ytp-3d-badge::after {
+  background-color: var(--base0D);
+}
+
+/* === Icon fill overrides (broader than local #logo-icon rule) === */
+[fill="red"],
+[fill="#F00"],
+[fill="#FF0000"],
+[fill="#f03"],
+[fill="#FF0033"] {
+  fill: var(--base0D);
+}
+
+[fill="white"] {
+  fill: var(--base05);
+}
+yt-icon.ytd-logo [fill="white"] {
+  fill: var(--base00);
+}
+
+.yt-spec-icon-shape [fill="#FAFAFA"],
+.yt-spec-icon-shape [fill="#000"],
+.yt-spec-icon-shape [fill="#fff"],
+.yt-spec-icon-shape [fill="#FFF"],
+.yt-spec-icon-shape [fill="#FFFFFF"] {
+  fill: var(--base00);
+}
+
+/* === Notification bell / indicator === */
+.ytSpecIconBadgeShapeStyleOverlay .ytSpecIconBadgeShapeIcon,
+.ytSpecIconBadgeShapeBadge {
+  color: var(--base05);
+}
+.ytSpecIconBadgeShapeTypeNotification .ytSpecIconBadgeShapeBadge {
+  background-color: var(--base0D);
+  color: var(--base00);
+}
+
+/* === Button shapes: mono === */
+.yt-spec-button-shape-next--mono.yt-spec-button-shape-next--tonal {
+  color: var(--base05);
+  background-color: var(--base02);
+}
+.yt-spec-button-shape-next--mono.yt-spec-button-shape-next--tonal:hover {
+  background-color: var(--base02);
+}
+.yt-spec-button-shape-next--mono.yt-spec-button-shape-next--tonal
+  [fill="rgb(3,3,3)"],
+.yt-spec-button-shape-next--mono.yt-spec-button-shape-next--tonal
+  [fill="rgb(0,0,0)"],
+.yt-spec-button-shape-next--mono.yt-spec-button-shape-next--tonal
+  [fill="rgb(255,255,255)"] {
+  fill: var(--base05);
+}
+.yt-spec-button-shape-next--mono.yt-spec-button-shape-next--tonal
+  [stroke="rgb(0,0,0)"],
+.yt-spec-button-shape-next--mono.yt-spec-button-shape-next--tonal
+  [stroke="rgb(255,255,255)"] {
+  stroke: var(--base05);
+}
+.yt-spec-button-shape-next--mono.yt-spec-button-shape-next--tonal
+  [animated-icon-type="LIKE"]
+  g
+  path[fill] {
+  fill: var(--base0D);
+}
+.yt-spec-button-shape-next--mono.yt-spec-button-shape-next--tonal
+  [animated-icon-type="LIKE"]
+  g
+  path[fill]
+  + [stroke] {
+  stroke: var(--base0D);
+}
+
+.yt-spec-button-shape-next--mono.yt-spec-button-shape-next--outline {
+  color: var(--base05);
+  border-color: var(--base03);
+}
+.yt-spec-button-shape-next--mono.yt-spec-button-shape-next--outline:hover {
+  background-color: var(--base03);
+}
+
+.yt-spec-button-shape-next--mono.yt-spec-button-shape-next--text {
+  color: var(--base05);
+}
+.yt-spec-button-shape-next--mono.yt-spec-button-shape-next--text:hover {
+  background-color: var(--base02);
+}
+.yt-spec-button-shape-next--mono.yt-spec-button-shape-next--text
+  path[d*="M3,11h3v10H3V11z"] {
+  fill: var(--base0D);
+}
+
+.yt-spec-button-shape-next--mono.yt-spec-button-shape-next--filled {
+  color: var(--base00);
+  background-color: var(--base0D);
+}
+.yt-spec-button-shape-next--mono.yt-spec-button-shape-next--filled:hover {
+  background-color: color-mix(in srgb, var(--base0D) 95%, var(--base00));
+}
+
+/* === Button shapes: disabled === */
+.yt-spec-button-shape-next--disabled {
+  color: var(--base04);
+}
+.yt-spec-button-shape-next--disabled.yt-spec-button-shape-next--filled {
+  color: var(--base04);
+  background-color: color-mix(in srgb, var(--base02) 70%, transparent);
+}
+
+/* === Button shapes: overlay === */
+.yt-spec-button-shape-next--overlay.yt-spec-button-shape-next--tonal {
+  color: var(--base05);
+  background-color: var(--base02);
+}
+.yt-spec-button-shape-next--overlay.yt-spec-button-shape-next--tonal:hover {
+  background-color: var(--base02);
+}
+.yt-spec-button-shape-next--overlay.yt-spec-button-shape-next--text {
+  color: var(--base05);
+}
+.yt-spec-button-shape-next--overlay.yt-spec-button-shape-next--text:hover {
+  background-color: var(--base02);
+}
+.yt-spec-button-shape-next--overlay.yt-spec-button-shape-next--filled {
+  color: var(--base00);
+  background-color: var(--base0D);
+}
+.yt-spec-button-shape-next--overlay.yt-spec-button-shape-next--outline {
+  color: var(--base05);
+  border-color: var(--base02);
+}
+.yt-spec-button-shape-next--overlay.yt-spec-button-shape-next--outline:hover {
+  background-color: var(--base02);
+}
+
+/* === Button shapes: call-to-action === */
+.yt-spec-button-shape-next--call-to-action.yt-spec-button-shape-next--outline {
+  color: var(--base0D);
+  border-color: var(--base03);
+}
+.yt-spec-button-shape-next--call-to-action.yt-spec-button-shape-next--outline:hover {
+  background-color: color-mix(in srgb, var(--base0D) 30%, transparent);
+  color: var(--base0D);
+}
+.yt-spec-button-shape-next--call-to-action.yt-spec-button-shape-next--text {
+  color: var(--base0D);
+}
+.yt-spec-button-shape-next--call-to-action.yt-spec-button-shape-next--text:hover {
+  background-color: color-mix(in srgb, var(--base0D) 30%, transparent);
+}
+.yt-spec-button-shape-next--call-to-action.yt-spec-button-shape-next--filled {
+  color: var(--base00);
+  background-color: var(--base0D);
+}
+.yt-spec-button-shape-next--call-to-action.yt-spec-button-shape-next--filled:hover {
+  background-color: color-mix(in srgb, var(--base0D) 95%, var(--base05));
+}
+
+/* === Searchbox extras === */
+.ytSearchboxComponentInputBoxHasFocus,
+.ytSearchboxComponentInputBoxHasFocusDark {
+  border-color: var(--base0D);
+}
+.ytSuggestionComponentPersonalizedSuggestion {
+  color: var(--base05);
+}
+.ytSuggestionComponentHighlighted {
+  background-color: var(--base02);
+}
+.ytSuggestionComponentLargerRemovedText {
+  color: var(--base04);
+}
+.ytSearchboxComponentSuggestionsContainer,
+.ytSearchboxComponentSuggestionsContainerDark {
+  background-color: var(--base02);
+  border-color: var(--base02);
+}
+.ytSuggestionComponentSuggestion,
+.ytSuggestionComponentSuggestionDark {
+  color: var(--base05);
+}
+.ytSearchboxComponentClearButtonIcon,
+.ytSearchboxComponentClearButtonIconDark {
+  color: var(--base05);
+}
+
+/* === Video description extras === */
+ytd-text-inline-expander
+  .ytAttributedStringLinkInheritColor:not(.ytAttributedStringLink) {
+  color: var(--base05);
+}
+.ytAttributedStringHighlightTextDecorator {
+  background-color: var(--base03);
+}
+.ytAttributedStringLinkCallToActionColor {
+  color: var(--base0D);
+}
+
+/* === Course Playlist === */
+.ytwCourseProgressViewModelHostProgressTitle,
+.ytwCourseProgressViewModelHostProgressSubtitle {
+  color: var(--base05);
+}
+.ytwCourseProgressViewModelHostProgressBar {
+  background-color: color-mix(in srgb, var(--base05) 20%, transparent);
+}
+.ytwCourseProgressViewModelHostProgressBarFill {
+  background-color: var(--base05);
+}
+
+/* === How This Was Made === */
+.ytwHowThisWasMadeSectionViewModelSectionTitle,
+.ytwHowThisWasMadeSectionViewModelBodyHeader {
+  color: var(--base05);
+}
+.ytwHowThisWasMadeSectionViewModelBodyText {
+  color: var(--base04);
+}
+
+/* === YouChat / AI chat === */
+.ytVideoDescriptionYouchatSectionViewModelSectionTitle {
+  color: var(--base05);
+}
+.ytVideoDescriptionYouchatSectionViewModelSubHeaderText {
+  color: var(--base04);
+}
+.ytwYouChatItemViewModelHost {
+  color: var(--base05);
+}
+.ytwYouChatChipsDataChip {
+  color: var(--base05);
+  border-color: var(--base03);
+}
+.ytwYouChatChipsDataChip:hover {
+  background-color: var(--base02);
+}
+.chatInputViewModelChatDisclaimer {
+  color: var(--base04);
+}
+
+/* === Timeline / Transcript === */
+.ytwTimelineChapterViewModelTitle,
+.ytShelfHeaderLayoutTitle {
+  color: var(--base05);
+}
+.ytwTranscriptSegmentViewModelHost {
+  color: var(--base04);
+}
+.ytwTranscriptSegmentViewModelTimestamp {
+  background-color: var(--base03);
+  color: var(--base05);
+}
+.ytwTranscriptSegmentViewModelTimestampActive {
+  background-color: var(--base03);
+  color: var(--base05);
+}
+
+/* === Video Attributes === */
+.videoAttributesSectionViewModelTitle,
+.ytVideoAttributeViewModelTitle {
+  color: var(--base05);
+}
+.ytVideoAttributeViewModelSubtitle,
+.ytVideoAttributeViewModelSecondarySubtitle {
+  color: var(--base05);
+}
+
+/* === Thumbnails === */
+.ytp-sb-unsubscribe {
+  background-color: var(--base03);
+  color: var(--base05);
+}
+.ytp-sb-subscribe {
+  background-color: var(--base0D);
+  color: var(--base00);
+}
+.ytThumbnailOverlayProgressBarHostWatchedProgressBar {
+  background-color: var(--base03);
+}
+.ytThumbnailOverlayProgressBarHostWatchedProgressBarSegment {
+  background-color: var(--base0D);
+}
+ytd-thumbnail-overlay-resume-playback-renderer {
+  background-color: var(--base03);
+}
+ytd-thumbnail-overlay-resume-playback-renderer #progress {
+  background-color: var(--base0D);
+}
+
+/* === Panels, popups, tooltips (player) === */
+.ytp-tooltip-bottom-text {
+  background-color: color-mix(in srgb, var(--base02) 90%, transparent);
+  color: var(--base05);
+  text-shadow: none;
+}
+.ytp-popup {
+  background-color: color-mix(in srgb, var(--base02) 90%, transparent);
+  text-shadow: none;
+}
+.ytp-panel-menu,
+.ytp-panel-header,
+.ytp-panel-footer,
+.ytp-menuitem-label,
+.ytp-premium-label,
+.ytp-menuitem-content,
+.ytp-menuitem-label-count,
+.ytp-menu-label-secondary,
+.ytd-menu-title-renderer {
+  color: var(--base05);
+}
+.ytp-panel-footer-content-link {
+  color: var(--base0D);
+}
+
+/* Player menu checkboxes */
+.ytp-menuitem[aria-checked="false"] .ytp-menuitem-toggle-checkbox::after {
+  background-color: var(--base04);
+}
+.ytp-menuitem[aria-checked="true"] .ytp-menuitem-toggle-checkbox {
+  background-color: var(--base03);
+}
+.ytp-menuitem[aria-checked="true"] .ytp-menuitem-toggle-checkbox::after {
+  background-color: var(--base05);
+}
+.ytp-menuitem:not([aria-disabled="true"]):hover {
+  background-color: var(--base02);
+}
+
+/* === Video player === */
+yt-progress-bar .ytProgressBarLineProgressBarPlayed,
+yt-progress-bar .ytProgressBarPlayheadProgressBarPlayheadDot {
+  background-color: var(--base0D);
+}
+yt-progress-bar .ytProgressBarLineProgressBarHovered,
+yt-progress-bar .ytProgressBarLineProgressBarBackground {
+  background-color: var(--base05);
+}
+
+.ytp-cards-button .ytp-cards-button-icon use {
+  fill: var(--base00);
+}
+.ytp-cards-button .ytp-cards-button-icon path {
+  fill: var(--base05);
+}
+.ytp-cards-teaser-box {
+  background-color: var(--base03);
+  border-bottom-color: var(--base03);
+}
+.ytp-cards-teaser-text {
+  color: var(--base05);
+}
+
+.html5-video-player {
+  color: var(--base05);
+  background-color: var(--base00);
+}
+.html5-video-player .ytp-swatch-background-color,
+.html5-video-player .ytp-play-progress {
+  background-color: var(--base0D);
+}
+.html5-video-player .ytp-svg-fill,
+.html5-video-player [fill="#fff"] {
+  fill: var(--base05);
+}
+.html5-video-player .ytp-volume-slider-handle,
+.html5-video-player .ytp-volume-slider-handle::before {
+  background-color: var(--base05);
+}
+.html5-video-player .ytp-volume-slider-handle::after {
+  background-color: color-mix(in srgb, var(--base05) 20%, transparent);
+}
+.html5-video-player .ytp-time-current,
+.html5-video-player .ytp-time-separator,
+.html5-video-player .ytp-time-duration {
+  color: var(--base05);
+}
+.html5-video-player .ytp-live-badge[disabled]::before {
+  background-color: var(--base0D);
+}
+.html5-video-player .ytp-live-badge::before {
+  background-color: var(--base03);
+}
+.html5-video-player .ytp-button[aria-pressed]::after,
+.html5-video-player .ytp-subtitles-button[aria-pressed]::after {
+  background-color: var(--base0D);
+}
+.html5-video-player .ytp-sfn {
+  background-color: color-mix(in srgb, var(--base00) 80%, transparent);
+  color: var(--base05);
+}
+.html5-video-player .ytp-autonav-toggle-button {
+  background-color: var(--base03);
+}
+.html5-video-player .ytp-autonav-toggle-button::after {
+  background-color: var(--base04);
+}
+.html5-video-player .ytp-autonav-toggle-button[aria-checked="true"]::after {
+  background-color: var(--base05);
+}
+
+/* === Video highlight === */
+ytd-rich-item-renderer.ytd-rich-item-renderer-highlight {
+  background-color: color-mix(in srgb, var(--base0D) 10%, transparent);
+  box-shadow: 0 0 0 10px color-mix(in srgb, var(--base0D) 10%, transparent);
+}
+
+/* === Shorts container === */
+#shorts-container {
+  --yt-spec-static-overlay-text-primary: var(--base05);
+}
+#shorts-container .YtwFactoidRendererLabel {
+  color: var(--base04);
+}
+#shorts-container .YtwFactoidRendererValue {
+  color: var(--base05);
+}
+#shorts-container
+  ytd-reel-video-renderer:not([is-watch-while-mode])
+  .ytSpecButtonShapeWithLabelLabel {
+  color: var(--base05);
+}
+#shorts-container
+  ytd-reel-video-renderer[is-watch-while-mode]
+  .ytSpecButtonShapeWithLabelLabel {
+  color: var(--base05);
+}
+#shorts-container .ytdVolumeControlsMuteIcon {
+  color: var(--base05);
+}
+#shorts-container .YtdShortsSuggestedActionStaticHostContainer {
+  background-color: color-mix(in srgb, var(--base00) 60%, transparent);
+}
+#shorts-container .YtdShortsSuggestedActionStaticHostLeadingIcon,
+#shorts-container .YtdShortsSuggestedActionStaticHostPrimaryText {
+  color: var(--base05);
+}
+
+/* === Overlayed buttons (thumbnail, volume, homepage) === */
+.ytBadgeShapeThumbnailDefaultRedesign,
+.yt-spec-button-shape-next--overlay-dark.yt-spec-button-shape-next--tonal[style="background-color: rgba(0, 0, 0, 0.3);"],
+.ytdVolumeControlsBackgroundScrim,
+.ytInlinePlayerControlsTopRightControlsCircleButton {
+  background-color: color-mix(in srgb, var(--base00) 60%, transparent);
+  color: var(--base05);
+}
+.yt-spec-button-shape-next--overlay-dark.yt-spec-button-shape-next--filled {
+  background-color: var(--base0D);
+  color: var(--base00);
+}
+
+/* === Video previews (hover cards) === */
+.ytSpecTouchFeedbackShapeHoverEffect {
+  background-color: var(--base02);
+}
+.ytLockupMetadataViewModelTitle {
+  color: var(--base05);
+}
+.ytLockupMetadataViewModelMetadata {
+  color: var(--base04);
+}
+.ytBadgeShapeDefault {
+  color: var(--base04);
+  background-color: var(--base02);
+}
+.ytBadgeShapeDefault.ytBadgeShapeModern {
+  background-color: transparent;
+}
+.ytBadgeShapeCommerce {
+  color: var(--base0B);
+}
+.ytBadgeShapeThumbnailLive {
+  background-color: var(--base0D);
+  color: var(--base00);
+}
+
+/* === Shorts titles / views on homepage === */
+.shortsLockupViewModelHostOutsideMetadataEndpoint {
+  color: var(--base05);
+}
+.shortsLockupViewModelHostOutsideMetadataSubhead {
+  color: var(--base04);
+}
+
+/* === Buy super thanks / progress bars === */
+#progressContainer.tp-yt-paper-progress {
+  background-color: var(--base01);
+}
+#comment-chip-container.yt-pdg-comment-chip-renderer,
+.slider-knob-inner.tp-yt-paper-slider {
+  background-color: var(--base0D);
+}
+#primaryProgress.tp-yt-paper-progress {
+  background-color: linear-gradient(
+    139deg,
+    var(--base0A),
+    var(--base08),
+    var(--base08),
+    var(--base08)
+  );
+}
+#container.ytd-pdg-comment-preview-renderer {
+  background-color: var(--base01);
+}
+#comment-chip-price.yt-pdg-comment-chip-renderer,
+yt-icon.yt-pdg-comment-chip-renderer {
+  color: var(--base00);
+}
+
+/* === Avatar live ring / badge === */
+.ytSpecAvatarShapeLiveRing::after {
+  background-color: var(--base0D);
+}
+.ytSpecAvatarShapeLiveBadge {
+  background-color: var(--base0D);
+}
+.ytSpecAvatarShapeLiveBadgeText {
+  color: var(--base00);
+}
+
+/* === Channel pages === */
+.ytPageHeaderViewModelHost .ytPageHeaderViewModelTitle {
+  color: var(--base05);
+}
+.ytPageHeaderViewModelHost .ytPageHeaderViewModelContentMetadata {
+  color: var(--base04);
+}
+.ytPageHeaderViewModelHost [style$="color: rgb(255, 255, 255);"] {
+  color: var(--base05);
+}
+.ytTruncatedTextHost {
+  color: var(--base04);
+}
+.ytAttributionViewModelSuffix .ytAttributedStringLinkCallToActionColor,
+.ytTruncatedTextAbsoluteButton {
+  color: var(--base05);
+}
+
+/* === Channel tabs === */
+.ytTabShapeTab {
+  color: var(--base05);
+}
+.ytTabShapeTabSelected {
+  color: var(--base05);
+}
+.tabGroupShapeSlider {
+  background-color: var(--base05);
+}
+.ytTabShapeHost:hover .ytTabShapeTabBar {
+  background-color: var(--base05);
+}
+
+/* === Components: menus, dialogs, dropdowns, toggles, textareas === */
+.ytContextualSheetLayoutHost,
+ytd-menu-popup-renderer {
+  background-color: var(--base01);
+}
+.ytListItemViewModelTappable:hover {
+  background-color: var(--base02);
+}
+.ytPanelHeaderViewModelTitle,
+.ytListItemViewModelTitle,
+.ytListItemViewModelAccessory {
+  color: var(--base05);
+}
+.ytListItemViewModelSubtitle {
+  color: var(--base05);
+}
+.ytSpecDialogLayoutHost {
+  background-color: var(--base01);
+}
+.ytSpecDialogLayoutHost .ytDialogHeaderViewModelText {
+  color: var(--base05);
+}
+.ytDropdownViewModelTitle {
+  color: var(--base05);
+}
+.ytDropdownViewModelLabel {
+  color: var(--base04);
+}
+.ytDropdownViewModelSupportError {
+  color: var(--base08);
+}
+.ytDropdownViewModelDropdownContainerErrorBorder {
+  border-color: var(--base08);
+}
+.ytStandardsTextareaShapeTextareaContainerOutline:focus-within {
+  border-color: var(--base05);
+}
+.ytSwitchShapeTrack {
+  background-color: var(--base03);
+}
+.ytSwitchShapeKnob {
+  background-color: var(--base01);
+}
+.ytSwitchShapeTrackActive {
+  background-color: var(--base0D);
+}
+.ytStandardsTextareaShapeTextarea {
+  color: var(--base05);
+}
+.ytStandardsTextareaShapePlaceholder {
+  color: var(--base04);
+}
+
+/* === Comments thread lines === */
+.ytSubThreadConnection,
+.ytSubThreadContinuation {
+  border-left-color: var(--base02);
+}
+.ytSubThreadConnection {
+  border-bottom-color: var(--base02);
+}
+.ytSubThreadHovered > .ytSubThreadThreadline .ytSubThreadConnection,
+.ytSubThreadHovered > .ytSubThreadThreadline .ytSubThreadContinuation {
+  border-left-color: var(--base03);
+}
+.ytSubThreadHovered > .ytSubThreadThreadline .ytSubThreadConnection {
+  border-bottom-color: var(--base03);
+}
+
+/* === Profile card === */
+.ytProfileCardViewModelHost {
+  background-color: var(--base01);
+}
+.ytProfileCardViewModelHost .ytProfileIdentityInfoViewModelChannelName,
+.ytProfileCardViewModelHost
+  .ytProfileIdentityInfoViewModelMetadataHandleWithBoldFont {
+  color: var(--base05);
+}
+.ytProfileCardViewModelHost .ytProfileIdentityInfoViewModelMetadataContent {
+  color: var(--base04);
+}
+.ytProfileCardViewModelHost .ytProfileInfoViewModelSectionTitle {
+  color: var(--base05);
+}
+.ytProfileCardViewModelHost .ytProfileInfoViewModelSectionSubtitle {
+  color: var(--base05);
+}
+.ytProfileCardViewModelHost .ytCommentInteractionViewModelVideoTitle {
+  color: var(--base05);
+}
+.ytProfileCardViewModelHost .ytCommentInteractionViewModelCommentContent {
+  color: var(--base05);
+}
+
+/* === Live chat replay carousel === */
+.ytVideoMetadataCarouselViewModelHost,
+.YtVideoMetadataCarouselViewModelHost {
+  background-color: var(--base02);
+}
+.ytVideoMetadataCarouselViewModelHost .ytCarouselTitleViewModelTitle,
+.YtVideoMetadataCarouselViewModelHost .YtCarouselTitleViewModelTitle,
+.ytVideoMetadataCarouselViewModelHost .yt-core-attributed-string,
+.ytVideoMetadataCarouselViewModelHost .yt-icon-shape {
+  color: var(--base05);
+}
+.ytVideoMetadataCarouselViewModelHost .ytTextCarouselItemViewModelHost {
+  color: var(--base05);
+}
+
+/* === Category tag pills === */
+.ytChipShapeInactive {
+  background-color: var(--base02);
+  color: var(--base05);
+}
+.ytChipShapeActive {
+  background-color: var(--base0D);
+  color: var(--base00);
+}
+
+/* === Studio variables (studio.youtube.com) === */
+:root,
+html,
+html[dark],
+html[dark][dark],
+html[dark][light],
+html[light],
+html[light][light] {
+  --ytcp-text-primary: var(--base05);
+  --ytcp-text-primary-inverse: var(--base00);
+  --ytcp-static-overlay-text-primary-inverse: var(--base00);
+  --ytcp-wordmark-text: var(--base05);
+  --ytcp-text-secondary: var(--base04);
+  --ytcp-text-disabled: var(--base05);
+  --ytcp-overlay-text-primary: var(--base04);
+  --ytcp-general-background-a: var(--base00);
+  --ytcp-general-background-b: var(--base01);
+  --ytcp-general-background-c: var(--base00);
+  --ytcp-brand-background-solid: var(--base01);
+  --ytcp-menu-background: var(--base02);
+  --ytcp-container-border-color: var(--base02);
+  --ytcp-container-hovered-border-color: var(--base02);
+  --ytcp-line-divider-solid: var(--base02);
+  --ytcp-container-border-color-inverse: var(--base04);
+  --ytcp-line-divider-solid-inverse: var(--base04);
+  --ytcp-call-to-action: var(--base0D);
+  --ytcp-call-to-action-inverse: var(--base01);
+  --ytcp-call-to-action-raised-background: var(--base0D);
+  --ytcp-call-to-action-raised-disabled: var(--base03);
+  --ytcp-call-to-action-raised-disabled-background: var(--base04);
+  --ytcp-call-to-action-raised-background-inverse: var(--base00);
+  --ytcp-call-to-action-raised-disabled-inverse: var(--base03);
+  --ytcp-call-to-action-raised-disabled-background-inverse: var(--base04);
+  --ytcp-icon-active: var(--base0D);
+  --ytcp-icon-inactive: var(--base04);
+  --ytcp-icon-disabled: var(--base03);
+  --ytcp-icon-active-inverse: var(--base04);
+  --ytcp-icon-disabled-inverse: var(--base05);
+  --ytcp-error-red: var(--base08);
+  --ytcp-badge-red: var(--base08);
+  --ytcp-error-red-inverse: var(--base08);
+  --ytcp-themed-red-inverse: var(--base08);
+  --ytcp-themed-red: var(--base0D);
+  --ytcp-themed-blue: var(--base0D);
+  --ytcp-badge-blue: color-mix(in srgb, var(--base0D) 30%, transparent);
+  --ytcp-badge-blue-solid: var(--base0D);
+  --ytcp-themed-blue-inverse: var(--base0D);
+  --ytcp-themed-green: var(--base0B);
+  --ytcp-themed-green-inverse: var(--base0B);
+  --ytcp-analytics-pine: var(--base0B);
+  --ytcp-analytics-pine-inverse: var(--base0B);
+  --ytcp-analytics-parrot: var(--base0B);
+  --ytcp-themed-yellow: var(--base0A);
+  --ytcp-yellow-inverse: var(--base0A);
+  --ytcp-badge-yellow: var(--base0A);
+  --ytcp-analytics-yellow: var(--base0A);
+  --ytcp-analytics-apricot: var(--base0A);
+  --ytcp-suggested-action: var(--base0C);
+  --ytcp-analytics-overview: var(--base0C);
+  --ytcp-analytics-revenue: var(--base0C);
+  --ytcp-analytics-default-secondary: var(--base0C);
+  --ytcp-analytics-royal-blue: var(--base0E);
+  --ytcp-analytics-reach: var(--base0E);
+  --ytcp-analytics-audience: var(--base0E);
+  --ytcp-analytics-engagement: var(--base08);
+  --ytcp-analytics-revenue-secondary: var(--base08);
+  --ytcp-focus-inverse: var(--base0D);
+  --ytcp-focus: var(--base0D);
+  --ytcp-selected-item: var(--base0D);
+  --ytcp-hover-item: var(--base04);
+  --ytcp-chip-active-focus: var(--base0D);
+  --ytcp-playhead: var(--base04);
+  --ytcp-playhead-inverse: var(--base04);
+  --yt-compact-link-icon-color: var(--base04);
+}
+
+/* Studio dialog */
+ytcp-button.destructive.ytls-error-dialog {
+  color: var(--base00);
+}
+yt-formatted-string.ytls-error-dialog,
+tp-yt-iron-icon.ytls-error-dialog {
+  color: var(--base05);
+}
+
+/* === Mobile (m.youtube.com) === */
+.m-mobile-topbar-header,
+.mobile-topbar-header[data-mode="watch"],
+ytm-mobile-topbar-renderer:not([ambient-topbar]) {
+  background-color: var(--base00);
+}
+.mobile-topbar-header[data-mode="watch"] .mobile-topbar-logo,
+.mobile-topbar-header[data-mode="watch"] .mobile-topbar-title,
+.mobile-topbar-header[data-mode="watch"] .mobile-topbar-header-content {
+  color: var(--base05);
+}
+.yt-spec-bottom-sheet-layout__bottom-sheet-renderer-container,
+.modern-styling {
+  background-color: var(--base02);
+}
+.yt-spec-bottom-sheet-layout__bottom-sheet-layout-header-wrapper {
+  border-bottom-color: var(--base02);
+}
+.yt-spec-bottom-sheet-layout__bottom-sheet-content {
+  color: var(--base05);
+}
+.engagement-panel-container {
+  background-color: var(--base01);
+}
+ytm-pivot-bar-renderer {
+  background-color: var(--base01);
+  color: var(--base05);
+  border-top-color: var(--base02);
+}
+.chip-bar {
+  background-color: var(--base00);
+}
+.chip-container {
+  color: var(--base05);
+  background-color: var(--base02);
+}
+.chip-bar .selected .chip-container {
+  color: var(--base00);
+  background-color: var(--base0D);
+}
+.yt-spec-touch-feedback-shape--touch-response .yt-spec-touch-feedback-shape__fill {
+  background-color: var(--base05);
+}
+.yt-spec-touch-feedback-shape--touch-response .yt-spec-touch-feedback-shape__stroke {
+  border-color: var(--base02);
+}
+.yt-spec-touch-feedback-shape--overlay-touch-response-inverse
+  .yt-spec-touch-feedback-shape__fill {
+  background-color: var(--base0D);
+}
+.yt-spec-touch-feedback-shape--overlay-touch-response .yt-spec-touch-feedback-shape__fill {
+  background-color: var(--base05);
+}

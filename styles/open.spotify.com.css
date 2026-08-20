@@ -257,3 +257,109 @@ div[role*="menuitem"] {
   background-image: none;
   background-color: var(--base01);
 }
+
+/* ============================================================
+   Supplemental rules (derived from catppuccin/userstyles spotify-web)
+   ============================================================ */
+
+/* now-playing progress bar */
+.ydlidzq2hSQrvGXn7yni {
+  background: var(--base05);
+  color: var(--base00);
+}
+
+/* activation (premium) tooltip */
+.tippy-box[data-theme~="activation"] {
+  background-color: var(--base0D);
+  color: var(--base00);
+}
+
+.tippy-arrow {
+  color: var(--base01);
+}
+
+/* generic tooltip background */
+.X8yW2lJbFCQfV5GjoRwL {
+  --generic-tooltip-background-color: var(--base01);
+}
+
+.YIJxiTuPgMQav316cRqP {
+  --generic-tooltip-background-color: var(--base01);
+}
+
+/* bottom player bar */
+.vnCew8qzJq3cVGlYFXRI {
+  background-color: var(--base05);
+}
+
+.vnCew8qzJq3cVGlYFXRI * {
+  fill: var(--base00);
+}
+
+.rovbQsmAS_mwvpKHaVhQ .PFgcCoJSWC3KjhZxHDYH * {
+  fill: var(--base05);
+}
+
+/* full-screen now-playing view */
+.npv-up-next {
+  background-color: var(--base01);
+}
+
+.mbUrqWP55sK6zhspiR72 button {
+  color: var(--base05);
+}
+
+.npv-lyrics__text-wrapper--previous p {
+  color: var(--base04);
+}
+
+.npv-lyrics__text-wrapper--current p {
+  color: var(--base05);
+}
+
+.npv-lyrics__text-wrapper--next p {
+  color: var(--base04);
+}
+
+.npv-lyrics__text--credits {
+  color: var(--base05);
+}
+
+/* nav item color vars */
+.TywOcKZEqNynWecCiATc {
+  --bg-color: var(--base02);
+  --fg-color: var(--base05);
+  --is-active-fg-color: var(--base0D);
+}
+
+.Ng3dPPA2_1CFYkzPukjM {
+  background: var(--base0D);
+}
+
+.KAZD28usA1vPz5GVpm63.EHxL6K_6WWDlTCZP6x5w::after {
+  background-color: var(--base0D);
+}
+
+/* accent-filled controls / check state */
+input:checked ~ .Js64TOfWtHksI6TQ6knT {
+  background: var(--base0D);
+}
+
+.Z35BWOA10YGn5uc9YgAp:focus-within,
+.Z35BWOA10YGn5uc9YgAp:hover,
+.Z35BWOA10YGn5uc9YgAp[data-context-menu-open="true"] {
+  background: var(--base01);
+}
+
+.wC9sIed7pfp47wZbmU6m:hover,
+.wC9sIed7pfp47wZbmU6m:not([aria-checked="true"]):focus {
+  background: var(--base01);
+}
+
+/* shuffle / loop / play active icons */
+.OF_3F0SQCsBtL1jSTlTA svg,
+.OF_3F0SQCsBtL1jSTlTA::after,
+.tP0mccyU1WAa7I9PevC1 svg,
+.tP0mccyU1WAa7I9PevC1::after {
+  color: var(--base0D);
+}

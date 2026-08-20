@@ -37,6 +37,11 @@ blockquote {
   color: var(--base04);
 }
 
+/* plain links (catppuccin: a[class~=""] -> blue) */
+a[class~=""] {
+  color: var(--base0D);
+}
+
 #query,
 #filter,
 #search {

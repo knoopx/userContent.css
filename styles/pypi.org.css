@@ -488,3 +488,95 @@ textarea {
 .dropdown__link:hover {
   background-color: var(--base02);
 }
+
+/* ============================================================
+   Supplemental rules (derived from catppuccin/userstyles pypi)
+   ============================================================ */
+
+::selection {
+  color: unset;
+}
+
+/* verified publisher checkmark */
+.verified .check {
+  color: var(--base0B);
+}
+
+/* project description blockquote */
+.project-description blockquote {
+  color: var(--base04);
+}
+
+/* callout variants */
+.callout-block--success {
+  border-color: var(--base0B);
+}
+
+.callout-block--success::before {
+  background-color: var(--base0B);
+}
+
+.callout-block--warning {
+  border-color: var(--base0A);
+}
+
+.callout-block--warning::before {
+  background-color: var(--base0A);
+}
+
+/* warning badge + status warning */
+.badge--warning {
+  background-color: var(--base0A);
+  border-color: var(--base0A);
+  color: var(--base00);
+}
+
+.status-badge--warn {
+  background-color: var(--base0A);
+  color: var(--base00);
+}
+
+/* password strength gauges */
+.password-strength .password-strength__gauge--0 {
+  background-color: var(--base08);
+}
+
+.password-strength .password-strength__gauge--1 {
+  background-color: var(--base09);
+}
+
+.password-strength .password-strength__gauge--2 {
+  background-color: var(--base0A);
+}
+
+.password-strength .password-strength__gauge--3 {
+  background-color: var(--base0D);
+}
+
+.password-strength .password-strength__gauge--4 {
+  background-color: var(--base0B);
+}
+
+/* danger / warning buttons */
+.button--danger {
+  background-color: var(--base08);
+  border-color: var(--base08);
+  color: var(--base00);
+}
+
+.button--warning {
+  background-color: var(--base0A);
+  border-color: var(--base0A);
+  color: var(--base00);
+}
+
+/* form errors */
+.form-errors,
+.form-errors li::before {
+  color: var(--base08);
+}
+
+.form-errors .form-error--valid,
+.form-errors .form-error--valid::before {
+  color: var(--base0B);
+}

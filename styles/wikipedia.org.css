@@ -434,3 +434,171 @@
 .mw-parser-output [style*="background-color: #"] {
   background: var(--base01);
 }
+
+/* supplemental: ported from catppuccin */
+
+:root {
+  /* Border shorthands (catppuccin: 1px solid @surface0) */
+  --border-base: 1px solid var(--base02);
+  --border-subtle: 1px solid var(--base02);
+}
+
+/* Site night mode: don't re-invert logos/icons our dark palette already renders white */
+html.skin-theme-clientpref-night .skin-invert-image img,
+html.skin-theme-clientpref-night .skin-invert,
+html.skin-theme-clientpref-night .oo-ui-iconElement-icon:not(
+    .oo-ui-image-progressive,
+    .oo-ui-image-destructive,
+    .oo-ui-checkboxInputWidget-checkIcon,
+    .oo-ui-image-invert,
+    .mw-no-invert
+  ),
+html.skin-theme-clientpref-night .oo-ui-indicatorElement-indicator {
+  filter: none;
+}
+
+/* Disambiguation and "see also" notes */
+.dablink,
+.rellink {
+  color: var(--base04);
+}
+
+/* Localized infobox/navbox variants (fr/it wikis) */
+.sinottico th,
+.navigation-box,
+.metadata,
+.side-box {
+  background-color: var(--base01);
+  border-color: var(--base02);
+  color: var(--base05);
+}
+
+/* Portals */
+.ns-100 .mw-parser-output {
+  background-color: var(--base00);
+  color: var(--base05);
+}
+
+/* Inline white text in article content */
+.mw-parser-output [style*="color:white"],
+.mw-parser-output [style*="color: white"],
+.mw-parser-output [style*="color:#ffffff"] {
+  color: var(--base05);
+}
+
+/* Collapsible section toggles */
+.mw-collapsible-toggle-default::before,
+.mw-collapsible-toggle-default::after {
+  color: var(--base04);
+}
+
+/* Link focus outline */
+a:focus {
+  outline-color: var(--base0D);
+}
+
+/* Main page panels (green/blue/lavender tints) */
+#mp-left {
+  background-color: color-mix(in srgb, var(--base0B) 20%, transparent);
+  border-color: var(--base0B);
+}
+#mp-left .mp-h2 {
+  background-color: color-mix(in srgb, var(--base0B) 40%, transparent);
+  border-color: color-mix(in srgb, var(--base0B) 40%, transparent);
+}
+#mp-right {
+  background-color: color-mix(in srgb, var(--base0C) 20%, transparent);
+  border-color: var(--base0C);
+}
+#mp-right .mp-h2 {
+  background-color: color-mix(in srgb, var(--base0C) 40%, transparent);
+  border-color: color-mix(in srgb, var(--base0C) 40%, transparent);
+}
+#mp-lower {
+  background-color: color-mix(in srgb, var(--base0E) 20%, transparent);
+  border-color: var(--base0E);
+}
+#mp-lower .mp-h2 {
+  background-color: color-mix(in srgb, var(--base0E) 40%, transparent);
+  border-color: color-mix(in srgb, var(--base0E) 40%, transparent);
+}
+#mp-bottom {
+  border-color: var(--base04);
+}
+#mp-bottom .mp-h2 {
+  background-color: color-mix(in srgb, var(--base0D) 40%, transparent);
+  border-color: color-mix(in srgb, var(--base0D) 40%, transparent);
+}
+.wikipedia-languages-prettybars {
+  background-color: var(--base03);
+}
+
+/* Math equations */
+.mwe-math-element img.skin-invert {
+  filter: brightness(0) invert(1);
+}
+
+/* OOUI */
+.oo-ui-indicator-down {
+  filter: brightness(0) invert(1);
+}
+.oo-ui-image-invert.oo-ui-icon-check,
+.mw-ui-icon-check-invert::before {
+  filter: brightness(0);
+}
+
+/* Vector 2022 page title bar icons */
+.vector-icon {
+  filter: brightness(0) invert(1);
+}
+
+/* View source */
+textarea {
+  background-color: var(--base01);
+  color: var(--base05);
+}
+
+/* View history */
+.flaggedrevs-color-1 {
+  background-color: color-mix(in srgb, var(--base0C) 10%, transparent);
+}
+
+/* Language search and settings (ULS) */
+.uls-search,
+.uls-filtersuggestion,
+.uls-lcd,
+#uls-settings-block.uls-settings-block--vector-2022.uls-settings-block--with-add-languages,
+#language-settings-dialog,
+#languagesettings-settings-panel,
+.uls-language-settings-close-block {
+  background-color: var(--base01);
+}
+.uls-language-block a {
+  color: var(--base0D);
+}
+.uls-search-label,
+#uls-settings-block.uls-settings-block--vector-2022 > button.uls-add-languages-button,
+#uls-settings-block.uls-settings-block--vector-2022 > button.uls-language-settings-button,
+#uls-settings-block.uls-settings-block--vector-2022 > button.uls-language-settings-button:hover,
+.uls-icon-close,
+.uls-languagefilter-clear {
+  filter: brightness(0) invert(1);
+}
+.uls-sub-panel,
+.language-settings-buttons {
+  border-color: var(--base02);
+}
+.uls-language-block > ul > li:hover {
+  background-color: var(--base02);
+}
+.languagesettings-menu .menu-section.active {
+  background-color: var(--base02);
+}
+
+/* Page preview */
+.mwe-popups .mwe-popups-extract[dir="ltr"]::after {
+  background-image: linear-gradient(to right, transparent, var(--base00) 50%);
+}
+.mwe-popups .mwe-popups-extract[dir="rtl"]::after {
+  background-image: linear-gradient(to left, transparent, var(--base00) 50%);
+}

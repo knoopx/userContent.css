@@ -76,3 +76,134 @@
   --pictogram-300: var(--base01-hsl);
   --pictogram-400: var(--base00-hsl);
 }
+
+/* ============================================================
+   Supplemental rules (derived from catppuccin/userstyles claude)
+   ============================================================ */
+
+/* Code blocks */
+.code-block__code {
+  background: var(--base00);
+}
+
+.code-block__code code span {
+  color: var(--base05);
+}
+
+.code-block__code code span.token[style="color: rgb(152, 195, 121);"] {
+  color: var(--base0B);
+}
+
+.code-block__code code span.token[style="color: rgb(209, 154, 102);"] {
+  color: var(--base0A);
+}
+
+.code-block__code code span.token[style="color: rgb(97, 175, 239);"] {
+  color: var(--base0D);
+}
+
+.code-block__code code span.token[style="color: rgb(224, 108, 117);"] {
+  color: var(--base08);
+}
+
+.code-block__code code span.token[style="color: rgb(198, 120, 221);"] {
+  color: var(--base0D);
+}
+
+.code-block__code code span.token[style="color: rgb(171, 178, 191);"] {
+  color: var(--base04);
+}
+
+/* Inline code */
+code.text-danger-000 {
+  color: var(--base07);
+}
+
+/* Tooltip */
+div.bg-black\/80 {
+  background: var(--base00);
+}
+
+div.text-white {
+  color: var(--base05);
+}
+
+/* Logo */
+div.text-\[\#D97757\] {
+  color: var(--base07);
+}
+
+/* "New chat" plus icon */
+div.text-always-white svg {
+  color: var(--base00);
+}
+
+/* "Subscribe to Pro" / "Create Team Account" buttons */
+button.bg-accent-pro-100 > span.inline-block {
+  color: var(--base00);
+}
+
+/* Pay monthly/annually buttons */
+button.bg-accent-secondary-900 span.text-text-000 {
+  color: var(--base00);
+}
+
+button.bg-accent-secondary-900 span.text-text-300 {
+  color: var(--base03);
+}
+
+button.bg-accent-secondary-900 div.bg-accent-secondary-000 {
+  background: color-mix(in srgb, var(--base07) 85%, var(--base00));
+}
+
+/* Delete conversation button */
+div.\!text-danger-000.\[\&\[data-highlighted\]\]\\:bg-danger-900[data-highlighted] {
+  background: color-mix(in srgb, var(--base08) 20%, transparent);
+}
+
+/* Checkbox */
+input[type="checkbox"] + div.bg-bg-000 {
+  background: var(--base05);
+}
+
+/* "Add writing example" button */
+button.\!text-accent-secondary-100.bg-accent-secondary-900 {
+  color: var(--base00);
+}
+
+button.\!text-accent-secondary-100.bg-accent-secondary-900:hover {
+  color: var(--base05);
+}
+
+/* "Describe your style" list */
+button.\!bg-accent-secondary-900.text-accent-secondary-000 {
+  color: var(--base00);
+}
+
+/* "Be as descriptive as possible..." helper text */
+div.bg-accent-secondary-900.text-text-200 {
+  color: var(--base00);
+}
+
+/* "Preview with an example..." pills */
+button.hover\\:bg-accent-secondary-900.hover\\:text-accent-secondary-000 {
+  color: var(--base07);
+}
+
+button.hover\\:bg-accent-secondary-900.hover\\:text-accent-secondary-000:hover {
+  color: var(--base00);
+}
+
+/* "Previewing with ..." dropdown button */
+button.\!text-accent-secondary-100.hover\\:\!bg-accent-secondary-900 {
+  color: var(--base07);
+}
+
+button.\!text-accent-secondary-100.hover\\:\!bg-accent-secondary-900:hover {
+  color: var(--base00);
+}
+
+/* White background (e.g., toggle switch thumb) */
+.bg-white {
+  background-color: var(--base05);
+}

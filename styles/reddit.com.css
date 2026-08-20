@@ -292,6 +292,31 @@ html {
   --button-color-text-activated: var(--base00);
 }
 
+/* Reddit logo recolor (catppuccin: circle -> accent, path -> crust) */
+#reddit-logo circle[fill="#FF4500"] {
+  fill: var(--base07);
+}
+
+#reddit-logo path[fill="#FFF"] {
+  fill: var(--base00);
+}
+
+/* trending carousel text (when not hidden) */
+shreddit-gallery-carousel .text-primary-onBackground {
+  color: var(--base05);
+}
+
+shreddit-gallery-carousel .text-coolgray-350 {
+  color: var(--base04);
+}
+
+/* community post header background */
+#pdp-credit-bar {
+  --color-neutral-background: var(--base00);
+  --color-neutral-content: var(--base05);
+  --color-neutral-content-weak: var(--base04);
+}
+
 /* Ads */
 shreddit-ad-post,
 [data-testid="ad-slot"],

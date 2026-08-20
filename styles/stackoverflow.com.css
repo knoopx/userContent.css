@@ -294,3 +294,121 @@ li.js-collectives-navcta-toggle,
   background-color: var(--base01);
   color: var(--base05);
 }
+
+/* ============================================================================
+   supplemental: ported from catppuccin (catppuccin/userstyles stack-overflow)
+   token map: base/crust->base00, mantle->base01, surface0/1->base02,
+   surface2/overlay0->base03, overlay1/2/subtext0->base04, subtext1/text->base05,
+   accent/blue/mauve->base0D, green->base0B, teal/sky/sapphire->base0C,
+   yellow/peach/orange->base0A, red/maroon/rosewater->base08, lavender->base0E
+   Skipped: remote @imports, --ctp-* exports, code.hljs reset (tied to the
+   skipped remote highlight.js import), #onetrust recolors (local hides the
+   consent sdk), and data-URI network-logo swaps.
+   ============================================================================ */
+
+/* missing translucent secondary var */
+:root,
+body,
+body.unified-theme,
+body.unified-theme * {
+  --translucent-secondary: color-mix(in srgb, var(--base0D) 10%, transparent);
+}
+
+/* sidebar widgets: backgrounds + nested borders (local only set border-color) */
+.s-sidebarwidget {
+  background-color: var(--base00);
+}
+.s-sidebarwidget .s-sidebarwidget--header {
+  background-color: var(--base02);
+  border-color: var(--base02);
+}
+.s-sidebarwidget::after,
+.s-sidebarwidget .s-sidebarwidget--content {
+  border-color: var(--base02);
+}
+
+/* inline kbd in prose */
+.s-prose kbd {
+  border-top-color: transparent;
+  box-shadow: 0 1px 1px var(--base00), inset 0 1px 0 0 var(--base04);
+}
+
+/* pagination item borders */
+.s-pagination .s-pagination--item {
+  border-color: var(--base03);
+}
+
+/* badge / notice surfaces */
+.s-badge {
+  color: var(--base00);
+  background-color: var(--base0D);
+}
+.s-notice,
+.s-notice .s-notice--btn {
+  color: var(--base05);
+}
+.badge,
+.badge-tag {
+  background-color: var(--base02);
+  color: var(--base05);
+}
+
+/* sunset (dark-mode overlay) surfaces */
+.sunset-background {
+  background-color: var(--base00);
+  color: var(--base05);
+}
+
+/* disabled links */
+.disabled-link {
+  color: var(--base04);
+}
+
+/* inline SVG fill overrides */
+[fill="#BCBBBB"] {
+  fill: var(--base04);
+}
+[fill="#F48024"] {
+  fill: var(--base0A);
+}
+[fill="#FEFEFE"] {
+  fill: var(--base05);
+}
+[fill="#2F96E8"],
+[fill="#2D6DB5"] {
+  fill: var(--base0D);
+}
+[fill="#8FD8F7"] {
+  fill: var(--base0C);
+}
+[fill="#46A2D9"],
+[fill="#155397"] {
+  fill: var(--base0D);
+}
+
+/* monochrome icon sprites -> white (project filter convention) */
+.wmd-button > span,
+.s-topbar .s-topbar--logo .-img,
+.envelope-on,
+.envelope-off,
+.vote-up-off,
+.vote-up-on,
+.vote-down-off,
+.vote-down-on,
+.feed-icon,
+.vote-accepted-off,
+.vote-accepted-on,
+.vote-accepted-bounty,
+.badge-earned-check,
+.delete-tag,
+.grippie,
+.expander-arrow-hide,
+.expander-arrow-show,
+.expander-arrow-small-hide,
+.expander-arrow-small-show,
+.anonymous-gravatar,
+.badge1,
+.badge2,
+.badge3 {
+  filter: brightness(0) invert(1);
+}

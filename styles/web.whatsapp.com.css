@@ -858,3 +858,113 @@
   --beige: var(--base01);
   --xmipt9: var(--base01);
 }
+
+/* supplemental: ported from catppuccin */
+
+:root {
+  /* WDS vars missing from main blocks */
+  --WDS-modal-backdrop-solid: var(--base00);
+  --WDS-persistent-always-black: var(--base00);
+  --WDS-persistent-always-white: var(--base0F);
+  --WDS-white: var(--base00);
+  --WDS-app-wash: var(--base02);
+  --WDS-systems-bubble-surface-e2e: color-mix(
+    in srgb,
+    var(--base0A) 20%,
+    var(--base01)
+  );
+  --WDS-systems-bubble-content-e2e: var(--base0A);
+  --WDS-systems-bubble-surface-business: color-mix(
+    in srgb,
+    var(--base0C) 20%,
+    var(--base01)
+  );
+  --WDS-components-platform-gesture-bar: color-mix(
+    in srgb,
+    var(--base00) 50%,
+    transparent
+  );
+  --WDS-components-platform-status-bar: color-mix(
+    in srgb,
+    var(--base00) 80%,
+    transparent
+  );
+
+  /* Attachment type colors */
+  --attachment-type-stickers-color: var(--base0B);
+  --attachment-type-polls-color: var(--base0A);
+  --attachment-type-contacts-color: var(--base0C);
+  --attachment-type-camera-color: var(--base08);
+  --attachment-type-photos-color: var(--base0D);
+  --attachment-type-documents-color: var(--base0D);
+  --attachment-type-audio-color: var(--base0A);
+  --attachment-type-event-color: var(--base08);
+
+  /* Misc traditional vars */
+  --white: var(--base00);
+  --startup-icon: var(--base02);
+  --blue-light: var(--base0D);
+  --butterbar-blue-nux-background: var(--base0C);
+  --butterbar-blue-nux-icon-background: color-mix(
+    in srgb,
+    var(--base0C) 50%,
+    var(--base00)
+  );
+  --focus-animation-deeper: color-mix(
+    in srgb,
+    var(--base0D) 30%,
+    var(--base00)
+  );
+  --date-picker-text-color: var(--base05);
+}
+
+/* Splash screen FOUC: inline-style overrides beat :root, so re-apply via
+   attribute selectors (values mirror the :root splashscreen block above) */
+[style^="--splashscreen-startup-background: #F7F5F3;"],
+[style^="--splashscreen-startup-background: #0A1014;"] {
+  --splashscreen-startup-background: var(--base00);
+  --splashscreen-startup-icon: var(--base02);
+  --splashscreen-primary-title: var(--base05);
+  --splashscreen-progress-primary: var(--base0D);
+  --splashscreen-progress-background: var(--base02);
+  --splashscreen-secondary-lighter: var(--base04);
+}
+
+/* "About AI messages" icon */
+.st0 {
+  fill: var(--base0D);
+  stroke: var(--base02);
+}
+
+/* Time/date picker field focus */
+input[type="time"]::-webkit-datetime-edit-hour-field:focus,
+input[type="time"]::-webkit-datetime-edit-minute-field:focus,
+input[type="time"]::-webkit-datetime-edit-second-field:focus,
+input[type="time"]::-webkit-datetime-edit-ampm-field:focus,
+input[type="date"]::-webkit-datetime-edit-year-field:focus,
+input[type="date"]::-webkit-datetime-edit-month-field:focus,
+input[type="date"]::-webkit-datetime-edit-day-field:focus {
+  background-color: var(--base0D);
+  color: var(--base00);
+}
+
+/* Wordmark */
+[data-icon="wa-wordmark-refreshed"] path {
+  fill: currentcolor;
+}
+
+/* Toast action button */
+#wa-popovers-bucket
+  + span
+  > div
+  button:nth-of-type(1):not(:has(> [data-icon="x-alt"])) {
+  color: var(--WDS-accent-emphasized);
+}
+
+/* Date picker calendar */
+.react-calendar__tile:disabled {
+  color: var(--base04);
+}
+.react-calendar__month-view__days__day--neighboringMonth {
+  color: var(--base04);
+}

@@ -325,3 +325,96 @@ svg[class*="download-icon"] path {
   background-color: var(--base00);
   text-shadow: none;
 }
+
+/* ============================================================
+   Supplemental rules (derived from catppuccin/userstyles crates.io)
+   ============================================================ */
+
+/* csstools light-dark toggle tokens (cards, search bar, dropdowns) */
+:root {
+  --csstools-color-scheme--dark: none;
+
+  /* Main article / readme / code backgrounds */
+  --csstools-light-dark-toggle--63: var(--base00);
+  --csstools-light-dark-toggle--92: var(--base01);
+  --csstools-light-dark-toggle--91: var(--base01);
+  --csstools-light-dark-toggle--78: var(--base00);
+
+  /* Versions cards */
+  --csstools-light-dark-toggle--111: var(--base05);
+  --csstools-light-dark-toggle--113: var(--base00);
+  --csstools-light-dark-toggle--114: color-mix(in srgb, var(--base0B) 15%, transparent);
+  --csstools-light-dark-toggle--117: color-mix(in srgb, var(--base0A) 15%, transparent);
+  --csstools-light-dark-toggle--109: var(--base02);
+  --csstools-light-dark-toggle--110: var(--base02);
+  --csstools-light-dark-toggle--115: var(--base02);
+  --csstools-light-dark-toggle--118: var(--base02);
+  --csstools-light-dark-toggle--126: var(--base05);
+
+  /* Dependencies cards */
+  --csstools-light-dark-toggle--83: var(--base00);
+  --csstools-light-dark-toggle--79: var(--base02);
+  --csstools-light-dark-toggle--80: var(--base05);
+  --csstools-light-dark-toggle--81: var(--base05);
+  --csstools-light-dark-toggle--84: var(--base04);
+
+  /* Dependents cards */
+  --csstools-light-dark-toggle--89: var(--base00);
+  --csstools-light-dark-toggle--86: var(--base02);
+
+  /* Search results cards */
+  --csstools-light-dark-toggle--2: var(--base00);
+
+  /* Homepage cards */
+  --csstools-light-dark-toggle--74: var(--base00);
+  --csstools-light-dark-toggle--77: var(--base02);
+  --csstools-light-dark-toggle--75: var(--base04);
+  --csstools-light-dark-toggle--76: var(--base05);
+  --csstools-light-dark-toggle--19: var(--base04);
+  --csstools-light-dark-toggle--20: var(--base04);
+
+  /* Header search bar */
+  --csstools-light-dark-toggle--34: var(--base00);
+
+  /* Dropdown */
+  --csstools-light-dark-toggle--23: var(--base01);
+  --csstools-light-dark-toggle--35: var(--base01);
+}
+
+/* Highlight.js code */
+code.hljs {
+  background: none;
+}
+
+/* New version badge */
+[class*="_new"] {
+  color: var(--base0B);
+}
+
+/* Toasts */
+.c-notification,
+.c-notification .c-notification__icon {
+  color: var(--base00);
+}
+
+/* Sort-by icon in search results */
+._icon_xsqxju {
+  color: var(--base0D);
+}
+
+/* Dropdown items */
+[class*="_item_"] button:hover,
+[class*="_item_"] > a:hover,
+[class*="_item_"] [class*="_selected_"] {
+  background: var(--base02);
+  color: var(--base05);
+}
+
+/* User email settings */
+[class*="_me-email_"] [class*="_row_"] {
+  border-color: var(--base02);
+}
+
+[class*="_me-email_"] [class*="_verified_"] {
+  color: var(--base0B);
+}

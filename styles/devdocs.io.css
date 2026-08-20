@@ -4,23 +4,31 @@ html._theme-dark {
   --textColor: var(--base07);
   --textColorLight: var(--base05);
   --textColorLighter: var(--base05);
+  --textColorRed: var(--base08);
   --focusBackground: var(--base03);
   --focusBorder: var(--base01);
   --focusText: var(--base05);
   --loadingText: var(--base0D);
   --selectionBackground: var(--base02);
+  --selectionText: var(--base00);
   --selectionBorder: var(--base01);
   --highlightBackground: var(--base04);
+  --linkColor: var(--base0D);
   --linkColorHover: var(--base07);
   --headerBackground: var(--base01);
   --headerBorder: var(--base01);
   --searchTagBackground: var(--base01);
   --searchBorder: var(--base01);
+  --inputFocusBorder: var(--base0D);
   --sidebarBackground: var(--base01);
   --sidebarBorder: var(--base01);
   --scrollbarColor: var(--base04);
   --scrollbarColorHover: var(--base04);
+  --boxHeaderBackground: var(--base01);
   --boxHeaderColor: var(--base05);
+  --boxBackground: var(--base01);
+  --boxBorder: var(--base02);
+  --boxBorderLight: var(--base02);
   --noteBackground: var(--base02);
   --noteBorder: var(--base01);
   --noteGreenBackground: var(--base02);
@@ -33,4 +41,25 @@ html._theme-dark {
   --noteRedBorder: var(--base01);
   --notifBackground: var(--base03);
   --notifBorder: 1px solid var(--base01);
+
+  /* supplemental: catppuccin/userstyles devdocs */
+  --tipBackground: var(--base02);
+  --tipBorder: 1px solid var(--base01);
+  --noticeBackground: var(--base02);
+  --noticeBorder: var(--base01);
+  --labelBackground: var(--base02);
+}
+
+html._theme-dark ._list-arrow {
+  fill: var(--base03);
+  opacity: 1;
+}
+
+html._theme-dark ._list-arrow:hover {
+  fill: var(--base04);
+}
+
+html._theme-dark ._search > svg {
+  fill: var(--base04);
+  opacity: 1;
 }
