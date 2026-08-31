@@ -519,3 +519,15 @@ table[class*="table-"] {
 [class*="ImageCard"] {
   background-color: var(--base01);
 }
+
+/* Chart canvas + pane surfaces: widget initialized light before injection;
+   force pane/canvas backgrounds to the palette. */
+.chart-widget--themed-light,
+.chart-widget--themed-light [class*="chart-widget__content"],
+.chart-widget--themed-light [data-qa-id="pane"],
+.chart-container,
+.chart-container-border,
+.chart-markup-table.pane,
+.chart-markup-table.pane canvas {
+  background-color: var(--base00);
+}
