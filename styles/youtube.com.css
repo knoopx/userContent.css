@@ -1919,3 +1919,25 @@ ytm-pivot-bar-renderer {
 .yt-spec-touch-feedback-shape--overlay-touch-response .yt-spec-touch-feedback-shape__fill {
   background-color: var(--base05);
 }
+
+/* === Pure-black (#000) background fix ===
+   In dark mode YouTube hardcodes #000 on the <body> and the <ytd-app>
+   root; neither is driven by a --yt-spec-* variable, so the :root
+   variable mapping above never themes them (this is the unstyled pure
+   black behind the feed and the left sidebar rail). Force the palette
+   base directly. Main page background -> base00; secondary dialog/panel
+   surfaces that fall back to #000 -> base01. No hardcoded colors. */
+html,
+body,
+ytd-app,
+ytd-app .ytd-appbar-container,
+ytd-app .ytd-main-content {
+  background-color: var(--base00) !important;
+}
+
+/* Secondary surfaces (dialogs / right engagement panel) -> base01 */
+.yt-spec-dialog-layout,
+.ytSpecDialogLayoutHost,
+#engagement-panel {
+  background-color: var(--base01) !important;
+}
