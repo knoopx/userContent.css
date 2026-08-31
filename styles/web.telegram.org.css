@@ -205,3 +205,52 @@ body {
   background: var(--base0D);
   color: var(--base00);
 }
+
+/*
+ * Unread notification badges (the white ovals in the chat list).
+ * Structure: div.chat-badge-transition > div (pill) > span (count).
+ * The site paints the pill background from a light variable, so it stays
+ * white. Force the accent fill + dark text; the extension appends
+ * !important to every declaration, so this beats the site's value.
+ */
+.chat-badge-transition > div {
+  background: var(--base0D);
+  border-color: var(--base0D);
+}
+
+.chat-badge-transition span,
+.chat-badge-transition > div {
+  color: var(--base00);
+}
+
+/*
+ * Override the inline `--theme-background-color: #000000` that Telegram sets
+ * directly on the top-level layout elements `body#root` and `#Main`.
+ *
+ * The `:root, body` rule above already maps `--theme-background-color` to
+ * var(--base00), but the inline declaration scoped to those elements still
+ * forces a pure-#000 background. The pi extension auto-appends `!important` to
+ * every injected declaration, so this injected !important declaration beats the
+ * non-important inline style and re-maps both surfaces to the palette.
+ */
+body,
+#Main {
+  --theme-background-color: var(--base00);
+}
+
+/*
+ * Remove the background artwork (doodle pattern).
+ *
+ * Telegram paints a doodle pattern via a --pattern-color-tinted SVG
+ * background. The value is set inline on #Main (--pattern-color: #27308a66;
+ * --pattern-intensity: 0.375), so a :root-level `--pattern-color:
+ * transparent` does not reach it — #Main's own declaration wins over the
+ * inherited value. Setting the variables directly on #Main (with the
+ * extension's auto-!important) overrides the inline value: a transparent
+ * tint plus zero intensity leaves a flat dark background.
+ */
+#Main {
+  --pattern-color: transparent;
+  --pattern-intensity: 0;
+  background-image: none;
+}
