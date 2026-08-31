@@ -1831,3 +1831,31 @@ div[aria-modal="true"] [data-mdc-dialog-action="cancel"]:focus,
 div[aria-modal="true"] [data-mdc-dialog-action="cancel"]:active {
   background-color: var(--base02);
 }
+
+/* === Unthemed white toolbar pills + label chips fix ===
+   The conversation-list column and its top toolbar render white
+   despite the --gm3-sys-color-* :root mapping. Force palette surfaces. */
+.z,
+.bGI.nH,
+.oy8Mbf,
+.nH.aqK,
+.Cq.aqL,
+.bzn .G-tF,
+.bzn .G-Ni,
+.bzn .T-I {
+  background-color: var(--base00);
+  color: var(--base05);
+  border-color: var(--base03);
+}
+
+/* Label chips: override inline light (#e1e3e1) background. */
+.ar.as {
+  background-color: var(--base02);
+  border-color: var(--base03);
+  color: var(--base05);
+}
+
+/* Google-apps companion icon shipping an inline #ffffff background. */
+.bse-bvF-JX-axQ-avS.Gs-avS {
+  background-color: var(--base02);
+}
