@@ -531,3 +531,28 @@ table[class*="table-"] {
 .chart-markup-table.pane canvas {
   background-color: var(--base00);
 }
+/* === White-area fixes: chart price/time scales + currency dropdown ===
+   The embedded chart widget renders its price scale (right), time scale
+   (bottom), and the currency (USD) dropdown with a light background the
+   :root var mapping does not reach. Force palette surfaces. */
+.chart-widget--themed-light [data-qa-id="price-scale"],
+.chart-widget--themed-light [data-qa-id="time-scale"],
+.chart-widget--themed-light [data-qa-id="left-price-scale"],
+.chart-widget--themed-light [data-qa-id="right-price-scale"],
+.chart-widget--themed-light .chart-markup-table,
+.chart-widget--themed-light [class*="priceScale"],
+.chart-widget--themed-light [class*="timeScale"],
+.chart-widget--themed-light [class*="scaleTable"],
+.chart-widget--themed-light [class*="Scale-"] {
+  background-color: var(--base00);
+  color: var(--base05);
+}
+
+/* currency (USD) dropdown in the chart toolbar */
+.chart-widget--themed-light [class*="dropdown-"],
+.chart-widget--themed-light [class*="Dropdown-"],
+.chart-widget--themed-light [class*="symbolSearch"],
+.chart-widget--themed-light [class*="SymbolSearch"] {
+  background-color: var(--base01);
+  color: var(--base05);
+}
