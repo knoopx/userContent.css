@@ -793,3 +793,158 @@ h2 {
 .dropdown-caret .caret-inner {
   border-bottom-color: var(--base02);
 }
+
+/* ---- New Tailwind frontend (x.com post-2025 UI, class-based tokens) ---- */
+
+/* CTA pill buttons (Continue with phone / Follow) */
+.bg-gray-1100 {
+  background-color: var(--base0D);
+  color: var(--base00);
+}
+
+.bg-gray-1100:hover {
+  background-color: color-mix(in srgb, var(--base0D) 85%, black);
+}
+
+/* white primary button */
+.bg-btn-primary {
+  background-color: var(--base0D);
+}
+
+.bg-btn-primary .text-inverted,
+.bg-btn-primary .text-headline2,
+.bg-btn-primary .text-background {
+  color: var(--base00);
+}
+
+/* brand blue accent */
+.text-brand {
+  color: var(--base0D);
+}
+
+/* verified badge blue */
+[fill="#1d9bf0" i] {
+  fill: var(--base0D);
+}
+
+/* neutral surfaces */
+.bg-background {
+  background-color: var(--base00);
+}
+
+.bg-background\/80 {
+  background-color: color-mix(in srgb, var(--base00) 80%, transparent);
+}
+
+.bg-secondary,
+.bg-tertiary {
+  background-color: var(--base01);
+}
+
+.bg-gray-0 {
+  background-color: var(--base00);
+}
+
+.bg-gray-200 {
+  background-color: var(--base02);
+}
+
+.bg-gray-300 {
+  background-color: var(--base03);
+}
+
+.bg-neutral-300 {
+  background-color: var(--base04);
+}
+
+.bg-modal {
+  background-color: var(--base01);
+}
+
+/* muted text */
+.text-gray-500,
+.text-gray-700 {
+  color: var(--base04);
+}
+
+/* borders (Tailwind class-based tokens) */
+.border-gray-100,
+.border-gray-200,
+.border-border {
+  border-color: var(--base02);
+}
+
+/* subtle translucent border (modal / popup surfaces) */
+.border-normal {
+  border-color: color-mix(in srgb, var(--base05) 15%, transparent);
+}
+
+/* ---- Block promo elements ---- */
+
+/* bottom "Continue to X" banner (login/app CTA with pointer emoji); the container re-renders between div/aside and z-30/z-40 variants */
+aside.fixed.bottom-0,
+div.fixed.bottom-0 {
+  display: none;
+}
+
+/* login prompt modal ("Don't miss what's happening") on logged-out profile / post pages */
+div.fixed.inset-0.z-50 {
+  display: none;
+}
+
+/* floating "Scan to get the app" QR button */
+button.bg-modal.shadow-popup.fixed {
+  display: none;
+}
+
+/* ---- Login / onboarding page (x.com/i/jf/onboarding, j-xxx frontend) ---- */
+
+/* auth provider pill buttons (Continue with phone / Google / Apple) */
+.jf-gsi-face {
+  background-color: var(--base0D);
+  color: var(--base00);
+  border-color: transparent;
+}
+
+/* sibling auth pills (phone / Apple) — hashed face class carrying the white bg; Google uses .jf-gsi-face */
+.jn6bdci11 {
+  background-color: var(--base0D);
+  color: var(--base00);
+  border-color: transparent;
+}
+
+/* email / username input */
+.jf-float-wrapper {
+  background-color: var(--base01);
+  border-color: var(--base03);
+}
+
+.jf-float-input::placeholder,
+.jf-float-label {
+  color: var(--base04);
+}
+
+/* Continue submit button (email flow). Stable hashed core shared by both states:
+   jfa278c0.jqjp5430.j8vunac0.j-by1qh80.j-pmlt8x0.j-dlswat0 — the state suffix
+   classes (jllpup913 = disabled, j-yc57ou13 = enabled) rotate, so match the core
+   and branch on the suffix. */
+
+/* enabled: accent CTA (matches the provider pills) */
+.jfa278c0.jqjp5430.j8vunac0.j-pmlt8x0.j-dlswat0.j-yc57ou13 {
+  background-color: var(--base0D);
+}
+
+.jfa278c0.jqjp5430.j8vunac0.j-pmlt8x0.j-dlswat0.j-yc57ou13 p,
+.jfa278c0.jqjp5430.j8vunac0.j-pmlt8x0.j-dlswat0.j-yc57ou13 .text-text {
+  color: var(--base00);
+}
+
+/* disabled: muted accent surface with readable muted text */
+.jfa278c0.jqjp5430.j8vunac0.j-pmlt8x0.j-dlswat0.jllpup913 {
+  background-color: color-mix(in srgb, var(--base0D) 20%, var(--base01));
+}
+
+.jfa278c0.jqjp5430.j8vunac0.j-pmlt8x0.j-dlswat0.jllpup913 p,
+.jfa278c0.jqjp5430.j8vunac0.j-pmlt8x0.j-dlswat0.jllpup913 .text-text {
+  color: var(--base04);
+}
