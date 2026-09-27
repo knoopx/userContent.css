@@ -373,16 +373,44 @@ div.hO[style] {
   filter: brightness(0) invert(1);
 }
 
-/* compose button */
+/* compose button — yellow (base0D) bg, black (base00) icon/text, full-width */
 .T-I.T-I-KE.L3 {
-  background-color: var(--base02);
-  color: var(--base0D);
+  background-color: var(--base0D);
+  color: var(--base00);
+  width: 100%;
+  margin: 0;
+  border-radius: 0;
 }
 
-/* compose pen icon (::before background image) */
+/* compose pen icon (::before background image) — force black */
 .T-I.T-I-KE.L3::before {
-  filter: brightness(0) invert(1);
-  opacity: 0.8;
+  filter: brightness(0);
+  opacity: 1;
+}
+
+/* compose button — the cross-origin gm3 theme sheet locks this element's
+   background-color and color with user-origin !important (neither our sheet's
+   !important nor even inline !important overrides them). background-image and
+   -webkit-text-fill-color are still overridable, so paint the yellow bg as a
+   flat gradient and render the "Compose" label black via text-fill-color.
+   Compact rounded button: content width, radius, margins. */
+.aeN .z0 > .T-I.T-I-KE.L3 {
+  background-color: var(--base0D) !important;
+  background-image: linear-gradient(var(--base0D), var(--base0D)) !important;
+  -webkit-text-fill-color: var(--base00) !important;
+  color: var(--base00) !important;
+  font-size: 14px !important;
+  filter: none !important;
+  width: 100% !important;
+  height: 40px !important;
+  margin: 0 16px 0 0 !important;
+  padding: 0 16px !important;
+  border-radius: 4px !important;
+}
+
+.aeN .z0 > .T-I.T-I-KE.L3::before {
+  filter: brightness(0) !important;
+  opacity: 1;
 }
 
 /* main content area */
@@ -822,6 +850,11 @@ textarea {
   background-color: var(--base01);
 }
 
+/* side panel toggle button ("Show side panel" chevron) — hide */
+div.brC-dA-I-Jw {
+  display: none !important;
+}
+
 .brC-aT5-aOt-axR {
   border-color: var(--base02);
 }
@@ -924,6 +957,38 @@ textarea::placeholder {
 img[src*="logo_gmail_lockup"] {
   height: unset;
   width: unset;
+}
+
+/* Gmail logo: the lockup image ships with a dark background box. Hide it and
+   render a themed text wordmark so it blends with the top bar. */
+img.gb_9c,
+img[src*="logo_gmail_lockup"],
+a.gb_me > img {
+  display: none;
+}
+a.gb_me::after {
+  content: "Gmail";
+  color: var(--base05);
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  line-height: 44px;
+}
+
+/* The "More" sidebar icon (G-asx J-J5-Ji without T-I-J3) renders as a solid
+   white square due to Gmail's brightness(0) invert(1) filter (set via a
+   high-specificity !important site rule that resists overrides). Hide the
+   icon to remove the white square; the item keeps its "More" text label. */
+div.G-asx.G-asx.G-asx.J-J5-Ji:not(.T-I-J3) {
+  display: none !important;
+}
+/* The whole action toolbar bar (G-atb): the email list's toolbar row (Select /
+   Archive / Report spam / Delete / Mark read / Refresh / More / Fetching mail)
+   plus the pagination row (1-100 of N, Newer/Older arrows, split-pane toggle,
+   input tools) is non-critical and renders a white box via Gmail's
+   brightness(0) invert(1) filter. Hide the entire bar. */
+div.G-atb {
+  display: none !important;
 }
 
 /* Tooltips */
@@ -1858,4 +1923,24 @@ div[aria-modal="true"] [data-mdc-dialog-action="cancel"]:active {
 /* Google-apps companion icon shipping an inline #ffffff background. */
 .bse-bvF-JX-axQ-avS.Gs-avS {
   background-color: var(--base02);
+}
+
+/* === Remaining white-area fixes (main search pill) ===
+   The main search pill (form.gb_Pd, rounded 24px, top-center) still
+   renders light (rgb(233,238,246)). Gmail's obfuscated class names
+   (gb_Pd, gsib_a, ...) change often, so target the form that contains
+   the search input — robust across re-obfuscation. */
+form.gb_Pd,
+form:has(input.searchboxInputFontClass),
+form:has(input[aria-label*="Search" i]) {
+  background-color: var(--base01);
+}
+form.gb_Pd input,
+form:has(input.searchboxInputFontClass) input {
+  color: var(--base05);
+}
+
+/* off-screen left drawer (gb_id) renders pure white; darken it too */
+div.gb_id {
+  background-color: var(--base01);
 }
