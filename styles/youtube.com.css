@@ -1941,3 +1941,45 @@ ytd-app .ytd-main-content {
 #engagement-panel {
   background-color: var(--base01) !important;
 }
+
+/* === Video-only mode at the narrow (mobile) breakpoint ===
+   At <=600px the watch page renders the player full-bleed and stacks all
+   chrome below it. Hide the fixed top bar and everything under the player
+   (metadata, description, related feed, comments) so only the video shows. */
+@media (max-width: 600px) {
+  /* Fixed top bar */
+  #masthead-container {
+    display: none;
+  }
+
+  /* Everything below the player: title, channel, actions, description,
+     related feed, comments */
+  ytd-watch-flexy #columns,
+  ytd-watch-flexy #single-column-container {
+    display: none;
+  }
+
+  /* The 56px top margin on ytd-page-manager exists to clear the fixed
+     masthead; with the masthead hidden it is a useless gap. Reset it so
+     the player starts at the very top of the viewport. */
+  ytd-page-manager {
+    margin-top: 0;
+  }
+
+  /* Pin the player to all viewport edges and stretch the inner video to
+     fill. The player JS sizes the <video> inline (width/height/left/top),
+     so the !important overrides below beat it; object-fit:cover (already
+     set by the player) crops the sliver so the video touches every edge. */
+  ytd-player {
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+  }
+  ytd-player video {
+    left: 0 !important;
+    top: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+  }
+}
